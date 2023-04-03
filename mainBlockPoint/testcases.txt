@@ -1,0 +1,41 @@
+spares i'm using for test
+10.3.129.237       ramac-spare18-c3750x-12s.rar.nam.gm.com
+10.3.129.254       ramac-spare1-c3750x-48p.rar.nam.gm.com
+10.3.129.247       ramac-spare8-c3750x-24t.rar.nam.gm.com
+
+
+
+
+
+10.3.129.237
+10.3.129.254
+10.3.129.247    
+
+10.3.131.147 - 9500
+10.9.25.18 - 9200L
+10.9.3.11 - arlaclast011 - 9300
+
+10.9.0.163 - 3400
+10.51.0.169 - 9200 
+10.51.25.18 - 9200L
+
+10.3.131.147
+10.9.25.18
+10.9.3.11
+
+
+Xl4HivbL0tBMhZ6G
+
+
+'''downloads_SMU = "copy tftp://10.59.254.7/ios/current/cat9k_lite_iosxe.17.06.04.CSCwd14641.SPA.smu.bin flash:"
+        con.send_command_timing(download_SMU)
+        con.send_command_timing("")
+        
+        print("looking for the file with the dir command")
+        reg = re.compile(r"cat9k_lite_iosxe.17.06.04.CSCwd14641.SPA.smu.bin")
+        dirs = con.send_command_timing(" dir")
+        print(reg.search(dirs).group()) '''
+		
+		
+		    #sh inv | sec NAME
+    #sh ver | section cisco 

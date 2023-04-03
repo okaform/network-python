@@ -1,0 +1,124 @@
+!STEPS for VALIDATION for Layer 3
+terminal length 0
+! *************************************************
+! **** Switch STATUS
+! *************************************************
+show boot
+!
+show clock
+!
+show ntp status
+!
+show env all
+!
+show power
+!
+show stackwise-virtual
+!
+show switch detail
+!
+show stack-power detail
+!
+sh interfaces transceiver
+!
+show license status
+!
+show platform
+! *************************************************
+! **** VTP and VLAN
+! *************************************************
+show vtp status
+!
+show vlan
+!
+show spanning-tree | include VLAN|This bridge
+! *************************************************
+! **** Layer 2 Status
+! *************************************************
+show cdp neighbors
+!
+show interface counters errors
+!
+show interface status
+!
+show interface status | in connected
+!
+show authentication sessions
+!
+show power inline | in on
+!
+show interface trunk
+!
+show interface status err-disabled
+!
+show interfaces | include ^Vlan
+!
+show mac address-table
+! *************************************************
+! **** Layer 3 Status
+! *************************************************
+show arp
+!
+show ip int brief | exclude unassigned
+!
+show ip route static
+!
+show ip route eigrp
+!
+show ip eigrp neighbors
+!
+show ip eigrp interfaces
+!
+show standby brief
+! *************************************************
+! **** IECN ARP Table
+! *************************************************
+show vlan | in IECN 
+!
+show interface status | in 500|_50[1-9]|510|497|498 
+!
+show arp | in Vlan((5)*[0-1][0-9]) 
+!
+show mac address-table | in 500|_50[1-9]|510|530|495|497|498 
+! *************************************************
+! **** Multicast Status
+! *************************************************
+show ip igmp membership
+!
+show ip pim neighbor
+!
+show ip mroute summary
+!
+show ip igmp group
+!
+show ip traffic
+! *************************************************
+! **** VRF
+! *************************************************
+sh vrf gm-security
+!
+show ip eigrp vrf gm-security interfaces
+!
+sh ip route vrf gm-security
+!
+show ip eigrp vrf gm-security neighbors
+!
+ping vrf gm-security 192.168.0.1 repeat 50
+!
+sh ip interface brief vlan762
+!
+ping vrf gm-security 192.168.0.1 repeat 50
+!
+sh vlan | in vrf
+!
+sh int trunk
+! *************************************************
+! **** Show Logging and running-config
+! *************************************************
+show log
+!
+show running-config
+!
+! *************************************************
+! **** END
+! *************************************************

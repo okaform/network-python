@@ -1,0 +1,466 @@
+
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#terminal length 0
+
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#sh vlan
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Ap1/0/1, Ap2/0/1
+300  wireless_mgmt_VLAN-300           active    
+500  IECN_VLAN-500                    active    Tw2/0/19, Tw2/0/21, Tw2/0/22, Tw2/0/33
+600  IPT_VLAN-600                     active    Tw1/0/1, Tw1/0/2, Tw1/0/3, Tw1/0/4, Tw1/0/5, Tw1/0/13, Tw1/0/14, Tw1/0/16, Tw1/0/17, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/21, Tw1/0/22, Tw1/0/23, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/27, Tw1/0/28, Tw1/0/29, Tw1/0/30, Tw1/0/31, Tw1/0/32, Tw1/0/33, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Te1/0/42, Te1/0/43, Te1/0/44, Te1/0/45, Te1/0/46, Te1/0/47, Te1/0/48, Tw2/0/16, Tw2/0/18, Tw2/0/20, Tw2/0/29, Tw2/0/30, Tw2/0/31, Tw2/0/32
+720  SSUN_VLAN-720                    active    
+762  gm-security-camera-vrf           active    
+999  unused-ports                     active    Te1/1/2, Te1/1/3, Te1/1/4, Te1/1/5, Te1/1/6, Te1/1/7, Te1/1/8, Tw2/0/18, Tw2/0/23, Tw2/0/24, Tw2/0/34, Tw2/0/35, Tw2/0/36, Te2/0/37, Te2/0/38, Te2/0/39, Te2/0/40, Te2/0/41, Te2/0/42, Te2/0/43, Te2/0/44, Te2/0/45, Te2/0/46, Te2/0/47, Te2/0/48, Te2/1/2, Te2/1/3, Te2/1/4, Te2/1/5, Te2/1/6, Te2/1/7, Te2/1/8
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+1199 SSUN_link-to-arlaccore001        active    
+1200 SSUN_link-to-arlaccore002        active    
+2218 gm-security-to-arlaccore001      active    
+2219 gm-security-to-arlaccore002      active    
+2550 2550-Vital_VLAN                  active    Tw2/0/17
+2700 2700-Multi-Purpose_VLAN          active    Tw1/0/6, Tw1/0/7, Tw1/0/8, Tw1/0/9, Tw1/0/10, Tw1/0/11, Tw1/0/12, Tw1/0/15, Tw2/0/1, Tw2/0/2, Tw2/0/3, Tw2/0/4, Tw2/0/5, Tw2/0/6, Tw2/0/7, Tw2/0/8, Tw2/0/9, Tw2/0/10, Tw2/0/11, Tw2/0/12, Tw2/0/13, Tw2/0/14, Tw2/0/15, Tw2/0/25, Tw2/0/26, Tw2/0/27, Tw2/0/28
+2750 2750-GMOL_VLAN                   active    Tw1/0/1, Tw1/0/2, Tw1/0/3, Tw1/0/4, Tw1/0/5, Tw1/0/13, Tw1/0/14, Tw1/0/16, Tw1/0/17, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/21, Tw1/0/22, Tw1/0/23, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/27, Tw1/0/28, Tw1/0/29, Tw1/0/30, Tw1/0/31, Tw1/0/32, Tw1/0/33, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Te1/0/42, Te1/0/43, Te1/0/44, Te1/0/45, Te1/0/46, Te1/0/47, Te1/0/48, Tw2/0/16, Tw2/0/20, Tw2/0/30, Tw2/0/31, Tw2/0/32
+2751 VLAN2751                         active    Tw2/0/29
+3050 link-to-arlaccore001             active    
+3550 link-to-arlaccore002             active    
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+300  enet  100300     1500  -      -      -        -    -        0      0   
+500  enet  100500     1500  -      -      -        -    -        0      0   
+600  enet  100600     1500  -      -      -        -    -        0      0   
+720  enet  100720     1500  -      -      -        -    -        0      0   
+762  enet  100762     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+1199 enet  101199     1500  -      -      -        -    -        0      0   
+1200 enet  101200     1500  -      -      -        -    -        0      0   
+2218 enet  102218     1500  -      -      -        -    -        0      0   
+2219 enet  102219     1500  -      -      -        -    -        0      0   
+2550 enet  102550     1500  -      -      -        -    -        0      0   
+2700 enet  102700     1500  -      -      -        -    -        0      0   
+2750 enet  102750     1500  -      -      -        -    -        0      0   
+2751 enet  102751     1500  -      -      -        -    -        0      0   
+3050 enet  103050     1500  -      -      -        -    -        0      0   
+3550 enet  103550     1500  -      -      -        -    -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#show interface status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Tw1/0/1      Paint - Spider Voi connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/2      Paint - RV`s Offic connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/3      Paint - Open Confe notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/4      Paint - VOIP Speak connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/5      Paint - VOIP Speak connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/6      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/7      Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/8      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/9      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/10     Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/11     Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/12     Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/13     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/14     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/15     Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/16     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/17     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/18     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/19     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/20     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/21     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/22     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/23     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/24     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/25     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/26     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/27     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/28     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/29     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/30     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/31     Paint - Copy/Print connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/32     Paint - GMOL Drop  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/33     Paint - GMOL Drop  connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/34     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/35     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/36     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Te1/0/37     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/38     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te1/0/39     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/40     IDEAL - Voip GMOL  connected    2750       a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/41     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/42     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te1/0/43     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/44     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/45     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/46     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/47     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/48     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/1/1      link-to-arlaccore0 connected    trunk        full    10G SFP-10GBase-LR
+Te1/1/2      unused-port        disabled     999          auto   auto unknown
+Te1/1/3      unused-port        disabled     999          auto   auto unknown
+Te1/1/4      unused-port        disabled     999          auto   auto unknown
+Te1/1/5      unused-port        disabled     999          auto   auto unknown
+Te1/1/6      unused-port        disabled     999          auto   auto unknown
+Te1/1/7      unused-port        disabled     999          auto   auto unknown
+Te1/1/8      unused-port        disabled     999          auto   auto unknown
+Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
+Tw2/0/1      arlaclaap687-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/2      arlaclaap688-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/3      arlaclaap679-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/4      arlaclaap684-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/5      arlaclaap678-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/6      arlaclaap685-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/7      arlaclaap680-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/8      arlaclaap686-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/9      arlaclaap681-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/10     arlaclaap689-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/11     Link_to_arlaclaap6 notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/12     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/13     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/14     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/15     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
+Tw2/0/16     Ideal Setech Print connected    2750       a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/17     Zebra Printer      notconnect   2550         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/18     IDEAL - GMOnline D connected    999        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/19     PP2/19 - NAM (PDS) disabled     500          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/20     Paint Admin Plotte connected    2750       a-full a-1000 100/1000/2.5GBaseTX
+Tw2/0/21     USARLWTBPDSP87     connected    500        a-full a-1000 100/1000/2.5GBaseTX
+Tw2/0/22     arp-SKID06-es1     connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/23     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/24     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/25     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/26     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/27     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/28     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/29     DMP                notconnect   2751         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/30     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/31     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/32     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/33     arp-SKID06-es1     notconnect   500          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/34     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/35     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw2/0/36     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Te2/0/37     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/38     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/39     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/40     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/41     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/42     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/43     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/44     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/45     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/46     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/47     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/48     Monitor Port       notconnect   999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/1/1      link-to-arlaccore0 connected    trunk        full    10G SFP-10GBase-LR
+Te2/1/2      unused-port        disabled     999          auto   auto unknown
+Te2/1/3      unused-port        disabled     999          auto   auto unknown
+Te2/1/4      unused-port        disabled     999          auto   auto unknown
+Te2/1/5      unused-port        disabled     999          auto   auto unknown
+Te2/1/6      unused-port        disabled     999          auto   auto unknown
+Te2/1/7      unused-port        disabled     999          auto   auto unknown
+Te2/1/8      unused-port        disabled     999          auto   auto unknown
+Ap2/0/1                         connected    1          a-full a-1000 App-hosting port
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#sh ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.9.4.142              9   689e.0b03.f99f  ARPA   Vlan3050
+Internet  10.9.4.143              -   689e.0b30.a4e6  ARPA   Vlan3050
+Internet  10.9.4.144             16   689e.0b04.07ff  ARPA   Vlan3550
+Internet  10.9.4.145              -   689e.0b30.a4e2  ARPA   Vlan3550
+Internet  10.9.44.65              -   689e.0b30.a4ca  ARPA   Vlan2550
+Internet  10.9.76.65              -   689e.0b30.a4ed  ARPA   Vlan2700
+Internet  10.9.76.70              0   dc8c.3785.7142  ARPA   Vlan2700
+Internet  10.9.76.78              0   dc8c.378e.2390  ARPA   Vlan2700
+Internet  10.9.76.79              0   dc8c.3785.70a4  ARPA   Vlan2700
+Internet  10.9.76.80              0   dc8c.3778.ef84  ARPA   Vlan2700
+Internet  10.9.76.96              0   a488.73cf.5b28  ARPA   Vlan2700
+Internet  10.9.76.97              0   a488.73ce.4b04  ARPA   Vlan2700
+Internet  10.9.76.98              0   a488.73cf.6324  ARPA   Vlan2700
+Internet  10.9.76.99              0   a488.73cf.178c  ARPA   Vlan2700
+Internet  10.9.76.102             0   a488.73cf.4030  ARPA   Vlan2700
+Internet  10.9.76.112             0   a488.73cf.4304  ARPA   Vlan2700
+Internet  10.9.76.113             0   a488.73ce.4044  ARPA   Vlan2700
+Internet  10.9.76.114             0   a488.73cf.3db4  ARPA   Vlan2700
+Internet  10.9.76.115             0   a488.73cf.223c  ARPA   Vlan2700
+Internet  10.9.76.123             0   b05c.da35.ad83  ARPA   Vlan2700
+Internet  10.9.76.124             2   b05c.da33.85d3  ARPA   Vlan2700
+Internet  10.9.76.125             0   a488.73cf.8890  ARPA   Vlan2700
+Internet  10.9.76.126             1   b05c.da32.174c  ARPA   Vlan2700
+Internet  10.9.108.65             -   689e.0b30.a4cc  ARPA   Vlan2750
+Internet  10.9.108.70             0   040e.3c0f.b5a8  ARPA   Vlan2750
+Internet  10.9.108.71             2   3863.bb04.70bb  ARPA   Vlan2750
+Internet  10.9.108.80             1   b05c.da33.8233  ARPA   Vlan2750
+Internet  10.9.108.87            22   0068.eb41.cbd5  ARPA   Vlan2750
+Internet  10.9.108.93             3   0068.eb61.b719  ARPA   Vlan2750
+Internet  10.9.108.97             0   b05c.da35.a187  ARPA   Vlan2750
+Internet  10.9.108.105            0   b05c.da34.f34b  ARPA   Vlan2750
+Internet  10.9.108.112            0   98e7.f4a3.f3fc  ARPA   Vlan2750
+Internet  10.9.108.114            0   b499.badc.88b5  ARPA   Vlan2750
+Internet  10.9.108.117            0   0068.eb62.b05a  ARPA   Vlan2750
+Internet  10.9.108.126            5   0068.eb61.2aad  ARPA   Vlan2750
+Internet  10.10.3.17              -   689e.0b30.a4c7  ARPA   Vlan300
+Internet  11.221.13.65            -   689e.0b30.a4d6  ARPA   Vlan600
+Internet  11.221.13.71            1   e840.400c.9005  ARPA   Vlan600
+Internet  11.221.13.73            1   5c50.15a9.a44b  ARPA   Vlan600
+Internet  11.221.13.75            1   ac44.f21a.64de  ARPA   Vlan600
+Internet  11.221.13.88            4   ac44.f21a.0e24  ARPA   Vlan600
+Internet  11.221.13.108           1   5c50.15a9.a748  ARPA   Vlan600
+Internet  11.221.13.110           1   5478.1a1c.82f0  ARPA   Vlan600
+Internet  11.221.13.114           4   2436.dab1.ca51  ARPA   Vlan600
+Internet  11.221.13.121           4   2436.dab1.e3ab  ARPA   Vlan600
+Internet  11.221.13.122           0   c064.e4d8.1963  ARPA   Vlan600
+Internet  11.221.13.126           2   2436.dab1.c961  ARPA   Vlan600
+Internet  120.39.164.1            -   689e.0b30.a4d0  ARPA   Vlan500
+Internet  120.39.164.10           2   b05c.da35.ac30  ARPA   Vlan500
+Internet  120.39.164.20           0   001b.1b1d.f994  ARPA   Vlan500
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#sh int trunk
+
+Port        Mode             Encapsulation  Status        Native vlan  
+Te1/1/1     desirable        802.1q         trunking      3050
+Te2/1/1     desirable        802.1q         trunking      3550
+
+Port        Vlans allowed on trunk
+Te1/1/1     1199,2218,3050
+Te2/1/1     1200,2219,3550
+
+Port        Vlans allowed and active in management domain
+Te1/1/1     1199,2218,3050
+Te2/1/1     1200,2219,3550
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Te1/1/1     1199,2218,3050
+Te2/1/1     1200,2219,3550
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#sh mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    0180.c200.0021    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 300    689e.0b30.a4c7    STATIC      Vl300 
+ 500    001b.1b1d.f994    DYNAMIC     Tw2/0/22
+ 500    001b.1b1d.f995    DYNAMIC     Tw2/0/22
+ 500    689e.0b30.a4d0    STATIC      Vl500 
+ 500    b05c.da35.ac30    DYNAMIC     Tw2/0/21
+ 600    2436.dab1.c961    STATIC      Tw1/0/2 
+ 600    2436.dab1.ca51    STATIC      Te1/0/40 
+ 600    2436.dab1.e3ab    STATIC      Tw1/0/19 
+ 600    5478.1a1c.82f0    STATIC      Te1/0/38 
+ 600    5c50.15a9.a44b    STATIC      Te1/0/42 
+ 600    5c50.15a9.a748    STATIC      Tw1/0/34 
+ 600    689e.0b30.a4d6    STATIC      Vl600 
+ 600    ac44.f21a.0dd7    STATIC      Tw1/0/4 
+ 600    ac44.f21a.0e24    STATIC      Tw1/0/5 
+ 600    ac44.f21a.64de    STATIC      Tw1/0/1 
+ 600    c064.e4d8.1963    STATIC      Tw1/0/28 
+ 600    e840.400c.9005    STATIC      Tw1/0/22 
+ 762    689e.0b30.a4f6    STATIC      Vl762 
+1199    689e.0b30.a4c9    STATIC      Vl1199 
+1200    689e.0b30.a4d5    STATIC      Vl1200 
+2218    689e.0b03.ea01    DYNAMIC     Te1/1/1
+2218    689e.0b03.f99f    DYNAMIC     Te1/1/1
+2218    689e.0b30.a4c2    STATIC      Vl2218 
+2219    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
+2219    689e.0b04.07ff    DYNAMIC     Te2/1/1
+2219    689e.0b30.a4f0    STATIC      Vl2219 
+2550    689e.0b30.a4ca    STATIC      Vl2550 
+2700    689e.0b30.a4ed    STATIC      Vl2700 
+2700    a488.73ce.4044    DYNAMIC     Tw2/0/3
+2700    a488.73ce.4b04    DYNAMIC     Tw2/0/1
+2700    a488.73cf.178c    DYNAMIC     Tw2/0/6
+2700    a488.73cf.223c    DYNAMIC     Tw2/0/9
+2700    a488.73cf.3db4    DYNAMIC     Tw2/0/8
+2700    a488.73cf.4030    DYNAMIC     Tw2/0/2
+2700    a488.73cf.4304    DYNAMIC     Tw2/0/4
+2700    a488.73cf.5b28    DYNAMIC     Tw2/0/5
+2700    a488.73cf.6324    DYNAMIC     Tw2/0/7
+2700    a488.73cf.8890    DYNAMIC     Tw2/0/10
+2700    b05c.da32.174c    STATIC      Tw1/0/10 
+2700    b05c.da33.85d3    STATIC      Tw1/0/7 
+2700    b05c.da35.ad83    STATIC      Tw1/0/11 
+2700    dc8c.3778.ef84    DYNAMIC     Tw2/0/12
+2700    dc8c.3785.70a4    DYNAMIC     Tw2/0/13
+2700    dc8c.3785.7142    DYNAMIC     Tw2/0/15
+2700    dc8c.378e.2390    DYNAMIC     Tw2/0/14
+2750    0068.eb61.2aad    STATIC      Te1/0/42 
+2750    0068.eb62.b05a    STATIC      Tw1/0/34 
+2750    040e.3c0f.b5a8    STATIC      Tw1/0/31 
+2750    3863.bb04.70bb    DYNAMIC     Tw1/0/33
+2750    689e.0b30.a4cc    STATIC      Vl2750 
+2750    98e7.f4a3.f3fc    STATIC      Tw2/0/16 
+2750    b05c.da33.8233    STATIC      Tw1/0/23 
+2750    b05c.da34.f34b    DYNAMIC     Tw1/0/16
+2750    b05c.da35.a187    STATIC      Tw1/0/28 
+2750    b499.badc.88b5    DYNAMIC     Tw2/0/20
+3050    689e.0b03.ea01    DYNAMIC     Te1/1/1
+3050    689e.0b03.f99f    DYNAMIC     Te1/1/1
+3050    689e.0b30.a4e6    STATIC      Vl3050 
+3550    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
+3550    689e.0b04.07ff    DYNAMIC     Te2/1/1
+3550    689e.0b30.a4e2    STATIC      Vl3550 
+ 999    0010.7fe6.051c    STATIC      Tw2/0/18 
+Total Mac Addresses for this criterion: 83
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#ping 120.39.164.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.39.164.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#ping 120.39.164.10
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.39.164.10, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#ping 120.39.164.20
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.39.164.20, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#
+
+arlaclast050-ga-1w7#!
+
+arlaclast050-ga-1w7#sh mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    0180.c200.0021    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 300    689e.0b30.a4c7    STATIC      Vl300 
+ 500    001b.1b1d.f994    DYNAMIC     Tw2/0/22
+ 500    001b.1b1d.f995    DYNAMIC     Tw2/0/22
+ 500    689e.0b30.a4d0    STATIC      Vl500 
+ 500    b05c.da35.ac30    DYNAMIC     Tw2/0/21
+ 600    2436.dab1.c961    STATIC      Tw1/0/2 
+ 600    2436.dab1.ca51    STATIC      Te1/0/40 
+ 600    2436.dab1.e3ab    STATIC      Tw1/0/19 
+ 600    5478.1a1c.82f0    STATIC      Te1/0/38 
+ 600    5c50.15a9.a44b    STATIC      Te1/0/42 
+ 600    5c50.15a9.a748    STATIC      Tw1/0/34 
+ 600    689e.0b30.a4d6    STATIC      Vl600 
+ 600    ac44.f21a.0dd7    STATIC      Tw1/0/4 
+ 600    ac44.f21a.0e24    STATIC      Tw1/0/5 
+ 600    ac44.f21a.64de    STATIC      Tw1/0/1 
+ 600    c064.e4d8.1963    STATIC      Tw1/0/28 
+ 600    e840.400c.9005    STATIC      Tw1/0/22 
+ 762    689e.0b30.a4f6    STATIC      Vl762 
+1199    689e.0b30.a4c9    STATIC      Vl1199 
+1200    689e.0b30.a4d5    STATIC      Vl1200 
+2218    689e.0b03.ea01    DYNAMIC     Te1/1/1
+2218    689e.0b03.f99f    DYNAMIC     Te1/1/1
+2218    689e.0b30.a4c2    STATIC      Vl2218 
+2219    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
+2219    689e.0b04.07ff    DYNAMIC     Te2/1/1
+2219    689e.0b30.a4f0    STATIC      Vl2219 
+2550    689e.0b30.a4ca    STATIC      Vl2550 
+2700    689e.0b30.a4ed    STATIC      Vl2700 
+2700    a488.73ce.4044    DYNAMIC     Tw2/0/3
+2700    a488.73ce.4b04    DYNAMIC     Tw2/0/1
+2700    a488.73cf.178c    DYNAMIC     Tw2/0/6
+2700    a488.73cf.223c    DYNAMIC     Tw2/0/9
+2700    a488.73cf.3db4    DYNAMIC     Tw2/0/8
+2700    a488.73cf.4030    DYNAMIC     Tw2/0/2
+2700    a488.73cf.4304    DYNAMIC     Tw2/0/4
+2700    a488.73cf.5b28    DYNAMIC     Tw2/0/5
+2700    a488.73cf.6324    DYNAMIC     Tw2/0/7
+2700    a488.73cf.8890    DYNAMIC     Tw2/0/10
+2700    b05c.da32.174c    STATIC      Tw1/0/10 
+2700    b05c.da33.85d3    STATIC      Tw1/0/7 
+2700    b05c.da35.ad83    STATIC      Tw1/0/11 
+2700    dc8c.3778.ef84    DYNAMIC     Tw2/0/12
+2700    dc8c.3785.70a4    DYNAMIC     Tw2/0/13
+2700    dc8c.3785.7142    DYNAMIC     Tw2/0/15
+2700    dc8c.378e.2390    DYNAMIC     Tw2/0/14
+2750    0068.eb61.2aad    STATIC      Te1/0/42 
+2750    0068.eb62.b05a    STATIC      Tw1/0/34 
+2750    040e.3c0f.b5a8    STATIC      Tw1/0/31 
+2750    3863.bb04.70bb    DYNAMIC     Tw1/0/33
+2750    689e.0b30.a4cc    STATIC      Vl2750 
+2750    98e7.f4a3.f3fc    STATIC      Tw2/0/16 
+2750    b05c.da33.8233    STATIC      Tw1/0/23 
+2750    b05c.da34.f34b    DYNAMIC     Tw1/0/16
+2750    b05c.da35.a187    STATIC      Tw1/0/28 
+2750    b499.badc.88b5    DYNAMIC     Tw2/0/20
+3050    689e.0b03.ea01    DYNAMIC     Te1/1/1
+3050    689e.0b03.f99f    DYNAMIC     Te1/1/1
+3050    689e.0b30.a4e6    STATIC      Vl3050 
+3550    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
+3550    689e.0b04.07ff    DYNAMIC     Te2/1/1
+3550    689e.0b30.a4e2    STATIC      Vl3550 
+ 999    0010.7fe6.051c    STATIC      Tw2/0/18 
+Total Mac Addresses for this criterion: 83
+arlaclast050-ga-1w7#!

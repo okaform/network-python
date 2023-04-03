@@ -1,0 +1,2937 @@
+
+fwaaclasw167-ob-1ctph#!STEPS for VALIDATION for Layer 3
+
+fwaaclasw167-ob-1ctph#terminal length 0
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** Switch STATUS
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show boot
+---------------------------
+Switch 1
+---------------------------
+Current Boot Variables:
+BOOT variable = flash:packages.conf;
+
+Boot Variables on next reload:
+BOOT variable = flash:packages.conf;
+Manual Boot = no
+Enable Break = no
+Boot Mode = DEVICE
+iPXE Timeout = 0
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show clock
+11:16:16.484 UTC Sun Apr 2 2023
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ntp status
+Clock is synchronized, stratum 5, reference is 10.51.3.129    
+nominal freq is 250.0000 Hz, actual freq is 250.0070 Hz, precision is 2**10
+ntp uptime is 1026376500 (1/100 of seconds), resolution is 4000
+reference time is E7D3E038.53F7CFC0 (11:06:32.328 UTC Sun Apr 2 2023)
+clock offset is -3.5000 msec, root delay is 17.44 msec
+root dispersion is 31.40 msec, peer dispersion is 1.97 msec
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is -0.000028108 s/s
+system poll interval is 1024, last update was 584 sec ago.
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show env all
+Sensor List: Environmental Monitoring 
+ Sensor          Location        State               Reading       Range(min-max)       
+ PS1 Vout        1               GOOD               55000 mV          na
+ PS1 Curout      1               GOOD                8000 mA          na
+ PS1 Powout      1               GOOD              440000 mW          na
+ PS1 Hotspot     1               GOOD                  24 Celsius     na
+ PS1 Fan Status  1               GOOD               43008 rpm         na
+ PS1 Status word 1               GOOD                   2             na
+ PS2 Vout        1               NOT PRESENT            0 mV          na
+ PS2 CURout      1               NOT PRESENT            0 mA          na
+ PS2 Powout      1               NOT PRESENT            0 mW          na
+ PS2 Hotspot     1               NOT PRESENT            0 Celsius     na
+ PS2 Fan Status  1               NOT PRESENT            0 rpm         na
+ PS2 Status word 1               NOT PRESENT            0             na
+ SYSTEM INLET    1               GREEN                 19 Celsius   0 - 56
+ SYSTEM OUTLET   1               GREEN                 25 Celsius   0 - 125
+ SYSTEM HOTSPOT  1               GREEN                 34 Celsius   0 - 125
+
+Switch	 FAN	 Speed	 State	 Airflow direction
+---------------------------------------------------
+  1  	  1	4935 	  OK	 Front to Back
+  1  	  2	4890 	  OK	 Front to Back
+
+SW  PID                 Serial#     Status           Sys Pwr  PoE Pwr  Watts
+--  ------------------  ----------  ---------------  -------  -------  -----
+1A  PWR-C6-600WAC       QCS23405BUE  OK              Good     Good     600 
+1B  Not Present
+
+---------------------------------------------------
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show power
+% Incomplete command.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show stackwise-virtual
+                                ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show switch detail
+Switch/Stack Mac Address : e41f.7bd4.c880 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   e41f.7bd4.c880     15     V01     Ready                               
+
+
+
+         Stack Port Status             Neighbors     
+Switch#  Port 1     Port 2           Port 1   Port 2 
+--------------------------------------------------------
+  1       DOWN       DOWN             None     None
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show stack-power detail
+                                ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#sh interfaces transceiver
+If device is externally calibrated, only calibrated values are printed.
+++ : high alarm, +  : high warning, -  : low warning, -- : low alarm.
+NA or N/A: not applicable, Tx: transmit, Rx: receive.
+mA: milliamperes, dBm: decibels (milliwatts).
+
+                                             Optical   Optical
+             Temperature  Voltage  Current   Tx Power  Rx Power
+Port         (Celsius)    (Volts)  (mA)      (dBm)     (dBm)
+---------    -----------  -------  --------  --------  --------
+Gi1/1/1      23.7       3.28      21.5      -5.1      -8.1   
+Gi1/1/4       8.6       3.31       0.0       N/A       N/A   
+
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show license status
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: Callhome
+
+Policy:
+  Policy in use: Merged from multiple sources.
+  Reporting ACK required: yes (CISCO default)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 365 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 90 (CISCO default)
+    Reporting frequency (days): 90 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+
+Miscellaneous:
+  Custom Id: <empty>
+
+Usage Reporting:
+  Last ACK received: <none>
+  Next ACK deadline: Mar 04 15:53:34 2023 UTC
+  Reporting push interval: 30  days
+  Next ACK push check: <none>
+  Next report push: Dec 04 16:15:10 2022 UTC
+  Last report push: <none>
+  Last report file write: <none>
+
+Trust Code Installed: <none>
+
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show platform
+Switch  Ports    Model                Serial No.   MAC address     Hw Ver.       Sw Ver. 
+------  -----   ---------             -----------  --------------  -------       --------
+ 1       32     C9200-24P             JAE243314VK  e41f.7bd4.c880  V01           17.06.04      
+Switch/Stack Mac Address : e41f.7bd4.c880 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                   Current
+Switch#   Role        Priority      State 
+-------------------------------------------
+*1       Active          15         Ready               
+
+
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** VTP and VLAN
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show vtp status
+VTP Version capable             : 1 to 3
+VTP version running             : 1
+VTP Domain Name                 : fwaac
+VTP Pruning Mode                : Disabled (Operationally Disabled)
+VTP Traps Generation            : Enabled
+Device ID                       : e41f.7bd4.c880
+Configuration last modified by 0.0.0.0 at 0-0-00 00:00:00
+
+Feature VLAN:
+--------------
+VTP Operating Mode                : Transparent
+Maximum VLANs supported locally   : 1005
+Number of existing VLANs          : 9
+Configuration Revision            : 0
+MD5 digest                        : 0xA5 0xD7 0x84 0x27 0x0C 0x01 0x5E 0x7C 
+                                    0x5A 0xDC 0xA8 0x57 0xE8 0x06 0x44 0x83 
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show vlan
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    
+300  Multi_TC_RF_VLAN_Management      active    
+600  IP_phone_Clients-600             active    
+800  PFCN_L2_Mgmt-vl800               active    Gi1/1/2
+999  unused-port                      active    Gi1/0/3, Gi1/0/4, Gi1/0/5, Gi1/0/6, Gi1/0/7, Gi1/0/8, Gi1/0/9, Gi1/0/10, Gi1/0/11, Gi1/0/12, Gi1/0/13, Gi1/0/14, Gi1/0/15, Gi1/0/16, Gi1/0/17, Gi1/0/18, Gi1/0/19, Gi1/0/20, Gi1/0/21, Gi1/0/22, Gi1/0/23, Gi1/0/24, Gi1/1/3, Gi1/1/4
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+2550 VITAL_VLAN-2550                  active    
+2700 Multi-Purpose_VLAN-2700          active    Gi1/0/1, Gi1/0/2
+2750 GMONLINE_VLAN-2750               active    
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+300  enet  100300     1500  -      -      -        -    -        0      0   
+600  enet  100600     1500  -      -      -        -    -        0      0   
+800  enet  100800     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+2550 enet  102550     1500  -      -      -        -    -        0      0   
+2700 enet  102700     1500  -      -      -        -    -        0      0   
+2750 enet  102750     1500  -      -      -        -    -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show spanning-tree | include VLAN|This bridge
+VLAN0300
+VLAN0600
+VLAN0800
+VLAN2550
+VLAN2700
+VLAN2750
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** Layer 2 Status
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+fwaaclast018-ph-2ph.fwa.nam.gm.com
+                 Gig 1/1/1         138             R S I  C9300-48U Ten 1/1/6
+fwaaclaap133-ph-1ctph1
+                 Gig 1/0/2         178              R T   C9120AXI- Gig 0
+fwaaclaap132-ph-1ctph2
+                 Gig 1/0/1         137              R T   C9120AXI- Gig 0
+
+Total cdp entries displayed : 3
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface counters errors
+
+Port           Align-Err     FCS-Err    Xmit-Err     Rcv-Err  UnderSize  OutDiscards 
+Gi1/0/1                0           0           0           0          0            0 
+Gi1/0/2                0           0           0           0          0            0 
+Gi1/0/3                0           0           0           0          0            0 
+Gi1/0/4                0           0           0           0          0            0 
+Gi1/0/5                0           0           0           0          0            0 
+Gi1/0/6                0           0           0           0          0            0 
+Gi1/0/7                0           0           0           0          0            0 
+Gi1/0/8                0           0           0           0          0            0 
+Gi1/0/9                0           0           0           0          0            0 
+Gi1/0/10               0           0           0           0          0            0 
+Gi1/0/11               0           0           0           0          0            0 
+Gi1/0/12               0           0           0           0          0            0 
+Gi1/0/13               0           0           0           0          0            0 
+Gi1/0/14               0           0           0           0          0            0 
+Gi1/0/15               0           0           0           0          0            0 
+Gi1/0/16               0           0           0           0          0            0 
+Gi1/0/17               0           0           0           0          0            0 
+Gi1/0/18               0           0           0           0          0            0 
+Gi1/0/19               0           0           0           0          0            0 
+Gi1/0/20               0           0           0           0          0            0 
+Gi1/0/21               0           0           0           0          0            0 
+Gi1/0/22               0           0           0           0          0            0 
+Gi1/0/23               0           0           0           0          0            0 
+Gi1/0/24               0           0           0           0          0            0 
+Gi1/1/1                0           0           0           0          0            0 
+Gi1/1/2                0           0           0           0          0            0 
+Gi1/1/3                0           0           0           0          0            0 
+Gi1/1/4                0           0           0           0          0            0 
+Po20                   0           0           0           0          0            0 
+
+Port         Single-Col  Multi-Col   Late-Col  Excess-Col  Carri-Sen      Runts 
+Gi1/0/1               0          0          0           0          0          0 
+Gi1/0/2               0          0          0           0          0          0 
+Gi1/0/3               0          0          0           0          0          0 
+Gi1/0/4               0          0          0           0          0          0 
+Gi1/0/5               0          0          0           0          0          0 
+Gi1/0/6               0          0          0           0          0          0 
+Gi1/0/7               0          0          0           0          0          0 
+Gi1/0/8               0          0          0           0          0          0 
+Gi1/0/9               0          0          0           0          0          0 
+Gi1/0/10              0          0          0           0          0          0 
+Gi1/0/11              0          0          0           0          0          0 
+Gi1/0/12              0          0          0           0          0          0 
+Gi1/0/13              0          0          0           0          0          0 
+Gi1/0/14              0          0          0           0          0          0 
+Gi1/0/15              0          0          0           0          0          0 
+Gi1/0/16              0          0          0           0          0          0 
+Gi1/0/17              0          0          0           0          0          0 
+Gi1/0/18              0          0          0           0          0          0 
+Gi1/0/19              0          0          0           0          0          0 
+Gi1/0/20              0          0          0           0          0          0 
+Gi1/0/21              0          0          0           0          0          0 
+Gi1/0/22              0          0          0           0          0          0 
+Gi1/0/23              0          0          0           0          0          0 
+Gi1/0/24              0          0          0           0          0          0 
+Gi1/1/1               0          0          0           0          0          0 
+Gi1/1/2               0          0          0           0          0          0 
+Gi1/1/3               0          0          0           0          0          0 
+Gi1/1/4               0          0          0           0          0          0 
+Po20                  0          0          0           0          0          0 
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Gi1/0/1      fwaaclaap132-ph-1c connected    2700       a-full a-1000 10/100/1000BaseTX
+Gi1/0/2      fwaaclaap133-ph-1c connected    2700       a-full a-1000 10/100/1000BaseTX
+Gi1/0/3      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/4      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/5      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/6      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/7      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/8      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/9      unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/10     unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/11     unused-port        disabled     999          full   1000 10/100/1000BaseTX
+Gi1/0/12     unused_port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/13     unused_port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/14     unused_port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/15     unused_port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/16     unused_port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/17     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/18     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/19     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/20     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/21     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/22     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/23     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/0/24     unused-port        disabled     999          auto   auto 10/100/1000BaseTX
+Gi1/1/1      link-to-fwaaclast0 connected    trunk        full   1000 1000BaseLX SFP
+Gi1/1/2      link-to-fwaaclast0 disabled     800          auto   auto unknown
+Gi1/1/3      unused-port        disabled     999          auto   auto unknown
+Gi1/1/4      unused-port        disabled     999          full   1000 1000BaseLX SFP
+Po20         link-to-fwaaclast0 connected    trunk      a-full a-1000 N/A
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface status | in connected
+Gi1/0/1      fwaaclaap132-ph-1c connected    2700       a-full a-1000 10/100/1000BaseTX
+Gi1/0/2      fwaaclaap133-ph-1c connected    2700       a-full a-1000 10/100/1000BaseTX
+Gi1/1/1      link-to-fwaaclast0 connected    trunk        full   1000 1000BaseLX SFP
+Po20         link-to-fwaaclast0 connected    trunk      a-full a-1000 N/A
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show authentication sessions
+No sessions currently exist
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show power inline | in on
+Gi1/0/1   auto   on         30.0    C9120AXI-B          4     30.0 
+Gi1/0/2   auto   on         30.0    C9120AXI-B          4     30.0 
+Totals:          2    on    60.0      
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface trunk
+
+Port           Mode             Encapsulation  Status        Native vlan  
+Po20           desirable        802.1q         trunking      800
+
+Port           Vlans allowed on trunk
+Po20           300,600,800,2550,2700,2750
+
+Port           Vlans allowed and active in management domain
+Po20           300,600,800,2550,2700,2750
+
+Port           Vlans in spanning tree forwarding state and not pruned
+Po20           300,600,800,2550,2700,2750
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface status err-disabled
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interfaces | include ^Vlan
+Vlan1 is administratively down, line protocol is down , Autostate Enabled
+Vlan800 is up, line protocol is up , Autostate Enabled
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    0180.c200.0021    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 800    0000.0c07.ac02    DYNAMIC     Po20
+ 800    0013.c608.b264    DYNAMIC     Po20
+ 800    1c72.1d9b.b781    DYNAMIC     Po20
+ 800    687d.b402.d89c    DYNAMIC     Po20
+ 800    687d.b402.eb14    DYNAMIC     Po20
+ 800    687d.b402.ef6c    DYNAMIC     Po20
+ 800    689e.0bba.15ba    DYNAMIC     Po20
+ 800    6c8b.d3d6.31df    DYNAMIC     Po20
+ 800    a488.73cf.2538    DYNAMIC     Po20
+ 800    e41f.7bb6.0cdf    DYNAMIC     Po20
+ 800    e41f.7bd4.c8d2    STATIC      Vl800 
+2700    0090.e800.e0d5    DYNAMIC     Po20
+2700    0090.e839.d379    DYNAMIC     Po20
+2700    687d.b403.159c    DYNAMIC     Po20
+2700    687d.b403.1fa4    DYNAMIC     Po20
+2700    687d.b403.252c    DYNAMIC     Po20
+2700    687d.b403.28f4    DYNAMIC     Po20
+2700    687d.b403.2d78    DYNAMIC     Po20
+2700    689e.0bba.15ba    DYNAMIC     Po20
+2700    689e.0bba.15ed    DYNAMIC     Po20
+2700    8424.8d03.fe82    DYNAMIC     Po20
+2700    8424.8d07.f827    DYNAMIC     Po20
+2700    8424.8d07.f82d    DYNAMIC     Po20
+2700    8424.8d07.f82f    DYNAMIC     Po20
+2700    8424.8d07.f830    DYNAMIC     Po20
+2700    8424.8d07.f9b9    DYNAMIC     Po20
+2700    8424.8d07.f9be    DYNAMIC     Po20
+2700    8424.8d07.f9c1    DYNAMIC     Po20
+2700    8424.8d07.f9e5    DYNAMIC     Po20
+2700    8424.8d07.f9f1    DYNAMIC     Po20
+2700    a488.73cf.1168    DYNAMIC     Gi1/0/1
+2700    a488.73cf.1330    DYNAMIC     Po20
+2700    a488.73cf.8a44    DYNAMIC     Gi1/0/2
+ 300    0000.0c07.ac02    DYNAMIC     Po20
+ 300    0476.b075.eac7    DYNAMIC     Po20
+ 300    687d.b402.0aa8    DYNAMIC     Po20
+ 300    687d.b402.1abc    DYNAMIC     Po20
+ 300    687d.b402.1bc0    DYNAMIC     Po20
+ 300    687d.b402.1e20    DYNAMIC     Po20
+ 300    687d.b402.28e0    DYNAMIC     Po20
+ 300    687d.b402.2d04    DYNAMIC     Po20
+ 300    687d.b402.2d14    DYNAMIC     Po20
+ 300    687d.b402.2d64    DYNAMIC     Po20
+ 300    687d.b402.2eb0    DYNAMIC     Po20
+ 300    687d.b402.3010    DYNAMIC     Po20
+ 300    687d.b402.8058    DYNAMIC     Po20
+ 300    687d.b402.bb48    DYNAMIC     Po20
+ 300    687d.b402.bca0    DYNAMIC     Po20
+ 300    687d.b402.bcb8    DYNAMIC     Po20
+ 300    687d.b402.bcbc    DYNAMIC     Po20
+ 300    687d.b402.bcc8    DYNAMIC     Po20
+ 300    687d.b402.bff8    DYNAMIC     Po20
+ 300    687d.b402.c07c    DYNAMIC     Po20
+ 300    687d.b402.c110    DYNAMIC     Po20
+ 300    687d.b402.c134    DYNAMIC     Po20
+ 300    687d.b402.c14c    DYNAMIC     Po20
+ 300    687d.b402.c1c8    DYNAMIC     Po20
+ 300    687d.b402.c1f0    DYNAMIC     Po20
+ 300    687d.b402.c200    DYNAMIC     Po20
+ 300    687d.b402.c230    DYNAMIC     Po20
+ 300    687d.b402.c2a4    DYNAMIC     Po20
+ 300    687d.b402.c2ac    DYNAMIC     Po20
+ 300    687d.b402.c49c    DYNAMIC     Po20
+ 300    687d.b402.ca14    DYNAMIC     Po20
+ 300    687d.b402.ca24    DYNAMIC     Po20
+ 300    687d.b402.cc18    DYNAMIC     Po20
+ 300    687d.b402.ccb8    DYNAMIC     Po20
+ 300    687d.b402.ccbc    DYNAMIC     Po20
+ 300    687d.b402.cd40    DYNAMIC     Po20
+ 300    687d.b402.cd4c    DYNAMIC     Po20
+ 300    687d.b402.cee0    DYNAMIC     Po20
+ 300    687d.b402.cf04    DYNAMIC     Po20
+ 300    687d.b402.cfd0    DYNAMIC     Po20
+ 300    687d.b402.d078    DYNAMIC     Po20
+ 300    687d.b402.d0f0    DYNAMIC     Po20
+ 300    687d.b402.d170    DYNAMIC     Po20
+ 300    687d.b402.d174    DYNAMIC     Po20
+ 300    687d.b402.d1f0    DYNAMIC     Po20
+ 300    687d.b402.d230    DYNAMIC     Po20
+ 300    687d.b402.d304    DYNAMIC     Po20
+ 300    687d.b402.d3d8    DYNAMIC     Po20
+ 300    687d.b402.d480    DYNAMIC     Po20
+ 300    687d.b402.d560    DYNAMIC     Po20
+ 300    687d.b402.d568    DYNAMIC     Po20
+ 300    687d.b402.d590    DYNAMIC     Po20
+ 300    687d.b402.d634    DYNAMIC     Po20
+ 300    687d.b402.d6ec    DYNAMIC     Po20
+ 300    687d.b402.d738    DYNAMIC     Po20
+ 300    687d.b402.d774    DYNAMIC     Po20
+ 300    687d.b402.d780    DYNAMIC     Po20
+ 300    687d.b402.d884    DYNAMIC     Po20
+ 300    687d.b402.d88c    DYNAMIC     Po20
+ 300    687d.b402.d890    DYNAMIC     Po20
+ 300    687d.b402.d898    DYNAMIC     Po20
+ 300    687d.b402.d8a0    DYNAMIC     Po20
+ 300    687d.b402.d980    DYNAMIC     Po20
+ 300    687d.b402.d984    DYNAMIC     Po20
+ 300    687d.b402.d988    DYNAMIC     Po20
+ 300    687d.b402.d98c    DYNAMIC     Po20
+ 300    687d.b402.d9c0    DYNAMIC     Po20
+ 300    687d.b402.d9c4    DYNAMIC     Po20
+ 300    687d.b402.d9cc    DYNAMIC     Po20
+ 300    687d.b402.da04    DYNAMIC     Po20
+ 300    687d.b402.da0c    DYNAMIC     Po20
+ 300    687d.b402.da40    DYNAMIC     Po20
+ 300    687d.b402.da88    DYNAMIC     Po20
+ 300    687d.b402.daa4    DYNAMIC     Po20
+ 300    687d.b402.dac8    DYNAMIC     Po20
+ 300    687d.b402.dae4    DYNAMIC     Po20
+ 300    687d.b402.dae8    DYNAMIC     Po20
+ 300    687d.b402.db40    DYNAMIC     Po20
+ 300    687d.b402.db60    DYNAMIC     Po20
+ 300    687d.b402.db7c    DYNAMIC     Po20
+ 300    687d.b402.db80    DYNAMIC     Po20
+ 300    687d.b402.db9c    DYNAMIC     Po20
+ 300    687d.b402.dba4    DYNAMIC     Po20
+ 300    687d.b402.dbc0    DYNAMIC     Po20
+ 300    687d.b402.dbd8    DYNAMIC     Po20
+ 300    687d.b402.dc18    DYNAMIC     Po20
+ 300    687d.b402.dc38    DYNAMIC     Po20
+ 300    687d.b402.dc7c    DYNAMIC     Po20
+ 300    687d.b402.dc98    DYNAMIC     Po20
+ 300    687d.b402.dcc0    DYNAMIC     Po20
+ 300    687d.b402.dd08    DYNAMIC     Po20
+ 300    687d.b402.dd0c    DYNAMIC     Po20
+ 300    687d.b402.dd30    DYNAMIC     Po20
+ 300    687d.b402.dd64    DYNAMIC     Po20
+ 300    687d.b402.dd70    DYNAMIC     Po20
+ 300    687d.b402.dd7c    DYNAMIC     Po20
+ 300    687d.b402.dd84    DYNAMIC     Po20
+ 300    687d.b402.dd88    DYNAMIC     Po20
+ 300    687d.b402.ddf0    DYNAMIC     Po20
+ 300    687d.b402.de14    DYNAMIC     Po20
+ 300    687d.b402.de40    DYNAMIC     Po20
+ 300    687d.b402.de44    DYNAMIC     Po20
+ 300    687d.b402.de50    DYNAMIC     Po20
+ 300    687d.b402.de54    DYNAMIC     Po20
+ 300    687d.b402.dec0    DYNAMIC     Po20
+ 300    687d.b402.dec4    DYNAMIC     Po20
+ 300    687d.b402.dec8    DYNAMIC     Po20
+ 300    687d.b402.e3ac    DYNAMIC     Po20
+ 300    687d.b402.e3b0    DYNAMIC     Po20
+ 300    687d.b402.e3bc    DYNAMIC     Po20
+ 300    687d.b402.e44c    DYNAMIC     Po20
+ 300    687d.b402.e450    DYNAMIC     Po20
+ 300    687d.b402.e458    DYNAMIC     Po20
+ 300    687d.b402.e4a4    DYNAMIC     Po20
+ 300    687d.b402.e4dc    DYNAMIC     Po20
+ 300    687d.b402.e4e8    DYNAMIC     Po20
+ 300    687d.b402.e4f0    DYNAMIC     Po20
+ 300    687d.b402.e520    DYNAMIC     Po20
+ 300    687d.b402.e524    DYNAMIC     Po20
+ 300    687d.b402.e52c    DYNAMIC     Po20
+ 300    687d.b402.e534    DYNAMIC     Po20
+ 300    687d.b402.e538    DYNAMIC     Po20
+ 300    687d.b402.e53c    DYNAMIC     Po20
+ 300    687d.b402.e540    DYNAMIC     Po20
+ 300    687d.b402.e55c    DYNAMIC     Po20
+ 300    687d.b402.e5f8    DYNAMIC     Po20
+ 300    687d.b402.e608    DYNAMIC     Po20
+ 300    687d.b402.e618    DYNAMIC     Po20
+ 300    687d.b402.e638    DYNAMIC     Po20
+ 300    687d.b402.e69c    DYNAMIC     Po20
+ 300    687d.b402.e6ac    DYNAMIC     Po20
+ 300    687d.b402.e6b4    DYNAMIC     Po20
+ 300    687d.b402.e6b8    DYNAMIC     Po20
+ 300    687d.b402.e6c8    DYNAMIC     Po20
+ 300    687d.b402.e780    DYNAMIC     Po20
+ 300    687d.b402.e798    DYNAMIC     Po20
+ 300    687d.b402.e7a8    DYNAMIC     Po20
+ 300    687d.b402.e818    DYNAMIC     Po20
+ 300    687d.b402.e85c    DYNAMIC     Po20
+ 300    687d.b402.e8ac    DYNAMIC     Po20
+ 300    687d.b402.e8bc    DYNAMIC     Po20
+ 300    687d.b402.e8c0    DYNAMIC     Po20
+ 300    687d.b402.e8c4    DYNAMIC     Po20
+ 300    687d.b402.e8d0    DYNAMIC     Po20
+ 300    687d.b402.e8dc    DYNAMIC     Po20
+ 300    687d.b402.e944    DYNAMIC     Po20
+ 300    687d.b402.e948    DYNAMIC     Po20
+ 300    687d.b402.e950    DYNAMIC     Po20
+ 300    687d.b402.e954    DYNAMIC     Po20
+ 300    687d.b402.e95c    DYNAMIC     Po20
+ 300    687d.b402.e960    DYNAMIC     Po20
+ 300    687d.b402.e9b4    DYNAMIC     Po20
+ 300    687d.b402.e9b8    DYNAMIC     Po20
+ 300    687d.b402.ea94    DYNAMIC     Po20
+ 300    687d.b402.eb84    DYNAMIC     Po20
+ 300    687d.b402.ebf4    DYNAMIC     Po20
+ 300    687d.b402.ecb4    DYNAMIC     Po20
+ 300    687d.b402.ed18    DYNAMIC     Po20
+ 300    687d.b402.ed24    DYNAMIC     Po20
+ 300    687d.b402.f124    DYNAMIC     Po20
+ 300    687d.b402.f1a0    DYNAMIC     Po20
+ 300    687d.b402.f1b0    DYNAMIC     Po20
+ 300    687d.b402.f22c    DYNAMIC     Po20
+ 300    687d.b402.f238    DYNAMIC     Po20
+ 300    687d.b402.f318    DYNAMIC     Po20
+ 300    687d.b402.f31c    DYNAMIC     Po20
+ 300    687d.b402.f3b4    DYNAMIC     Po20
+ 300    687d.b402.f430    DYNAMIC     Po20
+ 300    687d.b402.f478    DYNAMIC     Po20
+ 300    687d.b402.f48c    DYNAMIC     Po20
+ 300    687d.b402.f4e0    DYNAMIC     Po20
+ 300    687d.b402.f4f8    DYNAMIC     Po20
+ 300    687d.b402.f584    DYNAMIC     Po20
+ 300    687d.b402.f5a4    DYNAMIC     Po20
+ 300    687d.b402.f5ec    DYNAMIC     Po20
+ 300    687d.b402.f650    DYNAMIC     Po20
+ 300    687d.b402.f690    DYNAMIC     Po20
+ 300    687d.b402.f908    DYNAMIC     Po20
+ 300    687d.b402.f9d0    DYNAMIC     Po20
+ 300    687d.b402.f9e0    DYNAMIC     Po20
+ 300    687d.b402.fae8    DYNAMIC     Po20
+ 300    687d.b402.fb4c    DYNAMIC     Po20
+ 300    687d.b402.fbf8    DYNAMIC     Po20
+ 300    687d.b402.fc3c    DYNAMIC     Po20
+ 300    687d.b402.fc68    DYNAMIC     Po20
+ 300    687d.b402.fc70    DYNAMIC     Po20
+ 300    687d.b403.0504    DYNAMIC     Po20
+ 300    687d.b403.0508    DYNAMIC     Po20
+ 300    687d.b403.0510    DYNAMIC     Po20
+ 300    687d.b403.0570    DYNAMIC     Po20
+ 300    687d.b403.0594    DYNAMIC     Po20
+ 300    687d.b403.05dc    DYNAMIC     Po20
+ 300    687d.b403.0620    DYNAMIC     Po20
+ 300    687d.b403.068c    DYNAMIC     Po20
+ 300    687d.b403.0690    DYNAMIC     Po20
+ 300    687d.b403.06ac    DYNAMIC     Po20
+ 300    687d.b403.06fc    DYNAMIC     Po20
+ 300    687d.b403.0758    DYNAMIC     Po20
+ 300    687d.b403.0760    DYNAMIC     Po20
+ 300    687d.b403.076c    DYNAMIC     Po20
+ 300    687d.b403.0770    DYNAMIC     Po20
+ 300    687d.b403.0774    DYNAMIC     Po20
+ 300    687d.b403.0780    DYNAMIC     Po20
+ 300    687d.b403.07e4    DYNAMIC     Po20
+ 300    687d.b403.07e8    DYNAMIC     Po20
+ 300    687d.b403.0868    DYNAMIC     Po20
+ 300    687d.b403.1054    DYNAMIC     Po20
+ 300    687d.b403.11b8    DYNAMIC     Po20
+ 300    687d.b403.1408    DYNAMIC     Po20
+ 300    687d.b403.1430    DYNAMIC     Po20
+ 300    687d.b403.158c    DYNAMIC     Po20
+ 300    687d.b403.1590    DYNAMIC     Po20
+ 300    687d.b403.1628    DYNAMIC     Po20
+ 300    687d.b403.1694    DYNAMIC     Po20
+ 300    687d.b403.16a0    DYNAMIC     Po20
+ 300    687d.b403.16a4    DYNAMIC     Po20
+ 300    687d.b403.17c4    DYNAMIC     Po20
+ 300    687d.b403.17d0    DYNAMIC     Po20
+ 300    687d.b403.17d8    DYNAMIC     Po20
+ 300    687d.b403.17f0    DYNAMIC     Po20
+ 300    687d.b403.1814    DYNAMIC     Po20
+ 300    687d.b403.1854    DYNAMIC     Po20
+ 300    687d.b403.1858    DYNAMIC     Po20
+ 300    687d.b403.189c    DYNAMIC     Po20
+ 300    687d.b403.18a4    DYNAMIC     Po20
+ 300    687d.b403.18c0    DYNAMIC     Po20
+ 300    687d.b403.18c8    DYNAMIC     Po20
+ 300    687d.b403.194c    DYNAMIC     Po20
+ 300    687d.b403.19bc    DYNAMIC     Po20
+ 300    687d.b403.19c4    DYNAMIC     Po20
+ 300    687d.b403.19dc    DYNAMIC     Po20
+ 300    687d.b403.19f4    DYNAMIC     Po20
+ 300    687d.b403.1a2c    DYNAMIC     Po20
+ 300    687d.b403.1a34    DYNAMIC     Po20
+ 300    687d.b403.1a70    DYNAMIC     Po20
+ 300    687d.b403.1a80    DYNAMIC     Po20
+ 300    687d.b403.1aa4    DYNAMIC     Po20
+ 300    687d.b403.1ab4    DYNAMIC     Po20
+ 300    687d.b403.1ac8    DYNAMIC     Po20
+ 300    687d.b403.1acc    DYNAMIC     Po20
+ 300    687d.b403.1ad0    DYNAMIC     Po20
+ 300    687d.b403.1b54    DYNAMIC     Po20
+ 300    687d.b403.1b5c    DYNAMIC     Po20
+ 300    687d.b403.1b7c    DYNAMIC     Po20
+ 300    687d.b403.1bbc    DYNAMIC     Po20
+ 300    687d.b403.1be4    DYNAMIC     Po20
+ 300    687d.b403.1c8c    DYNAMIC     Po20
+ 300    687d.b403.1cc0    DYNAMIC     Po20
+ 300    687d.b403.1cc4    DYNAMIC     Po20
+ 300    687d.b403.1cd8    DYNAMIC     Po20
+ 300    687d.b403.1d74    DYNAMIC     Po20
+ 300    687d.b403.1d7c    DYNAMIC     Po20
+ 300    687d.b403.1d80    DYNAMIC     Po20
+ 300    687d.b403.1d94    DYNAMIC     Po20
+ 300    687d.b403.1db8    DYNAMIC     Po20
+ 300    687d.b403.1dc4    DYNAMIC     Po20
+ 300    687d.b403.1dcc    DYNAMIC     Po20
+ 300    687d.b403.1dd0    DYNAMIC     Po20
+ 300    687d.b403.1dd4    DYNAMIC     Po20
+ 300    687d.b403.1ddc    DYNAMIC     Po20
+ 300    687d.b403.1de8    DYNAMIC     Po20
+ 300    687d.b403.1e14    DYNAMIC     Po20
+ 300    687d.b403.1e18    DYNAMIC     Po20
+ 300    687d.b403.1e38    DYNAMIC     Po20
+ 300    687d.b403.1e40    DYNAMIC     Po20
+ 300    687d.b403.1e44    DYNAMIC     Po20
+ 300    687d.b403.1e50    DYNAMIC     Po20
+ 300    687d.b403.1e54    DYNAMIC     Po20
+ 300    687d.b403.1e74    DYNAMIC     Po20
+ 300    687d.b403.1e7c    DYNAMIC     Po20
+ 300    687d.b403.1e84    DYNAMIC     Po20
+ 300    687d.b403.1e90    DYNAMIC     Po20
+ 300    687d.b403.1e94    DYNAMIC     Po20
+ 300    687d.b403.1e9c    DYNAMIC     Po20
+ 300    687d.b403.1ea8    DYNAMIC     Po20
+ 300    687d.b403.1eb0    DYNAMIC     Po20
+ 300    687d.b403.1eb4    DYNAMIC     Po20
+ 300    687d.b403.1ec0    DYNAMIC     Po20
+ 300    687d.b403.1ec4    DYNAMIC     Po20
+ 300    687d.b403.1edc    DYNAMIC     Po20
+ 300    687d.b403.1ee8    DYNAMIC     Po20
+ 300    687d.b403.1ef8    DYNAMIC     Po20
+ 300    687d.b403.1efc    DYNAMIC     Po20
+ 300    687d.b403.1f0c    DYNAMIC     Po20
+ 300    687d.b403.1f10    DYNAMIC     Po20
+ 300    687d.b403.1f30    DYNAMIC     Po20
+ 300    687d.b403.1f38    DYNAMIC     Po20
+ 300    687d.b403.1f58    DYNAMIC     Po20
+ 300    687d.b403.1f6c    DYNAMIC     Po20
+ 300    687d.b403.1f74    DYNAMIC     Po20
+ 300    687d.b403.1f80    DYNAMIC     Po20
+ 300    687d.b403.1f88    DYNAMIC     Po20
+ 300    687d.b403.1f8c    DYNAMIC     Po20
+ 300    687d.b403.1f9c    DYNAMIC     Po20
+ 300    687d.b403.1fa8    DYNAMIC     Po20
+ 300    687d.b403.1fbc    DYNAMIC     Po20
+ 300    687d.b403.1fc4    DYNAMIC     Po20
+ 300    687d.b403.1fc8    DYNAMIC     Po20
+ 300    687d.b403.1fd0    DYNAMIC     Po20
+ 300    687d.b403.1fd4    DYNAMIC     Po20
+ 300    687d.b403.2030    DYNAMIC     Po20
+ 300    687d.b403.2034    DYNAMIC     Po20
+ 300    687d.b403.20e0    DYNAMIC     Po20
+ 300    687d.b403.21a8    DYNAMIC     Po20
+ 300    687d.b403.24b8    DYNAMIC     Po20
+ 300    687d.b403.24c0    DYNAMIC     Po20
+ 300    687d.b403.24c4    DYNAMIC     Po20
+ 300    687d.b403.24cc    DYNAMIC     Po20
+ 300    687d.b403.24e0    DYNAMIC     Po20
+ 300    687d.b403.24ec    DYNAMIC     Po20
+ 300    687d.b403.24f0    DYNAMIC     Po20
+ 300    687d.b403.2500    DYNAMIC     Po20
+ 300    687d.b403.2504    DYNAMIC     Po20
+ 300    687d.b403.2508    DYNAMIC     Po20
+ 300    687d.b403.250c    DYNAMIC     Po20
+ 300    687d.b403.2510    DYNAMIC     Po20
+ 300    687d.b403.2514    DYNAMIC     Po20
+ 300    687d.b403.2518    DYNAMIC     Po20
+ 300    687d.b403.251c    DYNAMIC     Po20
+ 300    687d.b403.2528    DYNAMIC     Po20
+ 300    687d.b403.2530    DYNAMIC     Po20
+ 300    687d.b403.25f0    DYNAMIC     Po20
+ 300    687d.b403.25f4    DYNAMIC     Po20
+ 300    687d.b403.25fc    DYNAMIC     Po20
+ 300    687d.b403.262c    DYNAMIC     Po20
+ 300    687d.b403.2630    DYNAMIC     Po20
+ 300    687d.b403.2668    DYNAMIC     Po20
+ 300    687d.b403.266c    DYNAMIC     Po20
+ 300    687d.b403.2680    DYNAMIC     Po20
+ 300    687d.b403.282c    DYNAMIC     Po20
+ 300    687d.b403.2840    DYNAMIC     Po20
+ 300    687d.b403.2848    DYNAMIC     Po20
+ 300    687d.b403.2850    DYNAMIC     Po20
+ 300    687d.b403.28b8    DYNAMIC     Po20
+ 300    687d.b403.28bc    DYNAMIC     Po20
+ 300    687d.b403.28d8    DYNAMIC     Po20
+ 300    687d.b403.29ac    DYNAMIC     Po20
+ 300    687d.b403.29f0    DYNAMIC     Po20
+ 300    687d.b403.2a40    DYNAMIC     Po20
+ 300    687d.b403.2a5c    DYNAMIC     Po20
+ 300    687d.b403.2afc    DYNAMIC     Po20
+ 300    687d.b403.2b04    DYNAMIC     Po20
+ 300    687d.b403.2b10    DYNAMIC     Po20
+ 300    687d.b403.2b14    DYNAMIC     Po20
+ 300    687d.b403.2b18    DYNAMIC     Po20
+ 300    687d.b403.2bc0    DYNAMIC     Po20
+ 300    687d.b403.2bd8    DYNAMIC     Po20
+ 300    687d.b403.2bfc    DYNAMIC     Po20
+ 300    687d.b403.2c8c    DYNAMIC     Po20
+ 300    687d.b403.2c94    DYNAMIC     Po20
+ 300    687d.b403.2c9c    DYNAMIC     Po20
+ 300    687d.b403.2d80    DYNAMIC     Po20
+ 300    687d.b403.2d88    DYNAMIC     Po20
+ 300    687d.b403.2df4    DYNAMIC     Po20
+ 300    687d.b403.2e14    DYNAMIC     Po20
+ 300    687d.b403.2eb4    DYNAMIC     Po20
+ 300    687d.b403.2ec4    DYNAMIC     Po20
+ 300    687d.b403.2ed0    DYNAMIC     Po20
+ 300    687d.b403.39c8    DYNAMIC     Po20
+ 300    687d.b403.39d4    DYNAMIC     Po20
+ 300    687d.b403.39d8    DYNAMIC     Po20
+ 300    687d.b403.39e0    DYNAMIC     Po20
+ 300    687d.b403.4e58    DYNAMIC     Po20
+ 300    689e.0b04.42bf    DYNAMIC     Po20
+ 300    689e.0b26.4cc7    DYNAMIC     Po20
+ 300    689e.0b2d.9247    DYNAMIC     Po20
+ 300    689e.0b2e.0c47    DYNAMIC     Po20
+ 300    689e.0b30.9ac7    DYNAMIC     Po20
+ 300    689e.0b6f.1bc7    DYNAMIC     Po20
+ 300    689e.0b74.9847    DYNAMIC     Po20
+ 300    689e.0b74.9ac7    DYNAMIC     Po20
+ 300    689e.0b74.9b47    DYNAMIC     Po20
+ 300    689e.0b74.9c47    DYNAMIC     Po20
+ 300    689e.0b74.9cc7    DYNAMIC     Po20
+ 300    689e.0bae.63c7    DYNAMIC     Po20
+ 300    689e.0bae.7a47    DYNAMIC     Po20
+ 300    689e.0bae.7b47    DYNAMIC     Po20
+ 300    689e.0bae.97c7    DYNAMIC     Po20
+ 300    689e.0bae.9cc7    DYNAMIC     Po20
+ 300    689e.0bb6.6347    DYNAMIC     Po20
+ 300    689e.0bb6.86c7    DYNAMIC     Po20
+ 300    689e.0bb6.91c7    DYNAMIC     Po20
+ 300    689e.0bb6.a447    DYNAMIC     Po20
+ 300    689e.0bb6.dc47    DYNAMIC     Po20
+ 300    689e.0bb7.42c7    DYNAMIC     Po20
+ 300    689e.0bb8.7b47    DYNAMIC     Po20
+ 300    689e.0bb8.83c7    DYNAMIC     Po20
+ 300    689e.0bb8.b7c7    DYNAMIC     Po20
+ 300    689e.0bb8.e3c7    DYNAMIC     Po20
+ 300    689e.0bb8.f347    DYNAMIC     Po20
+ 300    689e.0bb8.f8c7    DYNAMIC     Po20
+ 300    689e.0bb9.02c7    DYNAMIC     Po20
+ 300    689e.0bb9.1b47    DYNAMIC     Po20
+ 300    689e.0bb9.1fc7    DYNAMIC     Po20
+ 300    689e.0bb9.6ec7    DYNAMIC     Po20
+ 300    689e.0bba.15ba    DYNAMIC     Po20
+ 300    689e.0bba.15c7    DYNAMIC     Po20
+ 300    689e.0bba.42c7    DYNAMIC     Po20
+ 300    689e.0bba.4d47    DYNAMIC     Po20
+ 300    689e.0bba.4fc7    DYNAMIC     Po20
+ 300    689e.0bba.5547    DYNAMIC     Po20
+ 300    689e.0bbd.da47    DYNAMIC     Po20
+ 300    689e.0bbd.dac7    DYNAMIC     Po20
+ 300    689e.0bbd.fe47    DYNAMIC     Po20
+ 300    689e.0bbe.62c7    DYNAMIC     Po20
+ 300    689e.0bbe.6347    DYNAMIC     Po20
+ 300    689e.0bbe.65c7    DYNAMIC     Po20
+ 300    689e.0bbe.6ac7    DYNAMIC     Po20
+ 300    689e.0bbe.7347    DYNAMIC     Po20
+ 300    689e.0bbe.7b47    DYNAMIC     Po20
+ 300    689e.0bbe.7cc7    DYNAMIC     Po20
+ 300    689e.0bbe.7e47    DYNAMIC     Po20
+ 300    689e.0bbe.7f47    DYNAMIC     Po20
+ 300    689e.0bbe.80c7    DYNAMIC     Po20
+ 300    689e.0bbe.8cc7    DYNAMIC     Po20
+ 300    689e.0bc1.e8c7    DYNAMIC     Po20
+ 300    689e.0bc1.ebc7    DYNAMIC     Po20
+ 300    689e.0bc1.f047    DYNAMIC     Po20
+ 300    689e.0bc9.70c7    DYNAMIC     Po20
+ 300    689e.0bc9.8d47    DYNAMIC     Po20
+ 300    689e.0bc9.8e47    DYNAMIC     Po20
+ 300    689e.0bc9.8fc7    DYNAMIC     Po20
+ 300    689e.0bc9.9a47    DYNAMIC     Po20
+ 300    689e.0bc9.b9c7    DYNAMIC     Po20
+ 300    689e.0bc9.bac7    DYNAMIC     Po20
+ 300    689e.0bc9.bcc7    DYNAMIC     Po20
+ 300    689e.0bc9.c747    DYNAMIC     Po20
+ 300    689e.0bc9.c947    DYNAMIC     Po20
+ 300    689e.0bc9.ca47    DYNAMIC     Po20
+ 300    689e.0bc9.d147    DYNAMIC     Po20
+ 300    70f0.967f.5730    DYNAMIC     Po20
+ 300    a488.7388.a500    DYNAMIC     Po20
+ 300    a488.7389.e68c    DYNAMIC     Po20
+ 300    a488.7389.f69c    DYNAMIC     Po20
+ 300    a488.73ce.4b68    DYNAMIC     Po20
+ 300    a488.73ce.54b8    DYNAMIC     Po20
+ 300    a488.73ce.550c    DYNAMIC     Po20
+ 300    a488.73ce.55a0    DYNAMIC     Po20
+ 300    a488.73ce.7a0c    DYNAMIC     Po20
+ 300    a488.73cf.06c4    DYNAMIC     Po20
+ 300    a488.73cf.0df4    DYNAMIC     Po20
+ 300    a488.73cf.0ee8    DYNAMIC     Po20
+ 300    a488.73cf.1060    DYNAMIC     Po20
+ 300    a488.73cf.1074    DYNAMIC     Po20
+ 300    a488.73cf.1130    DYNAMIC     Po20
+ 300    a488.73cf.1190    DYNAMIC     Po20
+ 300    a488.73cf.11e4    DYNAMIC     Po20
+ 300    a488.73cf.1458    DYNAMIC     Po20
+ 300    a488.73cf.18ac    DYNAMIC     Po20
+ 300    a488.73cf.1b40    DYNAMIC     Po20
+ 300    a488.73cf.1bb8    DYNAMIC     Po20
+ 300    a488.73cf.1bbc    DYNAMIC     Po20
+ 300    a488.73cf.1d14    DYNAMIC     Po20
+ 300    a488.73cf.1f78    DYNAMIC     Po20
+ 300    a488.73cf.1f94    DYNAMIC     Po20
+ 300    a488.73cf.2084    DYNAMIC     Po20
+ 300    a488.73cf.255c    DYNAMIC     Po20
+ 300    a488.73cf.335c    DYNAMIC     Po20
+ 300    a488.73cf.3ca0    DYNAMIC     Po20
+ 300    a488.73cf.3e38    DYNAMIC     Po20
+ 300    a488.73cf.3fa4    DYNAMIC     Po20
+ 300    a488.73cf.40ac    DYNAMIC     Po20
+ 300    a488.73cf.41c0    DYNAMIC     Po20
+ 300    a488.73cf.5eb4    DYNAMIC     Po20
+ 300    a488.73cf.619c    DYNAMIC     Po20
+ 300    a488.73cf.8580    DYNAMIC     Po20
+ 300    a488.73cf.8588    DYNAMIC     Po20
+ 300    a488.73cf.8750    DYNAMIC     Po20
+ 300    a488.73cf.8898    DYNAMIC     Po20
+ 300    a488.73cf.8918    DYNAMIC     Po20
+ 300    a488.73cf.895c    DYNAMIC     Po20
+ 300    a488.73cf.8ae8    DYNAMIC     Po20
+ 300    a488.73cf.8ba8    DYNAMIC     Po20
+ 300    a488.73cf.8c50    DYNAMIC     Po20
+ 300    a488.73cf.8c54    DYNAMIC     Po20
+ 300    a488.73cf.8c9c    DYNAMIC     Po20
+ 300    a488.73cf.8cac    DYNAMIC     Po20
+ 300    a488.73cf.8cd8    DYNAMIC     Po20
+ 300    a488.73cf.8d2c    DYNAMIC     Po20
+ 300    a488.73cf.9634    DYNAMIC     Po20
+ 300    a488.73cf.96c0    DYNAMIC     Po20
+ 300    a488.73cf.97cc    DYNAMIC     Po20
+ 300    a488.73cf.97fc    DYNAMIC     Po20
+ 300    a488.73cf.9804    DYNAMIC     Po20
+ 300    a488.73cf.98c0    DYNAMIC     Po20
+ 300    a488.73cf.9afc    DYNAMIC     Po20
+ 300    a488.73cf.9c24    DYNAMIC     Po20
+ 300    a488.73cf.9c30    DYNAMIC     Po20
+ 300    a488.73cf.a14c    DYNAMIC     Po20
+ 300    a488.73cf.a58c    DYNAMIC     Po20
+ 300    a488.73cf.b990    DYNAMIC     Po20
+ 300    a488.73cf.c3b4    DYNAMIC     Po20
+ 300    a488.73cf.c840    DYNAMIC     Po20
+ 300    a488.73cf.c950    DYNAMIC     Po20
+ 300    a488.73cf.de64    DYNAMIC     Po20
+ 300    a488.73cf.e290    DYNAMIC     Po20
+ 300    a488.73cf.e3b0    DYNAMIC     Po20
+ 600    58bc.2774.6ac1    DYNAMIC     Po20
+ 600    689e.0bba.15ba    DYNAMIC     Po20
+ 600    689e.0bba.15d6    DYNAMIC     Po20
+ 600    ccd5.39d7.aae7    DYNAMIC     Po20
+2550    689e.0bba.15ba    DYNAMIC     Po20
+2550    689e.0bba.15ca    DYNAMIC     Po20
+2550    705a.0fa8.7455    DYNAMIC     Po20
+2550    b05c.da2e.178f    DYNAMIC     Po20
+2550    b05c.da32.0ad1    DYNAMIC     Po20
+2550    b05c.da33.871f    DYNAMIC     Po20
+2550    b05c.da33.88bb    DYNAMIC     Po20
+2550    b05c.da35.aa99    DYNAMIC     Po20
+2750    0068.eb61.37ff    DYNAMIC     Po20
+2750    1860.24e7.8c2f    DYNAMIC     Po20
+2750    48ba.4edd.d779    DYNAMIC     Po20
+2750    689e.0bba.15ba    DYNAMIC     Po20
+2750    689e.0bba.15cc    DYNAMIC     Po20
+2750    e070.eac1.712e    DYNAMIC     Po20
+Total Mac Addresses for this criterion: 569
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** Layer 3 Status
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.51.0.1             125   0000.0c07.ac02  ARPA   Vlan800
+Internet  10.51.0.167             -   e41f.7bd4.c8d2  ARPA   Vlan800
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip int brief | exclude unassigned
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan800                10.51.0.167     YES NVRAM  up                    up      
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip route static
+Extended Host Mode is enabled
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 10.51.0.1 to network 0.0.0.0
+
+S*    0.0.0.0/0 [0/0] via 10.51.0.1
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip route eigrp
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip eigrp neighbors
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip eigrp interfaces
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show standby brief
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** IECN ARP Table
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show vlan | in IECN 
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show interface status | in 500|_50[1-9]|510|497|498 
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show arp | in Vlan((5)*[0-1][0-9]) 
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show mac address-table | in 500|_50[1-9]|510|530|495|497|498 
+ 300    687d.b403.0510    DYNAMIC     Po20
+ 300    687d.b403.2500    DYNAMIC     Po20
+ 300    687d.b403.2510    DYNAMIC     Po20
+ 300    687d.b403.2530    DYNAMIC     Po20
+ 300    a488.7388.a500    DYNAMIC     Po20
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** Multicast Status
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show ip igmp membership
+Flags: A  - aggregate, T - tracked
+       L  - Local, S - static, V - virtual, R - Reported through v3 
+       I - v3lite, U - Urd, M - SSM (S,G) channel 
+       1,2,3 - The version of IGMP, the group is in
+Channel/Group-Flags: 
+       / - Filtering entry (Exclude mode (S,G), Include mode (G))
+Reporter:
+       <mac-or-ip-address> - last reporter if group is not explicitly tracked
+       <n>/<m>      - <n> reporter in include mode, <m> reporter in exclude
+
+ Channel/Group                  Reporter        Uptime   Exp.  Flags  Interface 
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip pim neighbor
+PIM Neighbor Table
+Mode: B - Bidir Capable, DR - Designated Router, N - Default DR Priority,
+      P - Proxy Capable, S - State Refresh Capable, G - GenID Capable,
+      L - DR Load-balancing Capable
+Neighbor          Interface                Uptime/Expires    Ver   DR
+Address                                                            Prio/Mode
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip mroute summary
+IP Multicast Routing Table
+Flags: D - Dense, S - Sparse, B - Bidir Group, s - SSM Group, C - Connected,
+       L - Local, P - Pruned, R - RP-bit set, F - Register flag,
+       T - SPT-bit set, J - Join SPT, M - MSDP created entry, E - Extranet,
+       X - Proxy Join Timer Running, A - Candidate for MSDP Advertisement,
+       U - URD, I - Received Source Specific Host Report, 
+       Z - Multicast Tunnel, z - MDT-data group sender, 
+       Y - Joined MDT-data group, y - Sending to MDT-data group, 
+       G - Received BGP C-Mroute, g - Sent BGP C-Mroute, 
+       N - Received BGP Shared-Tree Prune, n - BGP C-Mroute suppressed, 
+       Q - Received BGP S-A Route, q - Sent BGP S-A Route, 
+       V - RD & Vector, v - Vector, p - PIM Joins on route, 
+       x - VxLAN group, c - PFP-SA cache created entry, 
+       * - determined by Assert, # - iif-starg configured on rpf intf, 
+       e - encap-helper tunnel flag, l - LISP Decap Refcnt Contributor
+Outgoing interface flags: H - Hardware switched, A - Assert winner, p - PIM Join
+ Timers: Uptime/Expires
+ Interface state: Interface, Next-Hop or VCD, State/Mode
+
+IP Multicast Forwarding is not enabled.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip igmp group
+IGMP Connected Group Membership
+Group Address    Interface                Uptime    Expires   Last Reporter   Group Accounted
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip traffic
+IP statistics:
+  Rcvd:  13641602 total, 7800989 local destination
+         0 format errors, 0 checksum errors, 0 bad hop count
+         0 unknown protocol, 9183839 not a gateway
+         0 security failures, 0 bad options, 2965139 with options
+  Opts:  0 end, 0 nop, 0 basic security, 0 loose source route
+         0 timestamp, 0 extended security, 0 record route
+         0 stream ID, 0 strict source route, 2965139 alert, 0 cipso, 0 ump
+         0 other, 0 ignored
+  Frags: 0 reassembled, 0 timeouts, 0 couldn't reassemble
+         0 fragmented, 0 fragments, 0 couldn't fragment
+         0 invalid hole
+  Bcast: 4115495 received, 0 sent
+  Mcast: 7957594 received, 0 sent
+  Sent:  4013679 generated, 0 forwarded
+  Drop:  19 encapsulation failed, 0 unresolved, 4013537 no adjacency
+         0 no route, 0 unicast RPF, 0 forced drop, 0 unsupported-addr
+         0 options denied, 0 source IP address zero
+
+ICMP statistics:
+  Rcvd: 0 format errors, 3 checksum errors, 0 redirects, 0 unreachable
+        342265 echo, 0 echo reply, 0 mask requests, 0 mask replies, 0 quench
+        0 parameter, 0 timestamp, 0 timestamp replies, 0 info request, 0 other
+        0 irdp solicitations, 0 irdp advertisements
+        0 time exceeded, 0 info replies
+  Sent: 0 redirects, 0 unreachable, 0 echo, 342265 echo reply
+        0 mask requests, 0 mask replies, 0 quench, 0 timestamp, 0 timestamp replies
+        0 info reply, 0 time exceeded, 0 parameter problem
+        0 irdp solicitations, 0 irdp advertisements
+
+UDP statistics:
+  Rcvd: 6721233 total, 0 checksum errors, 4115495 no port 0 finput
+  Sent: 2616269 total, 0 forwarded broadcasts
+
+TCP statistics:
+  Rcvd: 737488 total, 0 checksum errors, 2011 no port
+  Sent: 1055145 total
+
+PIMv2 statistics: Sent/Received
+  Total: 0/0, 0 checksum errors, 0 format errors
+  Registers: 0/0 (0 non-rp, 0 non-sm-group), Register Stops: 0/0,  Hellos: 0/0
+  Join/Prunes: 0/0, Asserts: 0/0, grafts: 0/0
+  Bootstraps: 0/0, Candidate_RP_Advertisements: 0/0
+  Queue drops: 0
+  State-Refresh: 0/0
+
+IGMP statistics: Sent/Received
+  Total: 0/0, Format errors: 0/0, Checksum errors: 0/0
+  Host Queries: 0/0, Host Reports: 0/0, Host Leaves: 0/0 
+  DVMRP: 0/0, PIM: 0/0
+  Queue drops: 0
+  Report VRF mismatch drops: 0
+
+OSPF statistics:
+  Last clearing of OSPF traffic counters never
+  Rcvd: 0 total, 0 checksum errors
+  	0 hello, 0 database desc, 0 link state req
+  	0 link state updates, 0 link state acks
+  Sent: 0 total
+  	0 hello, 0 database desc, 0 link state req
+  	0 link state updates, 0 link state acks
+
+EIGRP-IPv4 statistics:
+  Rcvd: 0 total
+  Sent: 0 total
+
+NHRP statistics:
+   Sent: Total 0
+         0 Resolution Request  0 Resolution Reply  0 Registration Request  
+         0 Registration Reply  0 Purge Request  0 Purge Reply  
+         0 Error Indication  0 Traffic Indication  0 Redirect Suppress  
+   Rcvd: Total 0
+         0 Resolution Request  0 Resolution Reply  0 Registration Request  
+         0 Registration Reply  0 Purge Request  0 Purge Reply  
+         0 Error Indication  0 Traffic Indication  0 Redirect Suppress  
+
+BGP statistics:
+  Rcvd: 0 total, 0 opens, 0 notifications, 0 updates
+        0 keepalives, 0 route-refresh, 0 unrecognized
+  Sent: 0 total, 0 opens, 0 notifications, 0 updates
+        0 keepalives, 0 route-refresh
+
+ARP statistics:
+  Rcvd: 98959 requests, 842 replies, 0 reverse, 0 other
+  Sent: 710 requests, 13131 replies (0 proxy), 0 reverse
+  Drop due to input queue full: 0
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** VRF
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#sh vrf gm-security
+% No VRF named gm-security
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip eigrp vrf gm-security interfaces
+%VRF gm-security does not exist.
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#sh ip route vrf gm-security
+% IP routing table vrf gm-security does not exist
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show ip eigrp vrf gm-security neighbors
+%VRF gm-security does not exist.
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#ping vrf gm-security 192.168.0.1 repeat 50
+vrf gm-security does not exist                                                       ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#sh ip interface brief vlan762
+                                             ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#ping vrf gm-security 192.168.0.1 repeat 50
+vrf gm-security does not exist                                                       ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#sh vlan | in vrf
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#sh int trunk
+
+Port           Mode             Encapsulation  Status        Native vlan  
+Po20           desirable        802.1q         trunking      800
+
+Port           Vlans allowed on trunk
+Po20           300,600,800,2550,2700,2750
+
+Port           Vlans allowed and active in management domain
+Po20           300,600,800,2550,2700,2750
+
+Port           Vlans in spanning tree forwarding state and not pruned
+Po20           300,600,800,2550,2700,2750
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** Show Logging and running-config
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#show log
+Syslog logging: enabled (0 messages dropped, 2 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+Active Message Discriminator:
+FILTER    facility       drops    DOT1X|MAB|SESSION_MGR
+
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level informational, 2522 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level informational, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level informational, 2527 messages logged, xml disabled,
+                    filtering disabled, discriminator(FILTER), 
+                     0 messages rate-limited, 0 messages dropped-by-MD
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    File logging: disabled
+    Persistent logging: enabled, url flash:/syslog, disk space 5120000 bytes, file size 500000 bytes, batch size 4096 bytes, threshold capacity 0  , immediate  
+
+No active filter modules.
+
+    Trap logging: level informational, 2523 message lines logged
+        Logging to 148.93.49.21  (udp port 5012, audit disabled,
+              link up),
+              2522 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.129.8  (udp port 5012, audit disabled,
+              link up),
+              2523 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 148.93.115.30  (udp port 5500, audit disabled,
+              link up),
+              2523 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.83.30  (udp port 5500, audit disabled,
+              link up),
+              2523 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging Source-Interface:       VRF Name:
+        Vlan800                         
+    TLS Profiles: 
+
+Log Buffer (40960 bytes):
+17 19:14:58.130: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Fri Mar 17 2023
+Mar 17 19:14:59.165: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 18 01:06:32.001: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:06:32 UTC Sat Mar 18 2023
+Mar 18 01:08:30.800: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 18 02:43:28.364: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:43:28 UTC Sat Mar 18 2023
+Mar 18 02:43:39.488: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Mar 18 02:59:10.959: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:59:10 UTC Sat Mar 18 2023
+Mar 18 03:17:15.098: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Mar 18 09:01:03.118: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:01:03 UTC Sat Mar 18 2023
+Mar 18 09:01:05.394: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 18 13:03:31.669: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:03:31 UTC Sat Mar 18 2023
+Mar 18 13:05:23.342: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 18 16:00:27.315: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:00:27 UTC Sat Mar 18 2023
+Mar 18 16:00:32.549: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 18 19:14:57.848: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:57 UTC Sat Mar 18 2023
+Mar 18 19:14:58.860: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 01:05:41.082: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:05:41 UTC Sun Mar 19 2023
+Mar 19 01:07:56.517: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 09:01:37.180: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:01:37 UTC Sun Mar 19 2023
+Mar 19 09:01:39.965: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 13:05:33.767: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:05:33 UTC Sun Mar 19 2023
+Mar 19 13:08:06.360: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 16:00:32.271: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:00:32 UTC Sun Mar 19 2023
+Mar 19 16:00:38.660: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 19:14:59.922: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:59 UTC Sun Mar 19 2023
+Mar 19 19:15:01.606: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 19 22:11:03.292: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:03 UTC Sun Mar 19 2023
+Mar 19 22:11:03.584: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 19 22:11:04.152: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:04 UTC Sun Mar 19 2023
+Mar 19 22:11:05.689: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:05 UTC Sun Mar 19 2023
+Mar 19 22:11:06.584: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:06 UTC Sun Mar 19 2023
+Mar 19 22:11:07.534: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:07 UTC Sun Mar 19 2023
+Mar 19 22:11:08.393: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:08 UTC Sun Mar 19 2023
+Mar 19 22:11:09.290: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:09 UTC Sun Mar 19 2023
+Mar 19 22:11:10.229: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:11:10 UTC Sun Mar 19 2023
+Mar 19 22:11:13.788: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 20 01:22:15.107: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:22:15 UTC Mon Mar 20 2023
+Mar 20 01:25:23.650: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 09:01:02.167: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:01:02 UTC Mon Mar 20 2023
+Mar 20 09:01:05.166: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 09:04:40.829: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:04:40 UTC Mon Mar 20 2023
+Mar 20 09:04:42.121: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 09:08:04.544: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:08:04 UTC Mon Mar 20 2023
+Mar 20 09:08:05.670: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 12:45:19.830: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 12:45:19 UTC Mon Mar 20 2023
+Mar 20 12:45:20.947: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 13:28:07.399: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:28:07 UTC Mon Mar 20 2023
+Mar 20 13:30:58.499: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 16:01:13.821: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:01:13 UTC Mon Mar 20 2023
+Mar 20 16:01:15.015: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 19:14:59.783: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:59 UTC Mon Mar 20 2023
+Mar 20 19:15:01.393: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 19:30:57.778: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:30:57 UTC Mon Mar 20 2023
+Mar 20 19:30:58.959: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 20 20:08:31.793: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 20:08:31 UTC Mon Mar 20 2023
+Mar 20 20:08:33.442: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 01:08:41.685: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:08:41 UTC Tue Mar 21 2023
+Mar 21 01:09:00.178: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 01:40:01.535: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:40:01 UTC Tue Mar 21 2023
+Mar 21 01:43:20.418: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 09:04:59.743: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:04:59 UTC Tue Mar 21 2023
+Mar 21 09:05:04.048: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 12:45:26.290: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 12:45:26 UTC Tue Mar 21 2023
+Mar 21 12:45:27.462: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 13:05:20.473: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:05:20 UTC Tue Mar 21 2023
+Mar 21 13:07:31.923: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 13:50:10.571: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:50:10 UTC Tue Mar 21 2023
+Mar 21 13:50:25.485: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 13:59:08.293: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:59:08 UTC Tue Mar 21 2023
+Mar 21 13:59:12.963: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 16:00:30.923: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:00:30 UTC Tue Mar 21 2023
+Mar 21 16:00:37.832: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 18:44:17.592: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 18:44:17 UTC Tue Mar 21 2023
+Mar 21 18:44:18.715: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 19:14:58.156: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Tue Mar 21 2023
+Mar 21 19:14:59.158: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 21 21:52:33.326: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 130.172.119.141] [localport: 22] at 21:52:33 UTC Tue Mar 21 2023
+Mar 21 21:52:59.730: %SYS-6-LOGOUT: User as_cz507f has exited tty session 2(130.172.119.141)
+Mar 21 22:06:10.852: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 130.172.119.141] [localport: 22] at 22:06:10 UTC Tue Mar 21 2023
+Mar 21 22:07:00.965: %SYS-6-LOGOUT: User as_cz507f has exited tty session 2(130.172.119.141)
+Mar 21 22:10:15.747: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:15 UTC Tue Mar 21 2023
+Mar 21 22:10:16.044: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 21 22:10:16.616: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:16 UTC Tue Mar 21 2023
+Mar 21 22:10:18.150: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:18 UTC Tue Mar 21 2023
+Mar 21 22:10:19.055: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:19 UTC Tue Mar 21 2023
+Mar 21 22:10:20.045: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:20 UTC Tue Mar 21 2023
+Mar 21 22:10:21.027: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:21 UTC Tue Mar 21 2023
+Mar 21 22:10:21.979: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:21 UTC Tue Mar 21 2023
+Mar 21 22:10:23.024: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:10:23 UTC Tue Mar 21 2023
+Mar 21 22:36:34.985: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 130.172.119.141] [localport: 22] at 22:36:34 UTC Tue Mar 21 2023
+Mar 21 22:39:09.849: %SYS-6-LOGOUT: User as_cz507f has exited tty session 2(130.172.119.141)
+Mar 22 01:05:37.822: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:05:37 UTC Wed Mar 22 2023
+Mar 22 01:07:28.149: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 22 09:01:30.632: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:01:30 UTC Wed Mar 22 2023
+Mar 22 09:01:34.325: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 22 12:45:27.647: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 12:45:27 UTC Wed Mar 22 2023
+Mar 22 12:45:28.774: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 22 13:05:54.574: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:05:54 UTC Wed Mar 22 2023
+Mar 22 13:08:55.573: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 22 16:00:30.144: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:00:30 UTC Wed Mar 22 2023
+Mar 22 16:00:35.032: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 22 19:14:58.014: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Wed Mar 22 2023
+Mar 22 19:14:59.082: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 01:21:37.839: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_qztvwx] [Source: 130.172.119.73] [localport: 22] at 01:21:37 UTC Thu Mar 23 2023
+Mar 23 01:21:47.052: %SYS-6-LOGOUT: User as_qztvwx has exited tty session 2(130.172.119.73)
+Mar 23 01:23:17.152: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 01:23:17 UTC Thu Mar 23 2023
+Mar 23 01:26:06.049: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 09:02:01.441: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 09:02:01 UTC Thu Mar 23 2023
+Mar 23 09:02:05.017: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 12:45:22.871: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 12:45:22 UTC Thu Mar 23 2023
+Mar 23 12:45:23.905: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 13:03:59.878: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 13:03:59 UTC Thu Mar 23 2023
+Mar 23 13:05:51.424: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 16:00:29.476: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 148.93.49.60] [localport: 22] at 16:00:29 UTC Thu Mar 23 2023
+Mar 23 16:00:32.456: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(148.93.49.60)
+Mar 23 19:15:12.436: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:15:12 UTC Thu Mar 23 2023
+Mar 23 19:15:13.474: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 3(148.93.49.60)
+Mar 23 22:09:47.973: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:47 UTC Thu Mar 23 2023
+Mar 23 22:09:48.284: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 23 22:09:48.874: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:48 UTC Thu Mar 23 2023
+Mar 23 22:09:50.333: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:50 UTC Thu Mar 23 2023
+Mar 23 22:09:51.262: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:51 UTC Thu Mar 23 2023
+Mar 23 22:09:52.308: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:52 UTC Thu Mar 23 2023
+Mar 23 22:09:53.256: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:53 UTC Thu Mar 23 2023
+Mar 23 22:09:54.118: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:54 UTC Thu Mar 23 2023
+Mar 23 22:09:55.136: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:55 UTC Thu Mar 23 2023
+Mar 24 01:07:02.475: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:07:02 UTC Fri Mar 24 2023
+Mar 24 01:08:57.754: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 03:09:36.575: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 03:09:36 UTC Fri Mar 24 2023
+Mar 24 03:09:48.799: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 09:00:37.410: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:00:37 UTC Fri Mar 24 2023
+Mar 24 09:00:39.035: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 12:45:23.731: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:23 UTC Fri Mar 24 2023
+Mar 24 12:45:24.768: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 13:05:30.613: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:05:30 UTC Fri Mar 24 2023
+Mar 24 13:07:22.537: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 16:00:13.105: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:13 UTC Fri Mar 24 2023
+Mar 24 16:00:14.411: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 24 17:53:42.160: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_fzg6lw] [Source: 148.93.114.15] [localport: 22] at 17:53:42 UTC Fri Mar 24 2023
+Mar 24 18:25:33.884: %SYS-6-TTY_EXPIRE_TIMER: (exec timer expired, tty 2 (148.93.114.15)), user as_fzg6lw
+Mar 24 18:25:33.884: %SYS-6-LOGOUT: User as_fzg6lw has exited tty session 2(148.93.114.15)
+Mar 24 19:14:58.223: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Fri Mar 24 2023
+Mar 24 19:14:59.347: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 25 01:05:41.429: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:05:41 UTC Sat Mar 25 2023
+Mar 25 01:08:06.514: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 25 02:43:30.919: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:43:30 UTC Sat Mar 25 2023
+Mar 25 02:43:42.041: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Mar 25 02:59:47.531: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:59:47 UTC Sat Mar 25 2023
+Mar 25 03:17:17.444: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Mar 25 09:02:05.313: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:02:05 UTC Sat Mar 25 2023
+Mar 25 09:02:16.813: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 25 13:06:08.683: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:06:08 UTC Sat Mar 25 2023
+Mar 25 13:07:50.820: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 25 16:00:31.920: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:31 UTC Sat Mar 25 2023
+Mar 25 16:00:37.994: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 25 19:14:58.413: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Sat Mar 25 2023
+Mar 25 19:14:59.758: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 01:07:35.349: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:07:35 UTC Sun Mar 26 2023
+Mar 26 01:09:36.813: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 09:02:15.669: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:02:15 UTC Sun Mar 26 2023
+Mar 26 09:02:19.275: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 13:05:45.209: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:05:45 UTC Sun Mar 26 2023
+Mar 26 13:07:41.290: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 16:00:27.643: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:27 UTC Sun Mar 26 2023
+Mar 26 16:00:33.212: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 19:14:59.592: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:59 UTC Sun Mar 26 2023
+Mar 26 19:15:00.698: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 26 22:09:40.642: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:40 UTC Sun Mar 26 2023
+Mar 26 22:09:40.939: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 26 22:09:41.512: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:41 UTC Sun Mar 26 2023
+Mar 26 22:09:46.202: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:46 UTC Sun Mar 26 2023
+Mar 26 22:09:47.103: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:47 UTC Sun Mar 26 2023
+Mar 26 22:09:48.038: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:48 UTC Sun Mar 26 2023
+Mar 26 22:09:48.921: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:48 UTC Sun Mar 26 2023
+Mar 26 22:09:49.829: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:49 UTC Sun Mar 26 2023
+Mar 26 22:09:50.796: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:50 UTC Sun Mar 26 2023
+Mar 26 22:09:51.127: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 27 01:07:41.777: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:07:41 UTC Mon Mar 27 2023
+Mar 27 01:09:41.818: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 09:01:58.635: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:01:58 UTC Mon Mar 27 2023
+Mar 27 09:02:08.178: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 09:05:31.102: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:05:31 UTC Mon Mar 27 2023
+Mar 27 09:05:32.022: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 09:08:22.370: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:08:22 UTC Mon Mar 27 2023
+Mar 27 09:08:23.337: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 12:00:03.572: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:00:03 UTC Mon Mar 27 2023
+Mar 27 12:00:04.691: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 12:45:19.810: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:19 UTC Mon Mar 27 2023
+Mar 27 12:45:20.956: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 13:07:17.277: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:07:17 UTC Mon Mar 27 2023
+Mar 27 13:09:43.782: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 16:00:29.731: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:29 UTC Mon Mar 27 2023
+Mar 27 16:00:34.676: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 27 19:14:58.487: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Mon Mar 27 2023
+Mar 27 19:14:59.486: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 01:10:41.152: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:10:41 UTC Tue Mar 28 2023
+Mar 28 01:12:47.818: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 01:29:37.979: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:29:37 UTC Tue Mar 28 2023
+Mar 28 01:30:21.744: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 09:04:23.414: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:04:23 UTC Tue Mar 28 2023
+Mar 28 09:04:27.404: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 12:45:33.242: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:33 UTC Tue Mar 28 2023
+Mar 28 12:45:36.934: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 12:51:03.021: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:51:03 UTC Tue Mar 28 2023
+Mar 28 12:51:08.734: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 13:22:10.283: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:22:10 UTC Tue Mar 28 2023
+Mar 28 13:24:42.571: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 16:00:28.230: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:28 UTC Tue Mar 28 2023
+Mar 28 16:00:32.021: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 19:14:58.398: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Tue Mar 28 2023
+Mar 28 19:14:59.352: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 28 22:08:55.312: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:08:55 UTC Tue Mar 28 2023
+Mar 28 22:08:55.607: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 28 22:08:56.163: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:08:56 UTC Tue Mar 28 2023
+Mar 28 22:08:57.624: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:08:57 UTC Tue Mar 28 2023
+Mar 28 22:08:58.521: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:08:58 UTC Tue Mar 28 2023
+Mar 28 22:08:59.465: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:08:59 UTC Tue Mar 28 2023
+Mar 28 22:09:00.319: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:00 UTC Tue Mar 28 2023
+Mar 28 22:09:01.213: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:01 UTC Tue Mar 28 2023
+Mar 28 22:09:02.334: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:02 UTC Tue Mar 28 2023
+Mar 29 01:28:42.135: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:28:42 UTC Wed Mar 29 2023
+Mar 29 01:32:04.481: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 29 09:01:35.086: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:01:35 UTC Wed Mar 29 2023
+Mar 29 09:01:38.325: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 29 12:45:23.071: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:23 UTC Wed Mar 29 2023
+Mar 29 12:45:24.446: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 29 13:05:44.165: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:05:44 UTC Wed Mar 29 2023
+Mar 29 13:07:32.664: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 29 15:48:40.247: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_qztvwx] [Source: 148.93.114.161] [localport: 22] at 15:48:40 UTC Wed Mar 29 2023
+Mar 29 16:00:31.693: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:31 UTC Wed Mar 29 2023
+Mar 29 16:00:35.159: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 3(148.93.49.60)
+Mar 29 16:18:44.242: %SYS-6-TTY_EXPIRE_TIMER: (exec timer expired, tty 2 (148.93.114.161)), user as_qztvwx
+Mar 29 16:18:44.242: %SYS-6-LOGOUT: User as_qztvwx has exited tty session 2(148.93.114.161)
+Mar 29 19:14:57.958: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:57 UTC Wed Mar 29 2023
+Mar 29 19:14:58.919: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 01:04:33.839: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:04:33 UTC Thu Mar 30 2023
+Mar 30 01:07:05.812: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 03:19:21.055: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 03:19:21 UTC Thu Mar 30 2023
+Mar 30 03:19:21.353: %SYS-6-LOGOUT: User as_lzz26f has exited tty session 2(148.93.114.122)
+Mar 30 03:19:21.913: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 03:19:21 UTC Thu Mar 30 2023
+Mar 30 09:01:35.130: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:01:35 UTC Thu Mar 30 2023
+Mar 30 09:01:38.300: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 12:45:22.883: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:22 UTC Thu Mar 30 2023
+Mar 30 12:45:24.223: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 13:05:59.425: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:05:59 UTC Thu Mar 30 2023
+Mar 30 13:09:03.621: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 14:55:06.983: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 130.172.119.194] [localport: 22] at 14:55:06 UTC Thu Mar 30 2023
+Mar 30 14:58:27.886: %SYS-6-LOGOUT: User as_cz507f has exited tty session 2(130.172.119.194)
+Mar 30 15:29:33.155: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:33 UTC Thu Mar 30 2023
+Mar 30 15:29:33.478: %SYS-6-LOGOUT: User as_lzz26f has exited tty session 2(148.93.114.122)
+Mar 30 15:29:34.069: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:34 UTC Thu Mar 30 2023
+Mar 30 15:29:35.537: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:35 UTC Thu Mar 30 2023
+Mar 30 15:29:36.468: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:36 UTC Thu Mar 30 2023
+Mar 30 15:29:37.351: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:37 UTC Thu Mar 30 2023
+Mar 30 15:29:38.219: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:38 UTC Thu Mar 30 2023
+Mar 30 15:29:39.085: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:39 UTC Thu Mar 30 2023
+Mar 30 15:29:40.058: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 15:29:40 UTC Thu Mar 30 2023
+Mar 30 16:00:50.247: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:50 UTC Thu Mar 30 2023
+Mar 30 16:00:55.457: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 19:14:58.444: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Thu Mar 30 2023
+Mar 30 19:14:59.419: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 30 19:38:12.295: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_fzg6lw] [Source: 148.93.114.127] [localport: 22] at 19:38:12 UTC Thu Mar 30 2023
+Mar 30 20:08:32.272: %SYS-6-TTY_EXPIRE_TIMER: (exec timer expired, tty 2 (148.93.114.127)), user as_fzg6lw
+Mar 30 20:08:32.272: %SYS-6-LOGOUT: User as_fzg6lw has exited tty session 2(148.93.114.127)
+Mar 30 22:09:20.441: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:20 UTC Thu Mar 30 2023
+Mar 30 22:09:21.351: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 30 22:09:21.920: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:21 UTC Thu Mar 30 2023
+Mar 30 22:09:23.644: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:23 UTC Thu Mar 30 2023
+Mar 30 22:09:24.856: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:24 UTC Thu Mar 30 2023
+Mar 30 22:09:26.020: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:26 UTC Thu Mar 30 2023
+Mar 30 22:09:27.123: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:27 UTC Thu Mar 30 2023
+Mar 30 22:09:28.284: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:28 UTC Thu Mar 30 2023
+Mar 30 22:09:29.549: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:29 UTC Thu Mar 30 2023
+Mar 31 01:07:10.233: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:07:10 UTC Fri Mar 31 2023
+Mar 31 01:08:28.808: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 01:29:48.133: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:29:48 UTC Fri Mar 31 2023
+Mar 31 01:30:29.033: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 09:00:19.750: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:00:19 UTC Fri Mar 31 2023
+Mar 31 09:00:20.721: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 12:45:21.992: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 12:45:21 UTC Fri Mar 31 2023
+Mar 31 12:45:23.219: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 13:21:51.523: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:21:51 UTC Fri Mar 31 2023
+Mar 31 13:25:14.458: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 16:00:33.873: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:33 UTC Fri Mar 31 2023
+Mar 31 16:00:39.321: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Mar 31 19:14:58.660: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Fri Mar 31 2023
+Mar 31 19:14:59.635: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  1 01:04:56.224: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:04:56 UTC Sat Apr 1 2023
+Apr  1 01:06:18.428: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  1 02:44:13.212: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:44:13 UTC Sat Apr 1 2023
+Apr  1 02:44:24.164: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Apr  1 02:58:54.130: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_012] [Source: 148.93.49.26] [localport: 22] at 02:58:54 UTC Sat Apr 1 2023
+Apr  1 03:15:26.401: %SYS-6-LOGOUT: User SI_NAM_52343_P_012 has exited tty session 2(148.93.49.26)
+Apr  1 09:01:44.205: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:01:44 UTC Sat Apr 1 2023
+Apr  1 09:01:47.846: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  1 13:07:04.125: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 13:07:04 UTC Sat Apr 1 2023
+Apr  1 13:09:38.156: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  1 16:00:33.575: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 16:00:33 UTC Sat Apr 1 2023
+Apr  1 16:00:40.326: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  1 19:14:58.446: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 19:14:58 UTC Sat Apr 1 2023
+Apr  1 19:14:59.398: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  2 01:05:06.033: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 01:05:06 UTC Sun Apr 2 2023
+Apr  2 01:07:07.217: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  2 09:01:07.303: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.60] [localport: 22] at 09:01:07 UTC Sun Apr 2 2023
+Apr  2 09:01:09.898: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.60)
+Apr  2 11:16:13.051: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 148.93.114.53] [localport: 22] at 11:16:13 UTC Sun Apr 2 2023
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#show running-config
+Building configuration...
+
+Current configuration : 40366 bytes
+!
+! Last configuration change at 16:53:32 UTC Fri Jan 6 2023 by as_fzg6lw
+! NVRAM config last updated at 16:53:34 UTC Fri Jan 6 2023 by as_fzg6lw
+!
+version 17.6
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service call-home
+platform punt-keepalive disable-kernel-core
+!
+hostname fwaaclasw167-ob-1ctph
+!
+!
+vrf definition Mgmt-vrf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+logging discriminator FILTER facility drops DOT1X|MAB|SESSION_MGR 
+logging buffered discriminator FILTER 40960 informational
+logging persistent url flash:/syslog size 5120000 filesize 500000 immediate
+logging console informational
+logging monitor informational
+enable secret 9 $9$.WdJnHuGz02oNU$Jvw982a0zYCNbJJMbMCvsdLHw93PY9UTlPiPI1lYnlo
+enable password 7 10692448161211190910
+!
+!
+!
+!
+aaa new-model
+!
+!
+aaa authentication login default group tacacs+ local
+aaa authentication enable default group tacacs+ enable
+aaa authentication dot1x default group radius
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group tacacs+ local 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group tacacs+ none 
+aaa authorization network default group radius 
+aaa accounting send stop-record authentication failure
+aaa accounting update newinfo periodic 2880
+aaa accounting dot1x default start-stop group radius
+aaa accounting exec default stop-only group tacacs+
+aaa accounting commands 15 default stop-only group tacacs+
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.51.11.120 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 10.51.11.121 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 148.93.49.192 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 130.172.129.192 server-key 7 063E3A1B785E3E311434015E295C33720F
+!
+aaa session-id common
+process cpu threshold type total rising 60 interval 600 falling 30 interval 600
+boot system switch all flash:packages.conf
+switch 1 provision c9200-24p
+!
+!
+!
+!
+vtp domain fwaac
+vtp mode transparent
+!
+device-sensor filter-list dhcp list DS-dhcp-list
+ option name host-name
+ option name default-ip-ttl
+ option name requested-address
+ option name parameter-request-list
+ option name class-identifier
+ option name client-identifier
+!
+device-sensor filter-list lldp list DS-lldp-list
+ tlv name system-name
+ tlv name system-description
+ tlv name system-capabilities
+!
+device-sensor filter-list cdp list DS-cdp-list
+ tlv name device-name
+ tlv name address-type
+ tlv name capabilities-type
+ tlv name platform-type
+device-sensor filter-spec dhcp include list DS-dhcp-list
+device-sensor filter-spec lldp include list DS-lldp-list
+device-sensor filter-spec cdp include list DS-cdp-list
+device-sensor accounting
+device-sensor notify all-changes
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name fwa.nam.gm.com
+!
+!
+!
+login on-success log
+udld aggressive
+
+!
+!
+authentication mac-move permit
+access-session template monitor
+access-session acl default passthrough
+device-tracking policy IPDT_MAX_10
+ limit address-count 10
+ security-level glean
+ no protocol udp
+ tracking enable reachable-lifetime 10
+!
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment terminal
+ revocation-check none
+!
+crypto pki trustpoint TP-self-signed-2862999263
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-2862999263
+ revocation-check none
+ rsakeypair TP-self-signed-2862999263
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-2862999263
+!
+!
+dot1x system-auth-control
+dot1x critical eapol
+system mtu 9100
+license boot level network-advantage addon dna-advantage
+license smart transport callhome
+!
+!
+diagnostic bootup level minimal
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+archive
+ path flash:backup
+ maximum 7
+ time-period 1440
+memory free low-watermark processor 22870
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause psp
+errdisable recovery cause mrp-miscabling
+errdisable recovery interval 1200
+username localadmin privilege 15 secret 9 $9$O11v1VY7xoHSYU$EPsupoyc2Um4Wu3dDZrZCdFomAHW526WbTsf3UoEptU
+!
+redundancy
+ mode sso
+!
+!
+!
+transceiver type all
+ monitoring
+!
+vlan 300
+ name Multi_TC_RF_VLAN_Management
+!
+vlan 600
+ name IP_phone_Clients-600
+!
+vlan 800
+ name PFCN_L2_Mgmt-vl800
+!
+vlan 999
+ name unused-port
+!
+vlan 2550
+ name VITAL_VLAN-2550
+!
+vlan 2700
+ name Multi-Purpose_VLAN-2700
+!
+vlan 2750
+ name GMONLINE_VLAN-2750
+lldp run
+!
+!
+class-map match-any system-cpp-police-ewlc-control
+  description EWLC Control 
+class-map match-any system-cpp-police-topology-control
+  description Topology control
+class-map match-any system-cpp-police-sw-forward
+  description Sw forwarding, L2 LVX data packets, LOGGING, Transit Traffic
+class-map match-any system-cpp-default
+  description EWLC data, Inter FED Traffic 
+class-map match-any MATH
+ match access-group name MATH
+class-map match-any TRUNK_EGRESS_CLASS-1
+ match cos  5 
+ match dscp 41  42  43  44  45  ef  47 
+class-map match-any TRUNK_EGRESS_CLASS-2
+ match cos  0  3  6  7 
+ match dscp default  cs3  25  af31  27  af32  29  af33 
+ match dscp 31  cs5  cs6  49  50  51  52  53 
+ match dscp 54  55  cs7  57  58  59  60  61 
+ match dscp 62  63 
+class-map match-any system-cpp-police-sys-data
+  description Openflow, Exception, EGR Exception, NFL Sampled Data, RPF Failed
+class-map match-any TRUNK_EGRESS_CLASS-3
+ match cos  2  4 
+ match dscp cs2  17  af21  19  af22  21  af23  23 
+ match dscp cs4  33  af41  35  af42  37  af43  39 
+class-map match-any 50x-OTHER
+ match access-group name IECN
+class-map match-any TRUNK_EGRESS_CLASS-4
+ match cos  1 
+ match dscp 1  2  3  4  5  6  7  cs1 
+ match dscp 9  af11  11  af12  13  af13  15 
+class-map match-any GMOL-BU-AVAMAR
+ match access-group name GMOL-BU-AVAMAR
+class-map match-any system-cpp-police-punt-webauth
+  description Punt Webauth
+class-map match-any system-cpp-police-l2lvx-control
+  description L2 LVX control packets
+class-map match-any VIDEO-SIGNALING
+ match access-group name VIDEO-SIGNALING
+class-map match-any VOICE-SIG
+ match access-group name VOICE-SIG
+class-map match-any system-cpp-police-forus
+  description Forus Address resolution and Forus traffic
+class-map match-any system-cpp-police-multicast-end-station
+  description MCAST END STATION
+class-map match-any VIDEO-TRAFFIC
+ match access-group name VIDEO-TRAFFIC
+class-map match-any system-cpp-police-high-rate-app
+  description High Rate Applications 
+class-map match-any system-cpp-police-multicast
+  description MCAST Data
+class-map match-any HOST_EGRESS_CLASS-4
+ match cos  1 
+ match dscp 1  2  3  4  5  6  7  cs1 
+ match dscp 9  af11  11  af12  13  af13  15 
+class-map match-any system-cpp-police-l2-control
+  description L2 control
+class-map match-any system-cpp-police-dot1x-auth
+  description DOT1X Auth
+class-map match-any HOST_EGRESS_CLASS-2
+ match cos  0  3  6  7 
+ match dscp default  cs3  25  af31  27  af32  29  af33 
+ match dscp 31  cs5  cs6  49  50  51  52  53 
+ match dscp 54  55  cs7  57  58  59  60  61 
+ match dscp 62  63 
+class-map match-any HOST_EGRESS_CLASS-3
+ match cos  2  4 
+ match dscp cs2  17  af21  19  af22  21  af23  23 
+ match dscp cs4  33  af41  35  af42  37  af43  39 
+class-map match-any system-cpp-police-data
+  description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any HOST_EGRESS_CLASS-1
+ match cos  5 
+ match dscp 41  42  43  44  45  ef  47 
+class-map match-any system-cpp-police-stackwise-virt-control
+  description Stackwise Virtual OOB
+class-map match-any INTERLOCK
+ match access-group name CIP
+class-map match-any VOICE
+ match access-group name VOICE
+class-map match-any ALL_OTHER
+ match access-group name ALL_OTHER
+class-map match-any non-client-nrt-class
+class-map match-any NET_MGT
+ match access-group name NET_MGT
+class-map match-any system-cpp-police-routing-control
+  description Routing control and Low Latency
+class-map match-any system-cpp-police-protocol-snooping
+  description Protocol snooping
+class-map match-any system-cpp-police-dhcp-snooping
+  description DHCP snooping
+class-map match-any system-cpp-police-ios-routing
+  description L2 control, Topology control, Routing control, Low Latency
+class-map match-any system-cpp-police-system-critical
+  description System Critical and Gold Pkt
+class-map match-any system-cpp-police-ios-feature
+  description ICMPGEN,BROADCAST,ICMP,L2LVXCntrl,ProtoSnoop,PuntWebauth,MCASTData,Transit,DOT1XAuth,Swfwd,LOGGING,L2LVXData,ForusTraffic,ForusARP,McastEndStn,Openflow,Exception,EGRExcption,NflSampled,RpfFailed
+!
+policy-map HOST_EGRESS_PM
+ class HOST_EGRESS_CLASS-1
+  bandwidth remaining percent 25 
+  queue-buffers ratio 25
+  queue-limit cos 5 percent 100
+ class HOST_EGRESS_CLASS-2
+  bandwidth remaining percent 25 
+  queue-buffers ratio 25
+  queue-limit cos 0 percent 100
+  queue-limit cos 3 percent 100
+  queue-limit cos 6 percent 100
+  queue-limit cos 7 percent 100
+ class HOST_EGRESS_CLASS-3
+  bandwidth remaining percent 25 
+  queue-buffers ratio 25
+  queue-limit cos 2 percent 100
+  queue-limit cos 4 percent 100
+ class HOST_EGRESS_CLASS-4
+  bandwidth remaining percent 25 
+  queue-buffers ratio 24
+  queue-limit cos 1 percent 25
+policy-map PFCN-PHYS
+ class INTERLOCK
+  set dscp cs5
+ class 50x-OTHER
+  set dscp default
+ class MATH
+  set dscp 2
+ class VIDEO-SIGNALING
+  set dscp cs3
+ class VIDEO-TRAFFIC
+  set dscp af41
+ class VOICE-SIG
+  set dscp af31
+ class VOICE
+  set dscp ef
+ class NET_MGT
+  set dscp cs6
+ class GMOL-BU-AVAMAR
+  set dscp 1
+ class ALL_OTHER
+  set dscp cs2
+policy-map system-cpp-policy
+policy-map TRUNK_EGRESS_PM
+ class TRUNK_EGRESS_CLASS-1
+  priority level 1
+  queue-buffers ratio 25
+  queue-limit cos 5 percent 100
+ class TRUNK_EGRESS_CLASS-2
+  bandwidth remaining percent 20 
+  queue-buffers ratio 25
+  queue-limit cos 0 percent 100
+  queue-limit cos 3 percent 100
+  queue-limit cos 6 percent 100
+  queue-limit cos 7 percent 100
+ class TRUNK_EGRESS_CLASS-3
+  bandwidth remaining percent 20 
+  queue-buffers ratio 25
+  queue-limit cos 2 percent 100
+  queue-limit cos 4 percent 100
+ class TRUNK_EGRESS_CLASS-4
+  bandwidth remaining percent 20 
+  queue-buffers ratio 24
+  queue-limit cos 1 percent 25
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ no ip address
+!
+interface Port-channel20
+ description link-to-fwaaclast018
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 300,600,800,2550,2700,2750
+ switchport mode dynamic desirable
+!
+interface GigabitEthernet0/0
+ description unused-port
+ vrf forwarding Mgmt-vrf
+ no ip address
+ shutdown
+!
+interface GigabitEthernet1/0/1
+ description fwaaclaap132-ph-1ctph2
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/2
+ description fwaaclaap133-ph-1ctph1
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/3
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/4
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/5
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/6
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/7
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/8
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/9
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/10
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/11
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-IECN in
+ no logging event link-status
+ shutdown
+ power inline never
+ speed 1000
+ duplex full
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+ service-policy input PFCN-PHYS
+ service-policy output HOST_EGRESS_PM
+!
+interface GigabitEthernet1/0/12
+ description unused_port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/13
+ description unused_port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/14
+ description unused_port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/15
+ description unused_port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/16
+ description unused_port
+ switchport access vlan 999
+ switchport mode access
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/17
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/18
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/19
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/20
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/21
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/22
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/23
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/0/24
+ description unused-port
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ power inline never
+ authentication event fail retry 0 action authorize vlan 999
+ authentication event server dead action authorize vlan 999
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 999
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/1/1
+ description link-to-fwaaclast018-Te1/1/6
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 300,600,800,2550,2700,2750
+ switchport mode dynamic desirable
+ udld port aggressive
+ channel-group 20 mode desirable
+ spanning-tree portfast disable
+ spanning-tree bpduguard disable
+ service-policy output TRUNK_EGRESS_PM
+!
+interface GigabitEthernet1/1/2
+ description link-to-fwaaclast018-Te2/1/6
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 300,600,800,2550,2700,2750
+ switchport mode dynamic desirable
+ shutdown
+ udld port aggressive
+ channel-group 20 mode desirable
+ spanning-tree portfast disable
+ spanning-tree bpduguard disable
+ service-policy output TRUNK_EGRESS_PM
+!
+interface GigabitEthernet1/1/3
+ description unused-port
+ switchport access vlan 999
+ shutdown
+ udld port aggressive
+ service-policy output TRUNK_EGRESS_PM
+!
+interface GigabitEthernet1/1/4
+ description unused-port
+ switchport access vlan 999
+ shutdown
+ udld port aggressive
+ service-policy output TRUNK_EGRESS_PM
+!
+interface TenGigabitEthernet1/1/1
+!
+interface TenGigabitEthernet1/1/2
+ description unused-port
+ switchport access vlan 999
+ shutdown
+ udld port aggressive
+ service-policy output TRUNK_EGRESS_PM
+!
+interface TenGigabitEthernet1/1/3
+ description unused-port
+ switchport access vlan 999
+ shutdown
+ udld port aggressive
+ service-policy output TRUNK_EGRESS_PM
+!
+interface TenGigabitEthernet1/1/4
+ description unused-port
+ switchport access vlan 999
+ shutdown
+ udld port aggressive
+ service-policy output TRUNK_EGRESS_PM
+!
+interface Vlan1
+ description cat9k-L2-base-config-L2MGT-v01.08
+ no ip address
+ shutdown
+!
+interface Vlan800
+ description link-to-fwaaclast018 
+ ip address 10.51.0.167 255.255.254.0
+ no ip redirects
+ no ip proxy-arp
+!
+ip default-gateway 10.51.0.1
+no ip forward-protocol nd
+no ip forward-protocol udp tftp
+no ip forward-protocol udp nameserver
+no ip forward-protocol udp domain
+no ip forward-protocol udp time
+no ip forward-protocol udp netbios-ns
+no ip forward-protocol udp netbios-dgm
+no ip forward-protocol udp tacacs
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip http client source-interface Loopback0
+ip ftp source-interface Vlan800
+ip tftp source-interface Vlan800
+ip tacacs source-interface Vlan800 
+ip ssh source-interface Vlan800
+ip ssh version 2
+ip ssh dscp 48
+!
+!
+!
+ip access-list extended ACL-DEFAULT-GPN
+ 10 deny   ip any 120.17.0.0 0.0.255.255
+ 20 deny   ip any 10.51.7.128 0.0.0.63
+ 30 permit ip any any
+ip access-list extended ALL_OTHER
+ 10 permit ip any any
+ip access-list extended CIP
+ 10 permit udp 120.17.0.0 0.0.255.255 any eq 2222
+ 20 permit udp any eq 2222 120.17.0.0 0.0.255.255
+ip access-list extended GMOL-BU-AVAMAR
+ 10 permit ip 10.51.6.128 0.0.0.63 any
+ip access-list extended IECN
+ 10 permit ip 120.17.0.0 0.0.255.255 any
+ 20 permit ip any 120.17.0.0 0.0.255.255
+ip access-list extended MATH
+ 10 permit ip 120.18.122.0 0.0.1.255 any
+ 20 permit ip any 120.18.122.0 0.0.1.255
+ 30 permit ip 10.51.28.0 0.0.1.255 any
+ 40 permit ip any 10.51.28.0 0.0.1.255
+ 50 permit ip host 120.18.244.158 any
+ 60 permit ip any host 120.18.244.158
+ip access-list extended NET_MGT
+ 10 permit tcp any 120.18.0.0 0.0.1.255 eq 22
+ 20 permit tcp 120.18.0.0 0.0.1.255 eq 22 any
+ 30 permit udp any 120.18.0.0 0.0.1.255 eq snmp
+ 40 permit udp 120.18.0.0 0.0.1.255 eq snmp any
+ 50 permit tcp any 120.18.236.0 0.0.0.255 eq 22
+ 60 permit tcp 120.18.236.0 0.0.0.255 eq 22 any
+ 70 permit udp any 120.18.236.0 0.0.0.255 eq snmp
+ 80 permit udp 120.18.236.0 0.0.0.255 eq snmp any
+ 90 permit tcp any 120.18.245.0 0.0.0.255 eq 22
+ 100 permit udp any 120.18.245.0 0.0.0.255 eq snmp
+ 110 permit tcp any 10.51.0.0 0.0.1.255 eq 22
+ 120 permit tcp 10.51.0.0 0.0.1.255 eq 22 any
+ 130 permit udp any 10.51.0.0 0.0.1.255 eq snmp
+ 140 permit udp 10.51.0.0 0.0.1.255 eq snmp any
+ 150 permit tcp any 10.10.0.0 0.0.255.255 eq 22
+ 160 permit tcp 10.10.0.0 0.0.255.255 eq 22 any
+ 170 permit udp any 10.10.0.0 0.0.255.255 eq snmp
+ 180 permit udp 10.10.0.0 0.0.255.255 eq snmp any
+ 190 permit tcp any 10.51.2.0 0.0.0.255 eq 22
+ 200 permit tcp 10.51.2.0 0.0.0.255 eq 22 any
+ 210 permit udp any 10.51.2.0 0.0.0.255 eq snmp
+ 220 permit udp 10.51.2.0 0.0.0.255 eq snmp any
+ 230 permit tcp any 10.51.3.0 0.0.0.127 eq 22
+ 240 permit udp any 10.51.3.128 0.0.0.127 eq snmp
+ 250 permit tcp any 10.51.3.128 0.0.0.31 eq 22
+ 260 permit udp any 10.51.3.128 0.0.0.31 eq snmp
+ip access-list extended VIDEO-SIGNALING
+ 10 permit tcp 10.176.0.0 0.3.255.255 any range 5060 5061
+ 20 permit udp 10.176.0.0 0.3.255.255 any range 5060 5061
+ 30 permit tcp 10.176.0.0 0.3.255.255 range 5060 5061 any
+ 40 permit udp 10.176.0.0 0.3.255.255 range 5060 5061 any
+ip access-list extended VIDEO-TRAFFIC
+ 10 permit udp 10.176.0.0 0.3.255.255 any range 16384 32768
+ 20 permit tcp 10.176.0.0 0.3.255.255 any range 16384 32768
+ 30 permit udp 10.176.0.0 0.3.255.255 range 16384 32768 any
+ 40 permit tcp 10.176.0.0 0.3.255.255 range 16384 32768 any
+ip access-list extended VOICE
+ 10 permit udp 11.0.0.0 0.255.255.255 any range 16384 32767
+ 20 permit udp 10.160.0.0 0.15.255.255 any range 16384 32767
+ 30 permit udp 120.18.255.0 0.0.0.255 any range 16384 32767
+ 40 permit udp 10.51.19.0 0.0.0.255 any range 16384 32767
+ 50 permit udp 120.18.128.0 0.0.31.255 any range 16384 32767
+ 60 permit udp 120.18.64.0 0.0.31.255 any range 16384 32767
+ 70 permit udp 120.18.96.0 0.0.1.255 any range 16384 32767
+ 80 permit udp 120.18.98.0 0.0.0.255 any range 16384 32767
+ 90 permit udp 10.51.96.0 0.0.31.255 any range 16384 32767
+ip access-list extended VOICE-SIG
+ 10 permit udp 120.18.255.0 0.0.0.255 any range 5060 5061
+ 20 permit udp 10.51.19.0 0.0.0.255 any range 5060 5061
+ 30 permit udp 120.18.128.0 0.0.31.255 any range 5060 5061
+ 40 permit udp 120.18.64.0 0.0.31.255 any range 5060 5061
+ 50 permit udp 120.18.96.0 0.0.1.255 any range 5060 5061
+ 60 permit udp 120.18.98.0 0.0.0.255 any range 5060 5061
+ 70 permit udp 10.51.96.0 0.0.31.255 any range 5060 5061
+ 80 permit tcp 120.18.255.0 0.0.0.255 any range 5060 5061
+ 90 permit tcp 10.51.19.0 0.0.0.255 any range 5060 5061
+ 100 permit tcp 120.18.128.0 0.0.31.255 any range 5060 5061
+ 110 permit tcp 120.18.64.0 0.0.31.255 any range 5060 5061
+ 120 permit tcp 120.18.96.0 0.0.1.255 any range 5060 5061
+ 130 permit tcp 120.18.98.0 0.0.0.255 any range 5060 5061
+ 140 permit tcp 10.51.96.0 0.0.31.255 any range 5060 5061
+ 150 permit tcp 120.18.255.0 0.0.0.255 any eq 2000
+ 160 permit tcp 10.51.19.0 0.0.0.255 any eq 2000
+ 170 permit tcp 120.18.128.0 0.0.31.255 any eq 2000
+ 180 permit tcp 120.18.64.0 0.0.31.255 any eq 2000
+ 190 permit tcp 120.18.96.0 0.0.1.255 any eq 2000
+ 200 permit tcp 120.18.98.0 0.0.0.255 any eq 2000
+ 210 permit tcp 10.51.96.0 0.0.31.255 any eq 2000
+ 220 permit tcp 0.0.96.0 0.0.31.255 any eq 2000
+ 230 permit udp 11.0.0.0 0.255.255.255 any range 5060 5061
+ 240 permit tcp 11.0.0.0 0.255.255.255 any range 5060 5061
+ 250 permit udp 10.160.0.0 0.15.255.255 any range 5060 5061
+ 260 permit tcp 10.160.0.0 0.15.255.255 any range 5060 5061
+ 270 permit tcp 11.0.0.0 0.255.255.255 any eq 2000
+ 280 permit tcp 10.160.0.0 0.15.255.255 any eq 2000
+ 290 permit tcp 11.0.0.0 0.255.255.255 any eq 1720
+ 300 permit tcp 10.160.0.0 0.15.255.255 any eq 1720
+ip radius source-interface Vlan800 
+logging source-interface Vlan800
+logging host 148.93.49.21 transport udp port 5012
+logging host 130.172.129.8 transport udp port 5012
+logging host 148.93.115.30 transport udp port 5500
+logging host 130.172.83.30 transport udp port 5500
+ip access-list standard 93
+ 10 remark version 1.0
+ 10 remark GM monitor/manage center in Warren
+ 10 permit 148.93.114.0 0.0.0.255
+ 20 permit 148.93.49.0 0.0.0.255
+ 30 permit 148.93.144.0 0.0.1.255
+ 40 permit 148.93.146.0 0.0.1.255
+ 50 permit 148.93.148.0 0.0.1.255
+ 60 permit 10.14.9.251
+ 70 permit 148.93.50.0 0.0.0.255
+ 80 remark GM monitor/manage center in Milford
+ 80 permit 130.172.119.0 0.0.0.255
+ 90 permit 130.172.129.0 0.0.0.255
+ 100 permit 130.172.100.0 0.0.1.255
+ 110 permit 130.172.36.0 0.0.1.255
+ 120 permit 130.172.42.0 0.0.1.255
+ 130 remark GM monitor/manage center in Singapore
+ 130 permit 10.147.62.128 0.0.0.127
+ 140 permit 10.147.52.128 0.0.0.127
+ 150 remark Plant Cores
+ 150 permit 10.0.3.129 0.255.0.0
+ 160 permit 10.0.3.130 0.255.0.0
+ 170 permit 10.0.131.129 0.255.0.0
+ 180 permit 10.0.131.130 0.255.0.0
+!
+snmp-server group V3-RO v3 auth read V3ROVIEW 
+snmp-server group V3-RW v3 auth write V3RWVIEW 
+snmp-server view V3ROVIEW iso included
+snmp-server view V3RWVIEW iso included
+snmp-server trap-source Vlan800
+snmp-server location NUSFWA | ROANOKE INDIANA | 12200 LAFAYETTE CENTER RD | 1 |  OUT BUILDING | CTPH | GM-LAN-GRP | PLANT
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps port-security
+snmp-server enable traps fru-ctrl
+snmp-server enable traps flash insertion
+snmp-server enable traps flash removal
+snmp-server enable traps entity
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+snmp-server enable traps ipsla
+snmp-server enable traps bgp
+snmp-server enable traps vlan-membership
+snmp-server enable traps mac-notification change move threshold
+snmp-server host 10.51.11.203 informs version 3 auth V3NetMgtRO 
+snmp-server host 10.51.11.203 version 3 auth V3NetMgtRO 
+snmp ifmib ifindex persist
+tacacs-server directed-request
+tacacs server DCW-1
+ address ipv4 148.93.49.176
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCM-1
+ address ipv4 130.172.129.176
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCW-2
+ address ipv4 148.93.49.177
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCM-2
+ address ipv4 130.172.129.177
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+!
+!
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server attribute 31 mac format ietf
+radius-server retry method reorder
+!
+radius server LOCAL-ISE-1
+ address ipv4 10.51.11.120 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server LOCAL-ISE-2
+ address ipv4 10.51.11.121 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server CENTRAL-ISE-1
+ address ipv4 148.93.49.192 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server CENTRAL-ISE-2
+ address ipv4 130.172.129.192 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+!
+!
+control-plane
+ service-policy input system-cpp-policy
+!
+banner login ^CC
+******************************************************************************
+Use of this system is restricted to authorized users. User activity
+is monitored and recorded. Anyone using this system expressly consents to such
+monitoring and recording. BE ADVISED: if possible criminal activity or
+unauthorized changes are detected, system records along with certain personal
+information may be provided to management and/or appropriate authorities. 
+
+Requires AS_Zid account
+******************************************************************************
+^C
+!
+line con 0
+ exec-timeout 30 0
+ password 7 124D021A141C0D0529242A242A
+ stopbits 1
+line aux 0
+line vty 0 4
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 025203560D110E204F4107151C
+ transport input ssh
+line vty 5 15
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 1351101F0D1B052B282B263F2C
+ transport input ssh
+!
+ntp source Vlan800
+ntp server 10.51.3.129
+ntp server 10.51.3.130
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ no http secure server-identity-check
+ profile "CiscoTAC-1"
+  no reporting smart-licensing-data
+  destination transport-method http
+ profile "Site-Engineering-LAN"
+  reporting smart-licensing-data
+  destination transport-method http
+  no destination transport-method email
+  destination address http https://148.93.145.110:443/Transportgateway/services/DeviceRequestHandler 
+!
+mac address-table notification change
+!
+!
+!
+!
+!
+end
+
+fwaaclasw167-ob-1ctph#!
+
+fwaaclasw167-ob-1ctph#! *************************************************
+
+fwaaclasw167-ob-1ctph#! **** END
+
+fwaaclasw167-ob-1ctph#! *************************************************

@@ -1,0 +1,4 @@
+GigabitEthernet1/0/24
+GigabitEthernet2/0/24
+GigabitEthernet1/0/1
+GigabitEthernet2/0/1

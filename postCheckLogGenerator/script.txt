@@ -1,0 +1,31 @@
+routing-context vrf  IECN
+!
+!
+term len 0
+show boot
+show version
+show clock
+show ntp status
+show spanning-tree | include VLAN|this bridge
+show ip interface brief | exclude unassigned
+show interface counters errors
+show ip route static
+show ip eigrp interface
+show standby brief
+show cdp neighbor
+show vlan
+show log
+show interface trunk
+show interface status | inc connected
+show power inline
+show interfaces | include Vlan
+show mac address-table
+show switch detail
+show env all
+show ip arp
+show arp | in Vlan((5)*[0-1][0-9])
+show license status
+show license all
+show license right-to-use
+!
+!

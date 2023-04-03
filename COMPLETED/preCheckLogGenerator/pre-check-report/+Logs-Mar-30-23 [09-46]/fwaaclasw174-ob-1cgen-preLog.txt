@@ -1,0 +1,1967 @@
+
+fwaaclasw174-ob-1cgen#!STEPS for VALIDATION for Layer 3
+
+fwaaclasw174-ob-1cgen#terminal length 0
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** Switch STATUS
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show boot
+Current Boot Variables:
+BOOT variable = flash:packages.conf;
+
+Boot Variables on next reload:
+BOOT variable = flash:packages.conf;
+Config file = flash:/nvram_config
+ENABLE_FLASH_PRIMARY_BOOT = no
+MANUAL_BOOT variable = no
+ENABLE_BREAK variable = yes
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show clock
+14:56:44.784 UTC Thu Mar 30 2023
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ntp status
+Clock is synchronized, stratum 5, reference is 10.51.3.130    
+nominal freq is 250.0000 Hz, actual freq is 249.9308 Hz, precision is 2**10
+ntp uptime is 14740700 (1/100 of seconds), resolution is 4016
+reference time is E7D01F37.B851ED80 (14:46:15.720 UTC Thu Mar 30 2023)
+clock offset is -3.5000 msec, root delay is 17.26 msec
+root dispersion is 31.93 msec, peer dispersion is 1.97 msec
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is 0.000001067 s/s
+system poll interval is 1024, last update was 630 sec ago.
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show env all
+ALARM CONTACT 1
+   Status:      not asserted
+   Description: external alarm contact 1
+   Severity:    minor
+   Trigger:     closed
+ALARM CONTACT 2
+   Status:      not asserted
+   Description: external alarm contact 2
+   Severity:    minor
+   Trigger:     closed
+
+Supervisor Temperature Value: 74 C
+Temperature State: GREEN
+
+System Temperature thresholds
+-------------------------------
+Minor Threshold    : 80 C (Yellow)
+Major Threshold    : 90 C (Red)
+Critical Threshold : 96 C 
+Shutdown Threshold : 105 C 
+
+Pwr Supply         Type     Status
+
+------------------------------------
+POWER SUPPLY-A      DC      OK
+
+POWER SUPPLY-B      DC      Alarm Disabled
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show power
+Chassis type: IE-3400-8P2S
+
+Slot      Type                State                 
+--------- ------------------- --------------------- 
+R0        IE-3400-8P2S        ok, active            
+F0                            ok                    
+
+Slot      Type                State                 Capacity (W) 
+--------- ------------------- --------------------- ------------ 
+P0        Unknown             ok                    480          
+
+Power Type: DC
+Power Redundancy Mode: None
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show stackwise-virtual
+                                ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show switch detail
+                                  ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show stack-power detail
+                                ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#sh interfaces transceiver
+No transceiver present
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show license status
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: cslu
+  Cslu address: <empty>
+  Proxy:
+    Not Configured
+
+Policy:
+  Policy in use: Merged from multiple sources.
+  Reporting ACK required: yes (CISCO default)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 365 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 90 (CISCO default)
+    Reporting frequency (days): 90 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+
+Miscellaneous:
+  Custom Id: <empty>
+
+Usage Reporting:
+  Last ACK received: <none>
+  Next ACK deadline: Mar 11 13:08:54 2023 UTC
+  Reporting push interval: 30  days
+  Next ACK push check: <none>
+  Next report push: Mar 28 22:01:32 2023 UTC
+  Last report push: <none>
+  Last report file write: <none>
+
+Trust Code Installed: <none>
+
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show platform
+Switch  Ports    Model                Serial No.   MAC address     Hw Ver.       Sw Ver. 
+------  -----   ---------             -----------  --------------  -------       --------
+ 1       18     IE-3400-8P2S          FCW2443P3M9  dc77.4ce2.3480  13            17.03.03a     
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** VTP and VLAN
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show vtp status
+VTP Version capable             : 1 to 3
+VTP version running             : 1
+VTP Domain Name                 : fwaac
+VTP Pruning Mode                : Disabled
+VTP Traps Generation            : Enabled
+Device ID                       : dc77.4ce2.3480
+Configuration last modified by 0.0.0.0 at 0-0-00 00:00:00
+
+Feature VLAN:
+--------------
+VTP Operating Mode                : Transparent
+Maximum VLANs supported locally   : 259
+Number of existing VLANs          : 8
+Configuration Revision            : 0
+MD5 digest                        : 0xFC 0xBD 0x83 0xA8 0x3A 0x5B 0xD1 0xE4 
+                                    0xC0 0xD8 0x47 0x43 0x6A 0x20 0x41 0x75 
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show vlan
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Ap1/1
+600  IP_phone_Clients-600             active    
+800  PFCN_L2_Mgmt-vl800               active    Gi1/2
+999  unused-port                      active    
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+2550 VITAL_VLAN-2550                  active    
+2700 Multi-Purpose_VLAN-2700          active    Gi1/3, Gi1/4, Gi1/5, Gi1/6, Gi1/7, Gi1/8, Gi1/9, Gi1/10, Gi2/1, Gi2/2, Gi2/3, Gi2/4, Gi2/5, Gi2/6, Gi2/7, Gi2/8
+2750 GMONLINE_VLAN-2750               active    
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+600  enet  100600     1500  -      -      -        -    -        0      0   
+800  enet  100800     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+2550 enet  102550     1500  -      -      -        -    -        0      0   
+2700 enet  102700     1500  -      -      -        -    -        0      0   
+2750 enet  102750     1500  -      -      -        -    -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show spanning-tree | include VLAN|This bridge
+VLAN0001
+             This bridge is the root
+VLAN0600
+VLAN0800
+VLAN2550
+VLAN2700
+VLAN2750
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** Layer 2 Status
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show cdp neighbors
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+fwaaclast057-ob-1cgen.fwa.nam.gm.com
+                 Gig 1/1           140             R S I  C9300-48U Two 1/0/3
+
+Total cdp entries displayed : 1
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface counters errors
+
+Port        Align-Err    FCS-Err   Xmit-Err    Rcv-Err UnderSize OutDiscards
+Gi1/1               0          0          0          0         0           0
+Gi1/2               0          0          0          0         0           0
+Gi1/3               0          0          0          0         0           0
+Gi1/4               0          0          0          0         0           0
+Gi1/5               0          0          0          0         0           0
+Gi1/6               0          0          0          0         0           0
+Gi1/7               0          0          0          0         0           0
+Gi1/8               0          0          0          0         0           0
+Gi1/9               0          0          0          0         0           0
+Gi1/10              0          0          0          0         0           0
+Ap1/1               0          0          0          0         0           0
+Gi2/1               0          0          0          0         0           0
+Gi2/2               0          0          0          0         0           0
+Gi2/3               0          0          0          0         0           0
+Gi2/4               0          0          0          0         0           0
+Gi2/5               0          0          0          0         0           0
+Gi2/6               0          0          0          0         0           0
+Gi2/7               0          0          0          0         0           0
+Gi2/8               0          0          0          0         0           0
+Po1                 0          0          0          0         0           0
+
+Port      Single-Col Multi-Col  Late-Col Excess-Col Carri-Sen     Runts    Giants
+Gi1/1              0         0         0          0         0         0         0
+Gi1/2              0         0         0          0         0         0         0
+Gi1/3              0         0         0          0         0         0         0
+Gi1/4              0         0         0          0         0         0         0
+Gi1/5              0         0         0          0         0         0         0
+Gi1/6              0         0         0          0         0         0         0
+Gi1/7              0         0         0          0         0         0         0
+Gi1/8              0         0         0          0         0         0         0
+Gi1/9              0         0         0          0         0         0         0
+Gi1/10             0         0         0          0         0         0         0
+Ap1/1              0         0         0          0         0         0         0
+Gi2/1              0         0         0          0         0         0         0
+Gi2/2              0         0         0          0         0         0         0
+Gi2/3              0         0         0          0         0         0         0
+Gi2/4              0         0         0          0         0         0         0
+Gi2/5              0         0         0          0         0         0         0
+Gi2/6              0         0         0          0         0         0         0
+Gi2/7              0         0         0          0         0         0         0
+Gi2/8              0         0         0          0         0         0         0
+Po1                0         0         0          0         0         0         0
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Gi1/1        link-to-fwaac-la-o connected    trunk      a-full a-1000 10/100/1000BaseTX SFP
+Gi1/2        link-to-fwaac-la-o notconnect   800          auto   auto unknown
+Gi1/3        UNUSED             notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi1/4        Engine x PLC       notconnect   2700         full    100 10/100/1000BaseTX
+Gi1/5        FWAGEN-x-SATAC     notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi1/6        Engine x PLC       notconnect   2700         full    100 10/100/1000BaseTX
+Gi1/7        FWAGEN-x-SATAC     notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi1/8        FWAGEN-x-RLY       notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi1/9        FWAGEN-x-DSLC      notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi1/10       FWAGEN-x-HMI       notconnect   2700         full    100 10/100/1000BaseTX
+Ap1/1                           connected    1            full   1000 NO PHY XCVR
+Gi2/1        FWAGEN-x-RLY       notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi2/2        FWAGEN-x-DSLC      notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi2/3        FWAGEN-x-HMI       notconnect   2700         full    100 10/100/1000BaseTX
+Gi2/4        FWAGEN-x-PL1000E   notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi2/5        FWAGEN-x-PL1000E   notconnect   2700         auto   auto 10/100/1000BaseTX
+Gi2/6        FWAGEN-PLNT-HMI    notconnect   2700         full    100 10/100/1000BaseTX
+Gi2/7        FWAGEN-PLNT-PLC    notconnect   2700         full    100 10/100/1000BaseTX
+Gi2/8        FWAGEN-PLNT-MODBUS notconnect   2700         auto   auto 10/100/1000BaseTX
+Po1          link-to-fwaac-la-o connected    trunk      a-full a-1000 N/A
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface status | in connected
+Gi1/1        link-to-fwaac-la-o connected    trunk      a-full a-1000 10/100/1000BaseTX SFP
+Ap1/1                           connected    1            full   1000 NO PHY XCVR
+Po1          link-to-fwaac-la-o connected    trunk      a-full a-1000 N/A
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show authentication sessions
+No sessions currently exist
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show power inline | in on
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface trunk
+
+Port           Mode             Encapsulation  Status        Native vlan  
+Po1            on               802.1q         trunking      800
+
+Port           Vlans allowed on trunk
+Po1            600,800,2550,2700,2750
+
+Port           Vlans allowed and active in management domain
+Po1            600,800,2550,2700,2750
+
+Port           Vlans in spanning tree forwarding state and not pruned
+Po1            600,800,2550,2700,2750
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface status err-disabled
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interfaces | include ^Vlan
+Vlan1 is administratively down, line protocol is down , Autostate Enabled
+Vlan800 is up, line protocol is up , Autostate Enabled
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0000.0000.0000    STATIC      CPU
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0100.0ccc.ccce    STATIC      CPU
+ All    010e.cf00.0000    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    0180.c200.0014    STATIC      CPU
+ All    0180.c200.0015    STATIC      CPU
+ All    dc77.4ce2.348b    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 600    689e.0bc9.d103    DYNAMIC     Po1
+ 600    689e.0bc9.d156    DYNAMIC     Po1
+ 800    0000.0c07.ac02    DYNAMIC     Po1
+ 800    0013.c608.b264    DYNAMIC     Po1
+ 800    1c72.1d9b.b781    DYNAMIC     Po1
+ 800    687d.b402.d89c    DYNAMIC     Po1
+ 800    687d.b402.eb14    DYNAMIC     Po1
+ 800    687d.b402.ef6c    DYNAMIC     Po1
+ 800    689e.0bc9.d103    DYNAMIC     Po1
+ 800    6c8b.d3d6.31df    DYNAMIC     Po1
+ 800    a488.73cf.2538    DYNAMIC     Po1
+ 800    c2cf.3aff.43ac    DYNAMIC     Po1
+ 800    ce4d.1502.bdbe    DYNAMIC     Po1
+ 800    dc77.4ce2.310b    DYNAMIC     Po1
+ 800    e41f.7bb6.0cdf    DYNAMIC     Po1
+ 800    f04a.02a9.de80    DYNAMIC     Po1
+2550    000f.e504.6243    DYNAMIC     Po1
+2550    689e.0bc9.d103    DYNAMIC     Po1
+2550    689e.0bc9.d14a    DYNAMIC     Po1
+2700    0005.f000.3cd8    DYNAMIC     Po1
+2700    0005.f000.5013    DYNAMIC     Po1
+2700    0005.f000.501d    DYNAMIC     Po1
+2700    0005.f000.fa27    DYNAMIC     Po1
+2700    000d.8d01.a3fc    DYNAMIC     Po1
+2700    001d.9cbf.8641    DYNAMIC     Po1
+2700    001d.9cc3.9e6a    DYNAMIC     Po1
+2700    001d.9cc3.a9eb    DYNAMIC     Po1
+2700    001d.9cc3.abf8    DYNAMIC     Po1
+2700    001d.9cc3.ac4d    DYNAMIC     Po1
+2700    689e.0bc9.d103    DYNAMIC     Po1
+2700    689e.0bc9.d16d    DYNAMIC     Po1
+2700    e490.69a8.55bb    DYNAMIC     Po1
+2700    f454.3398.5fb8    DYNAMIC     Po1
+2750    689e.0bc9.d103    DYNAMIC     Po1
+2750    689e.0bc9.d14c    DYNAMIC     Po1
+Total Mac Addresses for this criterion: 61
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** Layer 3 Status
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  10.51.0.1             148   0000.0c07.ac02  ARPA   Vlan800
+Internet  10.51.0.2              22   6c8b.d3d6.31df  ARPA   Vlan800
+Internet  10.51.0.3              24   e41f.7bb6.0cdf  ARPA   Vlan800
+Internet  10.51.0.174             -   dc77.4ce2.348b  ARPA   Vlan800
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip int brief | exclude unassigned
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan800                10.51.0.174     YES NVRAM  up                    up      
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip route static
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 10.51.0.1 to network 0.0.0.0
+
+S*    0.0.0.0/0 [0/0] via 10.51.0.1
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip route eigrp
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip eigrp neighbors
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip eigrp interfaces
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show standby brief
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** IECN ARP Table
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show vlan | in IECN 
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show interface status | in 500|_50[1-9]|510|497|498 
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show arp | in Vlan((5)*[0-1][0-9]) 
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show mac address-table | in 500|_50[1-9]|510|530|495|497|498 
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** Multicast Status
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show ip igmp membership
+Flags: A  - aggregate, T - tracked
+       L  - Local, S - static, V - virtual, R - Reported through v3 
+       I - v3lite, U - Urd, M - SSM (S,G) channel 
+       1,2,3 - The version of IGMP, the group is in
+Channel/Group-Flags: 
+       / - Filtering entry (Exclude mode (S,G), Include mode (G))
+Reporter:
+       <mac-or-ip-address> - last reporter if group is not explicitly tracked
+       <n>/<m>      - <n> reporter in include mode, <m> reporter in exclude
+
+ Channel/Group                  Reporter        Uptime   Exp.  Flags  Interface 
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip pim neighbor
+PIM Neighbor Table
+Mode: B - Bidir Capable, DR - Designated Router, N - Default DR Priority,
+      P - Proxy Capable, S - State Refresh Capable, G - GenID Capable,
+      L - DR Load-balancing Capable
+Neighbor          Interface                Uptime/Expires    Ver   DR
+Address                                                            Prio/Mode
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip mroute summary
+IP Multicast Forwarding is not enabled.
+IP Multicast Routing Table
+Flags: D - Dense, S - Sparse, B - Bidir Group, s - SSM Group, C - Connected,
+       L - Local, P - Pruned, R - RP-bit set, F - Register flag,
+       T - SPT-bit set, J - Join SPT, M - MSDP created entry, E - Extranet,
+       X - Proxy Join Timer Running, A - Candidate for MSDP Advertisement,
+       U - URD, I - Received Source Specific Host Report, 
+       Z - Multicast Tunnel, z - MDT-data group sender, 
+       Y - Joined MDT-data group, y - Sending to MDT-data group, 
+       G - Received BGP C-Mroute, g - Sent BGP C-Mroute, 
+       N - Received BGP Shared-Tree Prune, n - BGP C-Mroute suppressed, 
+       Q - Received BGP S-A Route, q - Sent BGP S-A Route, 
+       V - RD & Vector, v - Vector, p - PIM Joins on route, 
+       x - VxLAN group, c - PFP-SA cache created entry, 
+       * - determined by Assert, # - iif-starg configured on rpf intf, 
+       e - encap-helper tunnel flag
+Outgoing interface flags: H - Hardware switched, A - Assert winner, p - PIM Join
+ Timers: Uptime/Expires
+ Interface state: Interface, Next-Hop or VCD, State/Mode
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip igmp group
+IGMP Connected Group Membership
+Group Address    Interface                Uptime    Expires   Last Reporter   Group Accounted
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip traffic
+IP statistics:
+  Rcvd:  326255 total, 97933 local destination
+         0 format errors, 0 checksum errors, 228322 bad hop count
+         0 unknown protocol, 0 not a gateway
+         0 security failures, 0 bad options, 27015 with options
+  Opts:  0 end, 0 nop, 0 basic security, 0 loose source route
+         0 timestamp, 0 extended security, 0 record route
+         0 stream ID, 0 strict source route, 27015 alert, 0 cipso, 0 ump
+         0 other
+  Frags: 0 reassembled, 0 timeouts, 0 couldn't reassemble
+         0 fragmented, 0 fragments, 0 couldn't fragment
+         0 invalid hole
+  Bcast: 58833 received, 0 sent
+  Mcast: 0 received, 0 sent
+  Sent:  43826 generated, 0 forwarded
+  Drop:  55 encapsulation failed, 0 unresolved, 0 no adjacency
+         0 no route, 0 unicast RPF, 0 forced drop, 0 unsupported-addr
+         0 options denied, 0 source IP address zero
+
+ICMP statistics:
+  Rcvd: 0 format errors, 0 checksum errors, 0 redirects, 0 unreachable
+        4915 echo, 0 echo reply, 0 mask requests, 0 mask replies, 0 quench
+        0 parameter, 0 timestamp, 0 timestamp replies, 0 info request, 0 other
+        0 irdp solicitations, 0 irdp advertisements
+        0 time exceeded, 0 info replies
+  Sent: 0 redirects, 0 unreachable, 0 echo, 4915 echo reply
+        0 mask requests, 0 mask replies, 0 quench, 0 timestamp, 0 timestamp replies
+        0 info reply, 0 time exceeded, 0 parameter problem
+        0 irdp solicitations, 0 irdp advertisements
+
+UDP statistics:
+  Rcvd: 82089 total, 0 checksum errors, 58833 no port 0 finput
+  Sent: 23410 total, 0 forwarded broadcasts
+
+TCP statistics:
+  Rcvd: 10929 total, 0 checksum errors, 26 no port
+  Sent: 15501 total
+
+PIMv2 statistics: Sent/Received
+  Total: 0/0, 0 checksum errors, 0 format errors
+  Registers: 0/0 (0 non-rp, 0 non-sm-group), Register Stops: 0/0,  Hellos: 0/0
+  Join/Prunes: 0/0, Asserts: 0/0, grafts: 0/0
+  Bootstraps: 0/0, Candidate_RP_Advertisements: 0/0
+  Queue drops: 0
+  State-Refresh: 0/0
+
+IGMP statistics: Sent/Received
+  Total: 0/0, Format errors: 0/0, Checksum errors: 0/0
+  Host Queries: 0/0, Host Reports: 0/0, Host Leaves: 0/0 
+  DVMRP: 0/0, PIM: 0/0
+  Queue drops: 0
+  Report VRF mismatch drops: 0
+
+BGP statistics:
+  Rcvd: 0 total, 0 opens, 0 notifications, 0 updates
+        0 keepalives, 0 route-refresh, 0 unrecognized
+  Sent: 0 total, 0 opens, 0 notifications, 0 updates
+        0 keepalives, 0 route-refresh
+
+EIGRP-IPv4 statistics:
+  Rcvd: 0 total
+  Sent: 0 total
+
+OSPF statistics:
+  Last clearing of OSPF traffic counters never
+  Rcvd: 0 total, 0 checksum errors
+  	0 hello, 0 database desc, 0 link state req
+  	0 link state updates, 0 link state acks
+  Sent: 0 total
+  	0 hello, 0 database desc, 0 link state req
+  	0 link state updates, 0 link state acks
+
+ARP statistics:
+  Rcvd: 2105 requests, 12 replies, 0 reverse, 0 other
+  Sent: 19 requests, 188 replies (0 proxy), 0 reverse
+  Drop due to input queue full: 0
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** VRF
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#sh vrf gm-security
+% No VRF named gm-security
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip eigrp vrf gm-security interfaces
+%VRF gm-security does not exist.
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#sh ip route vrf gm-security
+% IP routing table vrf gm-security does not exist
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show ip eigrp vrf gm-security neighbors
+%VRF gm-security does not exist.
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#ping vrf gm-security 192.168.0.1 repeat 50
+                               ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#sh ip interface brief vlan762
+                                             ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#ping vrf gm-security 192.168.0.1 repeat 50
+                               ^
+% Invalid input detected at '^' marker.
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#sh vlan | in vrf
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#sh int trunk
+
+Port           Mode             Encapsulation  Status        Native vlan  
+Po1            on               802.1q         trunking      800
+
+Port           Vlans allowed on trunk
+Po1            600,800,2550,2700,2750
+
+Port           Vlans allowed and active in management domain
+Po1            600,800,2550,2700,2750
+
+Port           Vlans in spanning tree forwarding state and not pruned
+Po1            600,800,2550,2700,2750
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** Show Logging and running-config
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#show log
+Syslog logging: enabled (0 messages dropped, 4 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+Active Message Discriminator:
+FILTER    facility       drops    DOT1X|MAB|SESSION_MGR
+
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: level informational, 124 messages logged, xml disabled,
+                     filtering disabled
+    Monitor logging: level informational, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level informational, 130 messages logged, xml disabled,
+                    filtering disabled, discriminator(FILTER), 
+                     0 messages rate-limited, 0 messages dropped-by-MD
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    File logging: disabled
+    Persistent logging: enabled, url flash:/syslog, disk space 5120000 bytes, file size 500000 bytes, batch size 4096 bytes, threshold capacity 0  , immediate  
+
+No active filter modules.
+
+    Trap logging: level informational, 126 message lines logged
+        Logging to 148.93.49.21  (udp port 5012, audit disabled,
+              link up),
+              125 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.129.8  (udp port 5012, audit disabled,
+              link up),
+              126 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 148.93.115.30  (udp port 5500, audit disabled,
+              link up),
+              126 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.83.30  (udp port 5500, audit disabled,
+              link up),
+              126 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging Source-Interface:       VRF Name:
+        Vlan800                         
+
+Log Buffer (40960 bytes):
+
+*Mar 28 21:59:32.406: %SUDI-5-VALIDATION_CHECK: Authenticating Supervisor Board...
+*Mar 28 21:59:32.406: %SUDI-5-VALIDATION_SUCCESS: Supervisor Board authenticated succesfully
+*Mar 28 21:59:32.606: %SMART_LIC-6-AGENT_ENABLED: Smart Agent for Licensing is enabled 
+*Mar 28 21:59:46.357: %SPANTREE-5-EXTENDED_SYSID: Extended SysId enabled for type vlan
+*Mar 28 21:59:46.359: %CRYPTO_ENGINE-4-CSDL_COMPLIANCE_DISABLED: Cisco PSB security compliance has been disabled
+*Mar 28 21:59:47.410: %LINK-3-UPDOWN: Interface Lsmpi1/3, changed state to up
+*Mar 28 21:59:47.411: %LINK-3-UPDOWN: Interface EOBC1/1, changed state to up
+*Mar 28 21:59:47.411: %LINK-3-UPDOWN: Interface LIIN1/2, changed state to up
+*Mar 28 21:59:47.414: %SUDI-5-VALIDATION_CHECK: Authenticating Expansion Module...
+*Mar 28 21:59:47.414: %SUDI-5-VALIDATION_SUCCESS: Expansion Module authenticated succesfully
+*Mar 28 21:59:47.508: %PNP-6-PNP_DISCOVERY_STARTED: PnP Discovery started
+*Mar 28 21:59:48.674: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
+*Mar 28 21:59:48.675: %LINEPROTO-5-UPDOWN: Line protocol on Interface Lsmpi1/3, changed state to up
+*Mar 28 21:59:48.676: %LINEPROTO-5-UPDOWN: Line protocol on Interface EOBC1/1, changed state to up
+*Mar 28 21:59:48.676: %LINEPROTO-5-UPDOWN: Line protocol on Interface LIIN1/2, changed state to up
+*Mar 28 21:59:49.621: %ONEP_BASE-6-SS_ENABLED: ONEP: Service set Base was enabled by Default
+*Mar 28 21:59:50.581: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named fwaaclasw174-ob-1cgen.fwa.nam.gm.com has been generated or imported by crypto config
+*Mar 28 21:59:50.596: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named SLA-KeyPair2 has been generated or imported by crypto config
+*Mar 28 21:59:50.611: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named SLA-KeyPair has been generated or imported by crypto config
+*Mar 28 21:59:50.617: %SNMP-6-AUTHPROTOCOLMD5: Authentication protocol md5 support will be deprecated in future
+*Mar 28 21:59:50.646: %SNMP-6-AUTHPROTOCOLMD5: Authentication protocol md5 support will be deprecated in future
+*Mar 28 21:59:50.705: %SYS-6-PRIVCFG_DECRYPT_SUCCESS: Successfully apply the private config file
+*Mar 28 21:59:50.809: %SYS-5-LOG_CONFIG_CHANGE: Buffer logging: level informational, xml disabled, filtering disabled, size (40960), discriminator (FILTER)
+*Mar 28 21:59:50.812: %SYS-5-LOG_CONFIG_CHANGE: Persistent logging: enabled, url flash:/syslog, disk space 5120000 bytes, file size 500000 bytes, batch size 4096 bytes
+*Mar 28 21:59:50.814: %SYS-5-LOG_CONFIG_CHANGE: Console logging: level informational, xml disabled, filtering disabled
+*Mar 28 21:59:50.816: %SYS-5-LOG_CONFIG_CHANGE: Monitor logging: level informational, xml disabled, filtering disabled
+*Mar 28 21:59:50.820: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:50.862: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:50.863: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:50.864: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:50.864: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:50.899: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: SLA-TrustPoint created succesfully
+*Mar 28 21:59:50.902: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: TP-self-signed-1277624563 created succesfully
+*Mar 28 21:59:51.135: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Mar 28 21:59:53.413: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 0 CLI Request Triggered
+*Mar 28 21:59:53.415: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 0 CLI Request Triggered
+*Mar 28 21:59:53.417: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 0 CLI Request Triggered
+*Mar 28 21:59:53.419: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 0 CLI Request Triggered
+*Mar 28 21:59:53.845: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.845: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.848: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.848: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.852: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.852: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.853: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.853: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.868: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.869:  Request successfully sent to PAC Provisioning driver.
+*Mar 28 21:59:53.870: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.873:  Request successfully sent to PAC Provisioning driver.
+*Mar 28 21:59:53.875: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.875:  Request successfully sent to PAC Provisioning driver.
+*Mar 28 21:59:53.877: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, type 7 passwords will soon be deprecated. Migrate to a supported password type
+*Mar 28 21:59:53.880:  Request successfully sent to PAC Provisioning driver.
+*Mar 28 21:59:53.919: %SW_VLAN-6-VTP_DOMAIN_NAME_CHG: VTP domain name changed to fwaac.
+*Mar 28 21:59:53.935: %SYS-5-CONFIG_I: Configured from memory by console
+*Mar 28 21:59:54.207: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan800, changed state to down
+*Mar 28 21:59:54.728: %PLATFORM-5-TRANSCEIVERINSERTED: Slot=1 Port=1: Transceiver has been inserted
+*Mar 28 21:59:55.270: %LINK-5-CHANGED: Interface Vlan1, changed state to administratively down
+*Mar 28 21:59:55.993: %LINK-3-UPDOWN: Interface AppGigabitEthernet1/1, changed state to up
+*Mar 28 21:59:56.816: %SSH-5-ENABLED: SSH 2.0 has been enabled
+*Mar 28 21:59:56.876: %SYS-5-RESTART: System restarted --
+Cisco IOS Software [Amsterdam], IE3x00 Switch Software (IE3x00-UNIVERSALK9-M), Version 17.3.3a, RELEASE SOFTWARE (fc3)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2021 by Cisco Systems, Inc.
+Compiled Fri 19-Mar-21 14:46 by mcpre
+*Mar 28 21:59:57.040: %LINEPROTO-5-UPDOWN: Line protocol on Interface AppGigabitEthernet1/1, changed state to up
+*Mar 28 21:59:57.402: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 5012 started - CLI initiated
+*Mar 28 21:59:57.402: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 5012 started - CLI initiated
+*Mar 28 21:59:57.403: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 5500 started - CLI initiated
+*Mar 28 21:59:57.403: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 5500 started - CLI initiated
+*Mar 28 21:59:58.764: %SNMP-5-COLDSTART: SNMP agent on host fwaaclasw174-ob-1cgen is undergoing a cold start
+*Mar 28 22:00:02.661: %PNP-6-PNP_BEST_UDI_UPDATE: Best UDI [PID:IE-3400-8P2S,VID:V01,SN:FCW2443P3M9] identified via (entity-mibs)
+*Mar 28 22:00:02.661: %PNP-6-PNP_CDP_UPDATE: Device UDI [PID:IE-3400-8P2S,VID:V01,SN:FCW2443P3M9] identified for CDP
+*Mar 28 22:00:02.663: %PNP-6-PNP_DISCOVERY_STOPPED: PnP Discovery stopped (Startup Config Present)
+*Mar 28 22:00:03.034: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named fwaaclasw174-ob-1cgen.fwa.nam.gm.com.server has been generated or imported by crypto-engine
+*Mar 28 22:00:06.532: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Mar 28 22:00:06.677: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI created succesfully
+*Mar 28 22:00:06.692: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named CISCO_IDEVID_SUDI has been generated or imported by pki-sudi
+*Mar 28 22:00:06.693: %CRYPTO_ENGINE-5-KEY_DELETED: A key named fwaaclasw174-ob-1cgen.fwa.nam.gm.com.server has been removed from key storage
+*Mar 28 22:00:06.694: %SSH-5-DISABLED: SSH 2.0 has been disabled
+*Mar 28 22:00:06.713: %SSH-5-ENABLED: SSH 2.0 has been enabled
+*Mar 28 22:00:06.725: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI0 created succesfully
+*Mar 28 22:00:06.731: %PKI-2-NON_AUTHORITATIVE_CLOCK: PKI functions can not be initialized until an authoritative time source, like NTP, can be obtained.
+*Mar 28 22:00:09.885: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named fwaaclasw174-ob-1cgen.fwa.nam.gm.com.server has been generated or imported by crypto-engine
+*Mar 28 22:00:28.055: %PKI-3-CERTIFICATE_INVALID_EXPIRED: Certificate chain validation has failed.  The certificate (SN: 06EE7E20) has expired.    Validity period ended on 2023-01-25T19:09:23Z
+*Mar 28 22:00:28.058: %CALL_HOME-6-CALL_HOME_ENABLED: Call-home is enabled by Smart Agent for Licensing.
+*Mar 28 22:00:28.165: %SMART_LIC-6-REPORTING_REQUIRED: A Usage report acknowledgement will be required in 0 days.
+*Mar 28 22:01:41.243: %SMART_LIC-3-COMM_FAILED: Communications failure with the Cisco Smart License Utility (CSLU) : Unable to resolve server hostname/domain name 
+*Mar 28 22:02:15.342: %LINK-3-UPDOWN: Interface GigabitEthernet1/1, changed state to up
+*Mar 28 22:02:19.336: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/1, changed state to up
+*Mar 28 22:02:20.333: %LINK-3-UPDOWN: Interface Port-channel1, changed state to up
+*Mar 28 22:02:21.333: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel1, changed state to up
+*Mar 28 22:02:21.402: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan800, changed state to up
+*Mar 28 22:02:26.337: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 5012 started - reconnection
+*Mar 28 22:02:31.337: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 5012 started - reconnection
+*Mar 28 22:02:36.336: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 5500 started - reconnection
+*Mar 28 22:02:41.337: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 5500 started - reconnection
+Mar 28 22:03:17.721: %PKI-6-AUTHORITATIVE_CLOCK: The system clock has been set.
+Mar 28 22:09:41.446: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:41 UTC Tue Mar 28 2023
+Mar 28 22:09:41.775: %SYS-6-LOGOUT: User SI_NAM_52343_P_011 has exited tty session 2(10.14.9.251)
+Mar 28 22:09:42.493: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:42 UTC Tue Mar 28 2023
+Mar 28 22:09:44.280: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:44 UTC Tue Mar 28 2023
+Mar 28 22:09:45.260: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:45 UTC Tue Mar 28 2023
+Mar 28 22:09:46.366: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:46 UTC Tue Mar 28 2023
+Mar 28 22:09:47.378: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:47 UTC Tue Mar 28 2023
+Mar 28 22:09:48.372: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:48 UTC Tue Mar 28 2023
+Mar 28 22:09:49.485: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: SI_NAM_52343_P_011] [Source: 10.14.9.251] [localport: 22] at 22:09:49 UTC Tue Mar 28 2023
+Mar 29 01:23:17.973: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 01:23:17 UTC Wed Mar 29 2023
+Mar 29 01:25:22.498: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 09:01:56.802: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 09:01:56 UTC Wed Mar 29 2023
+Mar 29 09:01:59.207: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 12:45:47.909: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 12:45:47 UTC Wed Mar 29 2023
+Mar 29 12:45:50.880: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 13:18:04.440: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 13:18:04 UTC Wed Mar 29 2023
+Mar 29 13:20:03.073: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 16:00:27.667: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 16:00:27 UTC Wed Mar 29 2023
+Mar 29 16:00:32.081: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 19:15:08.292: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 19:15:08 UTC Wed Mar 29 2023
+Mar 29 19:15:09.427: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 29 21:59:39.461: %SMART_LIC-3-COMM_FAILED: Communications failure with the Cisco Smart License Utility (CSLU) : Communications failure 
+Mar 29 22:01:54.177: %SMART_LIC-3-COMM_FAILED: Communications failure with the Cisco Smart License Utility (CSLU) : Unable to resolve server hostname/domain name 
+Mar 30 01:19:04.149: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 01:19:04 UTC Thu Mar 30 2023
+Mar 30 01:21:13.457: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 30 03:19:22.906: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 03:19:22 UTC Thu Mar 30 2023
+Mar 30 03:19:23.254: %SYS-6-LOGOUT: User as_lzz26f has exited tty session 2(148.93.114.122)
+Mar 30 03:19:23.912: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_lzz26f] [Source: 148.93.114.122] [localport: 22] at 03:19:23 UTC Thu Mar 30 2023
+Mar 30 09:02:18.861: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 09:02:18 UTC Thu Mar 30 2023
+Mar 30 09:02:21.018: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 30 12:45:43.153: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 12:45:43 UTC Thu Mar 30 2023
+Mar 30 12:45:44.767: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 30 13:16:42.028: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_023] [Source: 130.172.129.12] [localport: 22] at 13:16:42 UTC Thu Mar 30 2023
+Mar 30 13:18:52.860: %SYS-6-LOGOUT: User si_nam_52343_p_023 has exited tty session 2(130.172.129.12)
+Mar 30 14:56:40.547: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 130.172.119.194] [localport: 22] at 14:56:40 UTC Thu Mar 30 2023
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#show running-config
+Building configuration...
+
+Current configuration : 35084 bytes
+!
+! Last configuration change at 21:59:58 UTC Tue Mar 28 2023
+!
+version 17.3
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service call-home
+no platform punt-keepalive disable-kernel-core
+no platform punt-keepalive settings
+no platform bridge-security all
+!
+hostname fwaaclasw174-ob-1cgen
+!
+!
+logging discriminator FILTER facility drops DOT1X|MAB|SESSION_MGR 
+logging buffered discriminator FILTER 40960 informational
+logging persistent url flash:/syslog size 5120000 filesize 500000 immediate
+logging console informational
+logging monitor informational
+enable secret 9 $9$.WdJnHuGz02oNU$Jvw982a0zYCNbJJMbMCvsdLHw93PY9UTlPiPI1lYnlo
+enable password 7 123E2846010E0F162F3F
+!
+aaa new-model
+!
+!
+aaa authentication login default group tacacs+ local
+aaa authentication enable default group tacacs+ enable
+aaa authentication dot1x default group radius
+aaa authorization console
+aaa authorization config-commands
+aaa authorization exec default group tacacs+ local 
+aaa authorization commands 1 default group tacacs+ none 
+aaa authorization commands 15 default group tacacs+ none 
+aaa authorization network default group radius 
+aaa accounting send stop-record authentication failure
+aaa accounting update newinfo periodic 2880
+aaa accounting dot1x default start-stop group radius
+aaa accounting exec default stop-only group tacacs+
+aaa accounting commands 15 default stop-only group tacacs+
+!
+!
+!
+!
+!
+aaa server radius dynamic-author
+ client 10.51.11.120 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 10.51.11.121 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 148.93.49.192 server-key 7 063E3A1B785E3E311434015E295C33720F
+ client 130.172.129.192 server-key 7 063E3A1B785E3E311434015E295C33720F
+!
+aaa session-id common
+process cpu threshold type total rising 60 interval 600 falling 30 interval 600
+rep bpduleak
+ptp mode e2etransparent 
+vtp domain fwaac
+vtp mode transparent
+!
+!
+!
+!
+!
+!
+no ip domain lookup
+ip domain name fwa.nam.gm.com
+!
+!
+!
+login on-success log
+udld aggressive
+
+!
+!
+authentication mac-move permit
+no device-tracking logging theft
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment terminal
+ revocation-check crl
+!
+crypto pki trustpoint TP-self-signed-1277624563
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-1277624563
+ revocation-check none
+ rsakeypair TP-self-signed-1277624563
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-1277624563
+!
+!
+diagnostic bootup level minimal
+dot1x system-auth-control
+dot1x critical eapol
+license boot level network-advantage addon dna-advantage
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+archive
+ path flash:backup
+ maximum 7
+ time-period 1440
+memory free low-watermark processor 89969
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause vmps
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause loopback
+errdisable recovery cause psp
+errdisable recovery cause mrp-miscabling
+errdisable recovery interval 1200
+!
+alarm-profile defaultPort
+ alarm not-operating 
+ syslog not-operating 
+ notifies not-operating 
+!
+username localadmin privilege 15 secret 9 $9$O11v1VY7xoHSYU$EPsupoyc2Um4Wu3dDZrZCdFomAHW526WbTsf3UoEptU
+
+!
+!
+!
+transceiver type all
+ monitoring
+vlan internal allocation policy ascending
+!
+vlan 600
+ name IP_phone_Clients-600
+!
+vlan 800
+ name PFCN_L2_Mgmt-vl800
+!
+vlan 999
+ name unused-port
+!
+vlan 2550
+ name VITAL_VLAN-2550
+!
+vlan 2700
+ name Multi-Purpose_VLAN-2700
+!
+vlan 2750
+ name GMONLINE_VLAN-2750
+lldp run
+!
+!
+class-map match-any MATH
+ match access-group name MATH
+class-map match-any TRUNK_EGRESS_CLASS-1
+ match cos  5 
+ match dscp 41  42  43  44  45  ef  47 
+class-map match-any TRUNK_EGRESS_CLASS-2
+ match cos  0  3  6  7 
+ match dscp default  cs3  25  af31  27  af32  29  af33 
+ match dscp 31  cs5  cs6  49  50  51  52  53 
+ match dscp 54  55  cs7  57  58  59  60  61 
+ match dscp 62  63 
+class-map match-any TRUNK_EGRESS_CLASS-3
+ match cos  2  4 
+ match dscp cs2  17  af21  19  af22  21  af23  23 
+ match dscp cs4  33  af41  35  af42  37  af43  39 
+class-map match-any 50x-OTHER
+ match access-group name IECN
+class-map match-any TRUNK_EGRESS_CLASS-4
+ match cos  1 
+ match dscp 1  2  3  4  5  6  7  cs1 
+ match dscp 9  af11  11  af12  13  af13  15 
+class-map match-any VOICE_and_VIDEO-SIGNALING
+ match access-group name VIDEO-SIGNALING
+ match access-group name VOICE-SIG
+class-map match-any VIDEO-TRAFFIC
+ match access-group name VIDEO-TRAFFIC
+class-map match-any HOST_EGRESS_CLASS-4
+ match cos  1 
+ match dscp 1  2  3  4  5  6  7  cs1 
+ match dscp 9  af11  11  af12  13  af13  15 
+class-map match-any HOST_EGRESS_CLASS-2
+ match cos  0  3  6  7 
+ match dscp default  cs3  25  af31  27  af32  29  af33 
+ match dscp 31  cs5  cs6  49  50  51  52  53 
+ match dscp 54  55  cs7  57  58  59  60  61 
+ match dscp 62  63 
+class-map match-any HOST_EGRESS_CLASS-3
+ match cos  2  4 
+ match dscp cs2  17  af21  19  af22  21  af23  23 
+ match dscp cs4  33  af41  35  af42  37  af43  39 
+class-map match-any HOST_EGRESS_CLASS-1
+ match cos  5 
+ match dscp 41  42  43  44  45  ef  47 
+class-map match-any ALL_OTHER
+ match access-group name ALL_OTHER
+class-map match-any NET_MGT
+ match access-group name NET_MGT
+class-map match-any INTERLOCK_and_VOICE
+ match access-group name CIP
+ match access-group name VOICE
+!
+policy-map HOST_EGRESS_PM
+ class HOST_EGRESS_CLASS-1
+  bandwidth remaining percent 25 
+  queue-limit cos 5 1000 packets
+ class HOST_EGRESS_CLASS-2
+  bandwidth remaining percent 25 
+  queue-limit cos 0 1000 packets
+  queue-limit cos 3 1000 packets
+  queue-limit cos 6 1000 packets
+  queue-limit cos 7 1000 packets
+ class HOST_EGRESS_CLASS-3
+  bandwidth remaining percent 25 
+  queue-limit cos 2 1000 packets
+  queue-limit cos 4 1000 packets
+ class HOST_EGRESS_CLASS-4
+  bandwidth remaining percent 25 
+  queue-limit cos 1 250 packets
+policy-map PFCN-PHYS
+ class INTERLOCK_and_VOICE
+  set dscp ef
+ class 50x-OTHER
+  set dscp default
+ class MATH
+  set dscp 2
+ class VOICE_and_VIDEO-SIGNALING
+  set dscp cs3
+ class VIDEO-TRAFFIC
+  set dscp af41
+ class NET_MGT
+  set dscp cs6
+ class ALL_OTHER
+  set dscp cs2
+policy-map TRUNK_EGRESS_PM
+ class TRUNK_EGRESS_CLASS-1
+  priority
+  queue-limit cos 5 1000 packets
+ class TRUNK_EGRESS_CLASS-2
+  bandwidth remaining percent 20 
+  queue-limit cos 0 1000 packets
+  queue-limit cos 3 1000 packets
+  queue-limit cos 6 1000 packets
+  queue-limit cos 7 1000 packets
+ class TRUNK_EGRESS_CLASS-3
+  bandwidth remaining percent 20 
+  queue-limit cos 2 1000 packets
+  queue-limit cos 4 1000 packets
+ class TRUNK_EGRESS_CLASS-4
+  bandwidth remaining percent 20 
+  queue-limit cos 1 250 packets
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback0
+ no ip address
+!
+interface Port-channel1
+ description link-to-fwaac-la-ob-cgen-st57
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 600,800,2550,2700,2750
+ switchport mode trunk
+!
+interface GigabitEthernet1/1
+ description link-to-fwaac-la-ob-cgen-st57-Te1/1/4
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 600,800,2550,2700,2750
+ switchport mode trunk
+ udld port aggressive
+ channel-group 1 mode active
+ spanning-tree portfast disable
+ spanning-tree bpduguard disable
+!
+interface GigabitEthernet1/2
+ description link-to-fwaac-la-ob-cgen-st57-Te2/1/4
+ switchport access vlan 800
+ switchport trunk native vlan 800
+ switchport trunk allowed vlan 600,800,2550,2700,2750
+ switchport mode trunk
+ udld port aggressive
+ channel-group 1 mode active
+ spanning-tree portfast disable
+ spanning-tree bpduguard disable
+!
+interface GigabitEthernet1/3
+ description UNUSED
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/4
+ description Engine x PLC 
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/5
+ description FWAGEN-x-SATAC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/6
+ description Engine x PLC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/7
+ description FWAGEN-x-SATAC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/8
+ description FWAGEN-x-RLY
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/9
+ description FWAGEN-x-DSLC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet1/10
+ description FWAGEN-x-HMI
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface AppGigabitEthernet1/1
+!
+interface GigabitEthernet2/1
+ description FWAGEN-x-RLY
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/2
+ description FWAGEN-x-DSLC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/3
+ description FWAGEN-x-HMI
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/4
+ description FWAGEN-x-PL1000E
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/5
+ description FWAGEN-x-PL1000E
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/6
+ description FWAGEN-PLNT-HMI
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/7
+ description FWAGEN-PLNT-PLC
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ speed 100
+ duplex full
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface GigabitEthernet2/8
+ description FWAGEN-PLNT-MODBUS
+ switchport access vlan 2700
+ switchport mode access
+ device-tracking
+ ip access-group ACL-DEFAULT-GPN in
+ no logging event link-status
+ power inline never
+ authentication event fail retry 0 action authorize vlan 2700
+ authentication event server dead action authorize vlan 2700
+ authentication event server dead action authorize voice
+ authentication event no-response action authorize vlan 2700
+ authentication event server alive action reinitialize 
+ authentication host-mode multi-domain
+ authentication order dot1x mab
+ authentication priority dot1x mab
+ authentication port-control auto
+ authentication violation restrict
+ mab
+ no snmp trap link-status
+ no mdix auto
+ dot1x pae authenticator
+ dot1x timeout tx-period 5
+ dot1x timeout supp-timeout 10
+ spanning-tree portfast
+!
+interface Vlan1
+ description cat9k-L2-base-config-L2MGT-v01.08
+ no ip address
+ shutdown
+!
+interface Vlan800
+ description link-to-fwaac-la-ob-cgen-st57 
+ ip address 10.51.0.174 255.255.254.0
+ no ip redirects
+ no ip proxy-arp
+!
+ip default-gateway 10.51.0.1
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip http client source-interface Loopback0
+no ip forward-protocol nd
+no ip forward-protocol udp tftp
+no ip forward-protocol udp nameserver
+no ip forward-protocol udp domain
+no ip forward-protocol udp time
+no ip forward-protocol udp netbios-ns
+no ip forward-protocol udp netbios-dgm
+no ip forward-protocol udp tacacs
+!
+ip ftp source-interface Vlan800
+ip tftp source-interface Vlan800
+ip tacacs source-interface Vlan800 
+ip ssh source-interface Vlan800
+ip ssh version 2
+ip ssh dscp 48
+!
+!
+!
+ip access-list extended ACL-DEFAULT-GPN
+ 10 deny   ip any 120.17.0.0 0.0.255.255
+ 20 deny   ip any 10.51.7.128 0.0.0.63
+ 30 permit ip any any
+ip access-list extended ALL_OTHER
+ 10 permit ip any any
+ip access-list extended CIP
+ 10 permit udp 120.17.0.0 0.0.255.255 any eq 2222
+ 20 permit udp any eq 2222 120.17.0.0 0.0.255.255
+ip access-list extended GMOL-BU-AVAMAR
+ 10 permit ip 10.51.6.128 0.0.0.63 any
+ip access-list extended IECN
+ 10 permit ip 120.17.0.0 0.0.255.255 any
+ 20 permit ip any 120.17.0.0 0.0.255.255
+ip access-list extended MATH
+ 10 permit ip 120.18.122.0 0.0.1.255 any
+ 20 permit ip any 120.18.122.0 0.0.1.255
+ 30 permit ip 10.51.28.0 0.0.1.255 any
+ 40 permit ip any 10.51.28.0 0.0.1.255
+ 50 permit ip host 120.18.244.158 any
+ 60 permit ip any host 120.18.244.158
+ip access-list extended NET_MGT
+ 10 permit tcp any 120.18.0.0 0.0.1.255 eq 22
+ 20 permit tcp 120.18.0.0 0.0.1.255 eq 22 any
+ 30 permit udp any 120.18.0.0 0.0.1.255 eq snmp
+ 40 permit udp 120.18.0.0 0.0.1.255 eq snmp any
+ 50 permit tcp any 120.18.236.0 0.0.0.255 eq 22
+ 60 permit tcp 120.18.236.0 0.0.0.255 eq 22 any
+ 70 permit udp any 120.18.236.0 0.0.0.255 eq snmp
+ 80 permit udp 120.18.236.0 0.0.0.255 eq snmp any
+ 90 permit tcp any 120.18.245.0 0.0.0.255 eq 22
+ 100 permit udp any 120.18.245.0 0.0.0.255 eq snmp
+ 110 permit tcp any 10.51.0.0 0.0.1.255 eq 22
+ 120 permit tcp 10.51.0.0 0.0.1.255 eq 22 any
+ 130 permit udp any 10.51.0.0 0.0.1.255 eq snmp
+ 140 permit udp 10.51.0.0 0.0.1.255 eq snmp any
+ 150 permit tcp any 10.10.0.0 0.0.255.255 eq 22
+ 160 permit tcp 10.10.0.0 0.0.255.255 eq 22 any
+ 170 permit udp any 10.10.0.0 0.0.255.255 eq snmp
+ 180 permit udp 10.10.0.0 0.0.255.255 eq snmp any
+ 190 permit tcp any 10.51.2.0 0.0.0.255 eq 22
+ 200 permit tcp 10.51.2.0 0.0.0.255 eq 22 any
+ 210 permit udp any 10.51.2.0 0.0.0.255 eq snmp
+ 220 permit udp 10.51.2.0 0.0.0.255 eq snmp any
+ 230 permit tcp any 10.51.3.0 0.0.0.127 eq 22
+ 240 permit udp any 10.51.3.128 0.0.0.127 eq snmp
+ 250 permit tcp any 10.51.3.128 0.0.0.31 eq 22
+ 260 permit udp any 10.51.3.128 0.0.0.31 eq snmp
+ip access-list extended VIDEO-SIGNALING
+ 10 permit tcp 10.176.0.0 0.3.255.255 any range 5060 5061
+ 20 permit udp 10.176.0.0 0.3.255.255 any range 5060 5061
+ 30 permit tcp 10.176.0.0 0.3.255.255 range 5060 5061 any
+ 40 permit udp 10.176.0.0 0.3.255.255 range 5060 5061 any
+ip access-list extended VIDEO-TRAFFIC
+ 10 permit udp 10.176.0.0 0.3.255.255 any range 16384 32768
+ 20 permit tcp 10.176.0.0 0.3.255.255 any range 16384 32768
+ 30 permit udp 10.176.0.0 0.3.255.255 range 16384 32768 any
+ 40 permit tcp 10.176.0.0 0.3.255.255 range 16384 32768 any
+ip access-list extended VOICE
+ 10 permit udp 11.0.0.0 0.255.255.255 any range 16384 32767
+ 20 permit udp 10.160.0.0 0.15.255.255 any range 16384 32767
+ 30 permit udp 120.18.255.0 0.0.0.255 any range 16384 32767
+ 40 permit udp 10.51.19.0 0.0.0.255 any range 16384 32767
+ 50 permit udp 120.18.128.0 0.0.31.255 any range 16384 32767
+ 60 permit udp 120.18.64.0 0.0.31.255 any range 16384 32767
+ 70 permit udp 120.18.96.0 0.0.1.255 any range 16384 32767
+ 80 permit udp 120.18.98.0 0.0.0.255 any range 16384 32767
+ 90 permit udp 10.51.96.0 0.0.31.255 any range 16384 32767
+ip access-list extended VOICE-SIG
+ 10 permit udp 120.18.255.0 0.0.0.255 any range 5060 5061
+ 20 permit udp 10.51.19.0 0.0.0.255 any range 5060 5061
+ 30 permit udp 120.18.128.0 0.0.31.255 any range 5060 5061
+ 40 permit udp 120.18.64.0 0.0.31.255 any range 5060 5061
+ 50 permit udp 120.18.96.0 0.0.1.255 any range 5060 5061
+ 60 permit udp 120.18.98.0 0.0.0.255 any range 5060 5061
+ 70 permit udp 10.51.96.0 0.0.31.255 any range 5060 5061
+ 80 permit tcp 120.18.255.0 0.0.0.255 any range 5060 5061
+ 90 permit tcp 10.51.19.0 0.0.0.255 any range 5060 5061
+ 100 permit tcp 120.18.128.0 0.0.31.255 any range 5060 5061
+ 110 permit tcp 120.18.64.0 0.0.31.255 any range 5060 5061
+ 120 permit tcp 120.18.96.0 0.0.1.255 any range 5060 5061
+ 130 permit tcp 120.18.98.0 0.0.0.255 any range 5060 5061
+ 140 permit tcp 10.51.96.0 0.0.31.255 any range 5060 5061
+ 150 permit tcp 120.18.255.0 0.0.0.255 any eq 2000
+ 160 permit tcp 10.51.19.0 0.0.0.255 any eq 2000
+ 170 permit tcp 120.18.128.0 0.0.31.255 any eq 2000
+ 180 permit tcp 120.18.64.0 0.0.31.255 any eq 2000
+ 190 permit tcp 120.18.96.0 0.0.1.255 any eq 2000
+ 200 permit tcp 120.18.98.0 0.0.0.255 any eq 2000
+ 210 permit tcp 10.51.96.0 0.0.31.255 any eq 2000
+ 220 permit tcp 0.0.96.0 0.0.31.255 any eq 2000
+ 230 permit udp 11.0.0.0 0.255.255.255 any range 5060 5061
+ 240 permit tcp 11.0.0.0 0.255.255.255 any range 5060 5061
+ 250 permit udp 10.160.0.0 0.15.255.255 any range 5060 5061
+ 260 permit tcp 10.160.0.0 0.15.255.255 any range 5060 5061
+ 270 permit tcp 11.0.0.0 0.255.255.255 any eq 2000
+ 280 permit tcp 10.160.0.0 0.15.255.255 any eq 2000
+ 290 permit tcp 11.0.0.0 0.255.255.255 any eq 1720
+ 300 permit tcp 10.160.0.0 0.15.255.255 any eq 1720
+ip radius source-interface Vlan800 
+logging source-interface Vlan800
+logging host 148.93.49.21 transport udp port 5012
+logging host 130.172.129.8 transport udp port 5012
+logging host 148.93.115.30 transport udp port 5500
+logging host 130.172.83.30 transport udp port 5500
+ip access-list standard 93
+ 60 permit 10.14.9.251
+ 10 remark version 1.0
+ 10 remark GM monitor/manage center in Warren
+ 10 permit 148.93.114.0 0.0.0.255
+ 20 permit 148.93.49.0 0.0.0.255
+ 30 permit 148.93.144.0 0.0.1.255
+ 40 permit 148.93.146.0 0.0.1.255
+ 50 permit 148.93.148.0 0.0.1.255
+ 70 permit 148.93.50.0 0.0.0.255
+ 80 remark GM monitor/manage center in Milford
+ 80 permit 130.172.119.0 0.0.0.255
+ 90 permit 130.172.129.0 0.0.0.255
+ 100 permit 130.172.100.0 0.0.1.255
+ 110 permit 130.172.36.0 0.0.1.255
+ 120 permit 130.172.42.0 0.0.1.255
+ 130 remark GM monitor/manage center in Singapore
+ 130 permit 10.147.62.128 0.0.0.127
+ 140 permit 10.147.52.128 0.0.0.127
+ 150 remark Plant Cores
+ 150 permit 10.0.3.129 0.255.0.0
+ 160 permit 10.0.3.130 0.255.0.0
+ 170 permit 10.0.131.129 0.255.0.0
+ 180 permit 10.0.131.130 0.255.0.0
+!
+snmp-server group V3-RO v3 auth read V3ROVIEW 
+snmp-server group V3-RW v3 auth write V3RWVIEW 
+snmp-server view V3ROVIEW iso included
+snmp-server view V3RWVIEW iso included
+snmp-server trap-source Vlan800
+snmp-server location NUSFWA | ROANOKE INDIANA | 12200 LAFAYETTE CENTER RD | 1 |  OUT BUILDING | CGEN | GM-LAN-GRP | PLANT
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps fru-ctrl
+snmp-server enable traps entity
+snmp-server enable traps envmon fan shutdown supply temperature status
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps vlandelete
+snmp-server enable traps flash insertion
+snmp-server enable traps flash removal
+snmp-server enable traps port-security
+snmp-server enable traps ipsla
+snmp-server enable traps config-copy
+snmp-server enable traps config
+snmp-server enable traps bridge newroot topologychange
+snmp-server enable traps stpx inconsistency root-inconsistency loop-inconsistency
+snmp-server enable traps bgp
+snmp-server enable traps vlan-membership
+snmp-server enable traps mac-notification change move threshold
+snmp-server host 10.51.11.203 informs version 3 auth V3NetMgtRO 
+snmp-server host 10.51.11.203 version 3 auth V3NetMgtRO 
+snmp ifmib ifindex persist
+tacacs-server directed-request
+tacacs server DCW-1
+ address ipv4 148.93.49.176
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCM-1
+ address ipv4 130.172.129.176
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCW-2
+ address ipv4 148.93.49.177
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+tacacs server DCM-2
+ address ipv4 130.172.129.177
+ key 7 141D1E003A54787F111A190F0E3B0020172A7C7F5F706E0B531B3B5872057F017B7B3B033F11756E0924013151093E592A65465D23001B1D5D08332E09001D12
+!
+radius-server attribute 6 on-for-login-auth
+radius-server attribute 8 include-in-access-req
+radius-server attribute 25 access-request include
+radius-server attribute 31 mac format ietf
+radius-server retry method reorder
+!
+radius server LOCAL-ISE-1
+ address ipv4 10.51.11.120 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server LOCAL-ISE-2
+ address ipv4 10.51.11.121 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server CENTRAL-ISE-1
+ address ipv4 148.93.49.192 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+radius server CENTRAL-ISE-2
+ address ipv4 130.172.129.192 auth-port 1812 acct-port 1813
+ pac key 7 063E3A1B785E3E311434015E295C33720F
+!
+!
+!
+control-plane
+!
+banner login ^CC
+******************************************************************************
+Use of this system is restricted to authorized users. User activity
+is monitored and recorded. Anyone using this system expressly consents to such
+monitoring and recording. BE ADVISED: if possible criminal activity or
+unauthorized changes are detected, system records along with certain personal
+information may be provided to management and/or appropriate authorities. 
+
+Requires AS_Zid account
+******************************************************************************
+^C
+!
+line con 0
+ exec-timeout 30 0
+ password 7 040F0C0B09364D4F0A160B1B0B
+ stopbits 1
+line aux 0
+ stopbits 1
+line vty 0 4
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 0050140B024C0A070C2E424210
+ transport input ssh
+line vty 5 15
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 075B2641481E1804141D05001D
+ transport input ssh
+!
+ntp source Vlan800
+ntp server 10.51.3.129
+ntp server 10.51.3.130
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ profile "CiscoTAC-1"
+  no reporting smart-licensing-data
+  destination transport-method http
+ profile "Manufacturing-LAN"
+  reporting smart-licensing-data
+  destination transport-method http
+  no destination transport-method email
+  destination address http http://148.93.49.7:8080/Transportgateway/services/DeviceRequestHandler 
+!
+mac address-table notification change
+!
+!
+!
+!
+!
+end
+
+fwaaclasw174-ob-1cgen#!
+
+fwaaclasw174-ob-1cgen#! *************************************************
+
+fwaaclasw174-ob-1cgen#! **** END
+
+fwaaclasw174-ob-1cgen#! *************************************************
