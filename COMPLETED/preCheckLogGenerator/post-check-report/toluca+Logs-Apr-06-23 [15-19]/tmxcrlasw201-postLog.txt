@@ -1,0 +1,2218 @@
+
+tmxcrlasw201#!
+
+tmxcrlasw201#term len 0
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show boot
+---------------------------
+Switch 1
+---------------------------
+Current Boot Variables:
+BOOT variable does not exist
+
+Boot Variables on next reload:
+BOOT variable = flash:packages.conf
+Manual Boot = no
+Enable Break = no
+Boot Mode = DEVICE
+iPXE Timeout = 0
+tmxcrlasw201#!
+
+tmxcrlasw201#show version
+Cisco IOS XE Software, Version 17.06.04 - SMU-PATCHED
+Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.4, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Sun 14-Aug-22 08:58 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2022 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+BOOTLDR: System Bootstrap, Version 17.6.1r[FC2], RELEASE SOFTWARE (P)
+
+tmxcrlasw201 uptime is 2 hours, 12 minutes
+Uptime for this control processor is 2 hours, 14 minutes
+System returned to ROM by Reload Command at 18:06:47 UTC Thu Apr 6 2023
+System restarted at 18:09:14 UTC Thu Apr 6 2023
+System image file is "flash:packages.conf"
+Last reload reason: Reload Command
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+
+Technology Package License Information: 
+
+------------------------------------------------------------------------------
+Technology-package                                     Technology-package
+Current                        Type                       Next reboot  
+------------------------------------------------------------------------------
+network-advantage   	Smart License                 	 network-advantage   
+dna-advantage       	Subscription Smart License    	 dna-advantage                 
+AIR License Level: AIR DNA Advantage
+Next reload AIR license Level: AIR DNA Advantage
+
+Active SMU Information: 
+  State (St):  C - Committed, U - Uncommitted
+--------------------------------------------------------------------------------
+Type  Defect_ID    Version   St Filename                                     
+--------------------------------------------------------------------------------
+SMU   CSCwb51963   17.06.04. C  cat9k_iosxe.17.06.04.CSCwb51963.SPA.smu.bin  
+SMU   CSCwd17488   17.06.04. C  cat9k_iosxe.17.06.04.CSCwd17488.SPA.smu.bin  
+SMU   CSCwa34390   17.06.04. C  cat9k_iosxe.17.06.04.CSCwa34390.SPA.smu.bin  
+--------------------------------------------------------------------------------
+
+Smart Licensing Status: Registration Not Applicable/Not Applicable
+
+cisco C9300-48UXM (X86) processor with 1317097K/6147K bytes of memory.
+Processor board ID FJC24431P88
+2 Virtual Ethernet interfaces
+4 Gigabit Ethernet interfaces
+36 2.5 Gigabit Ethernet interfaces
+20 Ten Gigabit Ethernet interfaces
+2 TwentyFive Gigabit Ethernet interfaces
+2 Forty Gigabit Ethernet interfaces
+2048K bytes of non-volatile configuration memory.
+8388608K bytes of physical memory.
+1638400K bytes of Crash Files at crashinfo:.
+11264000K bytes of Flash at flash:.
+
+Base Ethernet MAC Address          : 40:f0:78:1b:b5:00
+Motherboard Assembly Number        : 73-18277-05
+Motherboard Serial Number          : FJZ24430F7S
+Model Revision Number              : A0
+Motherboard Revision Number        : A0
+Model Number                       : C9300-48UXM
+System Serial Number               : FJC24431P88
+CLEI Code Number                   : 
+
+
+Switch Ports Model              SW Version        SW Image              Mode   
+------ ----- -----              ----------        ----------            ----   
+*    1 65    C9300-48UXM        17.06.04          CAT9K_IOSXE           INSTALL
+
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show clock
+20:22:06.063 UTC Thu Apr 6 2023
+tmxcrlasw201#!
+
+tmxcrlasw201#show ntp status
+Clock is synchronized, stratum 4, reference is 164.56.50.7    
+nominal freq is 250.0000 Hz, actual freq is 249.9949 Hz, precision is 2**10
+ntp uptime is 795600 (1/100 of seconds), resolution is 4016
+reference time is E7D99F0B.922D0FE8 (19:42:03.571 UTC Thu Apr 6 2023)
+clock offset is -61.8136 msec, root delay is 64.36 msec
+root dispersion is 96.59 msec, peer dispersion is 1.04 msec
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is 0.000020268 s/s
+system poll interval is 512, last update was 2403 sec ago.
+tmxcrlasw201#!
+
+tmxcrlasw201#show spanning-tree | include VLAN|this bridge
+VLAN0105
+VLAN0218
+VLAN0401
+VLAN0500
+VLAN0800
+tmxcrlasw201#!
+
+tmxcrlasw201#show ip interface brief | exclude unassigned
+Interface              IP-Address      OK? Method Status                Protocol
+Vlan800                172.20.113.201  YES NVRAM  up                    up      
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show interface counters errors
+
+Port           Align-Err     FCS-Err    Xmit-Err     Rcv-Err  UnderSize  OutDiscards 
+Tw1/0/1                0           0           0           0          0            0 
+Tw1/0/2                0           0           0           0          0            0 
+Tw1/0/3                0           0           0           0          0            0 
+Tw1/0/4                0           0           0           0          0            0 
+Tw1/0/5                0           0           0           0          0            0 
+Tw1/0/6                0           0           0           0          0            0 
+Tw1/0/7                0           0           0           0          0            0 
+Tw1/0/8                0           0           0           0          0            0 
+Tw1/0/9                0           0           0           0          0            0 
+Tw1/0/10               0           0           0           0          0            0 
+Tw1/0/11               0           0           0           0          0            0 
+Tw1/0/12               0           0           0           0          0            0 
+Tw1/0/13               0           0           0           0          0            0 
+Tw1/0/14               0           0           0           0          0            0 
+Tw1/0/15               0           0           0           0          0            0 
+Tw1/0/16               0           0           0           0          0            0 
+Tw1/0/17               0           0           0           0          0            0 
+Tw1/0/18               0           0           0           0          0            0 
+Tw1/0/19               0           0           0           0          0            0 
+Tw1/0/20               0           0           0           0          0            0 
+Tw1/0/21               0           0           0           0          0            0 
+Tw1/0/22               0           0           0           0          0            0 
+Tw1/0/23               0           0           0           0          0            0 
+Tw1/0/24               0           0           0           0          0            0 
+Tw1/0/25               0           0           0           0          0            0 
+Tw1/0/26               0           0           0           0          0            0 
+Tw1/0/27               0           0           0           0          0            0 
+Tw1/0/28               0           0           0           0          0            0 
+Tw1/0/29               0           0           0           0          0            0 
+Tw1/0/30               0           0           0           0          0            0 
+Tw1/0/31               0           0           0           0          0            0 
+Tw1/0/32               0           0           0           0          0            0 
+Tw1/0/33               0           0           0           0          0            0 
+Tw1/0/34               0           0           0           0          0            0 
+Tw1/0/35               0           0           0           0          0            0 
+Tw1/0/36               0           0           0           0          0            0 
+Te1/0/37               0           0           0           0          0            0 
+Te1/0/38               0           0           0           0          0            0 
+Te1/0/39               0           0           0           0          0            0 
+Te1/0/40               0           0           0           0          0            0 
+Te1/0/41               0           0           0           0          0            0 
+Te1/0/42               0           0           0           0          0            0 
+Te1/0/43               0           0           0           0          0            0 
+Te1/0/44               0           0           0           0          0            0 
+Te1/0/45               0           0           0           0          0            0 
+Te1/0/46               0           0           0           0          0            0 
+Te1/0/47               0           0           0           0          0            0 
+Te1/0/48               0           0           0           0          0            0 
+Twe1/1/1               0           0           0           0          0            0 
+Twe1/1/2               0           0           0           0          0            0 
+Ap1/0/1                0           0           0           0          0            0 
+Po20                   0           0           0           0          0            0 
+Po55                   0           0           0           0          0            0 
+Po56                   0           0           0           0          0            0 
+
+Port         Single-Col  Multi-Col   Late-Col  Excess-Col  Carri-Sen      Runts 
+Tw1/0/1               0          0          0           0          0          0 
+Tw1/0/2               0          0          0           0          0          0 
+Tw1/0/3               0          0          0           0          0          0 
+Tw1/0/4               0          0          0           0          0          0 
+Tw1/0/5               0          0          0           0          0          0 
+Tw1/0/6               0          0          0           0          0          0 
+Tw1/0/7               0          0          0           0          0          0 
+Tw1/0/8               0          0          0           0          0          0 
+Tw1/0/9               0          0          0           0          0          0 
+Tw1/0/10              0          0          0           0          0          0 
+Tw1/0/11              0          0          0           0          0          0 
+Tw1/0/12              0          0          0           0          0          0 
+Tw1/0/13              0          0          0           0          0          0 
+Tw1/0/14              0          0          0           0          0          0 
+Tw1/0/15              0          0          0           0          0          0 
+Tw1/0/16              0          0          0           0          0          0 
+Tw1/0/17              0          0          0           0          0          0 
+Tw1/0/18              0          0          0           0          0          0 
+Tw1/0/19              0          0          0           0          0          0 
+Tw1/0/20              0          0          0           0          0          0 
+Tw1/0/21              0          0          0           0          0          0 
+Tw1/0/22              0          0          0           0          0          0 
+Tw1/0/23              0          0          0           0          0          0 
+Tw1/0/24              0          0          0           0          0          0 
+Tw1/0/25              0          0          0           0          0          0 
+Tw1/0/26              0          0          0           0          0          0 
+Tw1/0/27              0          0          0           0          0          0 
+Tw1/0/28              0          0          0           0          0          0 
+Tw1/0/29              0          0          0           0          0          0 
+Tw1/0/30              0          0          0           0          0          0 
+Tw1/0/31              0          0          0           0          0          0 
+Tw1/0/32              0          0          0           0          0          0 
+Tw1/0/33              0          0          0           0          0          0 
+Tw1/0/34              0          0          0           0          0          0 
+Tw1/0/35              0          0          0           0          0          0 
+Tw1/0/36              0          0          0           0          0          0 
+Te1/0/37              0          0          0           0          0          0 
+Te1/0/38              0          0          0           0          0          0 
+Te1/0/39              0          0          0           0          0          0 
+Te1/0/40              0          0          0           0          0          0 
+Te1/0/41              0          0          0           0          0          0 
+Te1/0/42              0          0          0           0          0          0 
+Te1/0/43              0          0          0           0          0          0 
+Te1/0/44              0          0          0           0          0          0 
+Te1/0/45              0          0          0           0          0          0 
+Te1/0/46              0          0          0           0          0          0 
+Te1/0/47              0          0          0           0          0          0 
+Te1/0/48              0          0          0           0          0          0 
+Twe1/1/1              0          0          0           0          0          0 
+Twe1/1/2              0          0          0           0          0          0 
+Ap1/0/1               0          0          0           0          0          0 
+Po20                  0          0          0           0          0          0 
+Po55                  0          0          0           0          0          0 
+Po56                  0          0          0           0          0          0 
+tmxcrlasw201#!
+
+tmxcrlasw201#show ip route static
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, m - OMP
+       n - NAT, Ni - NAT inside, No - NAT outside, Nd - NAT DIA
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       H - NHRP, G - NHRP registered, g - NHRP registration summary
+       o - ODR, P - periodic downloaded static route, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+       & - replicated local route overrides by connected
+
+Gateway of last resort is 172.20.113.193 to network 0.0.0.0
+
+S*    0.0.0.0/0 [1/0] via 172.20.113.193
+tmxcrlasw201#!
+
+tmxcrlasw201#show ip eigrp interface
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show standby brief
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show cdp neighbor
+Capability Codes: R - Router, T - Trans Bridge, B - Source Route Bridge
+                  S - Switch, H - Host, I - IGMP, r - Repeater, P - Phone, 
+                  D - Remote, C - CVTA, M - Two-port Mac Relay 
+
+Device ID        Local Intrfce     Holdtme    Capability  Platform  Port ID
+tolipstnap001-02 Two 1/0/6         139               H    FAS8200   e0M
+tolipstnap001-01 Two 1/0/4         136               H    FAS8200   e0d
+tolipstnap001-01 Two 1/0/5         136               H    FAS8200   e0c
+tmxcrlcrt001-01-X9.tmx.nam.gm.com
+                 Twe 1/1/1         131             R S I  C9500-48Y Twe 2/0/1
+tmxcrlcrt002-01-Y9.tmx.nam.gm.com
+                 Twe 1/1/2         146             R S I  C9500-48Y Twe 2/0/1
+
+Total cdp entries displayed : 5
+tmxcrlasw201#!
+
+tmxcrlasw201#show lldp neighbor
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+
+Device ID           Local Intf     Hold-time  Capability      Port ID
+tmxcrlcrt002-01-Y9.tTwe1/1/2       120        B,R             Twe2/0/1
+tmxcrlcrt001-01-X9.tTwe1/1/1       120        B,R             Twe2/0/1
+b496.91f4.2a54      Tw1/0/19       121                        b496.91f4.2a54
+b496.91f4.2844      Tw1/0/20       121                        b496.91f4.2844
+
+Total entries displayed: 4
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show vlan
+
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Ap1/0/1
+105  Server-BuR                       active    
+218  Server_Mgmt                      active    Tw1/0/1, Tw1/0/2, Tw1/0/3, Tw1/0/6, Tw1/0/12, Tw1/0/14, Tw1/0/16, Tw1/0/17
+401  Iman_Engineering                 active    Tw1/0/8, Tw1/0/10, Tw1/0/11, Tw1/0/13, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/21
+500  NMXTMX;VL500;TOLUCA_PDC          active    Tw1/0/7, Tw1/0/9, Tw1/0/15
+800  Multi_TC_L2_Switch_Mgt_VLAN      active    
+999  Unused_ports                     active    Tw1/0/22, Tw1/0/23, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/27, Tw1/0/28, Tw1/0/29, Tw1/0/30, Tw1/0/31, Tw1/0/32, Tw1/0/33, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Te1/0/42, Te1/0/43, Te1/0/44, Te1/0/45, Te1/0/46, Te1/0/47, Te1/0/48
+1002 fddi-default                     act/unsup 
+1003 token-ring-default               act/unsup 
+1004 fddinet-default                  act/unsup 
+1005 trnet-default                    act/unsup 
+
+VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
+---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
+1    enet  100001     1500  -      -      -        -    -        0      0   
+105  enet  100105     1500  -      -      -        -    -        0      0   
+218  enet  100218     1500  -      -      -        -    -        0      0   
+401  enet  100401     1500  -      -      -        -    -        0      0   
+500  enet  100500     1500  -      -      -        -    -        0      0   
+800  enet  100800     1500  -      -      -        -    -        0      0   
+999  enet  100999     1500  -      -      -        -    -        0      0   
+1002 fddi  101002     1500  -      -      -        -    -        0      0   
+1003 tr    101003     1500  -      -      -        -    -        0      0   
+1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
+1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
+
+Remote SPAN VLANs
+------------------------------------------------------------------------------
+
+
+Primary Secondary Type              Ports
+------- --------- ----------------- ------------------------------------------
+
+tmxcrlasw201#!
+
+tmxcrlasw201#sh int status
+
+Port         Name               Status       Vlan       Duplex  Speed Type
+Tw1/0/1      UPS-Monitoring01   connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/2      mxtoltcahpihs03-iD connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/3      tolipstsan001-ilo  connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/4      Netapp-Secondary   connected    trunk      a-full   1000 100/1000/2.5GBaseTX
+Tw1/0/5      Netapp-Secondary   connected    trunk      a-full   1000 100/1000/2.5GBaseTX
+Tw1/0/6      tolipstnap001-01-e connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/7      TOLIPPAGMND01-Pri  connected    500        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/8      TMXIPSTCS0001-eth3 connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/9      TOLIPEXGMO001-Prim notconnect   500          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/10     TMXIPSTSAN001-mgmt connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/11     tolipstsan001-Mgt  connected    401        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/12     link_tmxptnmts001- connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/13     MXTMXBRSHPIBR01-S  notconnect   401          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/14     link-to-tmxptsbc01 connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/15     tolipphsad001      connected    500        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/16     link_tmxptflvn001  connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/17     PriSecureLogix-iDR connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/18     tmxipphacc01-pri   notconnect   401          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/19     tmxipphacc02-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/20     tmxipphacc03-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/21     tmxipphacc04-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/22     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/23     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/24     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/25     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/26     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/27     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/28     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/29     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/30     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/31     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/32     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/33     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/34     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/35     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/36     available GT Infra disabled     999          auto   auto 100/1000/2.5GBaseTX
+Te1/0/37     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/38     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/39     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/40     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/41     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/42     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/43     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/44     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/45     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/46     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/47     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/48     available GT Infra disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Twe1/1/1     link-tmxcrlcrt001- connected    trunk        full    25G SFP-25GBase-AOC1M
+Twe1/1/2     link-tmxcrlcrt002- connected    trunk        full    25G SFP-10/25GBase-CSR
+Ap1/0/1      Unused GT Infrastr disabled     1            auto   auto App-hosting port
+Po20         Netapp             connected    trunk      a-full   1000 N/A
+Po55         link-tmxcrlcrt001- connected    trunk      a-full    25G N/A
+Po56         link-tmxcrlcrt002- connected    trunk      a-full    25G N/A
+tmxcrlasw201#!
+
+tmxcrlasw201#show interface trunk
+
+Port           Mode             Encapsulation  Status        Native vlan  
+Po20           on               802.1q         trunking      999
+Po55           on               802.1q         trunking      1
+Po56           on               802.1q         trunking      1
+
+Port           Vlans allowed on trunk
+Po20           105,218,401
+Po55           105,218,401,500,800
+Po56           105,218,401,500,800
+
+Port           Vlans allowed and active in management domain
+Po20           105,218,401
+Po55           105,218,401,500,800
+Po56           105,218,401,500,800
+
+Port           Vlans in spanning tree forwarding state and not pruned
+Po20           105,218,401
+Po55           105,401,800
+Po56           218,500,800
+tmxcrlasw201#!
+
+tmxcrlasw201#show interface status | inc connected
+Tw1/0/1      UPS-Monitoring01   connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/2      mxtoltcahpihs03-iD connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/3      tolipstsan001-ilo  connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/4      Netapp-Secondary   connected    trunk      a-full   1000 100/1000/2.5GBaseTX
+Tw1/0/5      Netapp-Secondary   connected    trunk      a-full   1000 100/1000/2.5GBaseTX
+Tw1/0/6      tolipstnap001-01-e connected    218        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/7      TOLIPPAGMND01-Pri  connected    500        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/8      TMXIPSTCS0001-eth3 connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/10     TMXIPSTSAN001-mgmt connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/11     tolipstsan001-Mgt  connected    401        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/12     link_tmxptnmts001- connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/14     link-to-tmxptsbc01 connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/15     tolipphsad001      connected    500        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/16     link_tmxptflvn001  connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/17     PriSecureLogix-iDR connected    218        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/19     tmxipphacc02-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/20     tmxipphacc03-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/21     tmxipphacc04-pri   connected    401        a-full a-1000 100/1000/2.5GBaseTX
+Twe1/1/1     link-tmxcrlcrt001- connected    trunk        full    25G SFP-25GBase-AOC1M
+Twe1/1/2     link-tmxcrlcrt002- connected    trunk        full    25G SFP-10/25GBase-CSR
+Po20         Netapp             connected    trunk      a-full   1000 N/A
+Po55         link-tmxcrlcrt001- connected    trunk      a-full    25G N/A
+Po56         link-tmxcrlcrt002- connected    trunk      a-full    25G N/A
+tmxcrlasw201#!
+
+tmxcrlasw201#show power inline
+
+Module   Available     Used     Remaining
+          (Watts)     (Watts)    (Watts) 
+------   ---------   --------   ---------
+1          1625.0        0.0      1625.0
+Interface Admin  Oper       Power   Device              Class Max
+                            (Watts)                            
+--------- ------ ---------- ------- ------------------- ----- ----
+Tw1/0/1   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/2   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/3   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/4   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/5   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/6   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/7   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/8   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/9   auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/10  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/11  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/12  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/13  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/14  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/15  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/16  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/17  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/18  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/19  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/20  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/21  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/22  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/23  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/24  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/25  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/26  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/27  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/28  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/29  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/30  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/31  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/32  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/33  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/34  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/35  auto   off        0.0     n/a                 n/a   60.0 
+Tw1/0/36  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/37  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/38  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/39  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/40  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/41  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/42  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/43  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/44  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/45  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/46  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/47  auto   off        0.0     n/a                 n/a   60.0 
+Te1/0/48  auto   off        0.0     n/a                 n/a   60.0 
+--------- ------ ---------- ---------- ---------- ------ ----- 
+Totals:          0    on    0.0       
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show interfaces | include Vlan
+Vlan1 is administratively down, line protocol is down , Autostate Enabled
+Vlan800 is up, line protocol is up , Autostate Enabled
+tmxcrlasw201#!
+
+tmxcrlasw201#show mac address-table
+          Mac Address Table
+-------------------------------------------
+
+Vlan    Mac Address       Type        Ports
+----    -----------       --------    -----
+ All    0100.0ccc.cccc    STATIC      CPU
+ All    0100.0ccc.cccd    STATIC      CPU
+ All    0180.c200.0000    STATIC      CPU
+ All    0180.c200.0001    STATIC      CPU
+ All    0180.c200.0002    STATIC      CPU
+ All    0180.c200.0003    STATIC      CPU
+ All    0180.c200.0004    STATIC      CPU
+ All    0180.c200.0005    STATIC      CPU
+ All    0180.c200.0006    STATIC      CPU
+ All    0180.c200.0007    STATIC      CPU
+ All    0180.c200.0008    STATIC      CPU
+ All    0180.c200.0009    STATIC      CPU
+ All    0180.c200.000a    STATIC      CPU
+ All    0180.c200.000b    STATIC      CPU
+ All    0180.c200.000c    STATIC      CPU
+ All    0180.c200.000d    STATIC      CPU
+ All    0180.c200.000e    STATIC      CPU
+ All    0180.c200.000f    STATIC      CPU
+ All    0180.c200.0010    STATIC      CPU
+ All    0180.c200.0021    STATIC      CPU
+ All    ffff.ffff.ffff    STATIC      CPU
+ 800    0000.0c07.ac02    DYNAMIC     Po56
+ 800    40f0.781b.b552    STATIC      Vl800 
+ 800    549f.c6f4.8fbf    DYNAMIC     Po55
+ 800    b0c5.3c3e.04ff    DYNAMIC     Po56
+ 800    ecce.1333.1d80    DYNAMIC     Po55
+ 800    ecce.1339.93d2    DYNAMIC     Po55
+ 800    ecce.1366.7bd2    DYNAMIC     Po55
+ 218    0000.0c07.ac02    DYNAMIC     Po56
+ 218    0008.2529.4290    DYNAMIC     Tw1/0/14
+ 218    0013.c608.b25e    DYNAMIC     Tw1/0/12
+ 218    0050.5667.dfe2    DYNAMIC     Po56
+ 218    00e0.d816.5734    DYNAMIC     Po56
+ 218    00e0.d816.5739    DYNAMIC     Tw1/0/1
+ 218    2cea.7f6d.5334    DYNAMIC     Tw1/0/3
+ 218    549f.c6f4.8fbf    DYNAMIC     Po56
+ 218    549f.c6f4.a641    DYNAMIC     Po56
+ 218    70b5.e8e1.a9fe    DYNAMIC     Tw1/0/2
+ 218    7486.e2b1.8b20    DYNAMIC     Tw1/0/16
+ 218    7486.e2b1.8b21    DYNAMIC     Tw1/0/16
+ 218    b0c5.3c3e.04ff    DYNAMIC     Po56
+ 218    b4b5.2fee.03ce    DYNAMIC     Po56
+ 218    bc97.e172.bcf0    DYNAMIC     Po56
+ 218    c84b.d682.c04e    DYNAMIC     Tw1/0/17
+ 218    c84b.d682.c0a8    DYNAMIC     Po56
+ 218    cc48.3a1b.b80a    DYNAMIC     Po56
+ 218    d039.ea22.7707    DYNAMIC     Po56
+ 218    d039.ea22.7709    DYNAMIC     Po56
+ 218    d039.ea22.9f27    DYNAMIC     Tw1/0/6
+ 218    d039.ea22.9f29    DYNAMIC     Tw1/0/6
+ 218    d239.ea22.7707    DYNAMIC     Po20
+ 218    d239.ea22.9f27    DYNAMIC     Po56
+ 218    ec2a.7233.5364    DYNAMIC     Po56
+ 401    0000.0c07.ac01    DYNAMIC     Po55
+ 401    0050.5688.2fdb    DYNAMIC     Po55
+ 401    0050.5688.4ffc    DYNAMIC     Po55
+ 401    0050.5688.83ff    DYNAMIC     Po55
+ 401    0050.5688.d0f6    DYNAMIC     Po55
+ 401    0050.5688.ee00    DYNAMIC     Po55
+ 401    0060.1645.6686    DYNAMIC     Po55
+ 401    0060.165b.96d2    DYNAMIC     Po55
+ 401    0060.165c.f6b6    DYNAMIC     Po55
+ 401    0062.0b02.feca    DYNAMIC     Po55
+ 401    549f.c6f4.8fbf    DYNAMIC     Po55
+ 401    908d.6ec7.a75b    DYNAMIC     Po55
+ 401    908d.6ec7.b257    DYNAMIC     Po55
+ 401    a036.9f6a.230e    DYNAMIC     Po55
+ 401    a036.9f6d.eb2a    DYNAMIC     Tw1/0/8
+ 401    b0c5.3c3e.03c1    DYNAMIC     Po55
+ 401    b0c5.3c3e.04ff    DYNAMIC     Po55
+ 401    b496.91f4.2844    DYNAMIC     Tw1/0/20
+ 401    b496.91f4.2a54    DYNAMIC     Tw1/0/19
+ 401    cc48.3a1b.b811    DYNAMIC     Tw1/0/21
+ 401    d239.ea22.76f7    DYNAMIC     Po55
+ 401    d239.ea22.9f17    DYNAMIC     Po55
+ 401    d81f.cc16.2180    DYNAMIC     Tw1/0/11
+ 500    0000.0c07.ac02    DYNAMIC     Po56
+ 500    0015.5daf.ef50    DYNAMIC     Tw1/0/15
+ 500    0015.5dc0.1d00    DYNAMIC     Tw1/0/15
+ 500    0015.5dc0.1d03    DYNAMIC     Tw1/0/15
+ 500    2c44.fd7c.80c0    DYNAMIC     Tw1/0/7
+ 500    2c44.fd7c.80c3    DYNAMIC     Po56
+ 500    549f.c6f4.8fbf    DYNAMIC     Po56
+ 500    549f.c6f4.a641    DYNAMIC     Po56
+ 500    b0c5.3c3e.04ff    DYNAMIC     Po56
+ 105    0000.0c07.ac01    DYNAMIC     Po55
+ 105    549f.c6f4.8fbf    DYNAMIC     Po55
+ 105    b0c5.3c3e.03c1    DYNAMIC     Po55
+ 105    b0c5.3c3e.04ff    DYNAMIC     Po55
+ 105    d239.ea22.7707    DYNAMIC     Po20
+ 105    d239.ea22.9f27    DYNAMIC     Po55
+Total Mac Addresses for this criterion: 91
+tmxcrlasw201#!
+
+tmxcrlasw201#show switch detail
+Switch/Stack Mac Address : 40f0.781b.b500 - Local Mac Address
+Mac persistency wait time: Indefinite
+                                             H/W   Current
+Switch#   Role    Mac Address     Priority Version  State 
+-------------------------------------------------------------------------------------
+*1       Active   40f0.781b.b500     15     V03     Ready                               
+
+
+
+         Stack Port Status             Neighbors     
+Switch#  Port 1     Port 2           Port 1   Port 2 
+--------------------------------------------------------
+  1       DOWN       DOWN             None     None
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show env all
+Sensor List: Environmental Monitoring 
+ Sensor          Location        State               Reading       Range(min-max)       
+ PS1 Vout        1               GOOD               56238 mV          na
+ PS1 Vin         1               GOOD              205500 mV        90 - 264
+ PS1 CURin       1               GOOD                 447 mA          na
+ PS1 Curout      1               GOOD                1258 mA          na
+ PS1 POWin       1               GOOD               71500 mW          na
+ PS1 POWout      1               GOOD               68875 mW          na
+ PS1 FAN         1               GOOD                6416 rpm         na
+ PS2 Vout        1               GOOD               56111 mV          na
+ PS2 Vin         1               GOOD              208000 mV        90 - 264
+ PS2 CURin       1               GOOD                 604 mA          na
+ PS2 CURout      1               GOOD                1539 mA          na
+ PS2 POWin       1               GOOD               95750 mW          na
+ PS2 POWout      1               GOOD               89375 mW          na
+ PS2 FAN         1               GOOD                8512 rpm         na
+ SYSTEM INLET    1               GREEN                 29 Celsius   0 - 56
+ SYSTEM OUTLET   1               GREEN                 48 Celsius   0 - 125
+ SYSTEM HOTSPOT  1               GREEN                 80 Celsius   0 - 125
+
+Switch	 FAN	 Speed	 State	 Airflow direction
+---------------------------------------------------
+  1  	  1	14240 	  OK	 Front to Back
+  1  	  2	14240 	  OK	 Front to Back
+  1  	  3	14240 	  OK	 Front to Back
+
+SW  PID                 Serial#     Status           Sys Pwr  PoE Pwr  Watts
+--  ------------------  ----------  ---------------  -------  -------  -----
+1A  PWR-C1-1100WAC-P    DCC2435DBWU  OK              Good     Good     1100
+1B  PWR-C1-1100WAC      DTN2105V40W  OK              Good     Good     1100
+
+---------------------------------------------------
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show ip arp
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  172.20.113.193         84   0000.0c07.ac02  ARPA   Vlan800
+Internet  172.20.113.194          6   549f.c6f4.8fbf  ARPA   Vlan800
+Internet  172.20.113.195          8   b0c5.3c3e.04ff  ARPA   Vlan800
+Internet  172.20.113.201          -   40f0.781b.b552  ARPA   Vlan800
+tmxcrlasw201#!
+
+tmxcrlasw201#show arp | in Vlan((5)*[0-1][0-9])
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show license status
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: Callhome
+
+Policy:
+  Policy in use: Merged from multiple sources.
+  Reporting ACK required: yes (CISCO default)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 365 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 90 (CISCO default)
+    Reporting frequency (days): 90 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+
+Miscellaneous:
+  Custom Id: <empty>
+
+Usage Reporting:
+  Last ACK received: <none>
+  Next ACK deadline: Jul 05 17:59:56 2023 UTC
+  Reporting push interval: 30  days
+  Next ACK push check: <none>
+  Next report push: Apr 06 19:09:57 2023 UTC
+  Last report push: <none>
+  Last report file write: <none>
+
+Trust Code Installed: <none>
+
+
+tmxcrlasw201#!
+
+tmxcrlasw201#show license all
+Smart Licensing Status
+======================
+
+Smart Licensing is ENABLED
+
+Export Authorization Key:
+  Features Authorized:
+    <none>
+
+Utility:
+  Status: DISABLED
+
+Smart Licensing Using Policy:
+  Status: ENABLED
+
+Data Privacy:
+  Sending Hostname: yes
+    Callhome hostname privacy: DISABLED
+    Smart Licensing hostname privacy: DISABLED
+  Version privacy: DISABLED
+
+Transport:
+  Type: Callhome
+
+Miscellaneous:
+  Custom Id: <empty>
+
+Policy:
+  Policy in use: Merged from multiple sources.
+  Reporting ACK required: yes (CISCO default)
+  Unenforced/Non-Export Perpetual Attributes:
+    First report requirement (days): 365 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Unenforced/Non-Export Subscription Attributes:
+    First report requirement (days): 90 (CISCO default)
+    Reporting frequency (days): 90 (CISCO default)
+    Report on change (days): 90 (CISCO default)
+  Enforced (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+  Export (Perpetual/Subscription) License Attributes:
+    First report requirement (days): 0 (CISCO default)
+    Reporting frequency (days): 0 (CISCO default)
+    Report on change (days): 0 (CISCO default)
+
+Usage Reporting:
+  Last ACK received: <none>
+  Next ACK deadline: Jul 05 17:59:56 2023 UTC
+  Reporting push interval: 30  days
+  Next ACK push check: <none>
+  Next report push: Apr 06 19:09:57 2023 UTC
+  Last report push: <none>
+  Last report file write: <none>
+
+Trust Code Installed: <none>
+
+License Usage
+=============
+
+network-advantage (C9300-48 Network Advantage):
+  Description: C9300-48 Network Advantage
+  Count: 1
+  Version: 1.0
+  Status: IN USE
+  Export status: NOT RESTRICTED
+  Feature Name: network-advantage
+  Feature Description: C9300-48 Network Advantage
+  Enforcement type: NOT ENFORCED
+  License type: Perpetual
+
+dna-advantage (C9300-48 DNA Advantage):
+  Description: C9300-48 DNA Advantage
+  Count: 1
+  Version: 1.0
+  Status: IN USE
+  Export status: NOT RESTRICTED
+  Feature Name: dna-advantage
+  Feature Description: C9300-48 DNA Advantage
+  Enforcement type: NOT ENFORCED
+  License type: Subscription
+
+Product Information
+===================
+UDI: PID:C9300-48UXM,SN:FJC24431P88
+
+Agent Version
+=============
+Smart Agent for Licensing: 5.1.29_rel/134
+
+License Authorizations
+======================
+Overall status:
+  Active: PID:C9300-48UXM,SN:FJC24431P88
+      Status: NOT INSTALLED
+
+Purchased Licenses:
+  No Purchase Information Available
+
+
+Derived Licenses:
+  Entitlement Tag: regid.2017-05.com.cisco.C9300_48P_NW_Advantagek9,1.0_6a224fe3-c92e-4440-a9c1-5d0e53a54015
+  Entitlement Tag: regid.2017-05.com.cisco.C9300_48P_Dna_Advantage,1.0_60783b06-53ee-484c-b21e-615d3cf6837a
+ 
+
+
+tmxcrlasw201#!
+
+tmxcrlasw201#sh log
+Syslog logging: enabled (0 messages dropped, 2 messages rate-limited, 0 flushes, 0 overruns, xml disabled, filtering disabled)
+
+Active Message Discriminator:
+FILTER    msg-body       drops    DOT1X-5|MAB-5|SESSION_MGR-5
+
+
+
+
+No Inactive Message Discriminator.
+
+
+    Console logging: disabled
+    Monitor logging: level informational, 0 messages logged, xml disabled,
+                     filtering disabled
+    Buffer logging:  level informational, 162 messages logged, xml disabled,
+                    filtering disabled, discriminator(FILTER), 
+                     0 messages rate-limited, 0 messages dropped-by-MD
+    Exception Logging: size (4096 bytes)
+    Count and timestamp logging messages: disabled
+    File logging: disabled
+    Persistent logging: enabled, url flash:/syslog, disk space 5120000 bytes, file size 500000 bytes, batch size 4096 bytes, threshold capacity 0  , immediate  
+
+No active filter modules.
+
+    Trap logging: level informational, 159 message lines logged
+        Logging to 148.93.49.21  (udp port 514, audit disabled,
+              link up),
+              158 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.129.8  (udp port 514, audit disabled,
+              link up),
+              159 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 148.93.115.30  (udp port 5400, audit disabled,
+              link up),
+              159 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging to 130.172.83.30  (udp port 5400, audit disabled,
+              link up),
+              159 message lines logged, 
+              0 message lines rate-limited, 
+              0 message lines dropped-by-MD, 
+              xml disabled, sequence number disabled
+              filtering disabled
+        Logging Source-Interface:       VRF Name:
+        Vlan800                         
+    TLS Profiles: 
+
+Log Buffer (40960 bytes):
+
+*Apr  6 18:09:21.675: %SMART_LIC-6-AGENT_ENABLED: Smart Agent for Licensing is enabled 
+*Apr  6 18:09:21.698: %SMART_LIC-6-EXPORT_CONTROLLED: Usage of export controlled features is not allowed
+*Apr  6 18:09:27.201: %TLSCLIENT-5-TLSCLIENT_IOS: TLS Client is IOS based
+*Apr  6 18:09:27.357: %CRYPTO-4-AUDITWARN: Encryption audit check could not be performed
+*Apr  6 18:09:27.358: %CRYPTO_ENGINE-4-CSDL_COMPLIANCE_DISABLED: Cisco PSB security compliance has been disabled
+*Apr  6 18:09:27.371: %SPANTREE-5-EXTENDED_SYSID: Extended SysId enabled for type vlan
+*Apr  6 18:09:27.702: %LINK-3-UPDOWN: Interface Lsmpi18/3, changed state to up
+*Apr  6 18:09:27.711: %LINK-3-UPDOWN: Interface EOBC18/1, changed state to up
+*Apr  6 18:09:27.712: %LINEPROTO-5-UPDOWN: Line protocol on Interface LI-Null0, changed state to up
+*Apr  6 18:09:27.712: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Apr  6 18:09:27.712: %LINEPROTO-5-UPDOWN: Line protocol on Interface LIIN18/2, changed state to up
+*Apr  6 18:09:27.713: %LINK-3-UPDOWN: Interface LIIN18/2, changed state to up
+*Apr  6 18:09:27.713: %LINK-5-CHANGED: Interface Bluetooth0/4, changed state to administratively down
+*Apr  6 18:09:27.811: %PNP-6-PNP_DISCOVERY_STARTED: PnP Discovery started
+*Apr  6 18:09:27.816: %HMANRP-6-HMAN_IOS_CHANNEL_INFO: HMAN-IOS channel event for switch 1: EMP_RELAY: Channel UP!
+*Apr  6 18:09:08.969: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 1 on Switch 1 is cable-not-connected
+*Apr  6 18:09:08.969: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 2 on Switch 1 is down
+*Apr  6 18:09:08.969: %STACKMGR-6-STACK_LINK_CHANGE: Switch 1 R0/0: stack_mgr: Stack port 2 on Switch 1 is cable-not-connected
+*Apr  6 18:09:08.969: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Apr  6 18:09:11.062: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Apr  6 18:09:13.123: %STACKMGR-4-SWITCH_ADDED: Switch 1 R0/0: stack_mgr: Switch 1 has been added to the stack.
+*Apr  6 18:09:13.124: %STACKMGR-6-ACTIVE_ELECTED: Switch 1 R0/0: stack_mgr: Switch 1 has been elected ACTIVE.
+*Apr  6 18:09:28.008: %HMANRP-6-EMP_NO_ELECTION_INFO: Could not elect active EMP switch, setting emp active switch to 0: EMP_RELAY: Could not elect switch with mgmt port UP
+*Apr  6 18:09:28.428: %SYS-5-CONFIG_P: Configured programmatically by process MGMT VRF Process from console as vty0
+*Apr  6 18:09:28.705: %IOSXE_MGMTVRF-6-CREATE_SUCCESS_INFO: Management vrf Mgmt-vrf created with ID 1, ipv4 table-id 0x1, ipv6 table-id 0x1E000001
+*Apr  6 18:09:28.706: %SYS-5-CONFIG_P: Configured programmatically by process MGMT VRF Process from console as vty0
+*Apr  6 18:09:28.715: %IOSXE_MGMTVRF-6-CREATE_SUCCESS_INFO: Management vrf Mgmt-vrf created with ID 1, ipv4 table-id 0x1, ipv6 table-id 0x1E000001
+*Apr  6 18:09:28.715: %SYS-5-CONFIG_P: Configured programmatically by process MGMT VRF Process from console as vty0
+*Apr  6 18:09:28.723: %LINEPROTO-5-UPDOWN: Line protocol on Interface Lsmpi18/3, changed state to up
+*Apr  6 18:09:28.723: %LINEPROTO-5-UPDOWN: Line protocol on Interface EOBC18/1, changed state to up
+*Apr  6 18:09:28.723: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Apr  6 18:09:28.723: %LINEPROTO-5-UPDOWN: Line protocol on Interface Bluetooth0/4, changed state to down
+*Apr  6 18:09:28.959: %ONEP_BASE-6-SS_ENABLED: ONEP: Service set Base was enabled by Default
+*Apr  6 18:09:29.548: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named TP-self-signed-1088750363 has been generated or imported by crypto config
+*Apr  6 18:09:29.554: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named SLA-KeyPair has been generated or imported by crypto config
+*Apr  6 18:09:29.559: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named SLA-KeyPair2 has been generated or imported by crypto config
+000044: *Apr  6 18:09:29.620: %SYS-5-LOG_CONFIG_CHANGE: Buffer logging: level informational, xml disabled, filtering disabled, size (40960), discriminator (FILTER)
+000045: *Apr  6 18:09:29.622: %SYS-5-LOG_CONFIG_CHANGE: Persistent logging: enabled, url flash:/syslog, disk space 5120000 bytes, file size 500000 bytes, batch size 4096 bytes
+000046: *Apr  6 18:09:29.625: %SYS-5-LOG_CONFIG_CHANGE: Console logging disabled
+000047: *Apr  6 18:09:29.626: %SYS-5-LOG_CONFIG_CHANGE: Monitor logging: level informational, xml disabled, filtering disabled
+000048: *Apr  6 18:09:29.690: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: SLA-TrustPoint created succesfully
+000049: *Apr  6 18:09:29.712: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: TP-self-signed-729424621 created succesfully
+000050: *Apr  6 18:09:29.867: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to down
+000051: *Apr  6 18:09:30.248: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 0 CLI Request Triggered
+000052: *Apr  6 18:09:30.248: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 0 CLI Request Triggered
+000053: *Apr  6 18:09:30.249: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 0 CLI Request Triggered
+000054: *Apr  6 18:09:30.250: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 0 CLI Request Triggered
+000055: *Apr  6 18:09:30.540: %LINK-5-CHANGED: Interface GigabitEthernet0/0, changed state to administratively down
+000056: *Apr  6 18:09:30.973: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000057: *Apr  6 18:09:30.973: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000058: *Apr  6 18:09:30.974: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000059: *Apr  6 18:09:30.974: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000060: *Apr  6 18:09:30.975: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000061: *Apr  6 18:09:30.975: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000062: *Apr  6 18:09:30.975: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000063: *Apr  6 18:09:30.975: %AAAA-4-CLI_DEPRECATED: WARNING: Command has been added to the configuration using a type 7 password. However, recommended to migrate to strong type-6 encryption
+000064: *Apr  6 18:09:31.049: %SW_VLAN-6-VTP_DOMAIN_NAME_CHG: VTP domain name changed to nmxtmx.
+000065: *Apr  6 18:09:31.061: %SYS-5-CONFIG_I: Configured from memory by console
+000066: *Apr  6 18:09:31.124: %SYS-5-CONFIG_P: Configured programmatically by process CPP MQC QoS Policy manager from console as vty1
+000067: *Apr  6 18:09:31.128: %PLATFORM_FEP-6-FRU_PS_OIR: Switch 1: FRU power supply A inserted
+000068: *Apr  6 18:09:31.128: %PLATFORM_FEP-6-FRU_PS_OIR: Switch 1: FRU power supply B inserted
+000069: *Apr  6 18:09:31.244: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan800, changed state to down
+000070: *Apr  6 18:09:31.506: %SSH-5-ENABLED: SSH 2.0 has been enabled
+000071: *Apr  6 18:09:31.637: %SYS-5-RESTART: System restarted --
+Cisco IOS Software [Bengaluru], Catalyst L3 Switch Software (CAT9K_IOSXE), Version 17.6.4, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Sun 14-Aug-22 08:58 by mcpre
+000072: *Apr  6 18:09:31.683: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 514 started - CLI initiated
+000073: *Apr  6 18:09:31.683: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 514 started - CLI initiated
+000074: *Apr  6 18:09:31.683: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 5400 started - CLI initiated
+000075: *Apr  6 18:09:31.683: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 5400 started - CLI initiated
+000076: *Apr  6 18:09:31.803: %SNMP-5-COLDSTART: SNMP agent on host tmxcrlasw201 is undergoing a cold start
+000077: *Apr  6 18:09:32.195: %LINK-5-CHANGED: Interface AppGigabitEthernet1/0/1, changed state to administratively down
+000078: *Apr  6 18:09:32.197: %LINK-5-CHANGED: Interface Vlan1, changed state to administratively down
+000079: *Apr  6 18:09:33.140: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/1/1, changed state to down
+000080: *Apr  6 18:09:33.153: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/1/2, changed state to down
+000081: *Apr  6 18:09:33.153: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/1/3, changed state to down
+000082: *Apr  6 18:09:33.153: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet1/1/4, changed state to down
+000083: *Apr  6 18:09:33.167: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/1, changed state to down
+000084: *Apr  6 18:09:33.167: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/2, changed state to down
+000085: *Apr  6 18:09:33.167: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/3, changed state to down
+000086: *Apr  6 18:09:33.168: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/4, changed state to down
+000087: *Apr  6 18:09:33.168: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/5, changed state to down
+000088: *Apr  6 18:09:33.168: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/6, changed state to down
+000089: *Apr  6 18:09:33.168: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/7, changed state to down
+000090: *Apr  6 18:09:33.181: %LINEPROTO-5-UPDOWN: Line protocol on Interface TenGigabitEthernet1/1/8, changed state to down
+000091: *Apr  6 18:09:33.195: %LINEPROTO-5-UPDOWN: Line protocol on Interface FortyGigabitEthernet1/1/1, changed state to down
+000092: *Apr  6 18:09:33.195: %LINEPROTO-5-UPDOWN: Line protocol on Interface FortyGigabitEthernet1/1/2, changed state to down
+000093: *Apr  6 18:09:33.245: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/1, changed state to down
+000094: *Apr  6 18:09:33.245: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/2, changed state to down
+000095: *Apr  6 18:09:33.301: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named TP-self-signed-1088750363.server has been generated or imported by crypto-engine
+000096: *Apr  6 18:09:34.244: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/1, changed state to down
+000097: *Apr  6 18:09:34.246: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/2, changed state to down
+000098: *Apr  6 18:09:34.270: %SYS-6-BOOTTIME: Time taken to reboot after reload =  167 seconds
+000099: *Apr  6 18:09:36.892: %PNP-6-PNP_BEST_UDI_UPDATE: Best UDI [PID:C9300-48UXM,VID:A0,SN:FJC24431P88] identified via (master-registry)
+000100: *Apr  6 18:09:36.893: %PNP-6-PNP_CDP_UPDATE: Device UDI [PID:C9300-48UXM,VID:A0,SN:FJC24431P88] identified for CDP
+000101: *Apr  6 18:09:36.893: %PNP-6-PNP_DISCOVERY_STOPPED: PnP Discovery stopped (Startup Config Present)
+000102: *Apr  6 18:09:38.642: ILP:: switch 1 POE mode : IEEE AT
+000103: *Apr  6 18:09:38.642: ILP:: POE POST detail for switch 1: PASS
+000104: *Apr  6 18:09:38.642: ILP::   Able to get POE POST from switch 1 MCU
+000105: *Apr  6 18:09:40.023: %HMANRP-6-EMP_NO_ELECTION_INFO: Could not elect active EMP switch, setting emp active switch to 0: EMP_RELAY: Could not elect switch with mgmt port UP
+000106: *Apr  6 18:09:47.475: %PKI-2-NON_AUTHORITATIVE_CLOCK: PKI functions can not be initialized until an authoritative time source, like NTP, can be obtained.
+000107: *Apr  6 18:09:47.495: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI_LEGACY created succesfully
+000108: *Apr  6 18:09:47.502: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named CISCO_IDEVID_SUDI_LEGACY has been generated or imported by pki-sudi
+000109: *Apr  6 18:09:47.521: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI_LEGACY0 created succesfully
+000110: *Apr  6 18:09:47.524: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI created succesfully
+000111: *Apr  6 18:09:47.530: %CRYPTO_ENGINE-5-KEY_ADDITION: A key named CISCO_IDEVID_SUDI has been generated or imported by pki-sudi
+000112: *Apr  6 18:09:47.567: %PKI-6-TRUSTPOINT_CREATE: Trustpoint: CISCO_IDEVID_SUDI0 created succesfully
+000113: *Apr  6 18:09:51.116: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+000114: *Apr  6 18:09:51.116: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+000115: *Apr  6 18:09:51.116: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+000116: *Apr  6 18:09:51.116: %EVENT_TRACE-6-ENABLE: Trace already enabled.
+000117: *Apr  6 18:10:02.707: %CALL_HOME-6-CALL_HOME_ENABLED: Call-home is enabled by Smart Agent for Licensing.
+000118: *Apr  6 18:10:02.769: %SMART_LIC-6-REPORTING_REQUIRED: A Usage report acknowledgement will be required in 89 days.
+000119: *Apr  6 18:10:03.037: %LINK-3-UPDOWN: Interface Port-channel20, changed state to up
+000120: *Apr  6 18:10:04.037: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel20, changed state to up
+000121: *Apr  6 18:10:10.624: %PLATFORM_PM-6-FRULINK_INSERTED: 2x25G uplink module inserted in the switch 1 slot 1
+000122: *Apr  6 18:10:12.608: %PLATFORM_PM-6-MODULE_INSERTED: SFP module inserted with interface name Twe1/1/1
+000123: *Apr  6 18:10:14.528: %PLATFORM_PM-6-MODULE_INSERTED: SFP module inserted with interface name Twe1/1/2
+000124: *Apr  6 18:10:16.760: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/1, changed state to up
+000125: *Apr  6 18:10:18.099: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/2, changed state to up
+000126: *Apr  6 18:10:20.487: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/1, changed state to up
+000127: *Apr  6 18:10:21.480: %LINK-3-UPDOWN: Interface Port-channel55, changed state to up
+000128: *Apr  6 18:10:22.058: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/2, changed state to up
+000129: *Apr  6 18:10:22.480: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel55, changed state to up
+000130: *Apr  6 18:10:22.487: %LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan800, changed state to up
+000131: *Apr  6 18:10:23.057: %LINK-3-UPDOWN: Interface Port-channel56, changed state to up
+000132: *Apr  6 18:10:24.056: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel56, changed state to up
+000133: *Apr  6 18:10:27.061: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.49.21 port 514 started - reconnection
+000134: *Apr  6 18:10:32.061: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.129.8 port 514 started - reconnection
+000135: *Apr  6 18:10:37.061: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 148.93.115.30 port 5400 started - reconnection
+000136: *Apr  6 18:10:42.061: %SYS-6-LOGGINGHOST_STARTSTOP: Logging to host 130.172.83.30 port 5400 started - reconnection
+000137: *Apr  6 18:11:02.181: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_rzclwb] [Source: 148.93.49.21] [localport: 22] at 18:11:02 UTC Thu Apr 6 2023
+000138: *Apr  6 18:11:16.559: %SYS-6-LOGOUT: User as_rzclwb has exited tty session 1(148.93.49.21)
+000139: *Apr  6 18:13:48.161: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_rzclwb] [Source: 148.93.49.21] [localport: 22] at 18:13:48 UTC Thu Apr 6 2023
+000140: *Apr  6 18:15:10.707: %SYS-5-CONFIG_I: Configured from console by as_rzclwb on vty0 (148.93.49.21)
+000141: *Apr  6 18:17:11.706: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.246] [localport: 22] at 18:17:11 UTC Thu Apr 6 2023
+000142: *Apr  6 18:17:34.126: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.246)
+000143: *Apr  6 18:19:17.962: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.246] [localport: 22] at 18:19:17 UTC Thu Apr 6 2023
+000144: *Apr  6 18:21:49.905: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.246)
+000145: *Apr  6 18:22:45.568: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.246] [localport: 22] at 18:22:45 UTC Thu Apr 6 2023
+000146: *Apr  6 18:23:22.656: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.246)
+000147: Apr  6 18:26:18.801: %PKI-6-AUTHORITATIVE_CLOCK: The system clock has been set.
+000148: Apr  6 18:27:36.751: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_rzclwb] [Source: 148.93.49.21] [localport: 22] at 18:27:36 UTC Thu Apr 6 2023
+000149: Apr  6 18:27:46.847: %INSTALL-5-INSTALL_START_INFO: Switch 1 R0/0: install_engine: Started install remove
+000150: Apr  6 18:30:34.480: %INSTALL-5-INSTALL_COMPLETED_INFO: Switch 1 R0/0: install_engine: Completed install remove
+000151: Apr  6 18:32:19.055: %SYS-6-LOGOUT: User as_rzclwb has exited tty session 2(148.93.49.21)
+000152: Apr  6 18:33:05.398: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.246] [localport: 22] at 18:33:05 UTC Thu Apr 6 2023
+000153: Apr  6 18:33:13.436: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 2(148.93.49.246)
+000154: Apr  6 18:43:42.723: %SPANTREE-2-LOOPGUARD_BLOCK: Loop guard blocking port Port-channel56 on VLAN0401.
+000155: Apr  6 18:43:49.003: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/2, changed state to down
+000156: Apr  6 18:43:49.003: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel56, changed state to down
+000157: Apr  6 18:43:50.004: %LINK-3-UPDOWN: Interface Port-channel56, changed state to down
+000158: Apr  6 18:43:50.005: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/2, changed state to down
+000159: Apr  6 18:45:33.774: %SYS-6-TTY_EXPIRE_TIMER: (exec timer expired, tty 1 (148.93.49.21)), user as_rzclwb
+000160: Apr  6 18:45:33.775: %SYS-6-LOGOUT: User as_rzclwb has exited tty session 1(148.93.49.21)
+000161: Apr  6 18:52:29.782: %LINK-3-UPDOWN: Interface TwentyFiveGigE1/1/2, changed state to up
+000162: Apr  6 18:52:33.856: %LINEPROTO-5-UPDOWN: Line protocol on Interface TwentyFiveGigE1/1/2, changed state to up
+000163: Apr  6 18:52:34.856: %LINK-3-UPDOWN: Interface Port-channel56, changed state to up
+000164: Apr  6 18:52:35.856: %LINEPROTO-5-UPDOWN: Line protocol on Interface Port-channel56, changed state to up
+000165: Apr  6 18:58:31.956: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_rzclwb] [Source: 148.93.49.21] [localport: 22] at 18:58:31 UTC Thu Apr 6 2023
+000166: Apr  6 19:08:47.967: %SYS-6-LOGOUT: User as_rzclwb has exited tty session 1(148.93.49.21)
+000167: Apr  6 20:05:01.571: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: si_nam_52343_p_004] [Source: 148.93.49.246] [localport: 22] at 20:05:01 UTC Thu Apr 6 2023
+000168: Apr  6 20:05:05.948: %SYS-6-LOGOUT: User si_nam_52343_p_004 has exited tty session 1(148.93.49.246)
+000169: Apr  6 20:22:01.963: %SEC_LOGIN-5-LOGIN_SUCCESS: Login Success [user: as_cz507f] [Source: 148.93.114.216] [localport: 22] at 20:22:01 UTC Thu Apr 6 2023
+tmxcrlasw201#!
+
+tmxcrlasw201#sh run
+Building configuration...
+
+Current configuration : 31914 bytes
+!
+! Last configuration change at 18:15:10 UTC Thu Apr 6 2023 by as_rzclwb
+!
+version 17.6
+service nagle
+service tcp-keepalives-in
+service tcp-keepalives-out
+service timestamps debug datetime msec localtime
+service timestamps log datetime msec localtime
+service password-encryption
+service sequence-numbers
+service call-home
+platform punt-keepalive disable-kernel-core
+!
+hostname tmxcrlasw201
+!
+!
+vrf definition Mgmt-vrf
+ !
+ address-family ipv4
+ exit-address-family
+ !
+ address-family ipv6
+ exit-address-family
+!
+logging discriminator FILTER msg-body drops DOT1X-5|MAB-5|SESSION_MGR-5
+logging buffered discriminator FILTER 40960 informational
+logging persistent url flash:/syslog size 5120000 filesize 500000 immediate
+no logging console
+logging monitor informational
+enable secret 9 $9$dzSKX/KLo.JjQ.$KIBmS83/hdgqPvjmx8EmwzXepBHQOPlelkm.bUrzQbc
+!
+aaa new-model
+!
+!
+aaa authentication attempts login 6
+aaa authentication login default group tacacs+ line
+aaa authentication enable default group tacacs+ enable
+aaa authorization exec default group tacacs+ local if-authenticated 
+aaa authorization commands 15 default local group tacacs+ if-authenticated 
+aaa accounting dot1x default start-stop group radius
+aaa accounting exec default stop-only group tacacs+
+aaa accounting commands 15 default stop-only group tacacs+
+aaa accounting network default stop-only group tacacs+
+!
+!
+!
+!
+!
+!
+aaa session-id common
+stack-mac persistent timer 0
+switch 1 provision c9300-48uxm
+!
+!
+!
+!
+ip routing
+!
+!
+!
+!
+!
+ip name-server 164.56.50.7
+no ip domain lookup
+ip domain name tmx.nam.gm.com
+!
+!
+!
+login on-success log
+!
+!
+!
+!
+!
+!
+!
+vtp domain nmxtmx
+vtp mode transparent
+udld aggressive
+
+!
+!
+crypto pki trustpoint SLA-TrustPoint
+ enrollment terminal
+ revocation-check none
+!
+crypto pki trustpoint TP-self-signed-729424621
+ enrollment selfsigned
+ subject-name cn=IOS-Self-Signed-Certificate-729424621
+ revocation-check none
+ rsakeypair TP-self-signed-729424621
+!
+!
+crypto pki certificate chain SLA-TrustPoint
+ certificate ca 01
+  30820321 30820209 A0030201 02020101 300D0609 2A864886 F70D0101 0B050030 
+  32310E30 0C060355 040A1305 43697363 6F312030 1E060355 04031317 43697363 
+  6F204C69 63656E73 696E6720 526F6F74 20434130 1E170D31 33303533 30313934 
+  3834375A 170D3338 30353330 31393438 34375A30 32310E30 0C060355 040A1305 
+  43697363 6F312030 1E060355 04031317 43697363 6F204C69 63656E73 696E6720 
+  526F6F74 20434130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 
+  82010A02 82010100 A6BCBD96 131E05F7 145EA72C 2CD686E6 17222EA1 F1EFF64D 
+  CBB4C798 212AA147 C655D8D7 9471380D 8711441E 1AAF071A 9CAE6388 8A38E520 
+  1C394D78 462EF239 C659F715 B98C0A59 5BBB5CBD 0CFEBEA3 700A8BF7 D8F256EE 
+  4AA4E80D DB6FD1C9 60B1FD18 FFC69C96 6FA68957 A2617DE7 104FDC5F EA2956AC 
+  7390A3EB 2B5436AD C847A2C5 DAB553EB 69A9A535 58E9F3E3 C0BD23CF 58BD7188 
+  68E69491 20F320E7 948E71D7 AE3BCC84 F10684C7 4BC8E00F 539BA42B 42C68BB7 
+  C7479096 B4CB2D62 EA2F505D C7B062A4 6811D95B E8250FC4 5D5D5FB8 8F27D191 
+  C55F0D76 61F9A4CD 3D992327 A8BB03BD 4E6D7069 7CBADF8B DF5F4368 95135E44 
+  DFC7C6CF 04DD7FD1 02030100 01A34230 40300E06 03551D0F 0101FF04 04030201 
+  06300F06 03551D13 0101FF04 05300301 01FF301D 0603551D 0E041604 1449DC85 
+  4B3D31E5 1B3E6A17 606AF333 3D3B4C73 E8300D06 092A8648 86F70D01 010B0500 
+  03820101 00507F24 D3932A66 86025D9F E838AE5C 6D4DF6B0 49631C78 240DA905 
+  604EDCDE FF4FED2B 77FC460E CD636FDB DD44681E 3A5673AB 9093D3B1 6C9E3D8B 
+  D98987BF E40CBD9E 1AECA0C2 2189BB5C 8FA85686 CD98B646 5575B146 8DFC66A8 
+  467A3DF4 4D565700 6ADF0F0D CF835015 3C04FF7C 21E878AC 11BA9CD2 55A9232C 
+  7CA7B7E6 C1AF74F6 152E99B7 B1FCF9BB E973DE7F 5BDDEB86 C71E3B49 1765308B 
+  5FB0DA06 B92AFE7F 494E8A9E 07B85737 F3A58BE1 1A48A229 C37C1E69 39F08678 
+  80DDCD16 D6BACECA EEBC7CF9 8428787B 35202CDC 60E4616A B623CDBD 230E3AFB 
+  418616A9 4093E049 4D10AB75 27E86F73 932E35B5 8862FDAE 0275156F 719BB2F0 
+  D697DF7F 28
+  	quit
+crypto pki certificate chain TP-self-signed-729424621
+ certificate self-signed 01
+  3082032E 30820216 A0030201 02020101 300D0609 2A864886 F70D0101 05050030 
+  30312E30 2C060355 04031325 494F532D 53656C66 2D536967 6E65642D 43657274 
+  69666963 6174652D 37323934 32343632 31301E17 0D323230 34303132 30303932 
+  315A170D 33303031 30313030 30303030 5A303031 2E302C06 03550403 1325494F 
+  532D5365 6C662D53 69676E65 642D4365 72746966 69636174 652D3732 39343234 
+  36323130 82012230 0D06092A 864886F7 0D010101 05000382 010F0030 82010A02 
+  82010100 A12A62EB 20E8BBEE 983D0166 5845EEF8 518CE72C F31F51E4 D9E38EB6 
+  94E7D0F5 0C737F08 90773A76 F31C9817 6C0ED9CC D888ADB0 521FB434 340BDDDE 
+  3EC2CBF8 08E420CB 499B4281 DDA99C9D 3D0375A1 45757457 4E97DF33 B3CC57AB 
+  562DDEAE 83213ED2 1E240C8B 0F809C02 BB0E857D 0E09A125 1CDCB7B1 39B7F56B 
+  8A72EB9E 88F58AAB 1817CF87 1CCA7332 89E34D5E D2491648 53B92672 085ED689 
+  D2E7AB84 A2D3E693 63AC90DE FD03CB15 DC97951F 1AFB3477 6D4FF20E 6C6A6F91 
+  11757F86 EAC8A8F5 8B1C9D4B 0D5B110F D09A8D61 4FD0FD72 D746F1DD 0E66344F 
+  029C63D5 87AE5DB4 4B4CE477 8FC96073 DFC967AD D05A3B09 0ACD077A 6E7F196D 
+  E952BA75 02030100 01A35330 51300F06 03551D13 0101FF04 05300301 01FF301F 
+  0603551D 23041830 16801406 200EC687 0EEC715B 796DB271 06866F6E B8A0C530 
+  1D060355 1D0E0416 04140620 0EC6870E EC715B79 6DB27106 866F6EB8 A0C5300D 
+  06092A86 4886F70D 01010505 00038201 010013A0 B9F0F995 4380EEDE DEABC496 
+  EDBF57A4 140AE472 41F7FB0D EEBD9DBC B9C66607 535A4388 3DA53A3C 794818E8 
+  3F839FA6 48C7C87E 2CFA46FA 67AA8529 92674DC4 AEE85F66 71F29D91 72429240 
+  0594F7E5 7AEBDF19 8451BA48 9F3355B8 0881FFA5 CE5BF856 B42A8AF8 D67EC385 
+  6713C9A5 B6F8A986 2D8A68B3 F7B808CB 54843279 EFD86A7E C919C648 BF466D4F 
+  A4963530 421386A7 94789E80 8E5A5391 53B07846 E22DFCC1 6BECA713 3C347D19 
+  E4D47E60 BB96916D 22F8F3FE 55BFB63C 8595C466 D2CDC4BE 1A7363BE 9A53E7A6 
+  CF1517F8 6EE2A46C 6D4F58EC 0447BC1C 9B91D09C B6602570 CFA66CA3 C99AAD01 
+  19A01AFA BA430594 F6A36A80 A7F5A34A 7D08
+  	quit
+!
+!
+system mtu 9100
+license boot level network-advantage addon dna-advantage
+license smart transport callhome
+!
+!
+diagnostic bootup level complete
+!
+spanning-tree mode rapid-pvst
+spanning-tree loopguard default
+spanning-tree portfast bpduguard default
+spanning-tree extend system-id
+memory free low-watermark processor 134335
+!
+errdisable recovery cause udld
+errdisable recovery cause bpduguard
+errdisable recovery cause security-violation
+errdisable recovery cause channel-misconfig
+errdisable recovery cause pagp-flap
+errdisable recovery cause dtp-flap
+errdisable recovery cause link-flap
+errdisable recovery cause sfp-config-mismatch
+errdisable recovery cause gbic-invalid
+errdisable recovery cause l2ptguard
+errdisable recovery cause psecure-violation
+errdisable recovery cause port-mode-failure
+errdisable recovery cause dhcp-rate-limit
+errdisable recovery cause pppoe-ia-rate-limit
+errdisable recovery cause mac-limit
+errdisable recovery cause storm-control
+errdisable recovery cause inline-power
+errdisable recovery cause arp-inspection
+errdisable recovery cause link-monitor-failure
+errdisable recovery cause oam-remote-failure
+errdisable recovery cause loopback
+errdisable recovery cause psp
+errdisable recovery cause mrp-miscabling
+errdisable recovery interval 1200
+!
+redundancy
+ mode sso
+!
+!
+!
+!
+!
+!
+transceiver type all
+ monitoring
+!
+vlan 105
+ name Server-BuR
+!
+vlan 218
+ name Server_Mgmt
+!
+vlan 401
+ name Iman_Engineering
+!
+vlan 500
+ name NMXTMX;VL500;TOLUCA_PDC
+!
+vlan 800
+ name Multi_TC_L2_Switch_Mgt_VLAN
+!
+vlan 999
+ name Unused_ports
+lldp run
+!
+!
+class-map match-any system-cpp-police-ewlc-control
+  description EWLC Control 
+class-map match-any system-cpp-police-topology-control
+  description Topology control
+class-map match-any system-cpp-police-sw-forward
+  description Sw forwarding, L2 LVX data packets, LOGGING, Transit Traffic
+class-map match-any system-cpp-default
+  description EWLC Data, Inter FED Traffic 
+class-map match-any system-cpp-police-sys-data
+  description Openflow, Exception, EGR Exception, NFL Sampled Data, RPF Failed
+class-map match-any system-cpp-police-punt-webauth
+  description Punt Webauth
+class-map match-any system-cpp-police-l2lvx-control
+  description L2 LVX control packets
+class-map match-any system-cpp-police-forus
+  description Forus Address resolution and Forus traffic
+class-map match-any system-cpp-police-multicast-end-station
+  description MCAST END STATION
+class-map match-any system-cpp-police-high-rate-app
+  description High Rate Applications 
+class-map match-any system-cpp-police-multicast
+  description MCAST Data
+class-map match-any system-cpp-police-l2-control
+  description L2 control
+class-map match-any system-cpp-police-dot1x-auth
+  description DOT1X Auth
+class-map match-any system-cpp-police-data
+  description ICMP redirect, ICMP_GEN and BROADCAST
+class-map match-any system-cpp-police-stackwise-virt-control
+  description Stackwise Virtual OOB
+class-map match-any non-client-nrt-class
+class-map match-any system-cpp-police-routing-control
+  description Routing control and Low Latency
+class-map match-any system-cpp-police-protocol-snooping
+  description Protocol snooping
+class-map match-any system-cpp-police-dhcp-snooping
+  description DHCP snooping
+class-map match-any system-cpp-police-ios-routing
+  description L2 control, Topology control, Routing control, Low Latency
+class-map match-any system-cpp-police-system-critical
+  description System Critical and Gold Pkt
+class-map match-any system-cpp-police-ios-feature
+  description ICMPGEN,BROADCAST,ICMP,L2LVXCntrl,ProtoSnoop,PuntWebauth,MCASTData,Transit,DOT1XAuth,Swfwd,LOGGING,L2LVXData,ForusTraffic,ForusARP,McastEndStn,Openflow,Exception,EGRExcption,NflSampled,RpfFailed
+!
+policy-map system-cpp-policy
+!
+! 
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Port-channel20
+ description Netapp
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 105,218,401
+ switchport mode trunk
+ speed 1000
+!
+interface Port-channel55
+ description link-tmxcrlcrt001-Twe2/0/1
+ switchport trunk allowed vlan 105,218,401,500,800
+ switchport mode trunk
+ speed nonegotiate
+ spanning-tree portfast disable
+ ip dhcp snooping trust
+!
+interface Port-channel56
+ description link-tmxcrlcrt002-Twe2/0/1
+ switchport trunk allowed vlan 105,218,401,500,800
+ switchport mode trunk
+ speed nonegotiate
+ spanning-tree portfast disable
+ ip dhcp snooping trust
+!
+interface GigabitEthernet0/0
+ description unused-port
+ vrf forwarding Mgmt-vrf
+ no ip address
+ shutdown
+ negotiation auto
+!
+interface TwoGigabitEthernet1/0/1
+ description UPS-Monitoring01
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/2
+ description mxtoltcahpihs03-iDRAC
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/3
+ description tolipstsan001-ilo
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/4
+ description Netapp-Secondary
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 105,218,401
+ switchport mode trunk
+ no logging event link-status
+ speed 1000
+ no snmp trap link-status
+ no mdix auto
+ channel-group 20 mode active
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/5
+ description Netapp-Secondary
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 105,218,401
+ switchport mode trunk
+ no logging event link-status
+ speed 1000
+ no snmp trap link-status
+ no mdix auto
+ channel-group 20 mode active
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/6
+ description tolipstnap001-01-e0m-Mgt
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/7
+ description TOLIPPAGMND01-Pri
+ switchport access vlan 500
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/8
+ description TMXIPSTCS0001-eth3
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/9
+ description TOLIPEXGMO001-Primary
+ switchport access vlan 500
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/10
+ description TMXIPSTSAN001-mgmt0
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/11
+ description tolipstsan001-Mgt
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/12
+ description link_tmxptnmts001-Port1
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/13
+ description MXTMXBRSHPIBR01-S
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/14
+ description link-to-tmxptsbc01-mgmt0
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/15
+ description tolipphsad001
+ switchport access vlan 500
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/16
+ description link_tmxptflvn001
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/17
+ description PriSecureLogix-iDRAC
+ switchport access vlan 218
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/18
+ description tmxipphacc01-pri
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/19
+ description tmxipphacc02-pri
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/20
+ description tmxipphacc03-pri
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/21
+ description tmxipphacc04-pri
+ switchport access vlan 401
+ switchport mode access
+ no logging event link-status
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/22
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/23
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/24
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/25
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/26
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/27
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/28
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/29
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/30
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/31
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/32
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/33
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/34
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/35
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TwoGigabitEthernet1/0/36
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/37
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/38
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/39
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/40
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/41
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/42
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/43
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/44
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/45
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/46
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/47
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface TenGigabitEthernet1/0/48
+ description available GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ no logging event link-status
+ shutdown
+ no snmp trap link-status
+ no mdix auto
+ spanning-tree portfast
+!
+interface GigabitEthernet1/1/1
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/1/2
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/1/3
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface GigabitEthernet1/1/4
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/1
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/2
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/3
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/4
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/5
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/6
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/7
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TenGigabitEthernet1/1/8
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+
+!
+interface FortyGigabitEthernet1/1/1
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface FortyGigabitEthernet1/1/2
+ description Future GT Infrastructure
+ switchport access vlan 999
+ switchport mode access
+ shutdown
+ udld port aggressive
+ spanning-tree portfast disable
+!
+interface TwentyFiveGigE1/1/1
+ description link-tmxcrlcrt001-Twe2/0/1
+ switchport trunk allowed vlan 105,218,401,500,800
+ switchport mode trunk
+ udld port aggressive
+ channel-group 55 mode active
+ spanning-tree portfast disable
+ ip dhcp snooping trust
+!
+interface TwentyFiveGigE1/1/2
+ description link-tmxcrlcrt002-Twe2/0/1
+ switchport trunk allowed vlan 105,218,401,500,800
+ switchport mode trunk
+ speed 25000
+ speed nonegotiate
+ udld port aggressive
+ channel-group 56 mode active
+ spanning-tree portfast disable
+ ip dhcp snooping trust
+!
+interface AppGigabitEthernet1/0/1
+ description Unused GT Infrastructure
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan800
+ ip address 172.20.113.201 255.255.255.240
+ no ip redirects
+ no ip unreachables
+ no ip proxy-arp
+!
+no ip forward-protocol nd
+no ip forward-protocol udp tftp
+no ip forward-protocol udp nameserver
+no ip forward-protocol udp domain
+no ip forward-protocol udp time
+no ip forward-protocol udp netbios-ns
+no ip forward-protocol udp netbios-dgm
+no ip forward-protocol udp tacacs
+ip telnet source-interface Vlan800
+no ip http server
+ip http authentication local
+no ip http secure-server
+ip http client source-interface Vlan800
+ip ftp source-interface Vlan800
+ip tftp source-interface Vlan800
+ip route 0.0.0.0 0.0.0.0 172.20.113.193
+ip tacacs source-interface Vlan800 
+ip ssh authentication-retries 5
+ip ssh source-interface Vlan800
+ip ssh version 2
+!
+!
+!
+logging source-interface Vlan800
+logging host 148.93.49.21
+logging host 130.172.129.8
+logging host 148.93.115.30 transport udp port 5400
+logging host 130.172.83.30 transport udp port 5400
+ip access-list standard 25
+ 10 permit 0.0.0.0
+ip access-list standard 90
+ 10 remark GM monitor/manage center in Warren
+ 10 permit 148.93.48.0 0.0.1.255
+ 20 permit 148.93.50.0 0.0.0.255
+ 30 permit 148.93.144.0 0.0.1.255
+ 40 permit 148.93.146.0 0.0.1.255
+ 50 permit 148.93.148.0 0.0.1.255
+ 60 remark GM monitor/manage center in Milford
+ 60 permit 130.172.128.0 0.0.1.255
+ 70 permit 130.172.130.0 0.0.0.255
+ 80 permit 130.172.100.0 0.0.1.255
+ 90 permit 130.172.36.0 0.0.1.255
+ 100 permit 130.172.42.0 0.0.1.255
+ 110 remark Global Plant HP NNMi Servers
+ 110 permit 10.0.11.203 0.255.0.0
+ 120 permit 10.0.139.203 0.255.0.0
+ 130 remark IO TV NetFlow Collector (Singapore W2)
+ 130 permit 10.147.94.37
+ip access-list standard 91
+ 10 remark GM monitor/manage center in Warren
+ 10 permit 148.93.49.0 0.0.0.255
+ 20 permit 148.93.144.0 0.0.1.255
+ 30 permit 148.93.146.0 0.0.1.255
+ 40 permit 148.93.148.0 0.0.1.255
+ 50 remark GM monitor/manage center in Milford
+ 50 permit 130.172.129.0 0.0.0.255
+ 60 permit 130.172.100.0 0.0.1.255
+ 70 permit 130.172.36.0 0.0.1.255
+ 80 permit 130.172.42.0 0.0.1.255
+ip access-list standard 93
+ 10 remark version 1.0
+ 10 remark GM monitor/manage center in Warren
+ 10 permit 148.93.114.0 0.0.0.255
+ 20 permit 148.93.49.0 0.0.0.255
+ 30 permit 148.93.144.0 0.0.1.255
+ 40 permit 148.93.146.0 0.0.1.255
+ 50 permit 148.93.148.0 0.0.1.255
+ 60 permit 10.14.9.251
+ 70 permit 148.93.50.0 0.0.0.255
+ 80 remark GM monitor/manage center in Milford
+ 80 permit 130.172.119.0 0.0.0.255
+ 90 permit 130.172.129.0 0.0.0.255
+ 100 permit 130.172.100.0 0.0.1.255
+ 110 permit 130.172.36.0 0.0.1.255
+ 120 permit 130.172.42.0 0.0.1.255
+ 130 remark GM monitor/manage center in Singapore
+ 130 permit 10.147.62.128 0.0.0.127
+ 140 permit 10.147.52.128 0.0.0.127
+!
+!
+snmp-server group network-operator v3 auth 
+snmp-server community Zeta2008XT RW 91
+snmp-server community Delta4123R RO 90
+snmp-server trap-source Vlan800
+snmp-server location TC-nmxtmx|AV INDUSTRIAL MINERA 700|Toluca, Estado De Mexico|Building C|Floor 1|Data Center | X09
+snmp-server contact GM GTSC (855)780-1125
+snmp-server system-shutdown
+snmp-server enable traps snmp authentication linkdown linkup coldstart warmstart
+snmp-server enable traps ospf state-change
+snmp-server enable traps ospf errors
+snmp-server enable traps ospf retransmit
+snmp-server enable traps ospf cisco-specific state-change nssa-trans-change
+snmp-server enable traps ospf cisco-specific state-change shamlink interface
+snmp-server enable traps ospf cisco-specific state-change shamlink neighbor
+snmp-server enable traps ospf cisco-specific errors
+snmp-server enable traps ospf cisco-specific retransmit
+snmp-server enable traps eigrp
+snmp-server enable traps vtp
+snmp-server enable traps vlancreate
+snmp-server enable traps stackwise
+snmp-server enable traps flash insertion removal lowspace
+snmp-server enable traps entity
+snmp-server enable traps envmon
+snmp-server enable traps ipsla
+snmp-server enable traps config
+snmp-server enable traps hsrp
+snmp-server enable traps msdp
+snmp-server enable traps pim neighbor-change rp-mapping-change invalid-pim-message
+snmp-server enable traps bgp state-changes updown-limited
+snmp-server enable traps rf
+snmp-server host 130.172.129.252 informs version 3 auth snmpv3user 
+snmp-server host 148.93.49.56 informs version 3 auth snmpv3user 
+snmp-server host 130.172.129.252 version 2c Trap41String 
+snmp-server host 148.93.49.56 version 2c Trap41String 
+snmp-server host 130.172.129.252 version 3 auth snmpv3user 
+snmp-server host 148.93.49.56 version 3 auth snmpv3user 
+snmp ifmib ifalias long
+snmp ifmib ifindex persist
+tacacs-server directed-request
+tacacs server GM-DCW-1
+ address ipv4 148.93.49.176
+ key 7 012A07037A2A5758024A5E003B2406263E38232F3176046020052A23323711595659035B1D041F3F40716347790042256A202E5F7C2B0608146F2C1F3D307F46
+tacacs server GM-DCM-1
+ address ipv4 130.172.129.176
+ key 7 012A07037A2A5758024A5E003B2406263E38232F3176046020052A23323711595659035B1D041F3F40716347790042256A202E5F7C2B0608146F2C1F3D307F46
+tacacs server GM-DCW-2
+ address ipv4 148.93.49.177
+ key 7 012A07037A2A5758024A5E003B2406263E38232F3176046020052A23323711595659035B1D041F3F40716347790042256A202E5F7C2B0608146F2C1F3D307F46
+tacacs server GM-DCM-2
+ address ipv4 130.172.129.177
+ key 7 012A07037A2A5758024A5E003B2406263E38232F3176046020052A23323711595659035B1D041F3F40716347790042256A202E5F7C2B0608146F2C1F3D307F46
+!
+!
+!
+control-plane
+ service-policy input system-cpp-policy
+!
+banner login ^C
+********************************************************************
+Use of this system is restricted to authorized users. User activity
+is monitored and recorded by system personnel. Anyone using this
+system expressly consents to such monitoring and recording. BE
+ADVISED: if possible criminal activity is detected, system records,
+along with certain personal information, may be provided to law
+enforcement officials.
+(Rev G5.30 ) Requires AS_Zid account
+$(hostname)
+********************************************************************
+^C
+!
+line con 0
+ session-timeout 15 
+ exec-timeout 30 0
+ password 7 08396F654C0B31003C380D5D2111362537
+ stopbits 1
+line vty 0 4
+ session-timeout 15 
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 08396F654C0B31003C380D5D2111362537
+ transport input ssh
+line vty 5 15
+ session-timeout 15 
+ access-class 93 in vrf-also
+ exec-timeout 30 0
+ password 7 08396F654C0B31003C380D5D2111362537
+ transport input ssh
+line vty 16 31
+ transport input ssh
+!
+call-home
+ ! If contact email address in call-home is configured as sch-smart-licensing@cisco.com
+ ! the email address configured in Cisco Smart License Portal will be used as contact email address to send SCH notifications.
+ contact-email-addr sch-smart-licensing@cisco.com
+ no http secure server-identity-check
+ profile "CiscoTAC-1"
+  no reporting smart-licensing-data
+  destination transport-method http
+ profile "Site-Engineering-LAN"
+  reporting smart-licensing-data
+  destination transport-method http
+  no destination transport-method email
+  destination address http https://148.93.145.110:443/Transportgateway/services/DeviceRequestHandler 
+ntp source Vlan800
+ntp server 10.68.65.96
+ntp server 130.173.33.162
+ntp server 164.56.50.7
+!
+mac address-table aging-time 1800
+!
+!
+!
+!
+!
+end
+
+tmxcrlasw201#!

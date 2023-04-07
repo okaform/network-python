@@ -74,17 +74,17 @@ for i in range(len(ipAd)):
             continue #This should break out of the loop
         #con.enable()
         
-        config_commands = [
+        '''config_commands = [
         f"copy ftp://Ftponly:bp1s4fun@10.59.254.7/ios/current/cat9k_iosxe.17.06.04.SPA.bin flash:",
         "\n"]
         
         
         output = con.send_config_set(config_commands)
-        print(output)
+        print(output)'''
         
         
         
-        '''source_file = r"tftp://10.59.254.7/ios/current/cat9k_iosxe.17.06.04.SPA.bin"
+        source_file = "N:\\IOS\\cat9k_iosxe.17.06.04.SPA.bin"
         dest_file = "test-cat9k_iosxe.17.06.04.SPA.bin"
         direction = "put"
         file_system = "flash:"
@@ -97,7 +97,7 @@ for i in range(len(ipAd)):
             overwrite_file = True,
         )
         
-        print(transfer_dict)'''
+        print(transfer_dict)
         
         
         '''scriptFile = open("N:\\Scripts\\COMPLETED\\preCheckLogGenerator\\scripts\\"+str(script_to_use), "r")#we're going back a directory because we changed to the precheck directory
