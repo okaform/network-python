@@ -1,31 +1,24 @@
 import nslookup
+import sys
+'''I am IMPORTING LIKE This because of the nature of the VDI not ening persistent. 
+I am adding this directory to the python path so that python can find the library.'''
+sys.path.append('N:/Python Libraries')
+from pythonping import ping
 
-def hostname(con_from_main, ip_ad):
-    hostname = nslookup.nslookup(ip_ad)
-    #hostname = con_from_main.send_command("sh run | i (hostname )", read_timeout=180)
-    #return hostname.split()[1]
-    print(hostname)
-    
+
+def hostname(ip_ad):
+    hostname = nslookup.nslookup(ip_ad)  
     return hostname[1]
     
     
     
-def switch_model(con_from_main):
-    model = con_from_main.send_command("sh ver | inc Model Number", read_timeout=120)
-    try:
-        split_model = model.strip().split(" : ")[1]
-        return split_model
-    except:
-        return "Command does not work"
-    
-    
-    
-def show_install_committed(con_from_main):
-    sh_install_committed = con_from_main.send_command("sh install committed | inc IMG", read_timeout=120)    
-    #split_commit = sh_install_committed.split("IMG ")
-    
-    try:
-        split_commit = sh_install_committed.split("IMG ")[1]
-        return split_commit
-    except IndexError:
-        return "Image not committed"
+def will_ping(ip_Ad):
+      status = 0
+      #we add the strip() because the user input takes data with a lot of space and causes issues.
+      ping_req = ping(ip_Ad.strip(), verbose=False, count=1) #change this to the number of times you want to ping.
+      # check the response..
+      if ping_req.packets_lost == 0:
+            status = "Up"
+      else:
+            status = "Down"
+      return status

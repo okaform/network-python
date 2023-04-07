@@ -1,4 +1,5 @@
-'''This script will generate a simple report of cisco switches with their current running ver, their installed committed and their model.
+'''This script will generate a simple report of pings.
+ RIght now it is onlye 1 ping tries and then it moves on.
 It will also add it to the excel file.'''
 
 import sys, re, os
@@ -7,14 +8,17 @@ import getOutput
 import openpyxl
 from datetime import date, datetime  
 import subprocess
-from pythonping import ping
+'''I am IMPORTING LIKE This because of the nature of the VDI not ening persistent. 
+I am adding this directory to the python path so that python can find the library.'''
+sys.path.append('N:/Python Libraries')
+
 from tabulate import tabulate
 #from openpyxl import Workbook
 
 
 start_time = datetime.now()
 as_id = "as_cz507f" #input("Enter your as_id")
-as_pass = "bnufCUPqNGtv3HMr" #input("Enter your as_password")
+as_pass = "vP76loNxtDjqpnzS" #input("Enter your as_password")
 
 
 #workbook = xlsxwriter.Workbook( "report/report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx")
@@ -31,76 +35,50 @@ col = 1
 workbook = openpyxl.Workbook()
 sheet1 = workbook.active
 sheet1.title="REPORT"
-file_name = "report/report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx"
+file_name = "N:\\Report\\ping\\report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx"
 #workbook.save(file_name)
 sheet1.cell(row=row, column=col, value="Date")
 sheet1.cell(row=row, column=col+1, value="Hostname")
 sheet1.cell(row=row, column=col+2, value="IP Address")
-sheet1.cell(row=row, column=col+3, value="Switch Model")
-sheet1.cell(row=row, column=col+4, value="Installed Version")
+sheet1.cell(row=row, column=col+3, value="Status")
 
 
 
 
-print("\n\nPaste the IP Addresses you want prechecks generated. \n"+
+
+print("\n\nPaste the IP Addresses you to do a ping sweep for. \n"+
 "When you are done. Hit ENTER, Ctrl + z, and ENTER in that order to end:\n")
 ip_Address = sys.stdin.readlines() #This will read multiple lines
 
 
+data = []
 
 for i in range(len(ip_Address)):
-    if len(ip_Address[i]) != 1: #this takes care of empty lines so they are not looked at
-        net_dev = {"host":ip_Address[i],
-                    "username":as_id,
-                    "password": as_pass, 
-                    "device_type":"cisco_ios",
-                    }
+      '''STEP ONE: Get Date '''
+      sheet1.cell(row + i + 1, col, datetime.now().strftime("%b-%d-%y %H:%M:%S"))
+      workbook.save(file_name) #save after every function call
+      '''STEP TWO: Get Hostname '''
+      sheet1.cell(row + i + 1, col+1, getOutput.hostname(ip_Address[i]))
+      workbook.save(file_name) #save after every function call
         
-        try:
-            con = ConnectHandler(**net_dev)
-        except:
-            print("There is a problem with your log in credentials for " +str(ip_Address[i])+". Please check your username or password")
-            sheet1.cell(row + i + 1, col, datetime.now().strftime("%b-%d-%y %H:%M:%S"))
-            sheet1.cell(row + i + 1, col+2, ip_Address[i])
-            sheet1.cell(row + i + 1, col+3, "Could Not Log In")
-            continue #This should break out of the loop
-            
-        try:    
-            con.enable()
-        except:
-            print("There is a Enable Password issue: " +str(ip_Address[i]).strip()+". Please check the device")
-            sheet1.cell(row + i + 1, col, datetime.now().strftime("%b-%d-%y %H:%M:%S"))
-            sheet1.cell(row + i + 1, col+2, ip_Address[i])
-            sheet1.cell(row + i + 1, col+3, "Could Not Enter Enable Mode ")
-            continue #This should break out of the loop
-        '''STEP ONE: Get Date '''
-        sheet1.cell(row + i + 1, col, datetime.now().strftime("%b-%d-%y %H:%M:%S"))
-        workbook.save(file_name) #save after every function call
-        
-        '''STEP TWO: Get Hostname '''
-        sheet1.cell(row + i + 1, col+1, getOutput.hostname(con, ip_Address[i]))
-        workbook.save(file_name) #save after every function call
-        
-        '''STEP THREE: Get ip Address '''
-        sheet1.cell(row + i + 1, col+2, ip_Address[i])
-        workbook.save(file_name) #save after every function call
-        
-        '''STEP FOUR: Get Switch Model '''
-        sheet1.cell(row + i + 1, col+3, getOutput.switch_model(con))
-        workbook.save(file_name) #save after every function call
-        
-        '''STEP FIVE: Get Install Commited '''
-        sheet1.cell(row + i + 1, col+4, getOutput.show_install_committed(con))
-        workbook.save(file_name) #save after every function call
-        
-        
-        #getOutput.getSwitchModel(con)
-    if i != len(ip_Address) - 1: #do not print this on the last switch
-        print("\n-----------------------------------------------------------")    
-        print("  ------------- Moving on to " +str(ip_Address[i + 1]).strip() + " ----------------")
-        print("-----------------------------------------------------------\n\n")         
-        
+      '''STEP THREE: Get ip Address '''
+      sheet1.cell(row + i + 1, col+2, ip_Address[i])
+      workbook.save(file_name) #save after every function call      
 
+      '''STEP FOUR: DO THE PING '''
+      status = getOutput.will_ping(ip_Address[i])
+      sheet1.cell(row + i + 1, col+3, status)
+      workbook.save(file_name) #save after every function call   
+      data.append([ip_Address[i], status])
+
+
+      if i != len(ip_Address) - 1: #do not print this on the last switch
+          print("\n-----------------------------------------------------------")    
+          print("  ------------- Moving on to " +str(ip_Address[i + 1]).strip() + " ----------------")
+          print("-----------------------------------------------------------\n\n")         
+
+        
+print(tabulate(data, headers=["IP Address", "Status"]))   
 workbook.save(file_name)
 #End of Script
 elapsed_time = datetime.now() - start_time #to calculate the total elapsed time the script took to run

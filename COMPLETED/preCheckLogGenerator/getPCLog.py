@@ -65,7 +65,7 @@ else:
 ''' ---------------------------------------
     ---------- DIRECTORY MOVE -------------
     --------------------------------------- '''
-dir = str(pre_or_post)+ "\\+Logs-" + str(datetime.now().strftime("%b-%d-%y [%H-%M]"))
+dir = "N:\\Report" + str(pre_or_post)+ "\\+Logs-" + str(datetime.now().strftime("%b-%d-%y [%H-%M]"))
 #This is for the directory
 if os.path.exists(dir):
     os.chdir(dir)
