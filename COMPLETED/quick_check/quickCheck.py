@@ -6,10 +6,6 @@ from netmiko.ssh_exception import SSHException
 from netmiko.ssh_exception import AuthenticationException
 from datetime import date, datetime  
 
-'''ip_ad = "10.22.3.5"
-as_id = "as_cz507f"
-passwd = "eqBHKti48MWSmzr7"
-en = "eqBHKti48MWSmzr7"'''
 
 #print("This is sys.argv 0 ->",sys.argv[1])
 #date.today())+
@@ -43,7 +39,7 @@ for i in range(len(ipAd)):
                     "username":sys.argv[1],
                     "password":sys.argv[2], #sys.argv[2] this is for the password for as_id
                     "device_type":"cisco_ios",
-                    "secret":sys.argv[2]
+                    #"secret":sys.argv[2]
                     }
         try:
             con = ConnectHandler(**net_dev)
@@ -52,12 +48,24 @@ for i in range(len(ipAd)):
             print(issue)
             logName.write("\n\n"+str(issue)+"\n\n")
             continue #This should break out of the loop
-        con.enable()
+        #con.enable()
         
         #Get the cdp and lldp neigh of switches
-        fileName = con.send_command("sh run | i hostname", read_timeout=180)
+        #fileName = con.send_command("sh run | i hostname", read_timeout=180)
+        fileName = input("Enter the filename: ")
+        
+        print("\n\nPaste the commands you wish to run.\n"+
+                "When you are done. Hit ENTER, Ctrl + z, and ENTER in that order to end:\n")
+
+        commands = sys.stdin.readlines() #This will read multiple lines
+        for command in commands:
+            logName.write(str(fileName) +'#' + str(command)) #get the switch name
+            quick_com = con.send_command(command, read_timeout=180)
+            logName.write(quick_com)
+            #logName.write("\n")           
         
         '''Check to see if version 17 is in the dir'''
+        '''
         logName.write(str(fileName.split(" ")[1]) +'#') #get the switch name
         quick_com = con.send_command("dir | inc sxe.17.06.04.SPA.bin", read_timeout=180)
         logName.write("dir | inc sxe.17.06.04.SPA.bin")
@@ -71,6 +79,8 @@ for i in range(len(ipAd)):
         logName.write("\n")
         logName.write(quick_com2)
         logName.write("\n")
+        '''
+        
         
       
         

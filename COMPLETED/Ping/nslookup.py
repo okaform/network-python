@@ -5,7 +5,7 @@ import subprocess
 def nslookup(ip_or_hostname): 
     data=[]
     #take the ip or hostname
-    output = subprocess.run(["nslookup", ip_or_hostname],stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    output = subprocess.run(["nslookup", ip_or_hostname],stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
     #std_out and std_err are not going to be seen with this DEVNULL statement
     try:
         hostname = str(output.stdout.splitlines()[3]).replace("b'Name:   ", '').replace('\'', '')

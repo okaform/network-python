@@ -20,18 +20,8 @@ start_time = datetime.now()
 as_id = "as_cz507f" #input("Enter your as_id")
 as_pass = "vP76loNxtDjqpnzS" #input("Enter your as_password")
 
-
-#workbook = xlsxwriter.Workbook( "report/report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx")
-#sheet1 = workbook.add_worksheet("REPORT")
-#bold = workbook.add_format({'bold': True})
 row = 1 #row and columns must be at least one with openpyxl
 col = 1
-#sheet1.write(row, col, "Date", bold)
-#sheet1.write(row, col+1, "Hostname", bold)
-#sheet1.write(row, col+2, "IP Address", bold)
-#sheet1.write(row, col+3, "Switch Model", bold)
-#sheet1.write(row, col+4, "Installed Version", bold)
-
 workbook = openpyxl.Workbook()
 sheet1 = workbook.active
 sheet1.title="REPORT"
@@ -71,11 +61,12 @@ for i in range(len(ip_Address)):
       workbook.save(file_name) #save after every function call   
       data.append([ip_Address[i], status])
 
-
+'''
       if i != len(ip_Address) - 1: #do not print this on the last switch
           print("\n-----------------------------------------------------------")    
           print("  ------------- Moving on to " +str(ip_Address[i + 1]).strip() + " ----------------")
-          print("-----------------------------------------------------------\n\n")         
+          print("-----------------------------------------------------------\n\n")  
+'''          
 
         
 print(tabulate(data, headers=["IP Address", "Status"]))   
