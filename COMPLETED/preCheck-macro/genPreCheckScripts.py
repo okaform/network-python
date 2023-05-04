@@ -2,7 +2,11 @@
 
 import sys, os, re
 
-def genPreCheck(con):
+def genPreCheck(con, script_directory):
+    if not os.path.exists(script_directory):
+        os.makedirs(script_directory)  #new dir for files to be moved
+        print("\n"+str(script_directory) +" has been created!\n")
+    
     to_send = "sh vlan brief"
     reg = re.compile(r"IECN_VLAN-5[0-4]\d") #for matching IECN vlan ranging from 500 to 549
     #IECN vlan are actually from 495 - 549. .even are pfcn and .odd are IECN on the second octet on IP Address
@@ -10,7 +14,8 @@ def genPreCheck(con):
    
     fileName = con.send_command("sh run | i hostname")
     #print(fileName.split(" ")[1])
-    preCheck_file = open(str(fileName.split(" ")[1])+"-preCheck.txt", mode="w") #create precheck_file file in .txt for pfcn switches
+    preCheck_file = open(str(script_directory)+"\\"+str(fileName.split(" ")[1])+"-pc-script.txt", mode="w") #create precheck_file file in .txt for pfcn switches
+    hostname = str(fileName.split(" ")[1])
     #the config script
     preCheck_file.write('''!
 terminal length 0
@@ -40,7 +45,10 @@ sh mac address-table
 sh mac address-table
 !''')
     preCheck_file.close()
-    return preCheck_file
+    #we are doing this because the callPreChecks file needs the hostname to create a file
+    #This will take the precheck_file Object and the hostname string.
+    file_and_hostname_data = [preCheck_file, hostname]
+    return file_and_hostname_data
 
 
 '''tclsh

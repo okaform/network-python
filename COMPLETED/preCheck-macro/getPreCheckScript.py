@@ -7,27 +7,34 @@ from netmiko.ssh_exception import AuthenticationException
 from datetime import date, datetime 
 import genPreCheckScripts, callPreChecks
 
-'''ip_ad = "10.22.3.5"
-as_id = "as_cz507f"
-passwd = "eqBHKti48MWSmzr7"
-en = "eqBHKti48MWSmzr7"'''
 
 start_time = datetime.now()
 
-#print("This is sys.argv 0 ->",sys.argv[1])
+
+''' -------------------------------------
+    --------- CREDENTIAL OPTIONS --------
+    ------------------------------------- '''
+as_id = input("Insert your as_id: ")
+as_pass = input("\nInsert your as_password: ")
+en_secret = input("\nInsert your secret password:")
+#This is useful for switches without management template. It will use the enable secret
+if en_secret == '':
+    en_secret = as_pass
+
+
+''' ---------------------------------------
+    ---------- GET THE IP ADDRESSES ---------
+    --------------------------------------- '''
 
 print("\n\nPaste the IP Addresses you want prechecks generated. \n"+
 "When you are done. Hit ENTER, Ctrl + z, and ENTER in that order to end:\n")
 
 ipAd = sys.stdin.readlines() #This will read multiple lines
 
-dir = "PreCheck-" + str(datetime.now().strftime("%m-%d-%y-{%H-%M}"))
-
-#sys.argv[1] is for the as_is
-os.chdir("C:\\Users\\"+sys.argv[1]+"\\Desktop")
-
-desktop = os.getcwd()
-
+''' ---------------------------------------
+    ---------- DIRECTORY MOVE -------------
+    --------------------------------------- '''   
+dir = "N:\\Report\\macro-preCheck-" + str(datetime.now().strftime("%b-%d-%y [%H-%M]"))
 #This is for the directory
 if os.path.exists(dir):
     os.chdir(dir)
@@ -37,14 +44,18 @@ else:
     os.chdir(dir)
     print("\n"+str(dir) +" has been created!\n")
 
+
+
+
+
 for i in range(len(ipAd)):
     if len(ipAd[i]) != 1: #this takes care of empty lines so they are not looked at
         #print(str(i) +" -> "+ str(userInput[i]) + " length -> " + str(len(userInput[i])))
         net_dev = {"host":ipAd[i],
-                    "username":sys.argv[1],
-                    "password":sys.argv[2], #sys.argv[2] this is for the password for as_id
+                    "username":as_id,
+                    "password": as_pass, 
                     "device_type":"cisco_ios",
-                    "secret":sys.argv[2]
+                    "secret": en_secret
                     }
         #This try catch block makes sure that if we hit a bad switch it doesn't crash the program but keeps going
         try:
@@ -52,23 +63,29 @@ for i in range(len(ipAd)):
         except:
             print("There is a problem with your log in credentials for " +str(ipAd[i])+". Please check your username or password")
             continue
-        con.enable()
+        try:
+            con.enable()
+        except:
+            print("There is a problem with your log in credentials for " +str(ipAd[i])+". Please check your username or password")
+            continue
         
         #call the genPreCheckScript
-        filename = genPreCheckScripts.genPreCheck(con) # filename it created in the function needs to be returned to be used for logs
+        script_directory = str(dir) + "\\scripts"
+        file_host_data = genPreCheckScripts.genPreCheck(con, script_directory) # filename it created in the function needs to be returned to be used for logs
         
         #call the callPreChecks
-        send_desktop = str(desktop)+"\\Logs-"+ str(dir)
-        callPreChecks.preCheck(con, send_desktop, ipAd[i], filename)
+        send_report = str(dir) +"\\Logs"
+        #file_host_data[0] and [1] are the precheck file object and the hostname respectively
+        callPreChecks.preCheck(con, send_report, ipAd[i], file_host_data[0], file_host_data[1])
         
         
         
         if i != len(ipAd) - 1: #do not print this on the last switch
-            print("\n-----------------------------------------------------------")    
-            print("-------------------------NEXT SWITCH ----------------------")
-            print("-----------------------------------------------------------\n\n") 
+            print("\n------------------------------------------------------------------------------------------")    
+            print("----------------------- Moving on to " +str(ipAd[i + 1]).strip() + " -------------------------")
+            print("----------------------------------------------------------------------------------------------\n\n") 
         
-print("Successfully Completed. Please check your Desktop for the PreCheck Folder")
+print("Successfully Completed. Please check your Reports Folder for the PreCheck Information. ")
 
 elapsed_time = datetime.now() - start_time #to calculate the total elapsed time the script took to run
 print("This script took approximately {}".format(elapsed_time))
