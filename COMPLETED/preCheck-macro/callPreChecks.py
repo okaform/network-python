@@ -9,7 +9,7 @@ def preCheck(con, dir, ipAd, file, hostname):
         if not os.path.exists(dir):
             os.makedirs(dir)  #new dir for files to be moved
             print("\n"+str(dir) +" has been created!\n")
-        print("creating logs for "+str(file.name) + " right now" )
+        print("creating logs for "+str(hostname) + " right now" )
         
                 
         #open the script file that we got from the main method

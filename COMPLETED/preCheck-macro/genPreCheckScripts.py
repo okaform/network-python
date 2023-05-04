@@ -12,7 +12,7 @@ def genPreCheck(con, script_directory):
     #IECN vlan are actually from 495 - 549. .even are pfcn and .odd are IECN on the second octet on IP Address
     mo = reg.findall(con.send_command(to_send)) #find all the IECN vlans from the sh vlan brief command
    
-    fileName = con.send_command("sh run | i hostname")
+    fileName = con.send_command("sh run | i (hostname )")
     #print(fileName.split(" ")[1])
     preCheck_file = open(str(script_directory)+"\\"+str(fileName.split(" ")[1])+"-pc-script.txt", mode="w") #create precheck_file file in .txt for pfcn switches
     hostname = str(fileName.split(" ")[1])
