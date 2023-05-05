@@ -92,9 +92,14 @@ except:
     print("\nThere is an issue with enable password")
     
     
+    
+''' ------------------------------------------
+    ---------- FILENAME ---------
+    ------------------------------------------ '''    
 #filename
 fileName = con.send_command("sh run | i (hostname )", read_timeout=180)
-host_dev_table = open(str(fileName.split(" ")[1]) +"-Table 2.txt", mode="a")     
+host_dev_table = open(str(fileName.split(" ")[1]) +"-Table 2.txt", mode="a") 
+port_config = open("port_config.txt", mode="a")    
 
 #Get Mac Address Dynamic
 mac_add = con.send_command("sh mac address-table dynamic", read_timeout=180)
@@ -134,6 +139,14 @@ for vlan_match in matches:
         #For the intface type. if vlan 300, assign tenGig ports, else assign two gig ports
         if '300' in vlan_match:
             port_found_str = str(port_found.group()).replace("Gi", "Te")
+            #create another file and write the configuration to it.
+            #port_config.write("\n")
+            port_config.write("\ninterface " + str(port_found_str))
+            port_config.write("\n description " + str(int_desc))
+            port_config.write("\n no shutdown")
+            port_config.write("\nexit")
+            port_config.write("\n!\n!")
+            
         else:
             port_found_str = str(port_found.group()).replace("Gi", "Two")
             
@@ -148,7 +161,8 @@ print(tabulated_table)
     
 host_dev_table.write(tabulated_table)
         
-host_dev_table.close()        
+host_dev_table.close()   
+port_config.close()     
         
      
 print("Successfully Completed. Please the " + str(dir) +" Folder")
