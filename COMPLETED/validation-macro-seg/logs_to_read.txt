@@ -1,59 +1,60 @@
 
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#terminal length 0
+tonptlast018-pt-1f25#terminal length 0
 
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#sh vlan
+tonptlast018-pt-1f25#sh vlan
 
 VLAN Name                             Status    Ports
 ---- -------------------------------- --------- -------------------------------
-1    default                          active    Ap1/0/1, Ap2/0/1
-300  wireless_mgmt_VLAN-300           active    
-500  IECN_VLAN-500                    active    Tw2/0/19, Tw2/0/21, Tw2/0/22, Tw2/0/33
-600  IPT_VLAN-600                     active    Tw1/0/1, Tw1/0/2, Tw1/0/3, Tw1/0/4, Tw1/0/5, Tw1/0/13, Tw1/0/14, Tw1/0/16, Tw1/0/17, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/21, Tw1/0/22, Tw1/0/23, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/27, Tw1/0/28, Tw1/0/29, Tw1/0/30, Tw1/0/31, Tw1/0/32, Tw1/0/33, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Te1/0/42, Te1/0/43, Te1/0/44, Te1/0/45, Te1/0/46, Te1/0/47, Te1/0/48, Tw2/0/16, Tw2/0/18, Tw2/0/20, Tw2/0/29, Tw2/0/30, Tw2/0/31, Tw2/0/32
-720  SSUN_VLAN-720                    active    
+1    default                          active    Ap1/0/1, Ap2/0/1, Ap3/0/1
+300  wireless_mgmt_VLAN-300           active    Tw1/0/23
+500  IECN_VLAN-500                    active    Tw1/0/6, Tw1/0/7, Tw1/0/8, Tw1/0/9, Tw1/0/10, Tw1/0/11, Tw1/0/12, Tw1/0/14, Tw1/0/17, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/28, Tw1/0/30, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Tw2/0/1, Tw2/0/2, Tw2/0/3, Tw2/0/4, Tw2/0/5, Tw2/0/6, Tw2/0/7, Tw2/0/8, Tw2/0/9, Tw2/0/10, Tw2/0/11, Tw2/0/12, Tw2/0/13, Tw2/0/14, Tw2/0/26, Tw2/0/27, Tw2/0/28, Tw2/0/29, Tw2/0/30, Tw2/0/31, Tw2/0/32, Tw2/0/33, Tw2/0/34, Tw2/0/35, Tw2/0/36
+                                                Te2/0/37, Te2/0/38, Te2/0/39, Te2/0/40
+501  IECN_VLAN-501                    active    Tw1/0/1, Tw2/0/25, Tw3/0/15, Tw3/0/17, Tw3/0/21, Tw3/0/30, Tw3/0/32, Tw3/0/33, Tw3/0/34, Tw3/0/35, Tw3/0/36, Te3/0/37, Te3/0/38, Te3/0/39, Te3/0/40, Te3/0/41
+550  Vital_VLAN                       active    Tw1/0/13, Tw1/0/15, Tw1/0/16, Tw1/0/27, Tw1/0/29, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/1/2, Te1/1/3, Te2/0/41, Te2/0/42, Tw3/0/1, Tw3/0/2, Tw3/0/3, Tw3/0/4, Tw3/0/5, Tw3/0/8, Tw3/0/9, Tw3/0/13, Tw3/0/18, Tw3/0/19, Tw3/0/20, Tw3/0/25, Tw3/0/27, Tw3/0/29, Te3/0/42, Te3/0/43, Te3/0/44, Te3/0/47
+600  IPT_VLAN-600                     active    Tw1/0/4, Tw1/0/5, Tw2/0/15, Tw2/0/16, Tw2/0/17, Tw2/0/18, Tw2/0/19, Tw2/0/21, Tw2/0/23
+700  Multi-Purpose_VLAN               active    Tw1/0/2, Tw1/0/3, Te1/0/45, Te1/0/46, Te1/0/47, Tw3/0/31
+750  GMOL_VLAN                        active    Tw1/0/4, Tw1/0/5
 762  gm-security-camera-vrf           active    
-999  unused-ports                     active    Te1/1/2, Te1/1/3, Te1/1/4, Te1/1/5, Te1/1/6, Te1/1/7, Te1/1/8, Tw2/0/18, Tw2/0/23, Tw2/0/24, Tw2/0/34, Tw2/0/35, Tw2/0/36, Te2/0/37, Te2/0/38, Te2/0/39, Te2/0/40, Te2/0/41, Te2/0/42, Te2/0/43, Te2/0/44, Te2/0/45, Te2/0/46, Te2/0/47, Te2/0/48, Te2/1/2, Te2/1/3, Te2/1/4, Te2/1/5, Te2/1/6, Te2/1/7, Te2/1/8
+999  unused-ports                     active    Tw1/0/31, Te1/0/43, Te1/1/4, Te1/1/5, Te1/1/6, Te1/1/7, Te1/1/8, Tw2/0/24, Te2/0/45, Te2/0/46, Te2/0/47, Te2/0/48, Te2/1/2, Te2/1/3, Te2/1/4, Te2/1/5, Te2/1/6, Te2/1/7, Te2/1/8, Tw3/0/16, Te3/0/45, Te3/0/46, Te3/0/48
 1002 fddi-default                     act/unsup 
 1003 token-ring-default               act/unsup 
 1004 fddinet-default                  act/unsup 
 1005 trnet-default                    act/unsup 
-1199 SSUN_link-to-arlaccore001        active    
-1200 SSUN_link-to-arlaccore002        active    
-2218 gm-security-to-arlaccore001      active    
-2219 gm-security-to-arlaccore002      active    
-2550 2550-Vital_VLAN                  active    Tw2/0/17
-2700 2700-Multi-Purpose_VLAN          active    Tw1/0/6, Tw1/0/7, Tw1/0/8, Tw1/0/9, Tw1/0/10, Tw1/0/11, Tw1/0/12, Tw1/0/15, Tw2/0/1, Tw2/0/2, Tw2/0/3, Tw2/0/4, Tw2/0/5, Tw2/0/6, Tw2/0/7, Tw2/0/8, Tw2/0/9, Tw2/0/10, Tw2/0/11, Tw2/0/12, Tw2/0/13, Tw2/0/14, Tw2/0/15, Tw2/0/25, Tw2/0/26, Tw2/0/27, Tw2/0/28
-2750 2750-GMOL_VLAN                   active    Tw1/0/1, Tw1/0/2, Tw1/0/3, Tw1/0/4, Tw1/0/5, Tw1/0/13, Tw1/0/14, Tw1/0/16, Tw1/0/17, Tw1/0/18, Tw1/0/19, Tw1/0/20, Tw1/0/21, Tw1/0/22, Tw1/0/23, Tw1/0/24, Tw1/0/25, Tw1/0/26, Tw1/0/27, Tw1/0/28, Tw1/0/29, Tw1/0/30, Tw1/0/31, Tw1/0/32, Tw1/0/33, Tw1/0/34, Tw1/0/35, Tw1/0/36, Te1/0/37, Te1/0/38, Te1/0/39, Te1/0/40, Te1/0/41, Te1/0/42, Te1/0/43, Te1/0/44, Te1/0/45, Te1/0/46, Te1/0/47, Te1/0/48, Tw2/0/16, Tw2/0/20, Tw2/0/30, Tw2/0/31, Tw2/0/32
-2751 VLAN2751                         active    Tw2/0/29
-3050 link-to-arlaccore001             active    
-3550 link-to-arlaccore002             active    
+2154 gm-security-to-tonptcore001      active    
+2155 gm-security-to-tonptcore002      active    
+2550 2550-Vital_VLAN                  active    Tw1/0/21, Tw1/0/22, Te1/0/42, Tw3/0/10, Tw3/0/11, Tw3/0/26, Tw3/0/28
+2700 2700-Multi-Purpose_VLAN          active    Tw1/0/32, Tw1/0/33, Te1/0/44, Te1/0/48, Tw2/0/20, Tw2/0/22, Te2/0/43, Te2/0/44, Tw3/0/6, Tw3/0/7, Tw3/0/12, Tw3/0/14, Tw3/0/22, Tw3/0/23, Tw3/0/24
+2750 2750-GMOL_VLAN                   active    Tw2/0/15, Tw2/0/16, Tw2/0/17, Tw2/0/18, Tw2/0/19, Tw2/0/21, Tw2/0/23
+3018 link-tonptcore001                active    
+3518 link-tonptcore002                active    
 
 VLAN Type  SAID       MTU   Parent RingNo BridgeNo Stp  BrdgMode Trans1 Trans2
 ---- ----- ---------- ----- ------ ------ -------- ---- -------- ------ ------
 1    enet  100001     1500  -      -      -        -    -        0      0   
 300  enet  100300     1500  -      -      -        -    -        0      0   
 500  enet  100500     1500  -      -      -        -    -        0      0   
+501  enet  100501     1500  -      -      -        -    -        0      0   
+550  enet  100550     1500  -      -      -        -    -        0      0   
 600  enet  100600     1500  -      -      -        -    -        0      0   
-720  enet  100720     1500  -      -      -        -    -        0      0   
+700  enet  100700     1500  -      -      -        -    -        0      0   
+750  enet  100750     1500  -      -      -        -    -        0      0   
 762  enet  100762     1500  -      -      -        -    -        0      0   
 999  enet  100999     1500  -      -      -        -    -        0      0   
 1002 fddi  101002     1500  -      -      -        -    -        0      0   
 1003 tr    101003     1500  -      -      -        -    -        0      0   
 1004 fdnet 101004     1500  -      -      -        ieee -        0      0   
 1005 trnet 101005     1500  -      -      -        ibm  -        0      0   
-1199 enet  101199     1500  -      -      -        -    -        0      0   
-1200 enet  101200     1500  -      -      -        -    -        0      0   
-2218 enet  102218     1500  -      -      -        -    -        0      0   
-2219 enet  102219     1500  -      -      -        -    -        0      0   
+2154 enet  102154     1500  -      -      -        -    -        0      0   
+2155 enet  102155     1500  -      -      -        -    -        0      0   
 2550 enet  102550     1500  -      -      -        -    -        0      0   
 2700 enet  102700     1500  -      -      -        -    -        0      0   
 2750 enet  102750     1500  -      -      -        -    -        0      0   
-2751 enet  102751     1500  -      -      -        -    -        0      0   
-3050 enet  103050     1500  -      -      -        -    -        0      0   
-3550 enet  103550     1500  -      -      -        -    -        0      0   
+3018 enet  103018     1500  -      -      -        -    -        0      0   
+3518 enet  103518     1500  -      -      -        -    -        0      0   
 
 Remote SPAN VLANs
 ------------------------------------------------------------------------------
@@ -62,117 +63,117 @@ Remote SPAN VLANs
 Primary Secondary Type              Ports
 ------- --------- ----------------- ------------------------------------------
 
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#show interface status
+tonptlast018-pt-1f25#show interface status
 
 Port         Name               Status       Vlan       Duplex  Speed Type
-Tw1/0/1      Paint - Spider Voi connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/2      Paint - RV`s Offic connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/3      Paint - Open Confe notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/4      Paint - VOIP Speak connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/5      Paint - VOIP Speak connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/6      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/7      Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/8      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/9      Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/10     Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/11     Paint - Plant Floo connected    2700       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/12     Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/13     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/14     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/15     Paint - Plant Floo notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/16     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/17     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/18     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/19     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/20     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/21     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/22     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/23     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/24     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/25     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/26     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/27     Paint - WorkStatio connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/28     Paint - WorkStatio connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/29     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/30     Paint - WorkStatio notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/31     Paint - Copy/Print connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw1/0/32     Paint - GMOL Drop  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/33     Paint - GMOL Drop  connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/34     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw1/0/35     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw1/0/36     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Te1/0/37     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/38     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
-Te1/0/39     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/40     IDEAL - Voip GMOL  connected    2750       a-full  a-100 100/1000/2.5G/5G/10GBaseTX
-Te1/0/41     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/42     IDEAL - Voip GMOL  connected    2750       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
-Te1/0/43     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/44     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/45     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/46     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/47     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/0/48     IDEAL - Voip GMOL  notconnect   2750         auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te1/1/1      link-to-arlaccore0 connected    trunk        full    10G SFP-10GBase-LR
-Te1/1/2      unused-port        disabled     999          auto   auto unknown
-Te1/1/3      unused-port        disabled     999          auto   auto unknown
+Tw1/0/1      MC-H1-1            notconnect   501          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/2      tonpt-p1-lap11     connected    700          full  a-100 100/1000/2.5GBaseTX
+Tw1/0/3      tonpt-p1-lap13     connected    700          full    100 100/1000/2.5GBaseTX
+Tw1/0/4      by-h27-b1          notconnect   750          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/5      by-h27-b2          notconnect   750          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/6      Link-to-USTNYVH110 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/7      Link-to-tgvh1-op03 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/8      Link-to-tgvh1-op04 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/9      Link-to-tgvh1-op06 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/10     Link-to-USTNYVH100 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/11     Link-to-tgvh2-op00 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/12     Link-to-USTNYVH210 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/13     USTNYVH10000P1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/14     Link-to-tgvh1-cmmw connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/15     USTNYVH10001P1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/16     USTNYVH10001P2     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/17     Link-to-tgvh2-op03 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/18     Link-to-tgvh2-op06 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/19     Link-to-tgvh2-op06 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/20     Link-to-USTNYVH200 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/21     USTNYVH10CMMC1     connected    2550       a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/22     USTNYVH20CMMC1     notconnect   2550         auto   auto 100/1000/2.5GBaseTX
+Tw1/0/23     tonpt-ams12-G26    connected    300          full    100 100/1000/2.5GBaseTX
+Tw1/0/24     Link-to-USTNYVH280 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/25     Link-to-USTNYVH280 connected    500          full    100 100/1000/2.5GBaseTX
+Tw1/0/26     Link-to-tgvh2-cmmw connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/27     ustnyvh20001p1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/28     Link-to-tgvh2-op04 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/29     ustnyvh20cmmg1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/30     Link-to-tgvh1-op00 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw1/0/31     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/32     TNYW0232           connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/33     tnyw0281           connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw1/0/34     USTNYVH10001A1     notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/35     USTNYVH10002A1     notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw1/0/36     USTNYVH20002A1     connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Te1/0/37     Link-to-tgvc1-op01 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/38     Link-to-tgvc1-op01 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/39     Link-to-tgvc1-op01 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/40     Link-to-tgvc1-op01 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/41     Link-to-tgvc1-op01 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/42     USTNYVH10CMMC1     notconnect   2550         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/43     unused_port        disabled     999          full   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/44     GENV PC            notconnect   2700         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/0/45     tonpt-g10-ats-st18 notconnect   700          full    100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/46     tonpt-g10-ups-st18 notconnect   700          full    100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/47     tonpt-g10-nb       notconnect   700          full    100 100/1000/2.5G/5G/10GBaseTX
+Te1/0/48     GENV PC            notconnect   2700         auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te1/1/1      link-tonptcore001- connected    trunk        full    10G SFP-10GBase-LR
+Te1/1/2      tems1-colg29-lp    connected    550        a-half   a-10 10/100/1000BaseTX SFP
+Te1/1/3      tems1-colg27-lp    connected    550        a-half   a-10 10/100/1000BaseTX SFP
 Te1/1/4      unused-port        disabled     999          auto   auto unknown
 Te1/1/5      unused-port        disabled     999          auto   auto unknown
 Te1/1/6      unused-port        disabled     999          auto   auto unknown
 Te1/1/7      unused-port        disabled     999          auto   auto unknown
 Te1/1/8      unused-port        disabled     999          auto   auto unknown
-Ap1/0/1                         connected    1          a-full a-1000 App-hosting port
-Tw2/0/1      arlaclaap687-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/2      arlaclaap688-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/3      arlaclaap679-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/4      arlaclaap684-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/5      arlaclaap678-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/6      arlaclaap685-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/7      arlaclaap680-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/8      arlaclaap686-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/9      arlaclaap681-ga-1x connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/10     arlaclaap689-ga-1w connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/11     Link_to_arlaclaap6 notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/12     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/13     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/14     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/15     Link_to_arlaclaap6 connected    2700       a-full a-2500 100/1000/2.5GBaseTX
-Tw2/0/16     Ideal Setech Print connected    2750       a-full  a-100 100/1000/2.5GBaseTX
-Tw2/0/17     Zebra Printer      notconnect   2550         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/18     IDEAL - GMOnline D connected    999        a-full  a-100 100/1000/2.5GBaseTX
-Tw2/0/19     PP2/19 - NAM (PDS) disabled     500          auto   auto 100/1000/2.5GBaseTX
-Tw2/0/20     Paint Admin Plotte connected    2750       a-full a-1000 100/1000/2.5GBaseTX
-Tw2/0/21     USARLWTBPDSP87     connected    500        a-full a-1000 100/1000/2.5GBaseTX
-Tw2/0/22     arp-SKID06-es1     connected    500        a-full  a-100 100/1000/2.5GBaseTX
-Tw2/0/23     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
+Ap1/0/1      unused_port        disabled     1            auto   auto App-hosting port
+Tw2/0/1      Link-to-tgvc1-op03 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/2      Link-to-tgvc1-op03 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/3      Link-to-tgvc1-op03 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/4      Link-to-tgvc1-op04 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/5      Link-to-tgvc1-op04 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/6      Link-to-tgvc1-op04 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/7      Link-to-tgvc1-op05 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/8      Link-to-tgvc1-op05 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/9      Link-to-tgvc1-op06 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/10     Link-to-tgvc1-op06 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/11     Link-to-tgvc1-op08 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/12     Link-to-tgvc1-op08 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/13     Link-to-tgvc1-op08 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/14     Link-to-tgvc1-op11 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/15     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/16     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/17     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/18     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/19     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/20     P1_PPS02           notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/21     Genv Crk Tm Rm     notconnect   2750         auto   auto 100/1000/2.5GBaseTX
+Tw2/0/22     Ustonpp-prd-p1-bm- connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw2/0/23     Genv Crk Tm Rm     connected    2750       a-full a-1000 100/1000/2.5GBaseTX
 Tw2/0/24     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
-Tw2/0/25     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/26     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/27     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/28     Vaccine            notconnect   2700         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/29     DMP                notconnect   2751         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/30     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/31     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/32     Paint Office GMOL  notconnect   2750         auto   auto 100/1000/2.5GBaseTX
-Tw2/0/33     arp-SKID06-es1     notconnect   500          auto   auto 100/1000/2.5GBaseTX
-Tw2/0/34     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
-Tw2/0/35     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
-Tw2/0/36     unused_port        disabled     999          auto   auto 100/1000/2.5GBaseTX
-Te2/0/37     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/38     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/39     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/40     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/41     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/42     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/43     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/44     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/45     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/46     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/47     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/0/48     Monitor Port       notconnect   999          auto   auto 100/1000/2.5G/5G/10GBaseTX
-Te2/1/1      link-to-arlaccore0 connected    trunk        full    10G SFP-10GBase-LR
+Tw2/0/25     Link-to-tgvc1-op01 connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/26     Link-to-tgvc1-op17 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/27     Link-to-tgvc1-op18 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/28     Link-to-tgvc1-op18 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/29     Link-to-tgvc1-op18 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/30     Link-to-tgvc1-op19 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/31     Link-to-tgvc1-op19 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/32     Link-to-tgvc1-op20 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/33     Link-to-tgvc1-op23 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/34     Link-to-tgvc1-op23 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/35     Link-to-tgvc1-op24 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Tw2/0/36     Link-to-tgvc1-op24 connected    500        a-full  a-100 100/1000/2.5GBaseTX
+Te2/0/37     Link-to-tgvc1-op24 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te2/0/38     Link-to-tgvc1-op24 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te2/0/39     Link-to-tgvc1-op25 connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te2/0/40     Link-to-tgvc1-cmmw connected    500        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te2/0/41     USTNYVC1CMM1P1     connected    550        a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te2/0/42     USTNYVC1CMM2P1     connected    550        a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te2/0/43     Andon Board E24    connected    2700       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te2/0/44     Andon Board D24    connected    2700       a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te2/0/45     unused_port        disabled     999          full   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/46     unused_port        disabled     999          full   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/47     unused_port        disabled     999          full   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/0/48     unused_port        disabled     999          full   auto 100/1000/2.5G/5G/10GBaseTX
+Te2/1/1      link-tonptcore002- connected    trunk        full    10G SFP-10GBase-LR
 Te2/1/2      unused-port        disabled     999          auto   auto unknown
 Te2/1/3      unused-port        disabled     999          auto   auto unknown
 Te2/1/4      unused-port        disabled     999          auto   auto unknown
@@ -180,83 +181,363 @@ Te2/1/5      unused-port        disabled     999          auto   auto unknown
 Te2/1/6      unused-port        disabled     999          auto   auto unknown
 Te2/1/7      unused-port        disabled     999          auto   auto unknown
 Te2/1/8      unused-port        disabled     999          auto   auto unknown
-Ap2/0/1                         connected    1          a-full a-1000 App-hosting port
-arlaclast050-ga-1w7#!
+Ap2/0/1      unused_port        disabled     1            auto   auto App-hosting port
+Tw3/0/1      ustnyvc10002a1     notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/2      USTNYTRDLT001      notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/3      ustnyvc10004a1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/4      ustnyvc10006a1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/5      TRDL01             connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/6      enter node name he connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/7      TNYW0289           connected    2700       a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/8      ustnyvc10001a1     connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/9      GenV-Crank-PC      connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/10     tonpt-wc-st18-g10- connected    2550       a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/11     tonpt-wc-st18-g10- connected    2550       a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/12     tgvc1 op230 conv p notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw3/0/13     USTNYVC1GAG5P1     connected    550        a-full a-1000 100/1000/2.5GBaseTX
+Tw3/0/14     tgvc1-ccmm-conv-po notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw3/0/15     tgvc1-flt122-umgd  connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/16     unused_port        disabled     999          full   auto 100/1000/2.5GBaseTX
+Tw3/0/17     tgvc1-flt124-umgd  connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/18     USTNYVC1GAG1P1     connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/19     USTNYVC1GAG2P1     notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/20     USTNYC1GAG3P1      connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/21     tgvc1-flt126-unmgd connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/22     tgvc1-op250-conv-p notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw3/0/23     tgvc1-adcole-conv- notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw3/0/24     tgvc1-optical-conv notconnect   2700         auto   auto 100/1000/2.5GBaseTX
+Tw3/0/25     tgvc1-ccmm-conv    connected    550        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/26     USTNYVC1CMM1C1     connected    2550       a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/27     CMM Conv port      notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/28     USTNYVC1CMM2C1     connected    2550       a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/29     CMM Conv port      notconnect   550          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/30     crk-op10gag-conv - connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/31     crk op160gag conv  notconnect   700          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/32     Link-to-tgvc1-op01 connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/33     Link-to-tgvc1-op01 connected    501        a-full  a-100 100/1000/2.5GBaseTX
+Tw3/0/34     Link-to-tgvc1-op03 notconnect   501          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/35     Link-to-tgvc1-op03 notconnect   501          auto   auto 100/1000/2.5GBaseTX
+Tw3/0/36     Link-to-tgvc1-op04 notconnect   501          auto   auto 100/1000/2.5GBaseTX
+Te3/0/37     Link-to-tgvc1-op04 notconnect   501          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/38     Link-to-tgvc1-op05 notconnect   501          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/39     Link-to-tgvc1-op08 notconnect   501          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/40     Link-to-tgvc1-op08 notconnect   501          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/41     Link-to-tgvc1-op17 notconnect   501          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/42     ustnyVC10007A7     connected    550        a-full  a-100 100/1000/2.5G/5G/10GBaseTX
+Te3/0/43     USTNYC1CFM2        connected    550        a-full a-1000 100/1000/2.5G/5G/10GBaseTX
+Te3/0/44     unused_port        disabled     550          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/45     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/46     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/47     unused_port        disabled     550          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Te3/0/48     unused_port        disabled     999          auto   auto 100/1000/2.5G/5G/10GBaseTX
+Ap3/0/1      unused_port        disabled     1            auto   auto App-hosting port
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#sh ip arp
+tonptlast018-pt-1f25#sh ip arp
 Protocol  Address          Age (min)  Hardware Addr   Type   Interface
-Internet  10.9.4.142              9   689e.0b03.f99f  ARPA   Vlan3050
-Internet  10.9.4.143              -   689e.0b30.a4e6  ARPA   Vlan3050
-Internet  10.9.4.144             16   689e.0b04.07ff  ARPA   Vlan3550
-Internet  10.9.4.145              -   689e.0b30.a4e2  ARPA   Vlan3550
-Internet  10.9.44.65              -   689e.0b30.a4ca  ARPA   Vlan2550
-Internet  10.9.76.65              -   689e.0b30.a4ed  ARPA   Vlan2700
-Internet  10.9.76.70              0   dc8c.3785.7142  ARPA   Vlan2700
-Internet  10.9.76.78              0   dc8c.378e.2390  ARPA   Vlan2700
-Internet  10.9.76.79              0   dc8c.3785.70a4  ARPA   Vlan2700
-Internet  10.9.76.80              0   dc8c.3778.ef84  ARPA   Vlan2700
-Internet  10.9.76.96              0   a488.73cf.5b28  ARPA   Vlan2700
-Internet  10.9.76.97              0   a488.73ce.4b04  ARPA   Vlan2700
-Internet  10.9.76.98              0   a488.73cf.6324  ARPA   Vlan2700
-Internet  10.9.76.99              0   a488.73cf.178c  ARPA   Vlan2700
-Internet  10.9.76.102             0   a488.73cf.4030  ARPA   Vlan2700
-Internet  10.9.76.112             0   a488.73cf.4304  ARPA   Vlan2700
-Internet  10.9.76.113             0   a488.73ce.4044  ARPA   Vlan2700
-Internet  10.9.76.114             0   a488.73cf.3db4  ARPA   Vlan2700
-Internet  10.9.76.115             0   a488.73cf.223c  ARPA   Vlan2700
-Internet  10.9.76.123             0   b05c.da35.ad83  ARPA   Vlan2700
-Internet  10.9.76.124             2   b05c.da33.85d3  ARPA   Vlan2700
-Internet  10.9.76.125             0   a488.73cf.8890  ARPA   Vlan2700
-Internet  10.9.76.126             1   b05c.da32.174c  ARPA   Vlan2700
-Internet  10.9.108.65             -   689e.0b30.a4cc  ARPA   Vlan2750
-Internet  10.9.108.70             0   040e.3c0f.b5a8  ARPA   Vlan2750
-Internet  10.9.108.71             2   3863.bb04.70bb  ARPA   Vlan2750
-Internet  10.9.108.80             1   b05c.da33.8233  ARPA   Vlan2750
-Internet  10.9.108.87            22   0068.eb41.cbd5  ARPA   Vlan2750
-Internet  10.9.108.93             3   0068.eb61.b719  ARPA   Vlan2750
-Internet  10.9.108.97             0   b05c.da35.a187  ARPA   Vlan2750
-Internet  10.9.108.105            0   b05c.da34.f34b  ARPA   Vlan2750
-Internet  10.9.108.112            0   98e7.f4a3.f3fc  ARPA   Vlan2750
-Internet  10.9.108.114            0   b499.badc.88b5  ARPA   Vlan2750
-Internet  10.9.108.117            0   0068.eb62.b05a  ARPA   Vlan2750
-Internet  10.9.108.126            5   0068.eb61.2aad  ARPA   Vlan2750
-Internet  10.10.3.17              -   689e.0b30.a4c7  ARPA   Vlan300
-Internet  11.221.13.65            -   689e.0b30.a4d6  ARPA   Vlan600
-Internet  11.221.13.71            1   e840.400c.9005  ARPA   Vlan600
-Internet  11.221.13.73            1   5c50.15a9.a44b  ARPA   Vlan600
-Internet  11.221.13.75            1   ac44.f21a.64de  ARPA   Vlan600
-Internet  11.221.13.88            4   ac44.f21a.0e24  ARPA   Vlan600
-Internet  11.221.13.108           1   5c50.15a9.a748  ARPA   Vlan600
-Internet  11.221.13.110           1   5478.1a1c.82f0  ARPA   Vlan600
-Internet  11.221.13.114           4   2436.dab1.ca51  ARPA   Vlan600
-Internet  11.221.13.121           4   2436.dab1.e3ab  ARPA   Vlan600
-Internet  11.221.13.122           0   c064.e4d8.1963  ARPA   Vlan600
-Internet  11.221.13.126           2   2436.dab1.c961  ARPA   Vlan600
-Internet  120.39.164.1            -   689e.0b30.a4d0  ARPA   Vlan500
-Internet  120.39.164.10           2   b05c.da35.ac30  ARPA   Vlan500
-Internet  120.39.164.20           0   001b.1b1d.f994  ARPA   Vlan500
-arlaclast050-ga-1w7#!
+Internet  10.7.132.14             2   f04a.0231.74df  ARPA   Vlan3018
+Internet  10.7.132.15             -   f8e9.4f08.0964  ARPA   Vlan3018
+Internet  10.7.132.16             3   f04a.0231.757f  ARPA   Vlan3518
+Internet  10.7.132.17             -   f8e9.4f08.096c  ARPA   Vlan3518
+Internet  10.7.164.65             -   f8e9.4f08.094a  ARPA   Vlan2550
+Internet  10.7.164.66             0   fc99.47b1.00c2  ARPA   Vlan2550
+Internet  10.7.164.67             0   6c20.56e1.2b78  ARPA   Vlan2550
+Internet  10.7.164.125            2   0800.239f.407a  ARPA   Vlan2550
+Internet  10.7.164.126            5   0800.239f.8089  ARPA   Vlan2550
+Internet  10.7.196.65             -   f8e9.4f08.096d  ARPA   Vlan2700
+Internet  10.7.196.82             1   3863.bbdb.a815  ARPA   Vlan2700
+Internet  10.7.196.88             0   b05c.da36.720e  ARPA   Vlan2700
+Internet  10.7.196.89             2   b05c.da2e.20eb  ARPA   Vlan2700
+Internet  10.7.196.91             0   b05c.da2e.25e9  ARPA   Vlan2700
+Internet  10.7.196.109            0   b05c.da34.e960  ARPA   Vlan2700
+Internet  10.7.196.118            0   b05c.da35.a758  ARPA   Vlan2700
+Internet  10.7.196.119            2   b05c.da2e.1a81  ARPA   Vlan2700
+Internet  10.7.228.65             -   f8e9.4f08.094c  ARPA   Vlan2750
+Internet  10.7.228.121            0   b05c.da2e.1a26  ARPA   Vlan2750
+Internet  10.10.133.17            -   f8e9.4f08.0947  ARPA   Vlan300
+Internet  11.226.102.65           -   f8e9.4f08.0956  ARPA   Vlan600
+Internet  120.1.18.1              -   f8e9.4f08.0950  ARPA   Vlan500
+Internet  120.1.18.17             0   c8d3.ffb1.69b9  ARPA   Vlan500
+Internet  120.1.18.18            10   00d0.2419.060a  ARPA   Vlan500
+Internet  120.1.18.19             7   00d0.2419.09c6  ARPA   Vlan500
+Internet  120.1.18.21             8   00d0.2419.05fa  ARPA   Vlan500
+Internet  120.1.18.23             8   0010.406e.8bb8  ARPA   Vlan500
+Internet  120.1.18.24            15   0010.406e.8c38  ARPA   Vlan500
+Internet  120.1.18.25             1   00d0.2419.c670  ARPA   Vlan500
+Internet  120.1.18.26             8   0080.63db.56e5  ARPA   Vlan500
+Internet  120.1.18.27            10   001f.f80a.8a16  ARPA   Vlan500
+Internet  120.1.18.28             7   0080.63db.5785  ARPA   Vlan500
+Internet  120.1.18.29             4   0080.63db.566d  ARPA   Vlan500
+Internet  120.1.18.30             1   00e0.e42c.0dbc  ARPA   Vlan500
+Internet  120.1.18.31             1   00e0.e42c.0c4c  ARPA   Vlan500
+Internet  120.1.18.32             1   0080.63db.5695  ARPA   Vlan500
+Internet  120.1.18.33             1   0080.63ed.6d8f  ARPA   Vlan500
+Internet  120.1.18.34             7   0080.63e1.9321  ARPA   Vlan500
+Internet  120.1.18.35            21   00e0.e42c.0db6  ARPA   Vlan500
+Internet  120.1.18.36            16   001b.1b30.be3a  ARPA   Vlan500
+Internet  120.1.18.37             1   001b.1b31.1892  ARPA   Vlan500
+Internet  120.1.18.38            20   00d0.2416.f4aa  ARPA   Vlan500
+Internet  120.1.18.39            22   001f.f80a.a570  ARPA   Vlan500
+Internet  120.1.18.40            26   00d0.2414.7918  ARPA   Vlan500
+Internet  120.1.18.41             0   0019.0f06.cdbf  ARPA   Vlan500
+Internet  120.1.18.42             0   0019.0f06.cdf3  ARPA   Vlan500
+Internet  120.1.18.44             9   00e0.e42b.cddf  ARPA   Vlan500
+Internet  120.1.18.45            13   00e0.e42c.0a21  ARPA   Vlan500
+Internet  120.1.18.46             0   001f.f80a.a550  ARPA   Vlan500
+Internet  120.1.18.47             1   00d0.2414.7b60  ARPA   Vlan500
+Internet  120.1.18.48            22   00e0.e42b.cab9  ARPA   Vlan500
+Internet  120.1.18.49            21   00e0.e42b.cab8  ARPA   Vlan500
+Internet  120.1.18.50            23   001f.f80a.9b7e  ARPA   Vlan500
+Internet  120.1.18.51             0   001f.f807.60f4  ARPA   Vlan500
+Internet  120.1.18.52            13   480f.cfc6.96ed  ARPA   Vlan500
+Internet  120.1.18.53             0   001f.f82b.9e7d  ARPA   Vlan500
+Internet  120.1.18.54            15   0010.40d8.c233  ARPA   Vlan500
+Internet  120.1.18.55             0   001f.f83f.51ac  ARPA   Vlan500
+Internet  120.1.18.56             2   489e.bdee.e53e  ARPA   Vlan500
+Internet  120.1.18.57             1   001f.f805.96fd  ARPA   Vlan500
+Internet  120.1.18.58             0   001f.f808.48a4  ARPA   Vlan500
+Internet  120.1.18.59             0   001f.f805.c1c5  ARPA   Vlan500
+Internet  120.1.18.60            24   0010.403b.7c75  ARPA   Vlan500
+Internet  120.1.18.61            14   00d0.2416.3178  ARPA   Vlan500
+Internet  120.1.18.62            15   00e0.e42c.0a72  ARPA   Vlan500
+Internet  120.1.18.63             7   001f.f80a.a54d  ARPA   Vlan500
+Internet  120.1.18.64             6   00d0.2416.32d2  ARPA   Vlan500
+Internet  120.1.18.65             0   Incomplete      ARPA   
+Internet  120.1.18.66             0   000e.8cfa.abd1  ARPA   Vlan500
+Internet  120.1.18.67             0   000e.8cf8.7794  ARPA   Vlan500
+Internet  120.1.18.68             0   001b.1b17.7a8e  ARPA   Vlan500
+Internet  120.1.18.69             4   001b.1b28.aa07  ARPA   Vlan500
+Internet  120.1.18.70             0   000e.8ccd.fc80  ARPA   Vlan500
+Internet  120.1.18.71             0   001b.1b17.d28c  ARPA   Vlan500
+Internet  120.1.18.72             1   001b.1b6a.77d8  ARPA   Vlan500
+Internet  120.1.18.73            26   000e.8cf6.391b  ARPA   Vlan500
+Internet  120.1.18.74             0   000e.8ccf.c252  ARPA   Vlan500
+Internet  120.1.18.75             0   000e.8cfa.a8a8  ARPA   Vlan500
+Internet  120.1.18.76             6   001f.f83f.51aa  ARPA   Vlan500
+Internet  120.1.18.77             0   000e.8cd1.099d  ARPA   Vlan500
+Internet  120.1.18.78             3   001f.f803.f872  ARPA   Vlan500
+Internet  120.1.18.79            19   001f.f83a.7365  ARPA   Vlan500
+Internet  120.1.18.80             4   001f.f804.f3e6  ARPA   Vlan500
+Internet  120.1.18.81             2   001f.f827.6d96  ARPA   Vlan500
+Internet  120.1.18.82             6   001b.1b41.9a8d  ARPA   Vlan500
+Internet  120.1.18.83             2   001f.f80b.51e1  ARPA   Vlan500
+Internet  120.1.18.84            14   00d0.2416.3292  ARPA   Vlan500
+Internet  120.1.18.85            22   001f.f815.b2db  ARPA   Vlan500
+Internet  120.1.18.86            26   001f.f807.60f2  ARPA   Vlan500
+Internet  120.1.18.87             7   001f.f80f.0571  ARPA   Vlan500
+Internet  120.1.18.88             1   001f.f804.9787  ARPA   Vlan500
+Internet  120.1.18.89            14   001f.f803.ad89  ARPA   Vlan500
+Internet  120.1.18.90            15   001f.f803.ad99  ARPA   Vlan500
+Internet  120.1.18.91             2   001f.f82b.9e7b  ARPA   Vlan500
+Internet  120.1.18.92            14   001f.f803.3797  ARPA   Vlan500
+Internet  120.1.18.93             4   001b.1b41.4e36  ARPA   Vlan500
+Internet  120.1.18.94            24   001f.f80a.8ffc  ARPA   Vlan500
+Internet  120.1.18.95            22   001f.f80b.5218  ARPA   Vlan500
+Internet  120.1.18.96            26   001b.1b41.4f6a  ARPA   Vlan500
+Internet  120.1.18.97            24   00d0.2416.32ae  ARPA   Vlan500
+Internet  120.1.18.99            11   00e0.e42c.0c38  ARPA   Vlan500
+Internet  120.1.18.100            5   001f.f80b.54f4  ARPA   Vlan500
+Internet  120.1.18.101            5   00d0.2421.d4a2  ARPA   Vlan500
+Internet  120.1.18.102           13   001b.1b53.cd2f  ARPA   Vlan500
+Internet  120.1.18.103            2   001f.f805.96fb  ARPA   Vlan500
+Internet  120.1.18.104           23   001f.f838.b395  ARPA   Vlan500
+Internet  120.1.18.105           24   001f.f808.48a2  ARPA   Vlan500
+Internet  120.1.18.106            3   001f.f81f.be9b  ARPA   Vlan500
+Internet  120.1.18.107            4   001f.f804.c5b5  ARPA   Vlan500
+Internet  120.1.18.108           12   001f.f804.7268  ARPA   Vlan500
+Internet  120.1.18.109           23   001f.f805.c1c3  ARPA   Vlan500
+Internet  120.1.18.110           23   001f.f804.2429  ARPA   Vlan500
+Internet  120.1.18.111           20   001f.f804.4085  ARPA   Vlan500
+Internet  120.1.18.112            8   001f.f802.251f  ARPA   Vlan500
+Internet  120.1.18.113            6   001b.1b55.0a4f  ARPA   Vlan500
+Internet  120.1.18.114           26   00e0.e42c.4761  ARPA   Vlan500
+Internet  120.1.18.115            4   001b.1b1c.c0b7  ARPA   Vlan500
+Internet  120.1.18.116            6   001b.1b55.094f  ARPA   Vlan500
+Internet  120.1.18.117           11   00e0.e42c.4763  ARPA   Vlan500
+Internet  120.1.18.118           23   001f.f80b.5953  ARPA   Vlan500
+Internet  120.1.18.119           12   00d0.2416.9b78  ARPA   Vlan500
+Internet  120.1.18.120           10   001b.1b55.6d2d  ARPA   Vlan500
+Internet  120.1.18.121            7   001b.1b55.d5ff  ARPA   Vlan500
+Internet  120.1.18.122           11   00e0.e428.54ce  ARPA   Vlan500
+Internet  120.1.18.123            4   0007.2900.295e  ARPA   Vlan500
+Internet  120.1.18.124           12   001b.1b53.cd3b  ARPA   Vlan500
+Internet  120.1.18.125            7   001b.1b55.0a5b  ARPA   Vlan500
+Internet  120.1.18.126            0   000e.8cfa.5b22  ARPA   Vlan500
+Internet  120.1.18.127            8   000e.8cfb.9b0f  ARPA   Vlan500
+Internet  120.1.18.128           21   000e.8c87.bfae  ARPA   Vlan500
+Internet  120.1.18.129           11   001b.1b1e.d21d  ARPA   Vlan500
+Internet  120.1.18.130           11   000e.8cfa.5e5b  ARPA   Vlan500
+Internet  120.1.18.131            8   000e.8cf7.1cc5  ARPA   Vlan500
+Internet  120.1.18.133           15   000e.8cfd.9b4c  ARPA   Vlan500
+Internet  120.1.18.134           10   001b.eb02.8747  ARPA   Vlan500
+Internet  120.1.18.135            0   001f.f80b.5971  ARPA   Vlan500
+Internet  120.1.18.136            6   000e.8ccf.f9f0  ARPA   Vlan500
+Internet  120.1.18.137           18   000e.8cfa.5c82  ARPA   Vlan500
+Internet  120.1.18.138           18   2863.360e.c86a  ARPA   Vlan500
+Internet  120.1.18.139            3   000e.8cfe.9df1  ARPA   Vlan500
+Internet  120.1.18.140            0   000e.8cfe.d8f3  ARPA   Vlan500
+Internet  120.1.18.141            9   000e.8cf7.781a  ARPA   Vlan500
+Internet  120.1.18.142           11   001b.1b16.99c2  ARPA   Vlan500
+Internet  120.1.18.143           20   000e.8cfe.6a29  ARPA   Vlan500
+Internet  120.1.18.144            3   00d0.2416.3b6c  ARPA   Vlan500
+Internet  120.1.18.145            0   40ec.f80c.d9a8  ARPA   Vlan500
+Internet  120.1.18.146           15   000e.8cfa.5bbe  ARPA   Vlan500
+Internet  120.1.18.147           18   000e.8cfd.9e01  ARPA   Vlan500
+Internet  120.1.18.148            5   000e.8cfb.25b3  ARPA   Vlan500
+Internet  120.1.18.149           15   001b.1b56.cc56  ARPA   Vlan500
+Internet  120.1.18.150            3   001b.1b30.48be  ARPA   Vlan500
+Internet  120.1.18.151            1   1060.4b6d.de93  ARPA   Vlan500
+Internet  120.1.18.152           13   001f.f80b.595d  ARPA   Vlan500
+Internet  120.1.18.153            1   00d0.2414.a064  ARPA   Vlan500
+Internet  120.1.18.154            0   001b.1b26.b1c4  ARPA   Vlan500
+Internet  120.1.18.155            0   001b.1b2c.e50c  ARPA   Vlan500
+Internet  120.1.18.156            0   001b.1b2c.e47c  ARPA   Vlan500
+Internet  120.1.18.157            0   001b.1b2c.e500  ARPA   Vlan500
+Internet  120.1.18.158            0   001b.1b2c.e47f  ARPA   Vlan500
+Internet  120.1.18.159           22   0060.34a5.f7c7  ARPA   Vlan500
+Internet  120.1.18.160           24   0060.34a5.f7c0  ARPA   Vlan500
+Internet  120.1.18.161           26   0060.34a5.f7ef  ARPA   Vlan500
+Internet  120.1.18.162            9   0060.34a5.f7e6  ARPA   Vlan500
+Internet  120.1.18.164           11   00d0.2419.09d2  ARPA   Vlan500
+Internet  120.1.18.165           10   001f.f803.1ecc  ARPA   Vlan500
+Internet  120.1.18.166            2   000e.8cf8.eb1e  ARPA   Vlan500
+Internet  120.1.18.167           21   000e.8cf8.efe7  ARPA   Vlan500
+Internet  120.1.18.168           20   000e.8cfe.46c5  ARPA   Vlan500
+Internet  120.1.18.169           22   000e.8cf8.ef71  ARPA   Vlan500
+Internet  120.1.18.170           22   000e.8cb2.079f  ARPA   Vlan500
+Internet  120.1.18.171           12   000e.8cf8.e9be  ARPA   Vlan500
+Internet  120.1.18.175            0   0012.9150.4af4  ARPA   Vlan500
+Internet  120.1.18.177            0   000e.8cfe.4716  ARPA   Vlan500
+Internet  120.1.18.178           24   000e.8cf8.f2ec  ARPA   Vlan500
+Internet  120.1.18.179            7   000e.8cb2.0787  ARPA   Vlan500
+Internet  120.1.18.180           22   000e.8cf9.9cc3  ARPA   Vlan500
+Internet  120.1.18.185           23   00d0.2416.9a30  ARPA   Vlan500
+Internet  120.1.18.186            2   000e.8cf8.f32c  ARPA   Vlan500
+Internet  120.1.18.187            3   000e.8cf8.f3f2  ARPA   Vlan500
+Internet  120.1.18.188           10   001f.f80f.0573  ARPA   Vlan500
+Internet  120.1.18.189            0   001f.f804.9789  ARPA   Vlan500
+Internet  120.1.18.190            0   001f.f803.ad8b  ARPA   Vlan500
+Internet  120.1.18.191            2   001f.f803.ad9b  ARPA   Vlan500
+Internet  120.1.18.192            0   001f.f803.f874  ARPA   Vlan500
+Internet  120.1.18.193            4   001f.f83a.7367  ARPA   Vlan500
+Internet  120.1.18.194            0   001f.f804.f3e8  ARPA   Vlan500
+Internet  120.1.18.195            0   001f.f827.6d98  ARPA   Vlan500
+Internet  120.1.18.196            1   001f.f803.3799  ARPA   Vlan500
+Internet  120.1.18.197            0   001f.f838.b397  ARPA   Vlan500
+Internet  120.1.18.198            1   001f.f81f.be9d  ARPA   Vlan500
+Internet  120.1.18.199            2   001f.f804.c5b7  ARPA   Vlan500
+Internet  120.1.18.200            1   001f.f804.726a  ARPA   Vlan500
+Internet  120.1.18.201            5   001f.f804.242b  ARPA   Vlan500
+Internet  120.1.18.202            2   001f.f804.4087  ARPA   Vlan500
+Internet  120.1.18.203            0   001f.f802.2521  ARPA   Vlan500
+Internet  120.1.18.204           19   001b.1b2e.ac4a  ARPA   Vlan500
+Internet  120.1.18.205            9   001b.1b2e.dc79  ARPA   Vlan500
+Internet  120.1.18.206           20   00e0.e42c.cd65  ARPA   Vlan500
+Internet  120.1.18.207            6   001b.1b2e.6f5f  ARPA   Vlan500
+Internet  120.1.18.208           12   001b.1b30.ae97  ARPA   Vlan500
+Internet  120.1.18.209           22   00e0.e40f.f8ff  ARPA   Vlan500
+Internet  120.1.18.210           11   00e0.e428.cec9  ARPA   Vlan500
+Internet  120.1.18.211           26   00e0.e428.3758  ARPA   Vlan500
+Internet  120.1.18.213            9   00e0.e428.ed3e  ARPA   Vlan500
+Internet  120.1.18.214           21   00e0.e429.16d0  ARPA   Vlan500
+Internet  120.1.18.215            0   00e0.e428.8537  ARPA   Vlan500
+Internet  120.1.18.216           21   0012.cd01.4017  ARPA   Vlan500
+Internet  120.1.18.217            0   001b.1b56.db89  ARPA   Vlan500
+Internet  120.1.18.218           13   00e0.e429.1ffa  ARPA   Vlan500
+Internet  120.1.18.219            3   00e0.e429.1ff8  ARPA   Vlan500
+Internet  120.1.18.220           25   00e0.e429.331c  ARPA   Vlan500
+Internet  120.1.18.221           11   00e0.e428.997f  ARPA   Vlan500
+Internet  120.1.18.222           11   00e0.e428.aa9f  ARPA   Vlan500
+Internet  120.1.18.223           17   00e0.e428.abff  ARPA   Vlan500
+Internet  120.1.18.224            0   00e0.e429.16a4  ARPA   Vlan500
+Internet  120.1.18.225           21   001b.1b56.bf7e  ARPA   Vlan500
+Internet  120.1.18.230            1   00a0.456d.db6c  ARPA   Vlan500
+Internet  120.1.18.231            1   0050.c22a.9e11  ARPA   Vlan500
+Internet  120.1.18.232            2   0050.c22a.9d42  ARPA   Vlan500
+Internet  120.1.18.233            4   0050.c22a.9e14  ARPA   Vlan500
+Internet  120.1.18.234            0   0050.c22a.9b0a  ARPA   Vlan500
+Internet  120.1.18.235           10   0050.c22a.9de0  ARPA   Vlan500
+Internet  120.1.18.236            9   001b.eb04.1025  ARPA   Vlan500
+Internet  120.1.18.237            6   0050.c22a.9b11  ARPA   Vlan500
+Internet  120.1.18.238            2   0050.c22a.9f85  ARPA   Vlan500
+Internet  120.1.18.239           15   001b.eb05.859f  ARPA   Vlan500
+Internet  120.1.18.240           16   001f.f8ef.b0ed  ARPA   Vlan500
+Internet  120.1.18.241            8   001f.f8f7.7ef7  ARPA   Vlan500
+Internet  120.1.18.242           21   001b.1b2d.db8c  ARPA   Vlan500
+Internet  120.1.18.244            2   00d0.2402.a950  ARPA   Vlan500
+Internet  120.1.18.245           14   00d0.2412.b1ec  ARPA   Vlan500
+Internet  120.1.18.246            5   00d0.2413.c1a6  ARPA   Vlan500
+Internet  120.1.18.247            4   00d0.2402.e2ec  ARPA   Vlan500
+Internet  120.1.18.248           25   001b.1b2d.db7b  ARPA   Vlan500
+Internet  120.1.18.249           21   001b.1b2e.0237  ARPA   Vlan500
+Internet  120.1.18.250           27   0015.2400.31f6  ARPA   Vlan500
+Internet  120.1.18.251           14   0015.2400.3175  ARPA   Vlan500
+Internet  120.1.18.253           22   0015.2401.36ba  ARPA   Vlan500
+Internet  120.1.200.1             -   f8e9.4f08.0976  ARPA   Vlan501
+Internet  120.1.200.26            0   Incomplete      ARPA   
+Internet  120.1.200.28            0   000e.8cf7.c265  ARPA   Vlan501
+Internet  120.1.200.29            0   Incomplete      ARPA   
+Internet  120.1.200.30            0   000e.8cf7.c8ef  ARPA   Vlan501
+Internet  120.1.200.31            0   001b.1b4c.8dd9  ARPA   Vlan501
+Internet  120.1.200.32            6   001b.1b2e.5dcd  ARPA   Vlan501
+Internet  120.1.200.33            8   000e.8cf8.04f2  ARPA   Vlan501
+Internet  120.1.200.35           23   000e.8cf7.785a  ARPA   Vlan501
+Internet  120.1.200.36            0   001b.1b4c.8e0c  ARPA   Vlan501
+Internet  120.1.200.37           19   001b.1b2f.ffd1  ARPA   Vlan501
+Internet  120.1.200.38            0   001b.1b4c.8dee  ARPA   Vlan501
+Internet  120.1.200.39           21   001b.1b2f.ffcd  ARPA   Vlan501
+Internet  120.1.200.40            0   001b.1b4c.7505  ARPA   Vlan501
+Internet  120.1.200.41           25   001b.1b2f.ffcf  ARPA   Vlan501
+Internet  120.1.200.58           21   001b.1b2c.a674  ARPA   Vlan501
+Internet  120.1.200.59           10   001b.1b2f.1ec1  ARPA   Vlan501
+Internet  120.2.68.65             -   f8e9.4f08.0974  ARPA   Vlan750
+Internet  120.2.132.65            -   f8e9.4f08.095c  ARPA   Vlan700
+Internet  120.2.132.77           25   0004.f1d4.566c  ARPA   Vlan700
+Internet  120.2.132.78           19   0004.f1d4.55f0  ARPA   Vlan700
+Internet  120.2.164.65            -   f8e9.4f08.0960  ARPA   Vlan550
+Internet  120.2.164.68            0   00a0.458b.f2da  ARPA   Vlan550
+Internet  120.2.164.70            0   Incomplete      ARPA   
+Internet  120.2.164.75            0   6805.ca5a.5c5f  ARPA   Vlan550
+Internet  120.2.164.76            0   6805.ca5a.4f6b  ARPA   Vlan550
+Internet  120.2.164.77            9   0001.2925.26ce  ARPA   Vlan550
+Internet  120.2.164.78            0   ccb2.5558.21c4  ARPA   Vlan550
+Internet  120.2.164.79            0   a0b3.ccfc.33f4  ARPA   Vlan550
+Internet  120.2.164.80            0   4c72.b9d1.eb02  ARPA   Vlan550
+Internet  120.2.164.81            0   ac16.2d02.dd3f  ARPA   Vlan550
+Internet  120.2.164.83            0   4c72.b9d1.f010  ARPA   Vlan550
+Internet  120.2.164.84            0   a036.9f92.774e  ARPA   Vlan550
+Internet  120.2.164.88            1   6805.ca5a.54df  ARPA   Vlan550
+Internet  120.2.164.89           13   3cd9.2b71.cdd6  ARPA   Vlan550
+Internet  120.2.164.91            1   3cd9.2b71.cab7  ARPA   Vlan550
+Internet  120.2.164.96            6   489e.bdef.392c  ARPA   Vlan550
+Internet  120.2.164.97            0   Incomplete      ARPA   
+Internet  120.2.164.98            9   8416.f904.935b  ARPA   Vlan550
+Internet  120.2.164.112           0   d050.999f.df95  ARPA   Vlan550
+Internet  120.2.164.116           0   0018.7d2c.298b  ARPA   Vlan550
+Internet  120.2.164.117           0   c025.a5a6.aa9c  ARPA   Vlan550
+Internet  120.2.164.124           2   00a0.4538.b983  ARPA   Vlan550
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#sh int trunk
+tonptlast018-pt-1f25#sh int trunk
 
-Port        Mode             Encapsulation  Status        Native vlan  
-Te1/1/1     desirable        802.1q         trunking      3050
-Te2/1/1     desirable        802.1q         trunking      3550
+Port           Mode             Encapsulation  Status        Native vlan  
+Te1/1/1        on               802.1q         trunking      1
+Te2/1/1        on               802.1q         trunking      1
 
-Port        Vlans allowed on trunk
-Te1/1/1     1199,2218,3050
-Te2/1/1     1200,2219,3550
+Port           Vlans allowed on trunk
+Te1/1/1        300,2154,3018
+Te2/1/1        300,2155,3518
 
-Port        Vlans allowed and active in management domain
-Te1/1/1     1199,2218,3050
-Te2/1/1     1200,2219,3550
+Port           Vlans allowed and active in management domain
+Te1/1/1        300,2154,3018
+Te2/1/1        300,2155,3518
 
-Port        Vlans in spanning tree forwarding state and not pruned
-Te1/1/1     1199,2218,3050
-Te2/1/1     1200,2219,3550
-arlaclast050-ga-1w7#!
+Port           Vlans in spanning tree forwarding state and not pruned
+Te1/1/1        2154,3018
+Te2/1/1        300,2155,3518
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#sh mac address-table
+tonptlast018-pt-1f25#sh mac address-table
           Mac Address Table
 -------------------------------------------
 
@@ -283,97 +564,2014 @@ Vlan    Mac Address       Type        Ports
  All    0180.c200.0010    STATIC      CPU
  All    0180.c200.0021    STATIC      CPU
  All    ffff.ffff.ffff    STATIC      CPU
- 300    689e.0b30.a4c7    STATIC      Vl300 
- 500    001b.1b1d.f994    DYNAMIC     Tw2/0/22
- 500    001b.1b1d.f995    DYNAMIC     Tw2/0/22
- 500    689e.0b30.a4d0    STATIC      Vl500 
- 500    b05c.da35.ac30    DYNAMIC     Tw2/0/21
- 600    2436.dab1.c961    STATIC      Tw1/0/2 
- 600    2436.dab1.ca51    STATIC      Te1/0/40 
- 600    2436.dab1.e3ab    STATIC      Tw1/0/19 
- 600    5478.1a1c.82f0    STATIC      Te1/0/38 
- 600    5c50.15a9.a44b    STATIC      Te1/0/42 
- 600    5c50.15a9.a748    STATIC      Tw1/0/34 
- 600    689e.0b30.a4d6    STATIC      Vl600 
- 600    ac44.f21a.0dd7    STATIC      Tw1/0/4 
- 600    ac44.f21a.0e24    STATIC      Tw1/0/5 
- 600    ac44.f21a.64de    STATIC      Tw1/0/1 
- 600    c064.e4d8.1963    STATIC      Tw1/0/28 
- 600    e840.400c.9005    STATIC      Tw1/0/22 
- 762    689e.0b30.a4f6    STATIC      Vl762 
-1199    689e.0b30.a4c9    STATIC      Vl1199 
-1200    689e.0b30.a4d5    STATIC      Vl1200 
-2218    689e.0b03.ea01    DYNAMIC     Te1/1/1
-2218    689e.0b03.f99f    DYNAMIC     Te1/1/1
-2218    689e.0b30.a4c2    STATIC      Vl2218 
-2219    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
-2219    689e.0b04.07ff    DYNAMIC     Te2/1/1
-2219    689e.0b30.a4f0    STATIC      Vl2219 
-2550    689e.0b30.a4ca    STATIC      Vl2550 
-2700    689e.0b30.a4ed    STATIC      Vl2700 
-2700    a488.73ce.4044    DYNAMIC     Tw2/0/3
-2700    a488.73ce.4b04    DYNAMIC     Tw2/0/1
-2700    a488.73cf.178c    DYNAMIC     Tw2/0/6
-2700    a488.73cf.223c    DYNAMIC     Tw2/0/9
-2700    a488.73cf.3db4    DYNAMIC     Tw2/0/8
-2700    a488.73cf.4030    DYNAMIC     Tw2/0/2
-2700    a488.73cf.4304    DYNAMIC     Tw2/0/4
-2700    a488.73cf.5b28    DYNAMIC     Tw2/0/5
-2700    a488.73cf.6324    DYNAMIC     Tw2/0/7
-2700    a488.73cf.8890    DYNAMIC     Tw2/0/10
-2700    b05c.da32.174c    STATIC      Tw1/0/10 
-2700    b05c.da33.85d3    STATIC      Tw1/0/7 
-2700    b05c.da35.ad83    STATIC      Tw1/0/11 
-2700    dc8c.3778.ef84    DYNAMIC     Tw2/0/12
-2700    dc8c.3785.70a4    DYNAMIC     Tw2/0/13
-2700    dc8c.3785.7142    DYNAMIC     Tw2/0/15
-2700    dc8c.378e.2390    DYNAMIC     Tw2/0/14
-2750    0068.eb61.2aad    STATIC      Te1/0/42 
-2750    0068.eb62.b05a    STATIC      Tw1/0/34 
-2750    040e.3c0f.b5a8    STATIC      Tw1/0/31 
-2750    3863.bb04.70bb    DYNAMIC     Tw1/0/33
-2750    689e.0b30.a4cc    STATIC      Vl2750 
-2750    98e7.f4a3.f3fc    STATIC      Tw2/0/16 
-2750    b05c.da33.8233    STATIC      Tw1/0/23 
-2750    b05c.da34.f34b    DYNAMIC     Tw1/0/16
-2750    b05c.da35.a187    STATIC      Tw1/0/28 
-2750    b499.badc.88b5    DYNAMIC     Tw2/0/20
-3050    689e.0b03.ea01    DYNAMIC     Te1/1/1
-3050    689e.0b03.f99f    DYNAMIC     Te1/1/1
-3050    689e.0b30.a4e6    STATIC      Vl3050 
-3550    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
-3550    689e.0b04.07ff    DYNAMIC     Te2/1/1
-3550    689e.0b30.a4e2    STATIC      Vl3550 
- 999    0010.7fe6.051c    STATIC      Tw2/0/18 
-Total Mac Addresses for this criterion: 83
-arlaclast050-ga-1w7#!
+ 300    0000.0c07.ac02    DYNAMIC     Te2/1/1
+ 300    001a.736d.eb79    DYNAMIC     Tw1/0/23
+ 300    4c71.0cc9.f5b6    DYNAMIC     Te2/1/1
+ 300    4c71.0cc9.f5c7    DYNAMIC     Te2/1/1
+ 300    5c31.9251.6947    DYNAMIC     Te2/1/1
+ 300    c0f8.7ff8.ebc7    DYNAMIC     Te2/1/1
+ 300    e8d3.227a.8bc7    DYNAMIC     Te2/1/1
+ 300    e8d3.2282.8747    DYNAMIC     Te2/1/1
+ 300    e8d3.2283.0a47    DYNAMIC     Te2/1/1
+ 300    e8d3.2290.f9c7    DYNAMIC     Te2/1/1
+ 300    e8d3.22d2.5747    DYNAMIC     Te2/1/1
+ 300    f04a.0231.74df    DYNAMIC     Te2/1/1
+ 300    f04a.0231.74f0    DYNAMIC     Te2/1/1
+ 300    f04a.0231.757f    DYNAMIC     Te2/1/1
+ 300    f8e5.7e73.01c7    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.1a47    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.7ac7    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.7c47    DYNAMIC     Te2/1/1
+ 300    f8e5.7ebb.e447    DYNAMIC     Te2/1/1
+ 300    f8e5.7ebc.3047    DYNAMIC     Te2/1/1
+ 300    f8e9.4f03.fcc7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f03.fd47    DYNAMIC     Te2/1/1
+ 300    f8e9.4f04.00c7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f07.4d47    DYNAMIC     Te2/1/1
+ 300    f8e9.4f07.4ec7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f08.0947    STATIC      Vl300 
+ 300    f8e9.4f0a.13c7    DYNAMIC     Te2/1/1
+ 500    0007.2900.295e    DYNAMIC     Tw2/0/31
+ 500    000e.8c87.bfae    DYNAMIC     Tw1/0/7
+ 500    000e.8cb2.0787    DYNAMIC     Tw1/0/28
+ 500    000e.8cb2.079f    DYNAMIC     Tw1/0/8
+ 500    000e.8ccd.fc80    DYNAMIC     Tw1/0/14
+ 500    000e.8ccd.fc81    DYNAMIC     Tw1/0/14
+ 500    000e.8ccf.c252    DYNAMIC     Tw1/0/26
+ 500    000e.8ccf.c253    DYNAMIC     Tw1/0/26
+ 500    000e.8ccf.f9f0    DYNAMIC     Tw1/0/14
+ 500    000e.8cd1.099d    DYNAMIC     Tw1/0/17
+ 500    000e.8cd1.099e    DYNAMIC     Tw1/0/17
+ 500    000e.8cf6.391b    DYNAMIC     Tw1/0/19
+ 500    000e.8cf6.391d    DYNAMIC     Tw1/0/19
+ 500    000e.8cf7.1cc5    DYNAMIC     Tw1/0/9
+ 500    000e.8cf7.781a    DYNAMIC     Tw1/0/19
+ 500    000e.8cf8.7794    DYNAMIC     Tw1/0/7
+ 500    000e.8cf8.7795    DYNAMIC     Tw1/0/7
+ 500    000e.8cf8.e9be    DYNAMIC     Tw1/0/8
+ 500    000e.8cf8.eb1e    DYNAMIC     Tw1/0/30
+ 500    000e.8cf8.ef71    DYNAMIC     Tw1/0/8
+ 500    000e.8cf8.efe7    DYNAMIC     Tw1/0/30
+ 500    000e.8cf8.f2ec    DYNAMIC     Tw1/0/28
+ 500    000e.8cf8.f32c    DYNAMIC     Tw1/0/11
+ 500    000e.8cf8.f3f2    DYNAMIC     Tw1/0/11
+ 500    000e.8cf9.9cc3    DYNAMIC     Tw1/0/28
+ 500    000e.8cfa.5b22    DYNAMIC     Tw1/0/30
+ 500    000e.8cfa.5bbe    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.5c82    DYNAMIC     Tw1/0/28
+ 500    000e.8cfa.5e5b    DYNAMIC     Tw1/0/8
+ 500    000e.8cfa.a8a8    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.a8a9    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.abd1    DYNAMIC     Tw1/0/30
+ 500    000e.8cfa.abd2    DYNAMIC     Tw1/0/30
+ 500    000e.8cfb.25b3    DYNAMIC     Tw1/0/17
+ 500    000e.8cfb.9b0f    DYNAMIC     Tw1/0/6
+ 500    000e.8cfd.9b4c    DYNAMIC     Tw1/0/10
+ 500    000e.8cfd.9e01    DYNAMIC     Tw1/0/12
+ 500    000e.8cfe.46c5    DYNAMIC     Tw1/0/8
+ 500    000e.8cfe.46c6    DYNAMIC     Tw1/0/8
+ 500    000e.8cfe.4716    DYNAMIC     Tw1/0/28
+ 500    000e.8cfe.4717    DYNAMIC     Tw1/0/28
+ 500    000e.8cfe.6a29    DYNAMIC     Tw1/0/24
+ 500    000e.8cfe.9df1    DYNAMIC     Tw1/0/18
+ 500    000e.8cfe.d8f3    DYNAMIC     Tw1/0/18
+ 500    0010.403b.7c75    DYNAMIC     Tw1/0/7
+ 500    0010.406e.8bb8    DYNAMIC     Tw1/0/9
+ 500    0010.406e.8c38    DYNAMIC     Tw1/0/18
+ 500    0010.40d8.c233    DYNAMIC     Tw1/0/17
+ 500    0012.9150.4af4    DYNAMIC     Tw1/0/8
+ 500    0012.9150.4dfe    DYNAMIC     Tw1/0/28
+ 500    0012.cd01.4017    DYNAMIC     Te2/0/39
+ 500    0015.2400.3175    DYNAMIC     Te2/0/38
+ 500    0015.2400.3176    DYNAMIC     Te2/0/38
+ 500    0015.2400.31f6    DYNAMIC     Te2/0/38
+ 500    0015.2401.36ba    DYNAMIC     Te2/0/40
+ 500    0015.2401.36bb    DYNAMIC     Te2/0/40
+ 500    0019.0f06.cdbf    DYNAMIC     Tw1/0/9
+ 500    0019.0f06.cdf3    DYNAMIC     Tw1/0/18
+ 500    001b.1b16.99c2    DYNAMIC     Tw1/0/20
+ 500    001b.1b17.7a8e    DYNAMIC     Tw1/0/8
+ 500    001b.1b17.7a8f    DYNAMIC     Tw1/0/8
+ 500    001b.1b17.d28c    DYNAMIC     Tw1/0/28
+ 500    001b.1b17.d28d    DYNAMIC     Tw1/0/28
+ 500    001b.1b1c.c0b7    DYNAMIC     Tw2/0/29
+ 500    001b.1b1c.c0b9    DYNAMIC     Tw2/0/29
+ 500    001b.1b1e.d21d    DYNAMIC     Tw1/0/8
+ 500    001b.1b26.b1c4    DYNAMIC     Tw2/0/36
+ 500    001b.1b26.b1c5    DYNAMIC     Tw2/0/36
+ 500    001b.1b28.aa07    DYNAMIC     Tw1/0/9
+ 500    001b.1b28.aa08    DYNAMIC     Tw1/0/9
+ 500    001b.1b2c.e47c    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e47d    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e47f    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e480    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e500    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e501    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e50c    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e50d    DYNAMIC     Tw2/0/36
+ 500    001b.1b2d.db7b    DYNAMIC     Te2/0/38
+ 500    001b.1b2d.db7c    DYNAMIC     Te2/0/38
+ 500    001b.1b2d.db8c    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0237    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0239    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0263    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.6f5f    DYNAMIC     Te2/0/39
+ 500    001b.1b2e.6f61    DYNAMIC     Te2/0/39
+ 500    001b.1b2e.ac4a    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.ac4c    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.dc79    DYNAMIC     Te2/0/38
+ 500    001b.1b30.48be    DYNAMIC     Tw2/0/34
+ 500    001b.1b30.48bf    DYNAMIC     Tw2/0/34
+ 500    001b.1b30.ae97    DYNAMIC     Te2/0/39
+ 500    001b.1b30.be3a    DYNAMIC     Te1/0/41
+ 500    001b.1b30.be3c    DYNAMIC     Te1/0/41
+ 500    001b.1b31.1892    DYNAMIC     Te1/0/41
+ 500    001b.1b41.4e36    DYNAMIC     Tw2/0/12
+ 500    001b.1b41.4f6a    DYNAMIC     Tw2/0/13
+ 500    001b.1b41.9a8d    DYNAMIC     Tw2/0/10
+ 500    001b.1b53.cd2f    DYNAMIC     Tw2/0/28
+ 500    001b.1b53.cd31    DYNAMIC     Tw2/0/28
+ 500    001b.1b53.cd3b    DYNAMIC     Tw2/0/32
+ 500    001b.1b53.cd3d    DYNAMIC     Tw2/0/32
+ 500    001b.1b55.094f    DYNAMIC     Tw2/0/29
+ 500    001b.1b55.0a4f    DYNAMIC     Tw2/0/28
+ 500    001b.1b55.0a5b    DYNAMIC     Tw2/0/32
+ 500    001b.1b55.6d2d    DYNAMIC     Tw2/0/31
+ 500    001b.1b55.6d2e    DYNAMIC     Tw2/0/31
+ 500    001b.1b55.d5ff    DYNAMIC     Tw2/0/31
+ 500    001b.1b56.bf7e    DYNAMIC     Te2/0/40
+ 500    001b.1b56.cc56    DYNAMIC     Tw2/0/34
+ 500    001b.1b56.cc57    DYNAMIC     Tw2/0/34
+ 500    001b.1b56.db89    DYNAMIC     Te2/0/40
+ 500    001b.1b56.db8a    DYNAMIC     Te2/0/40
+ 500    001b.1b6a.77d8    DYNAMIC     Tw1/0/18
+ 500    001b.1b6a.77d9    DYNAMIC     Tw1/0/18
+ 500    001b.eb02.8747    DYNAMIC     Tw2/0/32
+ 500    001b.eb04.1025    DYNAMIC     Tw1/0/18
+ 500    001b.eb05.859f    DYNAMIC     Tw1/0/19
+ 500    001f.f802.251f    DYNAMIC     Tw1/0/25
+ 500    001f.f802.2521    DYNAMIC     Tw1/0/25
+ 500    001f.f803.1ecc    DYNAMIC     Te2/0/37
+ 500    001f.f803.3797    DYNAMIC     Tw1/0/10
+ 500    001f.f803.3799    DYNAMIC     Tw1/0/10
+ 500    001f.f803.ad89    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad8b    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad99    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad9b    DYNAMIC     Tw1/0/6
+ 500    001f.f803.f872    DYNAMIC     Tw1/0/12
+ 500    001f.f803.f874    DYNAMIC     Tw1/0/12
+ 500    001f.f804.2429    DYNAMIC     Tw1/0/25
+ 500    001f.f804.242b    DYNAMIC     Tw1/0/25
+ 500    001f.f804.4085    DYNAMIC     Tw1/0/25
+ 500    001f.f804.4087    DYNAMIC     Tw1/0/25
+ 500    001f.f804.7268    DYNAMIC     Tw1/0/24
+ 500    001f.f804.726a    DYNAMIC     Tw1/0/24
+ 500    001f.f804.9787    DYNAMIC     Tw1/0/6
+ 500    001f.f804.9789    DYNAMIC     Tw1/0/6
+ 500    001f.f804.c5b5    DYNAMIC     Tw1/0/24
+ 500    001f.f804.c5b7    DYNAMIC     Tw1/0/24
+ 500    001f.f804.f3e6    DYNAMIC     Tw1/0/12
+ 500    001f.f804.f3e8    DYNAMIC     Tw1/0/12
+ 500    001f.f805.96fb    DYNAMIC     Tw1/0/20
+ 500    001f.f805.96fd    DYNAMIC     Tw1/0/20
+ 500    001f.f805.c1c3    DYNAMIC     Tw1/0/25
+ 500    001f.f805.c1c5    DYNAMIC     Tw1/0/25
+ 500    001f.f807.60f2    DYNAMIC     Tw1/0/6
+ 500    001f.f807.60f4    DYNAMIC     Tw1/0/6
+ 500    001f.f808.48a2    DYNAMIC     Tw1/0/24
+ 500    001f.f808.48a4    DYNAMIC     Tw1/0/24
+ 500    001f.f80a.8a16    DYNAMIC     Te1/0/37
+ 500    001f.f80a.8ffc    DYNAMIC     Tw2/0/13
+ 500    001f.f80a.9b7e    DYNAMIC     Tw2/0/7
+ 500    001f.f80a.a54d    DYNAMIC     Tw2/0/9
+ 500    001f.f80a.a550    DYNAMIC     Tw2/0/4
+ 500    001f.f80a.a570    DYNAMIC     Tw2/0/1
+ 500    001f.f80b.51e1    DYNAMIC     Tw2/0/11
+ 500    001f.f80b.5218    DYNAMIC     Tw2/0/14
+ 500    001f.f80b.54f4    DYNAMIC     Tw2/0/27
+ 500    001f.f80b.5953    DYNAMIC     Tw2/0/30
+ 500    001f.f80b.595d    DYNAMIC     Tw2/0/35
+ 500    001f.f80b.5971    DYNAMIC     Tw2/0/33
+ 500    001f.f80f.0571    DYNAMIC     Tw1/0/6
+ 500    001f.f80f.0573    DYNAMIC     Tw1/0/6
+ 500    001f.f815.b2db    DYNAMIC     Tw2/0/12
+ 500    001f.f81f.be9b    DYNAMIC     Tw1/0/24
+ 500    001f.f81f.be9d    DYNAMIC     Tw1/0/24
+ 500    001f.f827.6d96    DYNAMIC     Tw1/0/12
+ 500    001f.f827.6d98    DYNAMIC     Tw1/0/12
+ 500    001f.f82b.9e7b    DYNAMIC     Tw1/0/10
+ 500    001f.f82b.9e7d    DYNAMIC     Tw1/0/10
+ 500    001f.f838.b395    DYNAMIC     Tw1/0/20
+ 500    001f.f838.b397    DYNAMIC     Tw1/0/20
+ 500    001f.f83a.7365    DYNAMIC     Tw1/0/12
+ 500    001f.f83a.7367    DYNAMIC     Tw1/0/12
+ 500    001f.f83f.51aa    DYNAMIC     Tw1/0/12
+ 500    001f.f83f.51ac    DYNAMIC     Tw1/0/12
+ 500    001f.f8ef.b0ed    DYNAMIC     Te2/0/38
+ 500    001f.f8ef.b0ee    DYNAMIC     Te2/0/38
+ 500    001f.f8f7.7ef7    DYNAMIC     Te2/0/38
+ 500    0050.c22a.9b0a    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9b11    DYNAMIC     Tw1/0/18
+ 500    0050.c22a.9d42    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9de0    DYNAMIC     Tw1/0/18
+ 500    0050.c22a.9e11    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9e14    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9f85    DYNAMIC     Tw1/0/18
+ 500    0060.34a5.f7c0    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7c7    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7e6    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7ef    DYNAMIC     Tw2/0/36
+ 500    0080.63db.566d    DYNAMIC     Tw1/0/12
+ 500    0080.63db.5675    DYNAMIC     Tw1/0/12
+ 500    0080.63db.5695    DYNAMIC     Tw1/0/20
+ 500    0080.63db.569d    DYNAMIC     Tw1/0/20
+ 500    0080.63db.56e5    DYNAMIC     Tw1/0/6
+ 500    0080.63db.56ed    DYNAMIC     Tw1/0/6
+ 500    0080.63db.5785    DYNAMIC     Tw1/0/10
+ 500    0080.63db.578d    DYNAMIC     Tw1/0/10
+ 500    0080.63e1.9321    DYNAMIC     Tw1/0/25
+ 500    0080.63e1.9329    DYNAMIC     Tw1/0/25
+ 500    0080.63ed.6d8f    DYNAMIC     Tw1/0/24
+ 500    0080.63ed.6d97    DYNAMIC     Tw1/0/24
+ 500    00a0.456d.db6c    DYNAMIC     Tw2/0/34
+ 500    00d0.2402.a950    DYNAMIC     Tw1/0/6
+ 500    00d0.2402.e2ec    DYNAMIC     Tw1/0/12
+ 500    00d0.2412.b1ec    DYNAMIC     Tw1/0/8
+ 500    00d0.2413.c1a6    DYNAMIC     Tw1/0/28
+ 500    00d0.2414.7918    DYNAMIC     Tw2/0/1
+ 500    00d0.2414.7b60    DYNAMIC     Tw2/0/4
+ 500    00d0.2414.a064    DYNAMIC     Tw2/0/35
+ 500    00d0.2416.3178    DYNAMIC     Tw2/0/7
+ 500    00d0.2416.3292    DYNAMIC     Tw2/0/11
+ 500    00d0.2416.32ae    DYNAMIC     Tw2/0/14
+ 500    00d0.2416.32d2    DYNAMIC     Tw2/0/9
+ 500    00d0.2416.3b6c    DYNAMIC     Tw2/0/33
+ 500    00d0.2416.9a30    DYNAMIC     Te2/0/37
+ 500    00d0.2416.9b78    DYNAMIC     Tw2/0/30
+ 500    00d0.2416.f4aa    DYNAMIC     Te1/0/41
+ 500    00d0.2416.f4ab    DYNAMIC     Te1/0/41
+ 500    00d0.2419.05fa    DYNAMIC     Tw2/0/33
+ 500    00d0.2419.060a    DYNAMIC     Tw2/0/27
+ 500    00d0.2419.09c6    DYNAMIC     Tw2/0/30
+ 500    00d0.2419.09d2    DYNAMIC     Tw2/0/7
+ 500    00d0.2419.c670    DYNAMIC     Tw2/0/11
+ 500    00d0.2421.d4a2    DYNAMIC     Tw2/0/27
+ 500    00e0.e40f.f8ff    DYNAMIC     Tw1/0/6
+ 500    00e0.e428.3758    DYNAMIC     Tw1/0/9
+ 500    00e0.e428.54ce    DYNAMIC     Tw2/0/31
+ 500    00e0.e428.8537    DYNAMIC     Tw1/0/17
+ 500    00e0.e428.997f    DYNAMIC     Tw1/0/24
+ 500    00e0.e428.aa9f    DYNAMIC     Tw1/0/24
+ 500    00e0.e428.abff    DYNAMIC     Tw1/0/25
+ 500    00e0.e428.cec9    DYNAMIC     Tw1/0/7
+ 500    00e0.e428.ed3e    DYNAMIC     Tw1/0/10
+ 500    00e0.e429.16a4    DYNAMIC     Tw1/0/25
+ 500    00e0.e429.16d0    DYNAMIC     Tw1/0/12
+ 500    00e0.e429.1ff8    DYNAMIC     Tw1/0/18
+ 500    00e0.e429.1ffa    DYNAMIC     Tw1/0/18
+ 500    00e0.e429.331c    DYNAMIC     Tw1/0/20
+ 500    00e0.e42b.cab8    DYNAMIC     Tw2/0/6
+ 500    00e0.e42b.cab9    DYNAMIC     Tw2/0/5
+ 500    00e0.e42b.cddf    DYNAMIC     Tw2/0/2
+ 500    00e0.e42c.0a21    DYNAMIC     Tw2/0/3
+ 500    00e0.e42c.0a72    DYNAMIC     Tw2/0/8
+ 500    00e0.e42c.0c38    DYNAMIC     Tw2/0/26
+ 500    00e0.e42c.0c4c    DYNAMIC     Te1/0/39
+ 500    00e0.e42c.0db6    DYNAMIC     Te1/0/40
+ 500    00e0.e42c.0dbc    DYNAMIC     Te1/0/38
+ 500    00e0.e42c.4761    DYNAMIC     Tw2/0/28
+ 500    00e0.e42c.4763    DYNAMIC     Tw2/0/29
+ 500    00e0.e42c.cd65    DYNAMIC     Te2/0/38
+ 500    1060.4b6d.de93    DYNAMIC     Tw2/0/34
+ 500    2863.360e.c86a    DYNAMIC     Tw1/0/28
+ 500    40ec.f80c.d9a8    DYNAMIC     Tw1/0/26
+ 500    480f.cfc6.96ed    DYNAMIC     Tw1/0/9
+ 500    489e.bdee.e53e    DYNAMIC     Tw1/0/18
+ 500    c8d3.ffb1.69b9    DYNAMIC     Te2/0/37
+ 500    f8e9.4f08.0950    STATIC      Vl500 
+ 501    000e.8cf7.785a    DYNAMIC     Tw3/0/17
+ 501    000e.8cf7.c265    DYNAMIC     Tw3/0/15
+ 501    000e.8cf7.c266    DYNAMIC     Tw3/0/15
+ 501    000e.8cf7.c8ef    DYNAMIC     Tw3/0/17
+ 501    000e.8cf7.c8f0    DYNAMIC     Tw3/0/17
+ 501    000e.8cf8.04f2    DYNAMIC     Tw3/0/15
+ 501    001b.1b2c.a674    DYNAMIC     Tw3/0/30
+ 501    001b.1b2c.a675    DYNAMIC     Tw3/0/30
+ 501    001b.1b2e.5dcd    DYNAMIC     Tw3/0/21
+ 501    001b.1b2f.1ec1    DYNAMIC     Tw3/0/30
+ 501    001b.1b2f.ffcd    DYNAMIC     Tw3/0/32
+ 501    001b.1b2f.ffcf    DYNAMIC     Tw3/0/33
+ 501    001b.1b2f.ffd1    DYNAMIC     Tw2/0/25
+ 501    001b.1b4c.7505    DYNAMIC     Tw3/0/33
+ 501    001b.1b4c.7506    DYNAMIC     Tw3/0/33
+ 501    001b.1b4c.8dd9    DYNAMIC     Tw3/0/21
+ 501    001b.1b4c.8dda    DYNAMIC     Tw3/0/21
+ 501    001b.1b4c.8dee    DYNAMIC     Tw3/0/32
+ 501    001b.1b4c.8def    DYNAMIC     Tw3/0/32
+ 501    001b.1b4c.8e0c    DYNAMIC     Tw2/0/25
+ 501    001b.1b4c.8e0d    DYNAMIC     Tw2/0/25
+ 501    f8e9.4f08.0976    STATIC      Vl501 
+ 550    0001.2925.26ce    STATIC      Tw3/0/13 
+ 550    0018.7d2c.298b    DYNAMIC     Tw3/0/9
+ 550    00a0.4538.b983    STATIC      Te3/0/42 
+ 550    00a0.458b.f2da    STATIC      Tw3/0/8 
+ 550    3cd9.2b71.cab7    STATIC      Tw1/0/27 
+ 550    3cd9.2b71.cdd6    STATIC      Tw1/0/15 
+ 550    489e.bdef.392c    DYNAMIC     Tw3/0/9
+ 550    4c72.b9d1.eb02    STATIC      Te3/0/42 
+ 550    4c72.b9d1.f010    STATIC      Tw3/0/4 
+ 550    6805.ca5a.4f6b    STATIC      Te2/0/42 
+ 550    6805.ca5a.54df    STATIC      Tw1/0/13 
+ 550    6805.ca5a.5c5f    STATIC      Te2/0/41 
+ 550    8416.f904.935b    STATIC      Te3/0/43 
+ 550    901b.0e6e.1bbf    STATIC      Tw3/0/3 
+ 550    a036.9f92.774e    STATIC      Tw1/0/29 
+ 550    a0b3.ccfc.33f4    STATIC      Tw3/0/20 
+ 550    ac16.2d02.dd3f    STATIC      Tw3/0/18 
+ 550    c025.a5a6.aa9c    STATIC      Tw1/0/16 
+ 550    ccb2.5558.21c4    STATIC      Tw3/0/25 
+ 550    d050.999f.df95    STATIC      Tw3/0/8 
+ 550    f8e9.4f08.0960    STATIC      Vl550 
+ 600    f8e9.4f08.0956    STATIC      Vl600 
+ 700    0004.f1d4.55f0    DYNAMIC     Tw1/0/3
+ 700    0004.f1d4.566c    DYNAMIC     Tw1/0/2
+ 700    f8e9.4f08.095c    STATIC      Vl700 
+ 750    f8e9.4f08.0974    STATIC      Vl750 
+ 762    f8e9.4f08.0976    STATIC      Vl762 
+2154    f04a.0231.7450    DYNAMIC     Te1/1/1
+2154    f04a.0231.74df    DYNAMIC     Te1/1/1
+2154    f8e9.4f08.097f    STATIC      Vl2154 
+2155    f04a.0231.74f0    DYNAMIC     Te2/1/1
+2155    f04a.0231.757f    DYNAMIC     Te2/1/1
+2155    f8e9.4f08.094f    STATIC      Vl2155 
+2550    001d.7095.da1e    DYNAMIC     Tw1/0/21
+2550    0800.239f.407a    STATIC      Tw3/0/28 
+2550    0800.239f.8089    STATIC      Tw3/0/26 
+2550    6c20.56e1.2b78    DYNAMIC     Tw3/0/11
+2550    f8e9.4f08.094a    STATIC      Vl2550 
+2550    fc99.47b1.00c2    DYNAMIC     Tw3/0/10
+2700    3863.bbdb.a815    STATIC      Tw2/0/22 
+2700    b05c.da2e.1a81    STATIC      Te2/0/43 
+2700    b05c.da2e.20eb    STATIC      Te2/0/44 
+2700    b05c.da2e.25e9    STATIC      Tw3/0/7 
+2700    b05c.da34.e960    STATIC      Tw3/0/6 
+2700    b05c.da35.a758    STATIC      Tw1/0/33 
+2700    b05c.da36.720e    STATIC      Tw1/0/32 
+2700    f8e9.4f08.096d    STATIC      Vl2700 
+2750    b05c.da2e.1a26    STATIC      Tw2/0/23 
+2750    f8e9.4f08.094c    STATIC      Vl2750 
+3018    f04a.0231.7450    DYNAMIC     Te1/1/1
+3018    f04a.0231.74df    DYNAMIC     Te1/1/1
+3018    f8e9.4f08.0964    STATIC      Vl3018 
+3518    f04a.0231.74f0    DYNAMIC     Te2/1/1
+3518    f04a.0231.757f    DYNAMIC     Te2/1/1
+3518    f8e9.4f08.096c    STATIC      Vl3518 
+Total Mac Addresses for this criterion: 383
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#ping 120.39.164.1
+tonptlast018-pt-1f25#ping 120.1.18.1
 Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 120.39.164.1, timeout is 2 seconds:
+Sending 5, 100-byte ICMP Echos to 120.1.18.1, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#ping 120.39.164.10
+tonptlast018-pt-1f25#ping 120.1.18.42
 Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 120.39.164.10, timeout is 2 seconds:
+Sending 5, 100-byte ICMP Echos to 120.1.18.42, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#ping 120.39.164.20
+tonptlast018-pt-1f25#ping 120.1.18.76
 Type escape sequence to abort.
-Sending 5, 100-byte ICMP Echos to 120.39.164.20, timeout is 2 seconds:
+Sending 5, 100-byte ICMP Echos to 120.1.18.76, timeout is 2 seconds:
 !!!!!
 Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#
+tonptlast018-pt-1f25#ping 120.1.18.81
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.81, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#!
+tonptlast018-pt-1f25#ping 120.1.18.102
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.102, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
 
-arlaclast050-ga-1w7#sh mac address-table
+tonptlast018-pt-1f25#ping 120.1.18.71
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.71, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.115
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.115, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.86
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.86, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.63
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.63, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.68
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.68, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.95
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.95, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.165
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.165, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.72
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.72, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.103
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.103, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.149
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.149, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.91
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.91, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.90
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.90, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.120
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.120, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.204
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.204, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.39
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.39, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.70
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.70, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.83
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.83, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.77
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.77, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.217
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.217, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.109
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.109, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.112
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.112, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.66
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.66, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.152
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.152, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.75
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.75, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.111
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.111, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.74
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.74, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.50
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.50, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.104
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.104, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.46
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.46, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.27
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.27, timeout is 2 seconds:
+!!!!.
+Success rate is 80 percent (4/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.87
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.87, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.73
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.73, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.135
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.135, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.124
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.124, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.100
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.100, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.207
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.207, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.96
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.96, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.67
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.67, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.118
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.118, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.92
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.92, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.60
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.60, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.216
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.216, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.17
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.17, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.151
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.151, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.230
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.230, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.34
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.34, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/4/5 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.82
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.82, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.119
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.119, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.247
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.247, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.28
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.28, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/4/6 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.29
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.29, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/9/27 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.157
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.157, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.32
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.32, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 5/6/7 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.64
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.64, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.40
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.40, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.121
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.121, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.101, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.113
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.113, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.133
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.133, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.129
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.129, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.214
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.214, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.215
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.215, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.220
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.220, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.114
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.114, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.208
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.208, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.158
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.158, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.185
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.185, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.139
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.139, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.246
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.246, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.47
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.47, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.147
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.147, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.155
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.155, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.144
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.144, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.61
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.61, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.245
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.245, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.26
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.26, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/5/7 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.249
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.249, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/3/7 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.248
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.248, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/5 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.242
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.242, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 3/3/7 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.241
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.241, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.240
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.240, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.239
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.239, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.225
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.225, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.205
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.205, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.203
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.203, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.202
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.202, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.201
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.201, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.197
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.197, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.196
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.196, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.195
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.195, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.191
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.191, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.188
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.188, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.175
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.175, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.168
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.168, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.164
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.164, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.156
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.156, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.153
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.153, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.148
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.148, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.146
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.146, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.142
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.142, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.141
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.141, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.140
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.140, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/6 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.137
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.137, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.136
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.136, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.134
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.134, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.130
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.130, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.128
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.128, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.127
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.127, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.126
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.126, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.125
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.125, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.123
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.123, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.116
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.116, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.97
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.97, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.84
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.84, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.59
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.59, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.57
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.57, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.56
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.56, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/11/54 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.55
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.55, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.53
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.53, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.51
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.51, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.25
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.25, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.21
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.21, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.19
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.19, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.18
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.18, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.93
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.93, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.33
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.33, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/13/25 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.106
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.106, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.105
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.105, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.222
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.222, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.221
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.221, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.79
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.79, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.143
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.143, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.198
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.198, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.89
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.89, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.36
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.36, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.37
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.37, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.38
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.38, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.200
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.200, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.107
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.107, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.99
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.99, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 8/8/8 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.190
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.190, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.193
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.193, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.80
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.80, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.199
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.199, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.194
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.194, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.145
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.145, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.58
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.58, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.224
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.224, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.223
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.223, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.35
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.35, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/8/13 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.94
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.94, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.110
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.110, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.117
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.117, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.88
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.88, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.253
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.253, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.189
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.189, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.78
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.78, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.192
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.192, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.138
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.138, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.85
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.85, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.180
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.180, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.179
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.179, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.178
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.178, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.177
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.177, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.171
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.171, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.170
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.170, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.169
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.169, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.30
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.30, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 7/8/9 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.154
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.154, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.108
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.108, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.31
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.31, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 7/7/8 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.150
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.150, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.162
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.162, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.210
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.210, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.244
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.244, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.209
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.209, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.213
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.213, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.160
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.160, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.159
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.159, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.122
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.122, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.161
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.161, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 2/2/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.187
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.187, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.186
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.186, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.167
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.167, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.166
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.166, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.48
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.48, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.49
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.49, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.62
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.62, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.206
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.206, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.41
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.41, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.69
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.69, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.211
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.211, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.232
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.232, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.52
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.52, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.231
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.231, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.234
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.234, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.233
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.233, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.23
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.23, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/4 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.219
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.219, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.218
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.218, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.235
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.235, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.237
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.237, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.236
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.236, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.238
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.238, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.131
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.131, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.44
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.44, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.251
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.251, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.250
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.250, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.24
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.24, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/6 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.45
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.45, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.54
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.54, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/2/6 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.18.65
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.18.65, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.31
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.31, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.28
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.28, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.30
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.30, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.32
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.32, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.33
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.33, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.35
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.35, timeout is 2 seconds:
+!.!.!
+Success rate is 60 percent (3/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.36
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.36, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/3 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.37
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.37, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.40
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.40, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.41
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.41, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.58
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.58, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.59
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.59, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.39
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.39, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.38
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.38, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/2 ms
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.29
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.29, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#ping 120.1.200.26
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 120.1.200.26, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#
+
+tonptlast018-pt-1f25#!
+
+tonptlast018-pt-1f25#sh mac address-table
           Mac Address Table
 -------------------------------------------
 
@@ -400,67 +2598,367 @@ Vlan    Mac Address       Type        Ports
  All    0180.c200.0010    STATIC      CPU
  All    0180.c200.0021    STATIC      CPU
  All    ffff.ffff.ffff    STATIC      CPU
- 300    689e.0b30.a4c7    STATIC      Vl300 
- 500    001b.1b1d.f994    DYNAMIC     Tw2/0/22
- 500    001b.1b1d.f995    DYNAMIC     Tw2/0/22
- 500    689e.0b30.a4d0    STATIC      Vl500 
- 500    b05c.da35.ac30    DYNAMIC     Tw2/0/21
- 600    2436.dab1.c961    STATIC      Tw1/0/2 
- 600    2436.dab1.ca51    STATIC      Te1/0/40 
- 600    2436.dab1.e3ab    STATIC      Tw1/0/19 
- 600    5478.1a1c.82f0    STATIC      Te1/0/38 
- 600    5c50.15a9.a44b    STATIC      Te1/0/42 
- 600    5c50.15a9.a748    STATIC      Tw1/0/34 
- 600    689e.0b30.a4d6    STATIC      Vl600 
- 600    ac44.f21a.0dd7    STATIC      Tw1/0/4 
- 600    ac44.f21a.0e24    STATIC      Tw1/0/5 
- 600    ac44.f21a.64de    STATIC      Tw1/0/1 
- 600    c064.e4d8.1963    STATIC      Tw1/0/28 
- 600    e840.400c.9005    STATIC      Tw1/0/22 
- 762    689e.0b30.a4f6    STATIC      Vl762 
-1199    689e.0b30.a4c9    STATIC      Vl1199 
-1200    689e.0b30.a4d5    STATIC      Vl1200 
-2218    689e.0b03.ea01    DYNAMIC     Te1/1/1
-2218    689e.0b03.f99f    DYNAMIC     Te1/1/1
-2218    689e.0b30.a4c2    STATIC      Vl2218 
-2219    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
-2219    689e.0b04.07ff    DYNAMIC     Te2/1/1
-2219    689e.0b30.a4f0    STATIC      Vl2219 
-2550    689e.0b30.a4ca    STATIC      Vl2550 
-2700    689e.0b30.a4ed    STATIC      Vl2700 
-2700    a488.73ce.4044    DYNAMIC     Tw2/0/3
-2700    a488.73ce.4b04    DYNAMIC     Tw2/0/1
-2700    a488.73cf.178c    DYNAMIC     Tw2/0/6
-2700    a488.73cf.223c    DYNAMIC     Tw2/0/9
-2700    a488.73cf.3db4    DYNAMIC     Tw2/0/8
-2700    a488.73cf.4030    DYNAMIC     Tw2/0/2
-2700    a488.73cf.4304    DYNAMIC     Tw2/0/4
-2700    a488.73cf.5b28    DYNAMIC     Tw2/0/5
-2700    a488.73cf.6324    DYNAMIC     Tw2/0/7
-2700    a488.73cf.8890    DYNAMIC     Tw2/0/10
-2700    b05c.da32.174c    STATIC      Tw1/0/10 
-2700    b05c.da33.85d3    STATIC      Tw1/0/7 
-2700    b05c.da35.ad83    STATIC      Tw1/0/11 
-2700    dc8c.3778.ef84    DYNAMIC     Tw2/0/12
-2700    dc8c.3785.70a4    DYNAMIC     Tw2/0/13
-2700    dc8c.3785.7142    DYNAMIC     Tw2/0/15
-2700    dc8c.378e.2390    DYNAMIC     Tw2/0/14
-2750    0068.eb61.2aad    STATIC      Te1/0/42 
-2750    0068.eb62.b05a    STATIC      Tw1/0/34 
-2750    040e.3c0f.b5a8    STATIC      Tw1/0/31 
-2750    3863.bb04.70bb    DYNAMIC     Tw1/0/33
-2750    689e.0b30.a4cc    STATIC      Vl2750 
-2750    98e7.f4a3.f3fc    STATIC      Tw2/0/16 
-2750    b05c.da33.8233    STATIC      Tw1/0/23 
-2750    b05c.da34.f34b    DYNAMIC     Tw1/0/16
-2750    b05c.da35.a187    STATIC      Tw1/0/28 
-2750    b499.badc.88b5    DYNAMIC     Tw2/0/20
-3050    689e.0b03.ea01    DYNAMIC     Te1/1/1
-3050    689e.0b03.f99f    DYNAMIC     Te1/1/1
-3050    689e.0b30.a4e6    STATIC      Vl3050 
-3550    0476.b0e8.0aa1    DYNAMIC     Te2/1/1
-3550    689e.0b04.07ff    DYNAMIC     Te2/1/1
-3550    689e.0b30.a4e2    STATIC      Vl3550 
- 999    0010.7fe6.051c    STATIC      Tw2/0/18 
-Total Mac Addresses for this criterion: 83
-arlaclast050-ga-1w7#!
+ 300    0000.0c07.ac02    DYNAMIC     Te2/1/1
+ 300    001a.736d.eb79    DYNAMIC     Tw1/0/23
+ 300    4c71.0cc9.f5b6    DYNAMIC     Te2/1/1
+ 300    4c71.0cc9.f5c7    DYNAMIC     Te2/1/1
+ 300    5c31.9251.6947    DYNAMIC     Te2/1/1
+ 300    c0f8.7ff8.ebc7    DYNAMIC     Te2/1/1
+ 300    e8d3.227a.8bc7    DYNAMIC     Te2/1/1
+ 300    e8d3.2282.8747    DYNAMIC     Te2/1/1
+ 300    e8d3.2283.0a47    DYNAMIC     Te2/1/1
+ 300    e8d3.2290.f9c7    DYNAMIC     Te2/1/1
+ 300    e8d3.22d2.5747    DYNAMIC     Te2/1/1
+ 300    f04a.0231.74df    DYNAMIC     Te2/1/1
+ 300    f04a.0231.74f0    DYNAMIC     Te2/1/1
+ 300    f04a.0231.757f    DYNAMIC     Te2/1/1
+ 300    f8e5.7e73.01c7    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.1a47    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.7ac7    DYNAMIC     Te2/1/1
+ 300    f8e5.7eba.7c47    DYNAMIC     Te2/1/1
+ 300    f8e5.7ebb.e447    DYNAMIC     Te2/1/1
+ 300    f8e5.7ebc.3047    DYNAMIC     Te2/1/1
+ 300    f8e9.4f03.fcc7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f03.fd47    DYNAMIC     Te2/1/1
+ 300    f8e9.4f04.00c7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f07.4d47    DYNAMIC     Te2/1/1
+ 300    f8e9.4f07.4ec7    DYNAMIC     Te2/1/1
+ 300    f8e9.4f08.0947    STATIC      Vl300 
+ 300    f8e9.4f0a.13c7    DYNAMIC     Te2/1/1
+ 500    0007.2900.295e    DYNAMIC     Tw2/0/31
+ 500    000e.8c87.bfae    DYNAMIC     Tw1/0/7
+ 500    000e.8cb2.0787    DYNAMIC     Tw1/0/28
+ 500    000e.8cb2.079f    DYNAMIC     Tw1/0/8
+ 500    000e.8ccd.fc80    DYNAMIC     Tw1/0/14
+ 500    000e.8ccd.fc81    DYNAMIC     Tw1/0/14
+ 500    000e.8ccf.c252    DYNAMIC     Tw1/0/26
+ 500    000e.8ccf.c253    DYNAMIC     Tw1/0/26
+ 500    000e.8ccf.f9f0    DYNAMIC     Tw1/0/14
+ 500    000e.8cd1.099d    DYNAMIC     Tw1/0/17
+ 500    000e.8cd1.099e    DYNAMIC     Tw1/0/17
+ 500    000e.8cf6.391b    DYNAMIC     Tw1/0/19
+ 500    000e.8cf6.391d    DYNAMIC     Tw1/0/19
+ 500    000e.8cf7.1cc5    DYNAMIC     Tw1/0/9
+ 500    000e.8cf7.781a    DYNAMIC     Tw1/0/19
+ 500    000e.8cf8.7794    DYNAMIC     Tw1/0/7
+ 500    000e.8cf8.7795    DYNAMIC     Tw1/0/7
+ 500    000e.8cf8.e9be    DYNAMIC     Tw1/0/8
+ 500    000e.8cf8.eb1e    DYNAMIC     Tw1/0/30
+ 500    000e.8cf8.ef71    DYNAMIC     Tw1/0/8
+ 500    000e.8cf8.efe7    DYNAMIC     Tw1/0/30
+ 500    000e.8cf8.f2ec    DYNAMIC     Tw1/0/28
+ 500    000e.8cf8.f32c    DYNAMIC     Tw1/0/11
+ 500    000e.8cf8.f3f2    DYNAMIC     Tw1/0/11
+ 500    000e.8cf9.9cc3    DYNAMIC     Tw1/0/28
+ 500    000e.8cfa.5b22    DYNAMIC     Tw1/0/30
+ 500    000e.8cfa.5bbe    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.5c82    DYNAMIC     Tw1/0/28
+ 500    000e.8cfa.5e5b    DYNAMIC     Tw1/0/8
+ 500    000e.8cfa.a8a8    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.a8a9    DYNAMIC     Tw1/0/11
+ 500    000e.8cfa.abd1    DYNAMIC     Tw1/0/30
+ 500    000e.8cfa.abd2    DYNAMIC     Tw1/0/30
+ 500    000e.8cfb.25b3    DYNAMIC     Tw1/0/17
+ 500    000e.8cfb.9b0f    DYNAMIC     Tw1/0/6
+ 500    000e.8cfd.9b4c    DYNAMIC     Tw1/0/10
+ 500    000e.8cfd.9e01    DYNAMIC     Tw1/0/12
+ 500    000e.8cfe.46c5    DYNAMIC     Tw1/0/8
+ 500    000e.8cfe.46c6    DYNAMIC     Tw1/0/8
+ 500    000e.8cfe.4716    DYNAMIC     Tw1/0/28
+ 500    000e.8cfe.4717    DYNAMIC     Tw1/0/28
+ 500    000e.8cfe.6a29    DYNAMIC     Tw1/0/24
+ 500    000e.8cfe.9df1    DYNAMIC     Tw1/0/18
+ 500    000e.8cfe.d8f3    DYNAMIC     Tw1/0/18
+ 500    0010.403b.7c75    DYNAMIC     Tw1/0/7
+ 500    0010.406e.8bb8    DYNAMIC     Tw1/0/9
+ 500    0010.406e.8c38    DYNAMIC     Tw1/0/18
+ 500    0010.40d8.c233    DYNAMIC     Tw1/0/17
+ 500    0012.9150.4af4    DYNAMIC     Tw1/0/8
+ 500    0012.9150.4dfe    DYNAMIC     Tw1/0/28
+ 500    0012.cd01.4017    DYNAMIC     Te2/0/39
+ 500    0015.2400.3175    DYNAMIC     Te2/0/38
+ 500    0015.2400.3176    DYNAMIC     Te2/0/38
+ 500    0015.2400.31f6    DYNAMIC     Te2/0/38
+ 500    0015.2401.36ba    DYNAMIC     Te2/0/40
+ 500    0015.2401.36bb    DYNAMIC     Te2/0/40
+ 500    0019.0f06.cdbf    DYNAMIC     Tw1/0/9
+ 500    0019.0f06.cdf3    DYNAMIC     Tw1/0/18
+ 500    001b.1b16.99c2    DYNAMIC     Tw1/0/20
+ 500    001b.1b17.7a8e    DYNAMIC     Tw1/0/8
+ 500    001b.1b17.7a8f    DYNAMIC     Tw1/0/8
+ 500    001b.1b17.d28c    DYNAMIC     Tw1/0/28
+ 500    001b.1b17.d28d    DYNAMIC     Tw1/0/28
+ 500    001b.1b1c.c0b7    DYNAMIC     Tw2/0/29
+ 500    001b.1b1c.c0b9    DYNAMIC     Tw2/0/29
+ 500    001b.1b1e.d21d    DYNAMIC     Tw1/0/8
+ 500    001b.1b26.b1c4    DYNAMIC     Tw2/0/36
+ 500    001b.1b26.b1c5    DYNAMIC     Tw2/0/36
+ 500    001b.1b28.aa07    DYNAMIC     Tw1/0/9
+ 500    001b.1b28.aa08    DYNAMIC     Tw1/0/9
+ 500    001b.1b2c.e47c    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e47d    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e47f    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e480    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e500    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e501    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e50c    DYNAMIC     Tw2/0/36
+ 500    001b.1b2c.e50d    DYNAMIC     Tw2/0/36
+ 500    001b.1b2d.db7b    DYNAMIC     Te2/0/38
+ 500    001b.1b2d.db7c    DYNAMIC     Te2/0/38
+ 500    001b.1b2d.db8c    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0237    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0239    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.0263    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.6f5f    DYNAMIC     Te2/0/39
+ 500    001b.1b2e.6f61    DYNAMIC     Te2/0/39
+ 500    001b.1b2e.ac4a    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.ac4c    DYNAMIC     Te2/0/38
+ 500    001b.1b2e.dc79    DYNAMIC     Te2/0/38
+ 500    001b.1b30.48be    DYNAMIC     Tw2/0/34
+ 500    001b.1b30.48bf    DYNAMIC     Tw2/0/34
+ 500    001b.1b30.ae97    DYNAMIC     Te2/0/39
+ 500    001b.1b30.be3a    DYNAMIC     Te1/0/41
+ 500    001b.1b30.be3c    DYNAMIC     Te1/0/41
+ 500    001b.1b31.1892    DYNAMIC     Te1/0/41
+ 500    001b.1b41.4e36    DYNAMIC     Tw2/0/12
+ 500    001b.1b41.4f6a    DYNAMIC     Tw2/0/13
+ 500    001b.1b41.9a8d    DYNAMIC     Tw2/0/10
+ 500    001b.1b53.cd2f    DYNAMIC     Tw2/0/28
+ 500    001b.1b53.cd31    DYNAMIC     Tw2/0/28
+ 500    001b.1b53.cd3b    DYNAMIC     Tw2/0/32
+ 500    001b.1b53.cd3d    DYNAMIC     Tw2/0/32
+ 500    001b.1b55.094f    DYNAMIC     Tw2/0/29
+ 500    001b.1b55.0a4f    DYNAMIC     Tw2/0/28
+ 500    001b.1b55.0a5b    DYNAMIC     Tw2/0/32
+ 500    001b.1b55.6d2d    DYNAMIC     Tw2/0/31
+ 500    001b.1b55.6d2e    DYNAMIC     Tw2/0/31
+ 500    001b.1b55.d5ff    DYNAMIC     Tw2/0/31
+ 500    001b.1b56.bf7e    DYNAMIC     Te2/0/40
+ 500    001b.1b56.cc56    DYNAMIC     Tw2/0/34
+ 500    001b.1b56.cc57    DYNAMIC     Tw2/0/34
+ 500    001b.1b56.db89    DYNAMIC     Te2/0/40
+ 500    001b.1b56.db8a    DYNAMIC     Te2/0/40
+ 500    001b.1b6a.77d8    DYNAMIC     Tw1/0/18
+ 500    001b.1b6a.77d9    DYNAMIC     Tw1/0/18
+ 500    001b.eb02.8747    DYNAMIC     Tw2/0/32
+ 500    001b.eb04.1025    DYNAMIC     Tw1/0/18
+ 500    001b.eb05.859f    DYNAMIC     Tw1/0/19
+ 500    001f.f802.251f    DYNAMIC     Tw1/0/25
+ 500    001f.f802.2521    DYNAMIC     Tw1/0/25
+ 500    001f.f803.1ecc    DYNAMIC     Te2/0/37
+ 500    001f.f803.3797    DYNAMIC     Tw1/0/10
+ 500    001f.f803.3799    DYNAMIC     Tw1/0/10
+ 500    001f.f803.ad89    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad8b    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad99    DYNAMIC     Tw1/0/6
+ 500    001f.f803.ad9b    DYNAMIC     Tw1/0/6
+ 500    001f.f803.f872    DYNAMIC     Tw1/0/12
+ 500    001f.f803.f874    DYNAMIC     Tw1/0/12
+ 500    001f.f804.2429    DYNAMIC     Tw1/0/25
+ 500    001f.f804.242b    DYNAMIC     Tw1/0/25
+ 500    001f.f804.4085    DYNAMIC     Tw1/0/25
+ 500    001f.f804.4087    DYNAMIC     Tw1/0/25
+ 500    001f.f804.7268    DYNAMIC     Tw1/0/24
+ 500    001f.f804.726a    DYNAMIC     Tw1/0/24
+ 500    001f.f804.9787    DYNAMIC     Tw1/0/6
+ 500    001f.f804.9789    DYNAMIC     Tw1/0/6
+ 500    001f.f804.c5b5    DYNAMIC     Tw1/0/24
+ 500    001f.f804.c5b7    DYNAMIC     Tw1/0/24
+ 500    001f.f804.f3e6    DYNAMIC     Tw1/0/12
+ 500    001f.f804.f3e8    DYNAMIC     Tw1/0/12
+ 500    001f.f805.96fb    DYNAMIC     Tw1/0/20
+ 500    001f.f805.96fd    DYNAMIC     Tw1/0/20
+ 500    001f.f805.c1c3    DYNAMIC     Tw1/0/25
+ 500    001f.f805.c1c5    DYNAMIC     Tw1/0/25
+ 500    001f.f807.60f2    DYNAMIC     Tw1/0/6
+ 500    001f.f807.60f4    DYNAMIC     Tw1/0/6
+ 500    001f.f808.48a2    DYNAMIC     Tw1/0/24
+ 500    001f.f808.48a4    DYNAMIC     Tw1/0/24
+ 500    001f.f80a.8a16    DYNAMIC     Te1/0/37
+ 500    001f.f80a.8ffc    DYNAMIC     Tw2/0/13
+ 500    001f.f80a.9b7e    DYNAMIC     Tw2/0/7
+ 500    001f.f80a.a54d    DYNAMIC     Tw2/0/9
+ 500    001f.f80a.a550    DYNAMIC     Tw2/0/4
+ 500    001f.f80a.a570    DYNAMIC     Tw2/0/1
+ 500    001f.f80b.51e1    DYNAMIC     Tw2/0/11
+ 500    001f.f80b.5218    DYNAMIC     Tw2/0/14
+ 500    001f.f80b.54f4    DYNAMIC     Tw2/0/27
+ 500    001f.f80b.5953    DYNAMIC     Tw2/0/30
+ 500    001f.f80b.595d    DYNAMIC     Tw2/0/35
+ 500    001f.f80b.5971    DYNAMIC     Tw2/0/33
+ 500    001f.f80f.0571    DYNAMIC     Tw1/0/6
+ 500    001f.f80f.0573    DYNAMIC     Tw1/0/6
+ 500    001f.f815.b2db    DYNAMIC     Tw2/0/12
+ 500    001f.f81f.be9b    DYNAMIC     Tw1/0/24
+ 500    001f.f81f.be9d    DYNAMIC     Tw1/0/24
+ 500    001f.f827.6d96    DYNAMIC     Tw1/0/12
+ 500    001f.f827.6d98    DYNAMIC     Tw1/0/12
+ 500    001f.f82b.9e7b    DYNAMIC     Tw1/0/10
+ 500    001f.f82b.9e7d    DYNAMIC     Tw1/0/10
+ 500    001f.f838.b395    DYNAMIC     Tw1/0/20
+ 500    001f.f838.b397    DYNAMIC     Tw1/0/20
+ 500    001f.f83a.7365    DYNAMIC     Tw1/0/12
+ 500    001f.f83a.7367    DYNAMIC     Tw1/0/12
+ 500    001f.f83f.51aa    DYNAMIC     Tw1/0/12
+ 500    001f.f83f.51ac    DYNAMIC     Tw1/0/12
+ 500    001f.f8ef.b0ed    DYNAMIC     Te2/0/38
+ 500    001f.f8ef.b0ee    DYNAMIC     Te2/0/38
+ 500    001f.f8f7.7ef7    DYNAMIC     Te2/0/38
+ 500    0050.c22a.9b0a    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9b11    DYNAMIC     Tw1/0/18
+ 500    0050.c22a.9d42    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9de0    DYNAMIC     Tw1/0/18
+ 500    0050.c22a.9e11    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9e14    DYNAMIC     Tw1/0/9
+ 500    0050.c22a.9f85    DYNAMIC     Tw1/0/18
+ 500    0060.34a5.f7c0    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7c7    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7e6    DYNAMIC     Tw2/0/36
+ 500    0060.34a5.f7ef    DYNAMIC     Tw2/0/36
+ 500    0080.63db.566d    DYNAMIC     Tw1/0/12
+ 500    0080.63db.5675    DYNAMIC     Tw1/0/12
+ 500    0080.63db.5695    DYNAMIC     Tw1/0/20
+ 500    0080.63db.569d    DYNAMIC     Tw1/0/20
+ 500    0080.63db.56e5    DYNAMIC     Tw1/0/6
+ 500    0080.63db.56ed    DYNAMIC     Tw1/0/6
+ 500    0080.63db.5785    DYNAMIC     Tw1/0/10
+ 500    0080.63db.578d    DYNAMIC     Tw1/0/10
+ 500    0080.63e1.9321    DYNAMIC     Tw1/0/25
+ 500    0080.63e1.9329    DYNAMIC     Tw1/0/25
+ 500    0080.63ed.6d8f    DYNAMIC     Tw1/0/24
+ 500    0080.63ed.6d97    DYNAMIC     Tw1/0/24
+ 500    00a0.456d.db6c    DYNAMIC     Tw2/0/34
+ 500    00d0.2402.a950    DYNAMIC     Tw1/0/6
+ 500    00d0.2402.e2ec    DYNAMIC     Tw1/0/12
+ 500    00d0.2412.b1ec    DYNAMIC     Tw1/0/8
+ 500    00d0.2413.c1a6    DYNAMIC     Tw1/0/28
+ 500    00d0.2414.7918    DYNAMIC     Tw2/0/1
+ 500    00d0.2414.7b60    DYNAMIC     Tw2/0/4
+ 500    00d0.2414.a064    DYNAMIC     Tw2/0/35
+ 500    00d0.2416.3178    DYNAMIC     Tw2/0/7
+ 500    00d0.2416.3292    DYNAMIC     Tw2/0/11
+ 500    00d0.2416.32ae    DYNAMIC     Tw2/0/14
+ 500    00d0.2416.32d2    DYNAMIC     Tw2/0/9
+ 500    00d0.2416.3b6c    DYNAMIC     Tw2/0/33
+ 500    00d0.2416.9a30    DYNAMIC     Te2/0/37
+ 500    00d0.2416.9b78    DYNAMIC     Tw2/0/30
+ 500    00d0.2416.f4aa    DYNAMIC     Te1/0/41
+ 500    00d0.2416.f4ab    DYNAMIC     Te1/0/41
+ 500    00d0.2419.05fa    DYNAMIC     Tw2/0/33
+ 500    00d0.2419.060a    DYNAMIC     Tw2/0/27
+ 500    00d0.2419.09c6    DYNAMIC     Tw2/0/30
+ 500    00d0.2419.09d2    DYNAMIC     Tw2/0/7
+ 500    00d0.2419.c670    DYNAMIC     Tw2/0/11
+ 500    00d0.2421.d4a2    DYNAMIC     Tw2/0/27
+ 500    00e0.e40f.f8ff    DYNAMIC     Tw1/0/6
+ 500    00e0.e428.3758    DYNAMIC     Tw1/0/9
+ 500    00e0.e428.54ce    DYNAMIC     Tw2/0/31
+ 500    00e0.e428.8537    DYNAMIC     Tw1/0/17
+ 500    00e0.e428.997f    DYNAMIC     Tw1/0/24
+ 500    00e0.e428.aa9f    DYNAMIC     Tw1/0/24
+ 500    00e0.e428.abff    DYNAMIC     Tw1/0/25
+ 500    00e0.e428.cec9    DYNAMIC     Tw1/0/7
+ 500    00e0.e428.ed3e    DYNAMIC     Tw1/0/10
+ 500    00e0.e429.16a4    DYNAMIC     Tw1/0/25
+ 500    00e0.e429.16d0    DYNAMIC     Tw1/0/12
+ 500    00e0.e429.1ff8    DYNAMIC     Tw1/0/18
+ 500    00e0.e429.1ffa    DYNAMIC     Tw1/0/18
+ 500    00e0.e429.331c    DYNAMIC     Tw1/0/20
+ 500    00e0.e42b.cab8    DYNAMIC     Tw2/0/6
+ 500    00e0.e42b.cab9    DYNAMIC     Tw2/0/5
+ 500    00e0.e42b.cddf    DYNAMIC     Tw2/0/2
+ 500    00e0.e42c.0a21    DYNAMIC     Tw2/0/3
+ 500    00e0.e42c.0a72    DYNAMIC     Tw2/0/8
+ 500    00e0.e42c.0c38    DYNAMIC     Tw2/0/26
+ 500    00e0.e42c.0c4c    DYNAMIC     Te1/0/39
+ 500    00e0.e42c.0db6    DYNAMIC     Te1/0/40
+ 500    00e0.e42c.0dbc    DYNAMIC     Te1/0/38
+ 500    00e0.e42c.4761    DYNAMIC     Tw2/0/28
+ 500    00e0.e42c.4763    DYNAMIC     Tw2/0/29
+ 500    00e0.e42c.cd65    DYNAMIC     Te2/0/38
+ 500    1060.4b6d.de93    DYNAMIC     Tw2/0/34
+ 500    2863.360e.c86a    DYNAMIC     Tw1/0/28
+ 500    40ec.f80c.d9a8    DYNAMIC     Tw1/0/26
+ 500    480f.cfc6.96ed    DYNAMIC     Tw1/0/9
+ 500    489e.bdee.e53e    DYNAMIC     Tw1/0/18
+ 500    c8d3.ffb1.69b9    DYNAMIC     Te2/0/37
+ 500    f8e9.4f08.0950    STATIC      Vl500 
+ 501    000e.8cf7.785a    DYNAMIC     Tw3/0/17
+ 501    000e.8cf7.c265    DYNAMIC     Tw3/0/15
+ 501    000e.8cf7.c266    DYNAMIC     Tw3/0/15
+ 501    000e.8cf7.c8ef    DYNAMIC     Tw3/0/17
+ 501    000e.8cf7.c8f0    DYNAMIC     Tw3/0/17
+ 501    000e.8cf8.04f2    DYNAMIC     Tw3/0/15
+ 501    001b.1b2c.a674    DYNAMIC     Tw3/0/30
+ 501    001b.1b2c.a675    DYNAMIC     Tw3/0/30
+ 501    001b.1b2e.5dcd    DYNAMIC     Tw3/0/21
+ 501    001b.1b2f.1ec1    DYNAMIC     Tw3/0/30
+ 501    001b.1b2f.ffcd    DYNAMIC     Tw3/0/32
+ 501    001b.1b2f.ffcf    DYNAMIC     Tw3/0/33
+ 501    001b.1b2f.ffd1    DYNAMIC     Tw2/0/25
+ 501    001b.1b4c.7505    DYNAMIC     Tw3/0/33
+ 501    001b.1b4c.7506    DYNAMIC     Tw3/0/33
+ 501    001b.1b4c.8dd9    DYNAMIC     Tw3/0/21
+ 501    001b.1b4c.8dda    DYNAMIC     Tw3/0/21
+ 501    001b.1b4c.8dee    DYNAMIC     Tw3/0/32
+ 501    001b.1b4c.8def    DYNAMIC     Tw3/0/32
+ 501    001b.1b4c.8e0c    DYNAMIC     Tw2/0/25
+ 501    001b.1b4c.8e0d    DYNAMIC     Tw2/0/25
+ 501    f8e9.4f08.0976    STATIC      Vl501 
+ 550    0001.2925.26ce    STATIC      Tw3/0/13 
+ 550    0018.7d2c.298b    DYNAMIC     Tw3/0/9
+ 550    00a0.4538.b983    STATIC      Te3/0/42 
+ 550    00a0.458b.f2da    STATIC      Tw3/0/8 
+ 550    3cd9.2b71.cab7    STATIC      Tw1/0/27 
+ 550    3cd9.2b71.cdd6    STATIC      Tw1/0/15 
+ 550    489e.bdef.392c    DYNAMIC     Tw3/0/9
+ 550    4c72.b9d1.eb02    STATIC      Te3/0/42 
+ 550    4c72.b9d1.f010    STATIC      Tw3/0/4 
+ 550    6805.ca5a.4f6b    STATIC      Te2/0/42 
+ 550    6805.ca5a.54df    STATIC      Tw1/0/13 
+ 550    6805.ca5a.5c5f    STATIC      Te2/0/41 
+ 550    8416.f904.935b    STATIC      Te3/0/43 
+ 550    901b.0e6e.1bbf    STATIC      Tw3/0/3 
+ 550    a036.9f92.774e    STATIC      Tw1/0/29 
+ 550    a0b3.ccfc.33f4    STATIC      Tw3/0/20 
+ 550    ac16.2d02.dd3f    STATIC      Tw3/0/18 
+ 550    c025.a5a6.aa9c    STATIC      Tw1/0/16 
+ 550    ccb2.5558.21c4    STATIC      Tw3/0/25 
+ 550    d050.999f.df95    STATIC      Tw3/0/8 
+ 550    f8e9.4f08.0960    STATIC      Vl550 
+ 600    f8e9.4f08.0956    STATIC      Vl600 
+ 700    0004.f1d4.55f0    DYNAMIC     Tw1/0/3
+ 700    0004.f1d4.566c    DYNAMIC     Tw1/0/2
+ 700    f8e9.4f08.095c    STATIC      Vl700 
+ 750    f8e9.4f08.0974    STATIC      Vl750 
+ 762    f8e9.4f08.0976    STATIC      Vl762 
+2154    f04a.0231.7450    DYNAMIC     Te1/1/1
+2154    f04a.0231.74df    DYNAMIC     Te1/1/1
+2154    f8e9.4f08.097f    STATIC      Vl2154 
+2155    f04a.0231.74f0    DYNAMIC     Te2/1/1
+2155    f04a.0231.757f    DYNAMIC     Te2/1/1
+2155    f8e9.4f08.094f    STATIC      Vl2155 
+2550    001d.7095.da1e    DYNAMIC     Tw1/0/21
+2550    0800.239f.407a    STATIC      Tw3/0/28 
+2550    0800.239f.8089    STATIC      Tw3/0/26 
+2550    6c20.56e1.2b78    DYNAMIC     Tw3/0/11
+2550    f8e9.4f08.094a    STATIC      Vl2550 
+2550    fc99.47b1.00c2    DYNAMIC     Tw3/0/10
+2700    3863.bbdb.a815    STATIC      Tw2/0/22 
+2700    b05c.da2e.1a81    STATIC      Te2/0/43 
+2700    b05c.da2e.20eb    STATIC      Te2/0/44 
+2700    b05c.da2e.25e9    STATIC      Tw3/0/7 
+2700    b05c.da34.e960    STATIC      Tw3/0/6 
+2700    b05c.da35.a758    STATIC      Tw1/0/33 
+2700    b05c.da36.720e    STATIC      Tw1/0/32 
+2700    f8e9.4f08.096d    STATIC      Vl2700 
+2750    b05c.da2e.1a26    STATIC      Tw2/0/23 
+2750    f8e9.4f08.094c    STATIC      Vl2750 
+3018    f04a.0231.7450    DYNAMIC     Te1/1/1
+3018    f04a.0231.74df    DYNAMIC     Te1/1/1
+3018    f8e9.4f08.0964    STATIC      Vl3018 
+3518    f04a.0231.74f0    DYNAMIC     Te2/1/1
+3518    f04a.0231.757f    DYNAMIC     Te2/1/1
+3518    f8e9.4f08.096c    STATIC      Vl3518 
+Total Mac Addresses for this criterion: 383
+tonptlast018-pt-1f25#!
