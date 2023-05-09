@@ -22,25 +22,6 @@ if en_secret == '':
     en_secret = as_pass
 
 
-''' -----------------------------------
-    ------- EWO -----
-    ----------------------------------- '''
-EWO = input("\n1. EWO Name? ")
-
-''' ---------------------------------------
-    ---------- DIRECTORY MOVE -------------
-    --------------------------------------- '''   
-dir = "N:\\Report\\" + str(EWO)+ "-" + str(datetime.now().strftime("%b-%d-%y [%H-%M]"))
-#This is for the directory
-if os.path.exists(dir):
-    os.chdir(dir)
-    print("Folder exists")
-else:
-    os.makedirs(dir)  #new dir for files to be moved
-    os.chdir(dir)
-    print("\n"+str(dir) +" has been created!\n")
-
-
 ''' ---------------------------------------
     ---------- Get IP ADDRESS ---------
     --------------------------------------- '''
@@ -91,6 +72,26 @@ try:
 except:
     print("\nThere is an issue with enable password")
     
+
+
+''' -----------------------------------
+    ------- EWO -----
+    ----------------------------------- '''
+EWO = input("\n1. EWO Name? ")
+
+''' ---------------------------------------
+    ---------- DIRECTORY MOVE -------------
+    --------------------------------------- '''   
+dir = "N:\\Report\\" + str(EWO)+ "-" + str(datetime.now().strftime("%b-%d-%y [%H-%M]"))
+#This is for the directory
+if os.path.exists(dir):
+    os.chdir(dir)
+    print("Folder exists")
+else:
+    os.makedirs(dir)  #new dir for files to be moved
+    os.chdir(dir)
+    print("\n"+str(dir) +" has been created!\n")
+
     
     
 ''' ------------------------------------------
