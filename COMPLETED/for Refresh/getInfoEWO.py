@@ -7,6 +7,7 @@ from datetime import date, datetime
 sys.path.append('N:/Python Libraries')  
 from tabulate import tabulate
 import docx
+import getOthers
 
 
 start_time = datetime.now()
@@ -99,12 +100,24 @@ else:
     ------------------------------------------ '''    
 #filename
 fileName = con.send_command("sh run | i (hostname )", read_timeout=180)
-host_dev_table = open(str(fileName.split(" ")[1]) +"-Table 2.txt", mode="a") 
+sw_name = fileName.split(" ")[1]
+host_dev_table = open(str(sw_name) +"-Table 2.txt", mode="a") 
 port_config = open("port_config.txt", mode="a")    
 
 #Get Mac Address Dynamic
 mac_add = con.send_command("sh mac address-table dynamic", read_timeout=180)
 #print(mac_add)   
+
+
+
+''' ------------------------------------------
+    ---------- GET SERIAL NUMBERS ---------
+    ------------------------------------------ '''
+#Get it in a list
+serial_numbers_old = getOthers.getSerialNumber(sw_name, con)    
+    
+
+
 
 
 ''' ------------------------------------------
@@ -161,6 +174,9 @@ print(tabulated_table)
     
     
 host_dev_table.write(tabulated_table)
+host_dev_table.write("\n\n=========================================\n")
+host_dev_table.write(serial_numbers_old)
+host_dev_table.write("\n=========================================\n")
         
 host_dev_table.close()   
 port_config.close()     
