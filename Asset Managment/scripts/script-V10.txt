@@ -1,0 +1,87 @@
+term len 0
+!
+show sw | inc V
+
+!
+show install active
+!
+dir
+!
+show inventory
+!
+sh boot
+!
+sh clock
+!
+sh ver | in Licensing|9300
+!
+sh ntp status
+!
+sh switch detail
+!
+sh switch stack-ports summary
+!
+sh stack-power detail | in Switch|Neighbor
+!
+sh env all | in FAN|PWR
+!
+sh cdp nei
+!
+sh lldp neig
+!
+sh ip vrf
+!
+sh ip eigrp int
+!
+sh ip ei nei
+!
+sh ip ei vrf IECN nei
+!
+sh ip ei vrf gm-security nei
+!
+sh ip ei vrf SSUN nei
+!
+sh ip route static
+!
+sh ip route
+!
+sh ip route vrf IECN
+!
+sh ip route vrf gm-security
+!
+sh ip route vrf SSUN
+!
+sh ip pim int
+!
+sh ip pim rp mapp
+!
+sh ip int brief | ex unassigned
+!
+sh vlan
+!
+sh spanning-tree | include VLAN|This bridge
+!
+sh mac address-table
+!
+sh arp
+!
+sh arp vrf IECN
+!
+sh interface status
+!
+sh interface status | in connected
+!
+sh interface counters errors
+!
+sh interface | in ^Vlan
+!
+sh interface trunk
+!
+sh auth sessions
+!
+sh power inline
+!
+sh lic status
+! ---------------------------------------------------------
+sh log
+! ---------------------------------------------------------

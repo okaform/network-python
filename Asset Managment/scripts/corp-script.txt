@@ -1,0 +1,163 @@
+!
+! - Listed below are switch commands to run after the new 3850 or 9300 switch stack has been installed for testing and verification.
+!
+! - Before the change run the MAB Site Rescue for 24 hours for the building then do commands:
+!
+show version
+!							
+show switch detail						
+!
+show switch stack-ports summary			
+!
+show stack-power detail					
+!
+show interfaces counters errors    		
+!
+show interfaces status | in connected  	
+!
+show cdp neighbors
+!
+!
+!=============================================================
+!          EIGRP Routing
+!=============================================================
+!
+show ip eigrp neighbors					
+!
+show ip eigrp vrf gm-supplier neighbors	
+!
+!
+!=============================================================
+!          Multicast
+!=============================================================
+!
+show ip pim interface					
+!
+show ip pim rp mapping					
+!
+!
+!=============================================================
+!          NAC issues
+!=============================================================
+!
+show interfaces status | in 900			
+!
+show mac address | in 900
+!
+show ip arp vrf gm-supplier vlan 900
+!
+!
+!=============================================================
+!        Logging
+!=============================================================
+show logging							
+!
+!===========================================================================
+#####################Verification Commands################################
+!===========================================================================
+!
+show switch | inc V
+!
+show install committed
+!
+term len 0
+!
+dir
+!
+sh boot
+!
+sh ver
+!
+sh clock
+!
+sh ntp status
+!
+sh switch detail
+!
+sh switch stack-ports summary
+!
+sh stack-power detail | in Switch|Neighbor
+!
+sh env all | in FAN|PWR
+!
+sh cdp nei
+!
+sh lldp neig
+!
+sh power inline
+!
+sh interface status | in connected
+!
+sh interface counters errors
+!
+sh vlan
+!
+sh spanning-tree | include VLAN|This bridge
+!
+sh interface | in ^Vlan
+!
+sh interface trunk
+!
+sh mac address-table dy
+!
+sh ip int brief | ex unassigned
+!
+sh ip vrf
+!
+sh ip ospf nei
+!
+sh ip eigrp int
+!
+sh ip eigrp nei
+!
+sh ip route
+!
+sh arp
+!
+sh ip eigrp vrf gm-supplier int
+!
+sh ip eigrp vrf gm-supplier nei
+!
+sh ip route vrf gm-supplier
+!
+sh arp vrf gm-supplier
+!
+sh ip eigrp vrf gm-vehlabs int
+!
+sh ip eigrp vrf gm-vehlabs nei
+!
+sh ip route vrf gm-vehlabs
+!
+sh arp vrf gm-vehlabs
+!
+sh ip eigrp vrf GM-ULTRACRUISE-DEV int
+!
+sh ip eigrp vrf GM-ULTRACRUISE-DEV nei
+!
+sh ip route vrf GM-ULTRACRUISE-DEV
+!
+sh arp vrf GM-ULTRACRUISE-DEV
+!
+sh ip eigrp vrf utilitynet int
+!
+sh ip eigrp vrf utilitynet nei
+!
+sh ip route vrf utilitynet
+!
+sh arp vrf utilitynet
+!
+sh ip pim int
+!
+sh ip pim rp mapp
+!
+sh auth sessions
+!
+sh log
+!
+sh lic status
+!
+sh run
+!
+!=============================================================
+!        END
+!=============================================================
