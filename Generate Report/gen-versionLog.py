@@ -15,7 +15,7 @@ from datetime import date, datetime
 
 start_time = datetime.now()
 as_id = "as_cz507f" #input("Enter your as_id")
-as_pass = "bnufCUPqNGtv3HMr" #input("Enter your as_password")
+as_pass = "4D1nGmZNoKTBJC39" #input("Enter your as_password")
 
 
 #workbook = xlsxwriter.Workbook( "report/report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx")
@@ -32,7 +32,7 @@ col = 1
 workbook = openpyxl.Workbook()
 sheet1 = workbook.active
 sheet1.title="REPORT"
-file_name = "report/report " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx"
+file_name = "N:\Report\cisco-version\ " + str(datetime.now().strftime("%b-%d-%y [%H-%M]")) +".xlsx"
 #workbook.save(file_name)
 sheet1.cell(row=row, column=col, value="Date")
 sheet1.cell(row=row, column=col+1, value="Hostname")

@@ -19,13 +19,13 @@ def getSerialNumber(switch_name, con):
     serial_numbers = con.send_command("sh ver | inc System Serial Number ", read_timeout=180)
     #Split the serial numbers by the expression and put in a list    
     split_serial_numbers = serial_numbers.split("System Serial Number               : ")
-    print(split_serial_numbers)
+   
    
     #get the hostname and add to table
     serial_number_table = []
     for j in range(len(split_serial_numbers)):
         if split_serial_numbers[j] != '':
-            serial_number_table.append([(str(switch_name) + "-"+str(j)), split_serial_numbers[j]])
+            serial_number_table.append([(str(switch_name).strip() + "-"+str(j)), split_serial_numbers[j]])
     
     #get it in tablulate format
     table = tabulate(serial_number_table, headers=["Switch Stack","Serial Numbers"])       
