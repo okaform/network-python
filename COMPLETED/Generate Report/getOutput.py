@@ -36,7 +36,7 @@ def show_install_committed(con_from_main):
 def show_switch_stack(con_from_main):
     show_switch_stack = con_from_main.send_command("show switch | count Ready", read_timeout=120)
     number_of_stacks = show_switch_stack.split(" = ")[1]
-    if number_of_stacks == 0:
+    if number_of_stacks == '0':
         number_of_stacks = 1
-    return show_switch_stack.split(" = ")[1]
+    return number_of_stacks
     
