@@ -14,6 +14,8 @@ def switch_model(con_from_main):
     model = con_from_main.send_command("sh ver | inc Model Number", read_timeout=120)
     try:
         split_model = model.strip().split(" : ")[1]
+        substring_to_remove = "Model Number"
+        split_model = split_model.replace(substring_to_remove, "")
         return split_model
     except:
         return "Command does not work"
@@ -29,3 +31,12 @@ def show_install_committed(con_from_main):
         return split_commit
     except IndexError:
         return "Image not committed"
+
+
+def show_switch_stack(con_from_main):
+    show_switch_stack = con_from_main.send_command("show switch | count Ready", read_timeout=120)
+    number_of_stacks = show_switch_stack.split(" = ")[1]
+    if number_of_stacks == 0:
+        number_of_stacks = 1
+    return show_switch_stack.split(" = ")[1]
+    

@@ -39,6 +39,8 @@ sheet1.cell(row=row, column=col+1, value="Hostname")
 sheet1.cell(row=row, column=col+2, value="IP Address")
 sheet1.cell(row=row, column=col+3, value="Switch Model")
 sheet1.cell(row=row, column=col+4, value="Installed Version")
+sheet1.cell(row=row, column=col+5, value="No of Switch Stacks")
+
 
 
 
@@ -92,6 +94,10 @@ for i in range(len(ip_Address)):
         
         '''STEP FIVE: Get Install Commited '''
         sheet1.cell(row + i + 1, col+4, getOutput.show_install_committed(con))
+        workbook.save(file_name) #save after every function call
+
+        '''STEP SIX: Get the switch stack '''
+        sheet1.cell(row + i + 1, col+5, getOutput.show_switch_stack(con))
         workbook.save(file_name) #save after every function call
         
         
