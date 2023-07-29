@@ -22,7 +22,7 @@ sh lldp neig
 !
 sh interface trunk
 !
-!!! ONSITE RESOURCE CAN MOVE TO NEXT TC !!!
+! ----------- NEXT PHASE --------------!
 !
 sh auth sessions
 !

@@ -47,6 +47,7 @@ ch_script = input("\nWhich Script are you using?"
 "\n2. WTC/Corp Script"+
 "\n3. Short Script"+
 "\n4. Long Script" +
+"\n5. SDWAN Script" +
 "\nInput: ")
 
 script_to_use = ""
@@ -58,6 +59,8 @@ elif ch_script == '3':
     script_to_use = "short-script.txt"
 elif ch_script == '4':
     script_to_use = "long-script.txt"
+elif ch_script == '5':
+    script_to_use = "sdwan.txt"
 else:
     script_to_use = "mfg-script.txt"
     

@@ -4,19 +4,6 @@
 ! - Before the change run the MAB Site Rescue for 24 hours for the building then do commands:
 !
 show version
-!							
-show switch detail						
-!
-show switch stack-ports summary			
-!
-show stack-power detail					
-!
-show interfaces counters errors    		
-!
-show interfaces status | in connected  	
-!
-show cdp neighbors
-!
 !
 !=============================================================
 !          EIGRP Routing
@@ -46,12 +33,7 @@ show mac address | in 900
 !
 show ip arp vrf gm-supplier vlan 900
 !
-!
-!=============================================================
-!        Logging
-!=============================================================
-show logging							
-!
+
 !===========================================================================
 #####################Verification Commands################################
 !===========================================================================
@@ -76,17 +58,23 @@ sh switch detail
 !
 sh switch stack-ports summary
 !
+show stack-power detail		
+!
 sh stack-power detail | in Switch|Neighbor
 !
 sh env all | in FAN|PWR
 !
-sh cdp nei
+show cdp neighbors
 !
 sh lldp neig
 !
 sh power inline
 !
+show interface status 
+!
 sh interface status | in connected
+!
+sh int status | count connected
 !
 sh interface counters errors
 !
@@ -152,11 +140,17 @@ sh ip pim rp mapp
 !
 sh auth sessions
 !
-sh log
+sh auth sessions | count Gi|Tw|Te
 !
 sh lic status
 !
 sh run
+!
+!
+!=============================================================
+!        Logging
+!=============================================================
+show logging							
 !
 !=============================================================
 !        END

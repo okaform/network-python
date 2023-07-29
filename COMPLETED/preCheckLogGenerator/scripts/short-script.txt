@@ -1,13 +1,13 @@
 !
 term len 0
 !
-show boot
+show boot system
 !
 show version
 !
 show clock
 !
-show ntp status
+show install committed
 !
 show spanning-tree | include VLAN|this bridge
 !
@@ -32,6 +32,8 @@ sh int status
 show interface trunk
 !
 show interface status | inc connected
+!
+sh int status | count connected
 !
 show power inline
 !

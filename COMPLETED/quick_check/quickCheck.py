@@ -51,48 +51,21 @@ for i in range(len(ipAd)):
         #con.enable()
         
         #Get the cdp and lldp neigh of switches
-        #fileName = con.send_command("sh run | inc host-name", read_timeout=180) #host-name is for viptela
-        #fileName = input("Enter the filename: ")
-        
-        #print("\n\nPaste the commands you wish to run.\n"+
-        #        "When you are done. Hit ENTER, Ctrl + z, and ENTER in that order to end:\n")
+        fileName = con.send_command("sh run | inc (hostname )", read_timeout=180) #host-name is for viptela
 
-        commands = '''
-!
-request software remove 19.2.31
-!
-show software
-!
-show version
-!
-'''     
-        commands = commands.split("\n")
-        #hs = str(fileName.split("host-name              ")[1]) +'#'
-        #sys.stdin.readlines() #This will read multiple lines
-        for command in commands:
-            #logName.write(str(hs) + str(command)) #get the switch name
-            quick_com = con.send_command(command, read_timeout=180)
-            print(quick_com)
-            logName.write("\n") 
-            logName.write(quick_com)
-            logName.write("\n")           
-        
-        '''Check to see if version 17 is in the dir'''
-        '''
-        logName.write(str(fileName.split(" ")[1]) +'#') #get the switch name
-        quick_com = con.send_command("dir | inc sxe.17.06.04.SPA.bin", read_timeout=180)
-        logName.write("dir | inc sxe.17.06.04.SPA.bin")
-        logName.write("\n")
+
+        #Get CDP NEIGHBORS
+        logName.write(str(fileName.split(" ")[1]) + "#") #get the switch name
+        quick_com = con.send_command("sh cdp neigh", read_timeout=180)
+        logName.write("sh cdp neigh\n")
         logName.write(quick_com)
         logName.write("\n")
+        logName.write(str(fileName.split(" ")[1]) + "#") #get the switch name
+        logName.write("sh lldp neigh\n")
+        logName.write(str(con.send_command("sh lldp neigh", read_timeout=180)))
+        logName.write("\n") 
         
-        
-        quick_com2 = con.send_command("dir | inc smu.bin", read_timeout=180)
-        logName.write("dir | inc sxe.17.06.04.SPA.bin")
-        logName.write("\n")
-        logName.write(quick_com2)
-        logName.write("\n")
-        '''
+
         
         
       
@@ -166,3 +139,37 @@ print("This script took approximately {}".format(elapsed_time))
         logName.write("sh lldp neigh")
         logName.write(str(con.send_command("sh lldp neigh", read_timeout=180)))
         logName.write("\n") '''
+        
+        
+        
+        
+        
+        
+  
+'''commands = commands.split("\n")
+        #hs = str(fileName.split("host-name              ")[1]) +'#'
+        #sys.stdin.readlines() #This will read multiple lines
+        for command in commands:
+            #logName.write(str(hs) + str(command)) #get the switch name
+            quick_com = con.send_command(command, read_timeout=180)
+            print(quick_com)
+            logName.write("\n") 
+            logName.write(quick_com)
+            logName.write("\n")         '''  
+        
+'''Check to see if version 17 is in the dir'''
+'''
+        logName.write(str(fileName.split(" ")[1]) +'#') #get the switch name
+        quick_com = con.send_command("dir | inc sxe.17.06.04.SPA.bin", read_timeout=180)
+        logName.write("dir | inc sxe.17.06.04.SPA.bin")
+        logName.write("\n")
+        logName.write(quick_com)
+        logName.write("\n")
+        
+        
+        quick_com2 = con.send_command("dir | inc smu.bin", read_timeout=180)
+        logName.write("dir | inc sxe.17.06.04.SPA.bin")
+        logName.write("\n")
+        logName.write(quick_com2)
+        logName.write("\n")
+        '''

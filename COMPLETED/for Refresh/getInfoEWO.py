@@ -29,26 +29,19 @@ if en_secret == '':
 ipAd = input("\n\nPaste the IP Address you want to generate some EWO Info: ")
 
 ''' ------------------------------------------
-    ---------- Open the Word Docx ---------
+    ---------- Create the Word Docx ---------
     ------------------------------------------ '''
-'''doc_path = input("Enter the path to the EWO Document: ")
+doc = docx.Document()
+table = doc.add_table(rows=1, cols=4)
+table.style = 'Table Grid'
+table.autofit = True
+#Add Column Headers
+table.rows[0].cells[0].text = 'Device Name'
+table.rows[0].cells[1].text = 'Interface (Old - New)'
+table.rows[0].cells[2].text = 'Patch Cord Type'
+table.rows[0].cells[3].text = 'Length'
 
-doc = docx.Document(doc_path)
-
-target_paragrapgh = None
-
-search_string = "Badge Access Switch Connection"
-for paragraph in doc.paragraphs:
-    if search_string in paragraph.text:
-        #find the target paragraph
-        target_paragrapgh = paragraph
-        print(paragraph.text)
-        
-if target_paragrapgh:
-    new_table = 
-'''           
-        
-        
+      
         
 
 
@@ -169,9 +162,17 @@ for vlan_match in matches:
     table_info.append([int_desc, int_change, patch_cord_type, mac_found])
         
 
-tabulated_table = tabulate(table_info, headers=["Device Name","Interface (Old - New)","Patch Cord Type","Length"])       
+tabulated_table = tabulate(table_info, headers=["Device Name","Interface (Old - New)","Patch Cord Type","Length"])    
+
+#Add the rows to the word doc. 
+for row_data in table_info:
+    row = table.add_row()
+    for i, value in enumerate(row_data):
+        row.cells[i].text = value
+        
+#save the word doc
+doc.save(str(sw_name)+".docx")
 print(tabulated_table)          
-    
     
 host_dev_table.write(tabulated_table)
 host_dev_table.write("\n\n=========================================\n")

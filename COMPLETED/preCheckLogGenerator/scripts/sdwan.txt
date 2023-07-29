@@ -1,0 +1,26 @@
+ping 216.150.233.201
+!
+ping 172.20.208.14
+!
+ping 172.20.208.15
+!
+ping vrf 500 10.194.28.90
+!
+ping 10.204.10.13
+!
+ping 10.204.10.14
+!
+term length 0
+!
+show ip ospf neigh
+!
+sh ip route vrf 10 ospf
+!
+sh ip route vrf 500 ospf
+!
+sh ip int brief
+!
+sh run
+!
+sh sdwan run
+!

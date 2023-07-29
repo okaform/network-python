@@ -37,6 +37,8 @@ show spanning-tree | include VLAN|This bridge
 ! *************************************************
 show cdp neighbors
 !
+show lldp neigh
+!
 show interface counters errors
 !
 show interface status
