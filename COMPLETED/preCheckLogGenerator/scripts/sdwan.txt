@@ -1,26 +1,21 @@
-ping 216.150.233.201
+!============================================
+!------ hdlcrwcrt003 ------------------------
+!===========================================
+show bgp neighbor 10.193.9.1
 !
-ping 172.20.208.14
+ping 10.193.9.1
 !
-ping 172.20.208.15
+ping 172.20.208.14 vpn 10
 !
-ping vrf 500 10.194.28.90
+ping 172.20.208.15 vpn 10
 !
-ping 10.204.10.13
+ping 10.204.10.13 vpn 10
 !
-ping 10.204.10.14
+ping 10.204.10.14 vpn 10
 !
-term length 0
+sh int detail ge0/1.100 | nomore
 !
-show ip ospf neigh
+show hardware inventory | tab
 !
-sh ip route vrf 10 ospf
-!
-sh ip route vrf 500 ospf
-!
-sh ip int brief
-!
-sh run
-!
-sh sdwan run
-!
+show run | nomore
+
