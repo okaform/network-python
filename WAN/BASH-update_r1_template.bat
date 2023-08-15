@@ -15,7 +15,7 @@
 
 ::@py <directory to the python script> %* forward any command line arguments to the python program
 :: change the color of the batch file.(I didn't know I could do that)
-color 30 
+color F0 
 
 @echo off
 ::Rem echo Input your as_id

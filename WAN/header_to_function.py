@@ -1,36 +1,36 @@
 from special_commands import *
-from net_connection import *
+from vpn500_commands import *
 
-conn_1 = r1_conn()
-#conn_3 = r3_conn()
+
 header_to_function_dict = {
-    'csv-deviceIP': get_loopback0(conn_1)
-    ,'csv-host-name': get_hostname(conn_1)
-
+    'csv-deviceIP': get_loopback0
+    ,'csv-host-name': get_hostname
+    ,'//snmp/contact': "GM GTSC (855)780-1125"
+    ,'//snmp/location': get_snmp_location
+    #VPN 500 static routes
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_1/prefix': get_vpn500_static_route("s",1)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_2/prefix': get_vpn500_static_route("s",2)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_3/prefix': get_vpn500_static_route("s",3)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_4/prefix': get_vpn500_static_route("s",4)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_5/prefix': get_vpn500_static_route("s",5)
+    #VPN 500 next hop
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_1/next-hop/vpn500_next_hop_ip_address_1/address': get_vpn500_next_hop("n",1)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_2/next-hop/vpn500_next_hop_ip_address_2/address': get_vpn500_next_hop("n",2)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_3/next-hop/vpn500_next_hop_ip_address_3/address': get_vpn500_next_hop("n",3)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_4/next-hop/vpn500_next_hop_ip_address_4/address': get_vpn500_next_hop("n",4)
+    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_5/next-hop/vpn500_next_hop_ip_address_5/address': get_vpn500_next_hop("n",5)
+    #VPN 500 Aggregate
+    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_1/prefix-entry': get_vpn500_aggregate("a",1)
+    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_2/prefix-entry': get_vpn500_aggregate("a",2)
+    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_3/prefix-entry': get_vpn500_aggregate("a",3)
+    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_4/prefix-entry': get_vpn500_aggregate("a",4)
+    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_5/prefix-entry': get_vpn500_aggregate("a",5)   
+    
 }
 
 '''
-    
-    ,'//snmp/contact': get_snmp_contact
-    ,'//snmp/location': get_snmp_location
-    #VPN 500 static routes
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_1/prefix': (get_vpn500_static_route, "1")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_2/prefix': (get_vpn500_static_route, "2")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_3/prefix': (get_vpn500_static_route, "3")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_4/prefix': (get_vpn500_static_route, "4")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_5/prefix': (get_vpn500_static_route, "5")
-    #VPN 500 next hop
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_1/next-hop/vpn500_next_hop_ip_address_1/address': (get_vpn500_next_hop, "1")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_2/next-hop/vpn500_next_hop_ip_address_2/address': (get_vpn500_next_hop, "2")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_3/next-hop/vpn500_next_hop_ip_address_3/address': (get_vpn500_next_hop, "3")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_4/next-hop/vpn500_next_hop_ip_address_4/address': (get_vpn500_next_hop, "4")
-    ,'/500/vpn-instance/ip/route/vpn500_ipv4_ip_prefix_5/next-hop/vpn500_next_hop_ip_address_5/address': (get_vpn500_next_hop, "5")
-    #VPN 500 Aggregate
-    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_1/prefix-entry': (get_vpn500_aggregate, "1")
-    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_2/prefix-entry': (get_vpn500_aggregate, "2")
-    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_3/prefix-entry': (get_vpn500_aggregate, "3")
-    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_4/prefix-entry': (get_vpn500_aggregate, "4")
-    ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_5/prefix-entry': (get_vpn500_aggregate, "5")
+
+
     #VPN 500 int gi0/0/0.358
     ,'/500/GigabitEthernet0/0/0.358/interface/ip/address': get_000_358_ip_address
     ,'/500/GigabitEthernet0/0/0.358/interface/dhcp-helper': get_000_358_dhcp_helper

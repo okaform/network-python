@@ -9,7 +9,7 @@ from netmiko.ssh_exception import AuthenticationException
     --------- CREDENTIAL OPTIONS --------
     ------------------------------------- '''
 as_id = "as_cz507f" #input("Insert your as_id: ")
-as_pass = "7Bn5wrWgdf6T8jSU" #input("\nInsert your as_password: ")
+as_pass = "e5mQGcE3RPspvZMd" #input("\nInsert your as_password: ")
 r1_ip_address = "10.193.8.158" #input("\nInsert router 1's IP Address: ")
 r3_ip_address = "10.193.8.184" #input("\nInsert router 3's IP Address: ")
 
