@@ -1,4 +1,4 @@
-'''This section is for VPN 500. Goodluck!'''
+'''This section is for VPN 10. Almost there!'''
 from net_connection import *
 from no_net_connection import *
 import re, os, sys

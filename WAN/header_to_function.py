@@ -1,5 +1,6 @@
 from special_commands import *
 from vpn500_commands import *
+from vpn200_commands import *
 
 
 header_to_function_dict = {
@@ -25,61 +26,73 @@ header_to_function_dict = {
     ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_3/prefix-entry': get_vpn500_aggregate("a",3)
     ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_4/prefix-entry': get_vpn500_aggregate("a",4)
     ,'/500/vpn-instance/omp/advertise/aggregate/prefix-list/vpn500_aggregate_prefix_5/prefix-entry': get_vpn500_aggregate("a",5)   
+    #VPN 500 int gi0/0/0.358
+    ,'/500/GigabitEthernet0/0/0.358/interface/ip/address': get_000_358_ip_address
+    ,'/500/GigabitEthernet0/0/0.358/interface/dhcp-helper': get_000_358_dhcp_helper
+    ,'/500/GigabitEthernet0/0/0.358/interface/shutdown': get_000_358_shutdown
+    ,'/500/GigabitEthernet0/0/0.358/interface/vrrp/35/ipv4/address': get_000_358_vrrp
+    #VPN 500 int gi0/0/0.25    
+    ,'/500/GigabitEthernet0/0/0.25/interface/description': get_000_25_description
+    ,'/500/GigabitEthernet0/0/0.25/interface/ip/address': get_000_25_ip_address
+    ,'/500/GigabitEthernet0/0/0.25/interface/shutdown': get_000_25_shutdown
+    ,'/500/GigabitEthernet0/0/0.25/interface/vrrp/25/ipv4/address': get_000_25_vrrp    
+    #VPN 500 router_id
+    ,'/500//router/ospf/router-id': get_vpn500_ospf_id    
+    #VPN 200 static routes
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_1/prefix': get_vpn200_static_route("s",1)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_2/prefix': get_vpn200_static_route("s",2)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_3/prefix': get_vpn200_static_route("s",3)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_4/prefix': get_vpn200_static_route("s",4)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_5/prefix': get_vpn200_static_route("s",5)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_6/prefix': get_vpn200_static_route("s",6)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_7/prefix': get_vpn200_static_route("s",7)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_8/prefix': get_vpn200_static_route("s",8)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_9/prefix': get_vpn200_static_route("s",9)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_10/prefix': get_vpn200_static_route("s",10)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_11/prefix': get_vpn200_static_route("s",11)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_12/prefix': get_vpn200_static_route("s",12)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_13/prefix': get_vpn200_static_route("s",13)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_14/prefix': get_vpn200_static_route("s",14)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_15/prefix': get_vpn200_static_route("s",15)
+    #VPN 200 next hop
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_1/next-hop/vpn200_next_hop_ip_address_1/address': get_vpn200_next_hop("n",1)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_2/next-hop/vpn200_next_hop_ip_address_2/address': get_vpn200_next_hop("n",2)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_3/next-hop/vpn200_next_hop_ip_address_3/address': get_vpn200_next_hop("n",3)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_4/next-hop/vpn200_next_hop_ip_address_4/address': get_vpn200_next_hop("n",4)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_5/next-hop/vpn200_next_hop_ip_address_5/address': get_vpn200_next_hop("n",5)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_6/next-hop/vpn200_next_hop_ip_address_6/address': get_vpn200_next_hop("n",6)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_7/next-hop/vpn200_next_hop_ip_address_7/address': get_vpn200_next_hop("n",7)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_8/next-hop/vpn200_next_hop_ip_address_8/address': get_vpn200_next_hop("n",8)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_9/next-hop/vpn200_next_hop_ip_address_9/address': get_vpn200_next_hop("n",9)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_10/next-hop/vpn200_next_hop_ip_address_10/address': get_vpn200_next_hop("n",10)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_11/next-hop/vpn200_next_hop_ip_address_11/address': get_vpn200_next_hop("n",11)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_12/next-hop/vpn200_next_hop_ip_address_12/address': get_vpn200_next_hop("n",12)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_13/next-hop/vpn200_next_hop_ip_address_13/address': get_vpn200_next_hop("n",13)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_14/next-hop/vpn200_next_hop_ip_address_14/address': get_vpn200_next_hop("n",14)
+    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_15/next-hop/vpn200_next_hop_ip_address_15/address': get_vpn200_next_hop("n",15)    
+    #VPN 200 int gi0/0/0.212
+    ,'/200/GigabitEthernet0/0/0.212/interface/description': get_000_212_description
+    ,'/200/GigabitEthernet0/0/0.212/interface/ip/address': get_000_212_ip_address
+    ,'/200/GigabitEthernet0/0/0.212/interface/shutdown': get_000_212_shutdown
+    ,'/200/GigabitEthernet0/0/0.212/interface/vrrp/212/ipv4/address': get_000_212_vrrp
+    
+    
+    
+    
     
 }
 
 '''
 
 
-    #VPN 500 int gi0/0/0.358
-    ,'/500/GigabitEthernet0/0/0.358/interface/ip/address': get_000_358_ip_address
-    ,'/500/GigabitEthernet0/0/0.358/interface/dhcp-helper': get_000_358_dhcp_helper
-    ,'/500/GigabitEthernet0/0/0.358/interface/shutdown': get_000_358_shutdown
-    ,'/500/GigabitEthernet0/0/0.358/interface/vrrp/35/ipv4/address': get_000_358_vrrp
-    #VPN 500 int gi0/0/0.25
-    ,'/500/GigabitEthernet0/0/0.25/interface/description': get_000_25_description
-    ,'/500/GigabitEthernet0/0/0.25/interface/ip/address': get_000_25_ip_address
-    ,'/500/GigabitEthernet0/0/0.25/interface/shutdown': get_000_25_shutdown
-    ,'/500/GigabitEthernet0/0/0.25/interface/vrrp/25/ipv4/address': get_000_25_vrrp
-    #VPN 500 router_id
-    ,'/500//router/ospf/router-id' : get_vpn500_ospf_id
-    #VPN 200 static routes
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_1/prefix': (get_vpn200_static_route, "1")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_2/prefix': (get_vpn200_static_route, "2")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_3/prefix': (get_vpn200_static_route, "3")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_4/prefix': (get_vpn200_static_route, "4")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_5/prefix': (get_vpn200_static_route, "5")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_6/prefix': (get_vpn200_static_route, "6")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_7/prefix': (get_vpn200_static_route, "7")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_8/prefix': (get_vpn200_static_route, "8")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_9/prefix': (get_vpn200_static_route, "9")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_10/prefix': (get_vpn200_static_route, "10")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_11/prefix': (get_vpn200_static_route, "11")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_12/prefix': (get_vpn200_static_route, "12")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_13/prefix': (get_vpn200_static_route, "13")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_14/prefix': (get_vpn200_static_route, "14")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_15/prefix': (get_vpn200_static_route, "15")
-    #VPN 200 next hop
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_1/next-hop/vpn200_next_hop_ip_address_1/address': (get_vpn200_next_hop, "1")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_2/next-hop/vpn200_next_hop_ip_address_2/address': (get_vpn200_next_hop, "2")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_3/next-hop/vpn200_next_hop_ip_address_3/address': (get_vpn200_next_hop, "3")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_4/next-hop/vpn200_next_hop_ip_address_4/address': (get_vpn200_next_hop, "4")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_5/next-hop/vpn200_next_hop_ip_address_5/address': (get_vpn200_next_hop, "5")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_6/next-hop/vpn200_next_hop_ip_address_6/address': (get_vpn200_next_hop, "6")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_7/next-hop/vpn200_next_hop_ip_address_7/address': (get_vpn200_next_hop, "7")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_8/next-hop/vpn200_next_hop_ip_address_8/address': (get_vpn200_next_hop, "8")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_9/next-hop/vpn200_next_hop_ip_address_9/address': (get_vpn200_next_hop, "9")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_10/next-hop/vpn200_next_hop_ip_address_10/address': (get_vpn200_next_hop, "10")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_11/next-hop/vpn200_next_hop_ip_address_11/address': (get_vpn200_next_hop, "11")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_12/next-hop/vpn200_next_hop_ip_address_12/address': (get_vpn200_next_hop, "12")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_13/next-hop/vpn200_next_hop_ip_address_13/address': (get_vpn200_next_hop, "13")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_14/next-hop/vpn200_next_hop_ip_address_14/address': (get_vpn200_next_hop, "14")
-    ,'/200/vpn-instance/ip/route/vpn200_ipv4_ip_prefix_15/next-hop/vpn200_next_hop_ip_address_15/address': (get_vpn200_next_hop, "15")
-    #VPN 200 int gi0/0/0.212
-    ,'/200/GigabitEthernet0/0/0.212/interface/description': get_000_212_description
-    ,'/200/GigabitEthernet0/0/0.212/interface/ip/address': get_000_212_ip_address
-    ,'/200/GigabitEthernet0/0/0.212/interface/shutdown': get_000_212_shutdown
-    ,'/200/GigabitEthernet0/0/0.212/interface/vrrp/212/ipv4/address': get_000_212_vrrp
+
+
+
+
+
+
+
+
     #VPN 10 static routes
     ,'/10/vpn-instance/ip/route/vpn10_ipv4_ip_route_prefix_1/prefix': (get_vpn10_static_routes, "1")
     ,'/10/vpn-instance/ip/route/vpn10_ipv4_ip_route_prefix_2/prefix': (get_vpn10_static_routes, "2")

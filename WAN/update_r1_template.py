@@ -38,6 +38,7 @@ try:
                 sheet1.cell(row = 2, column = col + i, value=value_to_set) #Update the coresponding column 
             else:
                 value_to_set = header_to_function_dict[header]()
+                print(value_to_set)
                 sheet1.cell(row = 2, column = col + i, value=value_to_set) #Update the coresponding column 
     
     workbook.save("N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx")

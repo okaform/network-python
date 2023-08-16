@@ -9,7 +9,7 @@ def get_loopback0():
     find_ipv4 = re.search(ipv4_pattern, raw_output)
     if find_ipv4:
         found_ipv4 = find_ipv4.group()
-        print(found_ipv4)
+        #print(found_ipv4)
         return found_ipv4
     else:
         print("No loopback found!")
@@ -19,11 +19,11 @@ def get_loopback0():
 def get_hostname():
     raw_output = conn.send_command("show running-config | include (hostname )", read_timeout=180)
     hostname = raw_output.split(" ")[1]
-    print(hostname)
+    #print(hostname)
     return hostname
 
 def get_snmp_location():
     location = conn.send_command("show snmp location", read_timeout=180)
-    print(location)
+    #print(location)
     return location
     
