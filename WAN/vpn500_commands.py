@@ -27,11 +27,11 @@ def generate_static_route_list(route_type, prefix_number):
             return ""        
  
     else: #get the actual data from the router and return the first line. This should only be run once
-        print("This should only be seen ONCEEEEE!")
+        ##print("This should only be seen ONCEEEEE!")
         #Get the static routes
         static_routes = conn.send_command("show running-config | include ip route vrf NA-Guest", read_timeout=180)
         split_static_routes = static_routes.split('\n')
-        print(split_static_routes)
+        ##print(split_static_routes)
         reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)')
         for line in split_static_routes:
             mo = reg.findall(line)
@@ -132,4 +132,5 @@ def get_vpn500_ospf_id():
     reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)') #use regular expression to find the ip. We could also use split but this is more generic
     mo = re.search(reg, guest_ospf)
     return mo.group()
+    conn.disconnect()
     

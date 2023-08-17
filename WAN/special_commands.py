@@ -5,6 +5,7 @@ conn = r1_conn()
 
 def get_loopback0():
     raw_output = conn.send_command("show ip interface brief | include Loopback0", read_timeout=180)
+    print("I AM IN HERE ONLY ONCE. to test loopback0 function call twice.")
     ipv4_pattern = r'\b(?:\d{1,3}\.){3}\d{1,3}\b'
     find_ipv4 = re.search(ipv4_pattern, raw_output)
     if find_ipv4:
@@ -25,5 +26,6 @@ def get_hostname():
 def get_snmp_location():
     location = conn.send_command("show snmp location", read_timeout=180)
     #print(location)
+    conn.disconnect()
     return location
     

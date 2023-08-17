@@ -3,13 +3,21 @@ from net_connection import *
 from no_net_connection import *
 import re, os, sys
 
-conn = r1_conn()
+conn = r3_conn()
 #create the List needed globally
 aggregate_list = []
 static_list = []
 next_hop_list = []
 
 
+def get_m1_next_hop():
+    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/1.100
+    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/7.50 - tloc inet 1
+    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/3 - inet 2
+    #show run vpn 0 | inc 0.0.0.0. THere's a list 
+
+
+'''
 def generate_static_route_list(route_type, prefix_number): 
     #if the file exist,then return that line in the file, if it doesn't then run and return the line in the list
     #if static_list is not empty and aggregate_list is also not empty and next_hop_list is also not empty, then we return the list item based on the route type or an empty string
@@ -152,6 +160,6 @@ def get_vpn10_ospf_id():
     guest_ospf = conn.send_command("show ip ospf 1293 | include Routing Process", read_timeout=180)
     reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)') #use regular expression to find the ip. We could also use split but this is more generic
     mo = re.search(reg, guest_ospf)
-    conn.disconnect()
     return mo.group()
-    
+
+'''    
