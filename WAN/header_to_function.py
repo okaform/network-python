@@ -2,10 +2,12 @@ from special_commands import *
 from vpn500_commands import *
 from vpn200_commands import *
 from vpn10_commands import *
+from vpn0_commands import *
 
+loopback0 = get_loopback0()
 
 header_to_function_dict = {
-    'csv-deviceIP': get_loopback0
+    'csv-deviceIP': loopback0
     ,'csv-host-name': get_hostname
     ,'//snmp/contact': "GM GTSC (855)780-1125"
     ,'//snmp/location': get_snmp_location
@@ -152,7 +154,7 @@ header_to_function_dict = {
     ,'/10/GigabitEthernet0/0/0.659/interface/ip/address': get_000_659_ip_address
     ,'/10/GigabitEthernet0/0/0.659/interface/shutdown': get_000_659_shutdown
     #Loopback
-    ,'/10/Loopback0/interface/ip/address': lambda: header_to_function_dict.get('csv-deviceIP')()+"/32"
+    ,'/10/Loopback0/interface/ip/address': str(loopback0)+"/32"
     #VPN 10 int gi0/0/0.202
     ,'/10/GigabitEthernet0/0/0.202/interface/description': get_000_202_description
     ,'/10/GigabitEthernet0/0/0.202/interface/ip/address': get_000_202_ip_address
@@ -169,6 +171,23 @@ header_to_function_dict = {
     ,'/0/vpn-instance/ip/route/lte_ip_prefix_default/prefix': '0.0.0.0/0'    
     #VPN 0 next hop
     ,'/0/vpn-instance/ip/route/m1_ip_prefix_default/next-hop/m1_next_hop_ip_address_0/address': get_m1_next_hop    
+    ,'/0/vpn-instance/ip/route/m2_ip_prefix_default/next-hop/m2_next_hop_ip_address_0/address': get_m2_next_hop
+    ,'/0/vpn-instance/ip/route/i1_ip_prefix_default/next-hop/i1_next_hop_ip_address_0/address': get_i1_next_hop
+    ,'/0/vpn-instance/ip/route/i2_ip_prefix_default/next-hop/i2_next_hop_ip_address_0/address': get_i2_next_hop
+    ,'/0/vpn-instance/ip/route/i3_ip_prefix_default/next-hop/i3_next_hop_ip_address_0/address': get_i3_next_hop
+    ,'/0/vpn-instance/ip/route/lte_ip_prefix_default/next-hop/lte_next_hop_ip_address_0/address': get_lte_next_hop    
+    #VPN 0 int gi0/0/2
+    ,'/0/GigabitEthernet0/0/2/interface/description': get_002_description
+    ,'/0/GigabitEthernet0/0/2/interface/ip/address': get_002_ip_address
+    ,'/0/GigabitEthernet0/0/2/interface/shutdown': get_002_shutdown
+    ,'/0/GigabitEthernet0/0/2/interface/autonegotiate': get_002_autonegotiate
+    ,'/0/GigabitEthernet0/0/2/interface/shaping-rate': get_002_shaping_rate
+    ,'/0/GigabitEthernet0/0/2/interface/bandwidth-upstream': get_002_bandwidth_upstream
+    ,'/0/GigabitEthernet0/0/2/interface/bandwidth-downstream': get_002_bandwidth_downstream    
+    
+
+
+
     
     
 }
@@ -180,19 +199,10 @@ header_to_function_dict = {
 
 
 
-    ,'/0/vpn-instance/ip/route/m2_ip_prefix_default/next-hop/m2_next_hop_ip_address_0/address': get_m2_next_hop
-    ,'/0/vpn-instance/ip/route/i1_ip_prefix_default/next-hop/i1_next_hop_ip_address_0/address': get_i1_next_hop
-    ,'/0/vpn-instance/ip/route/i2_ip_prefix_default/next-hop/i2_next_hop_ip_address_0/address': get_i2_next_hop
-    ,'/0/vpn-instance/ip/route/i3_ip_prefix_default/next-hop/i3_next_hop_ip_address_0/address': get_i3_next_hop
-    ,'/0/vpn-instance/ip/route/lte_ip_prefix_default/next-hop/lte_next_hop_ip_address_0/address': get_lte_next_hop
-    #VPN 0 int gi0/0/2
-    ,'/0/GigabitEthernet0/0/2/interface/description': get_002_description
-    ,'/0/GigabitEthernet0/0/2/interface/ip/address': get_002_ip_address
-    ,'/0/GigabitEthernet0/0/2/interface/shutdown': get_002_shutdown
-    ,'/0/GigabitEthernet0/0/2/interface/autonegotiate': get_002_autonegotiate
-    ,'/0/GigabitEthernet0/0/2/interface/shaping-rate': get_002_shaping_rate
-    ,'/0/GigabitEthernet0/0/2/interface/bandwidth-upstream': get_002_bandwidth_upstream
-    ,'/0/GigabitEthernet0/0/2/interface/bandwidth-downstream': get_002_bandwidth_downstream
+
+
+
+
     #VPN 0 int gi0/0/1
     ,'/0/GigabitEthernet0/0/1/interface/shutdown': "FALSE"
     #VPN 0 int te0/0/4

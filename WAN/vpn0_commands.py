@@ -8,15 +8,209 @@ conn = r3_conn()
 aggregate_list = []
 static_list = []
 next_hop_list = []
+reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/1.100 - mpls 1
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/7.50 - tloc inet 1
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/7.11 - tloc mpls 2 
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/3 - inet 2
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/0 inet 3
+#show ip routes | inc 0.0.0.0 | inc static | inc ge0/7.59 - tloc lte
+#show run vpn 0 | inc 0.0.0.0. THere's a list 
 
 
 def get_m1_next_hop():
-    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/1.100
-    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/7.50 - tloc inet 1
-    #show ip routes | inc 0.0.0.0 | inc static | inc ge0/3 - inet 2
-    #show run vpn 0 | inc 0.0.0.0. THere's a list 
+    found_next_hop = ''
+    mpls_static = ''
+    try:
+        mpls_static = conn.send_command_timing("show ip routes static | include 0.0.0.0 | inc ge0/1.100", strip_prompt=True, strip_command=True, read_timeout=5)#we use send_command_timing so it doesn't take so much time
+        conn.disconnect()
+        print("R3 is disconnected")
+        found_next_hop = reg.findall(mpls_static)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if found_next_hop == "": #if no static IP Address is found, find it from the ip address configuration
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()
+        #new_conn.send_command("")
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/1.100 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by newline then by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad
+    else:
+        found_next_hop = reg.findall(mpls_static)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
 
 
+def get_m2_next_hop():
+    mpls2_tloc = ''
+    found_next_hop = ''
+    try:#we expect the timeout to fail so we catch it.
+        conn = r3_conn()
+        mpls2_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/7.11", strip_prompt=True, strip_command=True, read_timeout=1)#we use send_command_timing so it doesn't take so much time    
+        conn.disconnect()#trying to disconnect to see if it fixes the timing issue
+        print("R3 is disconnected")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if mpls2_tloc == '' or 'show ip routes' in mpls2_tloc: #we are adding the command as a way to show that the string is empty since the strip command and prompt still shows
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()#connect back
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/7.11 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad       
+    else:
+        print("did you get here for mpls2?")
+        found_next_hop = reg.findall(mpls2_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
+
+
+def get_i1_next_hop():
+    inet1_tloc = ''
+    found_next_hop = ''
+    try:#we expect the timeout to fail so we catch it.
+        conn = r3_conn()
+        inet1_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/7.50", strip_prompt=True, strip_command=True, read_timeout=1)#we use send_command_timing so it doesn't take so much time    
+        conn.disconnect()#trying to disconnect to see if it fixes the timing issue
+        print("R3 is disconnected")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if inet1_tloc == '' or 'show ip routes' in inet1_tloc: #we are adding the command as a way to show that the string is empty since the strip command and prompt still shows
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()#connect back
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/7.50 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad       
+    else:
+        print("Did you get here for inet1?")
+        found_next_hop = reg.findall(inet1_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
+
+def get_i2_next_hop():
+    inet2_tloc = ''
+    found_next_hop = ''
+    try:#we expect the timeout to fail so we catch it.
+        conn = r3_conn()
+        inet2_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/3", strip_prompt=True, strip_command=True, read_timeout=1)#we use send_command_timing so it doesn't take so much time    
+        conn.disconnect()#trying to disconnect to see if it fixes the timing issue
+        print("R3 is disconnected")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if inet2_tloc == '' or 'show ip routes' in inet2_tloc: #we are adding the command as a way to show that the string is empty since the strip command and prompt still shows
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()#connect back
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/3 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad       
+    else:
+        print("Did you get here for inet2?")
+        found_next_hop = reg.findall(inet2_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
+        
+def get_i3_next_hop():
+    inet3_tloc = ''
+    found_next_hop = ''
+    try:#we expect the timeout to fail so we catch it.
+        conn = r3_conn()
+        inet3_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/0", strip_prompt=True, strip_command=True, read_timeout=1)#we use send_command_timing so it doesn't take so much time    
+        conn.disconnect()#trying to disconnect to see if it fixes the timing issue
+        print("R3 is disconnected")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if inet3_tloc == '' or 'show ip routes' in inet3_tloc: #we are adding the command as a way to show that the string is empty since the strip command and prompt still shows
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()#connect back
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/0 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad       
+    else:
+        print("Did you get here for inet3?")
+        found_next_hop = reg.findall(inet3_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
+        
+#The TLOC might be messed up. Check diagram and subnet calculation
+def get_lte_next_hop():
+    lte_tloc = ''
+    found_next_hop = ''
+    try:#we expect the timeout to fail so we catch it.
+        conn = r3_conn()
+        lte_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/7.59", strip_prompt=True, strip_command=True, read_timeout=1)#we use send_command_timing so it doesn't take so much time    
+        conn.disconnect()#trying to disconnect to see if it fixes the timing issue
+        print("R3 is disconnected")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        found_next_hop = ''
+    if lte_tloc == '' or 'show ip routes' in lte_tloc: #we are adding the command as a way to show that the string is empty since the strip command and prompt still shows
+        #Get the IP Address from MPLS 1 and subtract 1 from the ip 
+        new_conn = r3_conn()#connect back
+        mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/7.59 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
+        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+        new_ip_ad = subtract_one_from_ipv4(ip_ad)
+        return new_ip_ad       
+    else:
+        print("Did you get here for lte?")
+        found_next_hop = reg.findall(lte_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
+        return found_next_hop
+
+        
+def get_002_description():
+    conn = r3_conn()
+    ge0_3_desc = conn.send_command("show running-config vpn 0 interface ge0/3 description | exclude vpn | exclude interface", read_timeout=120)
+    strip_str = ge0_3_desc.replace('description', '').strip().strip('"')
+    return strip_str
+
+def get_002_ip_address():
+    ge0_3_ip = conn.send_command("show running-config vpn 0 interface ge0/3 ip | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_ip_strip = ge0_3_ip.split(" ")[-1]
+    return ge0_3_ip_strip
+
+def get_002_shutdown():
+    ge0_3_shutdown = conn.send_command("show running-config vpn 0 interface ge0/3 shutdown | exclude vpn | exclude interface", read_timeout=120)
+    if "no shutdown" in ge0_3_shutdown:
+        return "FALSE"
+    else:
+        return "TRUE"
+
+def get_002_autonegotiate():
+    ge0_3_auto = conn.send_command("show int detail ge0/3 | inc auto", read_timeout=120)
+    if ge0_3_auto == "false":
+        return "FALSE"
+    else:
+        return "TRUE"
+
+    
+def get_002_shaping_rate():
+    ge0_3_shape = conn.send_command("show running-config vpn 0 interface ge0/3 shaping-rate | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_shape_strip = ge0_3_shape.split(" ")[-1]
+    return ge0_3_shape_strip
+
+
+def get_002_bandwidth_upstream():
+    ge0_3_up = conn.send_command("show running-config vpn 0 interface ge0/3 bandwidth-upstream | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_up_strip = ge0_3_up.split(" ")[-1]
+    return ge0_3_up_strip
+
+def get_002_bandwidth_downstream():
+    ge0_3_down = conn.send_command("show running-config vpn 0 interface ge0/3 bandwidth-downstream | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_down_strip = ge0_3_down.split(" ")[-1]
+    return ge0_3_down_strip
+
+
+
+
+
+
+
+
+
+        
 '''
 def generate_static_route_list(route_type, prefix_number): 
     #if the file exist,then return that line in the file, if it doesn't then run and return the line in the list

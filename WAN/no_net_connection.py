@@ -37,3 +37,11 @@ subnet_to_cidr = {
 #This function returns the corresponding cidr notation from the subnet mask
 def convert_to_cidr(subnet_mask): 
     return subnet_to_cidr.get(subnet_mask, "CIDR NOT FOUND")
+
+def subtract_one_from_ipv4(ipv4_address):
+    octets = ipv4_address.split('.')
+    last_octet = int(octets[-1]) #get the last octet and convert to int
+    new_last_octet = max(last_octet - 1, 0) #ensure we don't get a negative number
+    octets[-1] = str(new_last_octet)
+    new_ipv4_address = '.'.join(octets)
+    return new_ipv4_address
