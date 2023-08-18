@@ -5,10 +5,11 @@ from vpn10_commands import *
 from vpn0_commands import *
 
 loopback0 = get_loopback0()
+hostname = get_hostname()
 
 header_to_function_dict = {
     'csv-deviceIP': loopback0
-    ,'csv-host-name': get_hostname
+    ,'csv-host-name': hostname
     ,'//snmp/contact': "GM GTSC (855)780-1125"
     ,'//snmp/location': get_snmp_location
     #VPN 500 static routes
@@ -175,7 +176,7 @@ header_to_function_dict = {
     ,'/0/vpn-instance/ip/route/i1_ip_prefix_default/next-hop/i1_next_hop_ip_address_0/address': get_i1_next_hop
     ,'/0/vpn-instance/ip/route/i2_ip_prefix_default/next-hop/i2_next_hop_ip_address_0/address': get_i2_next_hop
     ,'/0/vpn-instance/ip/route/i3_ip_prefix_default/next-hop/i3_next_hop_ip_address_0/address': get_i3_next_hop
-    ,'/0/vpn-instance/ip/route/lte_ip_prefix_default/next-hop/lte_next_hop_ip_address_0/address': get_lte_next_hop    
+    ,'/0/vpn-instance/ip/route/lte_ip_prefix_default/next-hop/lte_next_hop_ip_address_0/address': get_lte_next_hop  
     #VPN 0 int gi0/0/2
     ,'/0/GigabitEthernet0/0/2/interface/description': get_002_description
     ,'/0/GigabitEthernet0/0/2/interface/ip/address': get_002_ip_address
@@ -184,27 +185,8 @@ header_to_function_dict = {
     ,'/0/GigabitEthernet0/0/2/interface/shaping-rate': get_002_shaping_rate
     ,'/0/GigabitEthernet0/0/2/interface/bandwidth-upstream': get_002_bandwidth_upstream
     ,'/0/GigabitEthernet0/0/2/interface/bandwidth-downstream': get_002_bandwidth_downstream    
-    
-
-
-
-    
-    
-}
-
-'''
-
-
-
-
-
-
-
-
-
-
     #VPN 0 int gi0/0/1
-    ,'/0/GigabitEthernet0/0/1/interface/shutdown': "FALSE"
+    ,'/0/GigabitEthernet0/0/1/interface/shutdown': "FALSE"    
     #VPN 0 int te0/0/4
     ,'/0/TenGigabitEthernet0/0/4.100/interface/description': get_004_100_description
     ,'/0/TenGigabitEthernet0/0/4.100/interface/ip/address': get_004_100_ip_address
@@ -240,10 +222,13 @@ header_to_function_dict = {
     ,'/0//router/bgp/neighbor/bgp_neighbor_address_0/shutdown': get_bgp_neighbor_shutdown
     ,'/0//router/bgp/neighbor/bgp_neighbor_address_0/remote-as': get_bgp_neighbor_remote_as
     #FINAL STUFF
-    ,'//system/host-name': get_hostname
-    ,'//system/gps-location/latitude': get_latitude
-    ,'//system/gps-location/longitude': get_longitude
-    ,'//system/system-ip': get_loopback0
+    ,'//system/host-name': hostname  
+    ,'//system/gps-location/latitude': "DO THIS YOURSELF"
+    ,'//system/gps-location/longitude': "DO THIS YOURSELF"
+    ,'//system/system-ip': loopback0
     ,'//system/site-id': get_site_id
     
-'''
+    
+    
+}
+

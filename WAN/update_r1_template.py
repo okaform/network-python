@@ -10,6 +10,8 @@ from header_to_function import header_to_function_dict
 sys.path.append('N:/Python Libraries')
 import pandas as pd
 
+start_time = datetime.now()
+
 ''' -------------------------------------------------
     ---------- CONVERT FROM CSV TO XLSX -------------
     -------------------------------------------------- '''
@@ -47,4 +49,15 @@ except FileNotFoundError:
     print("File not found:", r1_template)
 except openpyxl.utils.exceptions.InvalidFileException:
     print("Invalid Excel file format:", r1_template)
-    
+
+''' -------------------------------------------------
+    ---------- CONVERT FROM XLSX TO CSV -------------
+    -------------------------------------------------- '''
+excel_filename = "N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx"
+r1_csv = "N:\\Report\\vEdge-to-cEdge\\r1-temp.csv"
+data = pd.read_excel(excel_filename) #Load CSV file using pandas
+data.to_csv(r1_csv, index=False)
+
+
+elapsed_time = datetime.now() - start_time #to calculate the total elapsed time the script took to run
+print("This script took approximately {}".format(elapsed_time))    
