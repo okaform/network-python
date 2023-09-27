@@ -108,14 +108,15 @@ for i in range(len(ipAd)):
             logs_err = open("ZZ-error-logs.txt", mode="a")
             logs_err.write(issue_st)
             continue #This should break out of the loop
-        con.enable()
+        #con.enable()
         
         scriptFile = open("N:\\Scripts\\COMPLETED\\preCheckLogGenerator\\scripts\\"+str(script_to_use), "r")#we're going back a directory because we changed to the precheck directory
         
+        #for others
         fileName = con.send_command("sh run | i (hostname )", read_timeout=180)
         #for VIPTELA
         #fileName = con.send_command("sh run | i host-name", read_timeout=180)
-        #for others
+        
         preCheck_file = open(str(fileName.split(" ")[1])+ pr_po_name, mode="a") #create precheck_file file in .txt for pfcn switches
         
         listObj = scriptFile.readlines()

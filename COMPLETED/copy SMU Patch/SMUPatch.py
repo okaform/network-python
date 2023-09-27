@@ -44,16 +44,32 @@ if en_secret == '':
     ---------- SMU PATCH CHOICES ---------
     ----------------------------------- '''
 #smu pathces
+#9300 upgrade
+#smu_1 = "copy tftp://10.9.1.250/cat9k_iosxe.17.06.04.CSCwd17488.SPA.smu.bin flash:"
+#smu_2 = "copy tftp://10.9.1.252/cat9k_iosxe.17.06.04.CSCwa34390.SPA.smu.bin flash:"
+#smu_3 = "copy tftp://10.9.1.250/cat9k_iosxe.17.06.04.CSCwb51963.SPA.smu.bin flash:"
 
-smu_1 = "copy tftp://10.9.1.250/cat9k_iosxe.17.06.04.CSCwd17488.SPA.smu.bin flash:"
-smu_2 = "copy tftp://10.9.1.252/cat9k_iosxe.17.06.04.CSCwa34390.SPA.smu.bin flash:"
-smu_3 = "copy tftp://10.9.1.250/cat9k_iosxe.17.06.04.CSCwb51963.SPA.smu.bin flash:"
+#verify_1 = "Verify flash:cat9k_iosxe.17.06.04.CSCwd17488.SPA.smu.bin"
+#verify_2 = "Verify flash:cat9k_iosxe.17.06.04.CSCwa34390.SPA.smu.bin"
+#verify_3 = "Verify flash:cat9k_iosxe.17.06.04.CSCwb51963.SPA.smu.bin"
+#verify_4 = "Verify flash:cat9k_iosxe.17.06.04.SPA.bin"
 
-verify_1 = "Verify flash:cat9k_iosxe.17.06.04.CSCwd17488.SPA.smu.bin"
-verify_2 = "Verify flash:cat9k_iosxe.17.06.04.CSCwa34390.SPA.smu.bin"
-verify_3 = "Verify flash:cat9k_iosxe.17.06.04.CSCwb51963.SPA.smu.bin"
-verify_4 = "Verify flash:cat9k_iosxe.17.06.04.SPA.bin"
-    
+#-------------------------------------------------------------------------------------    
+#9200L upgrade
+#smu_1 = "copy tftp://10.51.1.252/cat9k_lite_iosxe.17.06.04.CSCwe13263.SPA.smu.bin flash:"
+#smu_2 = "copy tftp://10.51.1.253/cat9k_lite_iosxe.17.06.04.CSCwa34390.SPA.smu.bin flash:"
+#smu_3 = "copy tftp://10.51.1.254/cat9k_lite_iosxe.17.06.04.CSCwb51963.SPA.smu.bin flash:"
+
+#-------------------------------------------------------------------------------------    
+#9200L upgrade
+smu_1 = "copy tftp://10.9.1.249/cat9k_lite_iosxe.17.06.04.CSCwe13263.SPA.smu.bin flash:"
+smu_2 = "copy tftp://10.9.1.250/cat9k_lite_iosxe.17.06.04.CSCwa34390.SPA.smu.bin flash:"
+smu_3 = "copy tftp://10.9.1.252/cat9k_lite_iosxe.17.06.04.CSCwb51963.SPA.smu.bin flash:"
+
+verify_1 = "Verify flash:cat9k_lite_iosxe.17.06.04.CSCwe13263.SPA.smu.bin"
+verify_2 = "Verify flash:cat9k_lite_iosxe.17.06.04.CSCwa34390.SPA.smu.bin"
+verify_3 = "Verify flash:cat9k_lite_iosxe.17.06.04.CSCwb51963.SPA.smu.bin"
+
 
 ''' ---------------------------------------
     ---------- PASTE IP ADDRESSES ---------
@@ -92,7 +108,11 @@ for i in range(len(ipAd)):
         fileName = con.send_command("sh run | i (hostname )", read_timeout=180)
         fileName = fileName.split(" ")[1]
         #DO the verify of Main Code
-        main_code = con.send_command("dir | include cat9k_iosxe.17.06.04.SPA.bin ")
+        #9300
+        #main_code = con.send_command("dir | include cat9k_iosxe.17.06.04.SPA.bin ")
+        #9200L
+        main_code = con.send_command("sh install committed | inc 17.06.04 ")
+        
         #if main code is present, continue, if not, break out of current iteration by continue 
         if main_code == "":
             print("The main version 17.06.04 code is not present. Please download.")
@@ -140,13 +160,13 @@ for i in range(len(ipAd)):
         v1 = con.send_command_timing(verify_1, read_timeout=0)
         v2 = con.send_command_timing(verify_2, read_timeout=0)
         v3 = con.send_command_timing(verify_3, read_timeout=0)
-        print(con.send_command_timing(verify_4, read_timeout=0))
+        #print(con.send_command_timing(verify_4, read_timeout=0))
         con.send_command("", read_timeout=120)
         
         dir_output = con.send_command("dir | inc 17.06.04", read_timeout=120)
         print(dir_output)
         
-        dir_log_file = open("N:\\Report\\blockpoint\\test.txt", "a")
+        dir_log_file = open("N:\\Report\\blockpoint\\test-1.txt", "a")
 
         dir_log_file.write(fileName)
         dir_log_file.write("\n")

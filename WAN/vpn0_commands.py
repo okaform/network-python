@@ -9,7 +9,7 @@ bgp_list = []
 
 reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})')
 
-
+#FIX the logic error here for router 2. 
 def get_m1_next_hop():
     found_next_hop = ''
     mpls_static = ''
@@ -26,13 +26,17 @@ def get_m1_next_hop():
         new_conn = r3_conn()
         #new_conn.send_command("")
         mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/1.100 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
-        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by newline then by spaces and then by the / to get the ip address
-        new_ip_ad = subtract_one_from_ipv4(ip_ad)
-        return new_ip_ad
+        if "ip " not in mpls_ip:
+            return "7.7.7.2/28"
+        else:
+            ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by newline then by spaces and then by the / to get the ip address
+            new_ip_ad = subtract_one_from_ipv4(ip_ad)
+            return new_ip_ad
     else:
         found_next_hop = reg.findall(mpls_static)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
         return found_next_hop
 
+#FIX the logic error here for router 2. 
 def get_m2_next_hop():
     mpls2_tloc = ''
     found_next_hop = ''
@@ -56,6 +60,7 @@ def get_m2_next_hop():
         found_next_hop = reg.findall(mpls2_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
         return found_next_hop
 
+#FIX the logic error here for router 2. 
 def get_i1_next_hop():
     inet1_tloc = ''
     found_next_hop = ''
@@ -84,7 +89,7 @@ def get_i2_next_hop():
     found_next_hop = ''
     try:#we expect the timeout to fail so we catch it.
         conn = r3_conn()
-        inet2_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/3", strip_prompt=True, strip_command=True, read_timeout=5)#we use send_command_timing so it doesn't take so much time    
+        inet2_tloc = conn.send_command_timing("show ip routes | include 0.0.0.0 | inc ge0/3", strip_prompt=True, strip_command=True, read_timeout=15)#we use send_command_timing so it doesn't take so much time    
         conn.disconnect()#trying to disconnect to see if it fixes the timing issue
         print("R3 is disconnected")
     except Exception as e:
@@ -94,14 +99,18 @@ def get_i2_next_hop():
         #Get the IP Address from MPLS 1 and subtract 1 from the ip 
         new_conn = r3_conn()#connect back
         mpls_ip = new_conn.send_command("show running-config vpn 0 interface ge0/3 | inc address", strip_prompt=True, strip_command=True, read_timeout=120)
-        ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
-        new_ip_ad = subtract_one_from_ipv4(ip_ad)
-        return new_ip_ad       
+        if "ip " not in mpls_ip:
+            return "7.7.7.3/28"
+        else:
+            ip_ad = mpls_ip.split('\n')[0].split()[-1].split('/')[0]#This split by spaces and then by the / to get the ip address
+            new_ip_ad = subtract_one_from_ipv4(ip_ad)
+            return new_ip_ad       
     else:
         print("Did you get here for inet2?")
         found_next_hop = reg.findall(inet2_tloc)[1] #The 0 will be the 0.0.0.0 and the 1 will be the ip address that we need.
         return found_next_hop
-        
+
+#FIX the logic error here for router 2.         
 def get_i3_next_hop():
     inet3_tloc = ''
     found_next_hop = ''
@@ -303,6 +312,52 @@ def get_004_bandwidth_downstream():
     conn.disconnect()
     return ge0_3_down_strip
 
+#VPN 0 Gi0/0/3
+def get_003_description():
+    conn = r3_conn()
+    ge0_3_desc = conn.send_command("show running-config vpn 0 interface ge0/0 description | exclude vpn | exclude interface", read_timeout=120)
+    strip_str = ge0_3_desc.split('\n')[0].replace('description', '').strip().strip('"')
+    conn.disconnect()
+    return strip_str
+    
+def get_003_ip_address():
+    conn = r3_conn()
+    ge0_3_ip = conn.send_command("show running-config vpn 0 interface ge0/0 ip | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_ip_strip = ge0_3_ip.split('\n')[0].split(" ")[-1]
+    conn.disconnect()
+    return ge0_3_ip_strip
+    
+def get_003_shutdown():
+    conn = r3_conn()
+    ge0_3_shutdown = conn.send_command("show running-config vpn 0 interface ge0/0 shutdown | exclude vpn | exclude interface", read_timeout=120)
+    conn.disconnect()
+    if "no shutdown" in ge0_3_shutdown:
+        return "FALSE"
+    else:
+        return "TRUE"
+
+def get_003_shaping_rate():
+    conn = r3_conn()
+    ge0_3_shape = conn.send_command("show running-config vpn 0 interface ge0/0 shaping-rate | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_shape_strip = ge0_3_shape.split('\n')[0].split(" ")[-1]
+    conn.disconnect()
+    return ge0_3_shape_strip
+    
+def get_003_bandwidth_upstream():
+    conn = r3_conn()
+    ge0_3_up = conn.send_command("show running-config vpn 0 interface ge0/0 bandwidth-upstream | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_up_strip = ge0_3_up.split('\n')[0].split(" ")[-1]
+    conn.disconnect()
+    return ge0_3_up_strip
+    
+def get_003_bandwidth_downstream():
+    conn = r3_conn()
+    ge0_3_down = conn.send_command("show running-config vpn 0 interface ge0/0 bandwidth-downstream | exclude vpn | exclude interface", read_timeout=120)
+    ge0_3_down_strip = ge0_3_down.split('\n')[0].split(" ")[-1]
+    conn.disconnect()
+    return ge0_3_down_strip
+    
+    
 
 #VPN 0 TLOC Interface
 def get_001_59_ip_address():
@@ -461,4 +516,4 @@ def get_bgp_neighbor_remote_as():
 
 #SITE ID
 def get_site_id():
-   retur
+   return bgp_list[7]

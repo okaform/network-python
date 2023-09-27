@@ -218,13 +218,6 @@ header_to_function_dict = {
     ,'/0/GigabitEthernet0/0/1.10/interface/shutdown': get_001_10_shutdown
     #VPN 0 gi0/0/0
     ,'/0/GigabitEthernet0/0/0/interface/shutdown': "FALSE"
-    #VPN 0 gi0/0/3
-    ,'/0/GigabitEthernet0/0/3/interface/description': get_003_description 
-    ,'/0/GigabitEthernet0/0/3/interface/ip/address': get_003_ip_address 
-    ,'/0/GigabitEthernet0/0/3/interface/shutdown': get_003_shutdown  
-    ,'/0/GigabitEthernet0/0/3/interface/shaping-rate': get_003_shaping_rate
-    ,'/0/GigabitEthernet0/0/3/interface/bandwidth-upstream': get_003_bandwidth_upstream
-    ,'/0/GigabitEthernet0/0/3/interface/bandwidth-downstream': get_003_bandwidth_downstream
     #BGP
     ,'/0//router/bgp/as-num': get_bgp_as_num
     ,'/0//router/bgp/shutdown': get_bgp_shutdown

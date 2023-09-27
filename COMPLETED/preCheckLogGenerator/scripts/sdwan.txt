@@ -1,21 +1,47 @@
 !============================================
-!------ hdlcrwcrt003 ------------------------
+!------ silcrwcrt002 ------------------------
 !===========================================
-show bgp neighbor 10.193.9.1
+show ip ospf neigh
 !
-ping 10.193.9.1
+!copy run bootflash:pre-C101138789.cfg
 !
-ping 172.20.208.14 vpn 10
+ping 172.20.208.14
 !
-ping 172.20.208.15 vpn 10
+ping 172.20.208.15
 !
-ping 10.204.10.13 vpn 10
+ping 10.204.10.13
 !
-ping 10.204.10.14 vpn 10
+ping 10.204.10.14
 !
-sh int detail ge0/1.100 | nomore
+ping 10.203.9.166
 !
-show hardware inventory | tab
+ping 10.204.10.13
 !
-show run | nomore
+ping 10.204.10.14
+!
+show run | section router bgp
+!
+show run | section router ospf
+!
+show run | inc ip route
+!
+show ip bgp neighbors 10.193.19.242 advertised-routes
+! IECN advertised routes to viptela Router 3
+show ip bgp vpnv4 vrf IECN neighbors 10.193.19.226 advertised-routes
+! JIT advertised routes to viptela Router 3
+show ip bgp vpnv4 vrf JIT neighbors 10.193.19.230 advertised-routes
+! NA-Guest advertised routes to viptela Router 3
+show ip bgp vpnv4 vrf NA-Guest neighbors 10.194.19.218 advertised-routes
+!
+show ip route vrf NA-Guest ospf 900
+!
+sh ip route ospf 1293
+!
+sh ip ospf neigh
+! - VRRP/HSRP
+show standby all
+!
+show standby neighbors
+!
+sh run
 

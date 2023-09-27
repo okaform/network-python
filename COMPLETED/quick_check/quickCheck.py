@@ -61,9 +61,12 @@ for i in range(len(ipAd)):
         logName.write(quick_com)
         logName.write("\n")
         logName.write(str(fileName.split(" ")[1]) + "#") #get the switch name
-        logName.write("sh lldp neigh\n")
-        logName.write(str(con.send_command("sh lldp neigh", read_timeout=180)))
-        logName.write("\n") 
+        #logName.write("sh lldp neigh\n")
+        #logName.write(str(con.send_command("sh lldp neigh", read_timeout=180)))
+        logName.write("sh int description\n")
+        logName.write(str(con.send_command("sh int description", read_timeout=180)))
+        logName.write("\n------------------------------------------------------------------------------------\n\n")
+        
         
 
         

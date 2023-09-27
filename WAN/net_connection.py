@@ -9,9 +9,11 @@ from netmiko.ssh_exception import AuthenticationException
     --------- CREDENTIAL OPTIONS --------
     ------------------------------------- '''
 as_id = "as_cz507f" #input("Insert your as_id: ")
-as_pass = "e5mQGcE3RPspvZMd" #input("\nInsert your as_password: ")
-r1_ip_address = "10.193.8.158" #input("\nInsert router 1's IP Address: ")
-r3_ip_address = "10.193.8.184" #input("\nInsert router 3's IP Address: ")
+as_pass = "S6ZWYK423BdfbPjC" #input("\nInsert your as_password: ")
+r1_ip_address = "10.193.17.159" #input("\nInsert router 1's IP Address: ")
+r2_ip_address = "10.193.19.223" #input("\nInsert router 2's IP Address: ")
+r3_ip_address = "10.193.17.185" #input("\nInsert router 3's IP Address: ")
+r4_ip_address = "10.193.19.249" #input("\nInsert router 4's IP Address: ")
 
 
 
@@ -31,6 +33,23 @@ def r1_conn():
     
     return con
 
+#Router 2 connection
+def r2_conn():
+    net_dev_2 = {"host":r2_ip_address,
+                "username":as_id,
+                "password":as_pass, 
+                "device_type":"cisco_ios",
+             }
+    try:
+        con = ConnectHandler(**net_dev_2)
+    except:
+        issue_st = "\nThere is a problem with your log in credentials for " +str(r1_ip_address).strip()+". Please check your username or password.\n"
+        print(issue_st)
+    con.enable()
+    print("r2 is connected")
+    
+    return con
+
 def r3_conn():
     net_dev_3 = {"host":r3_ip_address,
                 "username":as_id,
@@ -43,5 +62,22 @@ def r3_conn():
         issue_st = "\nThere is a problem with your log in credentials for " +str(r1_ip_address).strip()+". Please check your username or password.\n"
         print(issue_st)
     print("r3 is connected")
+    
+    return con
+
+#router 4
+def r4_conn():
+    net_dev_4 = {"host":r4_ip_address,
+                "username":as_id,
+                "password":as_pass, 
+                "device_type":"cisco_ios",
+             }
+    try:
+        con = ConnectHandler(**net_dev_4)
+    except:
+        issue_st = "\nThere is a problem with your log in credentials for " +str(r1_ip_address).strip()+". Please check your username or password.\n"
+        print(issue_st)
+    con.enable()
+    print("r4 is connected")
     
     return con

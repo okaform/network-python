@@ -1,32 +1,21 @@
-import sys, os
-import openpyxl
-import csv
-from netmiko import ConnectHandler
-from netmiko.ssh_exception import NetMikoTimeoutException
-from netmiko.ssh_exception import SSHException
-from netmiko.ssh_exception import AuthenticationException
-from datetime import date, datetime  
-from header_to_function import header_to_function_dict
-#from r2_header_to_function import r2_header_to_function_dict
-sys.path.append('N:/Python Libraries')
-import pandas as pd
 
-start_time = datetime.now()
+
+print("DONE with ROUTER ONE! MOVING ON to ROUTER TWO!!")
 
 ''' ------------------------------------------------------------
-    ---------- CONVERT ROUTER ONE FROM CSV TO XLSX -------------
+    ---------- CONVERT ROUTER TWO FROM CSV TO XLSX -------------
     ------------------------------------------------------------ '''
-csv_filename = "N:\\Report\\vEdge-to-cEdge\\MFG-8300-R1-M1-I2-I3-I1-LTE-T4-v1.csv"
-r1_excel = "N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx"
-data = pd.read_csv(csv_filename) #Load CSV file using pandas
-data.to_excel(r1_excel, index=False)
+csv2_filename = "N:\\Report\\vEdge-to-cEdge\\MFG-8300-R2-I1-LTE-M1-I2-I3-G3-v1.csv"
+r2_excel = "N:\\Report\\vEdge-to-cEdge\\r2-temp.xlsx"
+data = pd.read_csv(csv2_filename) #Load CSV file using pandas
+data.to_excel(r2_excel, index=False)
 
 
 ''' ---------------------------------------------------
-    ---------- OPEN ROUTER ONE EXCEL FILE -------------
+    ---------- OPEN ROUTER TWO EXCEL FILE -------------
     --------------------------------------------------- '''
 try:
-    workbook = openpyxl.load_workbook("N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx") #Open the newly converted excel file
+    workbook = openpyxl.load_workbook("N:\\Report\\vEdge-to-cEdge\\r2-temp.xlsx") #Open the newly converted excel file
     sheet1 = workbook.active
     col = 1
   
@@ -44,18 +33,25 @@ try:
                 print(value_to_set)
                 sheet1.cell(row = 2, column = col + i, value=value_to_set) #Update the coresponding column 
     
-    workbook.save("N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx")
+    workbook.save("N:\\Report\\vEdge-to-cEdge\\r2-temp.xlsx")
     
 except FileNotFoundError:
-    print("File not found:", r1_template)
+    print("File not found:", r2_template)
 except openpyxl.utils.exceptions.InvalidFileException:
-    print("Invalid Excel file format:", r1_template)
+    print("Invalid Excel file format:", r2_template)
 
 ''' -------------------------------------------------
     ---------- CONVERT R1 FROM XLSX TO CSV -------------
     -------------------------------------------------- '''
-excel_filename = "N:\\Report\\vEdge-to-cEdge\\r1-temp.xlsx"
-r1_csv = "N:\\Report\\vEdge-to-cEdge\\r1-temp.csv"
+    
+excel_filename = "N:\\Report\\vEdge-to-cEdge\\r2-temp.xlsx"
+r2_csv = "N:\\Report\\vEdge-to-cEdge\\r2-temp.csv"
 data = pd.read_excel(excel_filename) #Load CSV file using pandas
-data.to_csv(r1_csv, index=False)
+data.to_csv(r2_csv, index=False)
 
+
+elapsed_time = datetime.now() - start_time #to calculate the total elapsed time the script took to run
+print("This script took approximately {}".format(elapsed_time))    
+
+
+'''

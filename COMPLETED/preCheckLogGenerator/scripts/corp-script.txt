@@ -66,7 +66,7 @@ sh env all | in FAN|PWR
 !
 show cdp neighbors
 !
-sh lldp neig
+sh lldp neighbor
 !
 sh power inline
 !
@@ -86,13 +86,21 @@ sh interface | in ^Vlan
 !
 sh interface trunk
 !
-sh mac address-table dy
+sh mac address-table dynamic
 !
 sh ip int brief | ex unassigned
 !
 sh ip vrf
 !
 sh ip ospf nei
+!
+sh ip ospf interface brief
+!
+sh ip ospf database
+!
+sh ip ospf database topology
+!
+sh ip ospf topology-info 
 !
 sh ip eigrp int
 !
@@ -102,33 +110,21 @@ sh ip route
 !
 sh arp
 !
-sh ip eigrp vrf gm-supplier int
-!
-sh ip eigrp vrf gm-supplier nei
-!
 sh ip route vrf gm-supplier
 !
 sh arp vrf gm-supplier
 !
-sh ip eigrp vrf gm-vehlabs int
+sh ip route vrf gm-security
 !
-sh ip eigrp vrf gm-vehlabs nei
+sh arp vrf gm-security
 !
 sh ip route vrf gm-vehlabs
 !
 sh arp vrf gm-vehlabs
 !
-sh ip eigrp vrf GM-ULTRACRUISE-DEV int
-!
-sh ip eigrp vrf GM-ULTRACRUISE-DEV nei
-!
 sh ip route vrf GM-ULTRACRUISE-DEV
 !
 sh arp vrf GM-ULTRACRUISE-DEV
-!
-sh ip eigrp vrf utilitynet int
-!
-sh ip eigrp vrf utilitynet nei
 !
 sh ip route vrf utilitynet
 !

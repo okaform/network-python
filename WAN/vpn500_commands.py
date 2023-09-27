@@ -35,6 +35,8 @@ def generate_static_route_list(route_type, prefix_number):
         reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)')
         for line in split_static_routes:
             mo = reg.findall(line)
+            if len(mo) == 0: #if no vpn500 static routes are found, return an empty string
+               return ""
             ip = mo[0] #this is for the ip
             subnet = convert_to_cidr(mo[1]) #convert the subnet mask to cidr notation
             complete_static = str(ip) + "/"+str(subnet) #concatenate the ip to the subnet mask 
@@ -104,27 +106,42 @@ def get_000_358_vrrp():
 
 def get_000_25_description():
     int_gi000_25 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.25 | include description", read_timeout=180)
-    return int_gi000_25.split("description")[1] #return the second portion of the splitted string which is the actual description 
+    #print(len(int_gi000_25.split("description")))
+    if len(int_gi000_25.split("description")) == 1: #if the interface doesn't exist
+        return ""
+    else:
+        return int_gi000_25.split("description")[1] #return the second portion of the splitted string which is the actual description 
 
 def get_000_25_ip_address():
     int_gi000_25 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.25 | include ip address", read_timeout=180)
     split_line = int_gi000_25.split(" ")#split by the spaces
-    ip = split_line[3] #this is for the ip
-    subnet = convert_to_cidr(split_line[4]) #convert the subnet mask to cidr notation    
-    return str(ip) + "/"+str(subnet) #concatenate the ip to the subnet mask 
+    if len(split_line) == 1: 
+        return "2.2.2.2/29"
+    else:
+        ip = split_line[3] #this is for the ip
+        subnet = convert_to_cidr(split_line[4]) #convert the subnet mask to cidr notation    
+        return str(ip) + "/"+str(subnet) #concatenate the ip to the subnet mask 
 
 def get_000_25_shutdown(): 
-    int_gi000_25 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.25 | include shutdown", read_timeout=180)
-    if int_gi000_25 == "": #check if keyword shutdown is present, command should return an empty string
-        return "FALSE"
-    else:
-        return "TRUE"
+    '''LOGIC ERROR HERE.. MAYBE IT IS FiXed'''
+    int_gi000_25 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.25 ", read_timeout=180)
+    if "ip address" in int_gi000_25: #if ip address is present then interface might be shutdown or not
+        if "shutdown" in int_gi000_25:
+            return "TRUE"
+        else:
+            return "FALSE"
+    else: #if Ip address is not in the output then interface doesn't exist and should be shutdown
+        return "TRUE" #check if keyword shutdown is present, command should return an empty string
+
 
 def get_000_25_vrrp():
     int_gi000_25 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.25 | include standby", read_timeout=180)
     reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)') #use regular expression to find the ip. We could also use split but this is more generic
     mo = re.search(reg, int_gi000_25)
-    return mo.group()
+    if mo == None:
+        return "2.2.2.5"
+    else:
+        return mo.group()
 
 
 def get_vpn500_ospf_id():

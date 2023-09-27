@@ -53,6 +53,10 @@ def generate_static_route_list(route_type, prefix_number):
         else:
             return ""      
 
+def do_aggregate_route():
+    
+    return "test"
+
 def get_vpn10_static_route(route_type, prefix_number):
     static_route = generate_static_route_list(route_type, prefix_number)
     return static_route
@@ -62,9 +66,43 @@ def get_vpn10_next_hop(route_type, prefix_number):
     return next_hop
 
 def get_vpn10_aggregate(route_type, prefix_number):
+    #first aggregate is always the loopback
     aggregate = generate_static_route_list(route_type, prefix_number)
     return aggregate
 
+'''.655 Interface'''
+def get_000_655_description():
+    int_gi000_655 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.655 | include description", read_timeout=180)
+    if "Invalid" in int_gi000_655: #if the interface doesn't exist
+        return "NOT IN USE"
+    else:
+        return int_gi000_655.split("description")[1] #return the second portion of the splitted string which is the actual description 
+    
+def get_000_655_ip_address():
+    int_gi000_655 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.655 | include ip address", read_timeout=180)
+    if "Invalid" in int_gi000_655: #if the interface doesn't exist
+        return "8.8.8.5/30"        
+    split_line = int_gi000_655.split(" ")#split by the spaces
+    ip = split_line[3] #this is for the ip
+    subnet = convert_to_cidr(split_line[4]) #convert the subnet mask to cidr notation    
+    return str(ip) + "/"+str(subnet) #concatenate the ip to the subnet mask 
+        
+def get_000_655_shutdown():
+    int_gi000_655 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.655 | include shutdown", read_timeout=180)
+    if int_gi000_655 != "" or "Invalid" in int_gi000_655: #check if keyword shutdown is present, command should return an empty string
+        return "TRUE"
+    else:
+        return "FALSE"
+
+def get_000_655_vrrp():
+    int_gi000_655 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.655 | include standby", read_timeout=180)
+    if "Invalid" in int_gi000_655: #if the interface doesn't exist
+        return "10.10.10.2"    
+    reg = re.compile(r'(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|Null0)') #use regular expression to find the ip. We could also use split but this is more generic
+    mo = re.search(reg, int_gi000_655)
+    return mo.group()
+    
+'''.658 Interface'''
 def get_000_658_description():
     int_gi000_658 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.658 | include description", read_timeout=180)
     return int_gi000_658.split("description")[1] #return the second portion of the splitted string which is the actual description 
@@ -89,7 +127,7 @@ def get_000_658_vrrp():
     mo = re.search(reg, int_gi000_658)
     return mo.group()
 
-
+'''.20 Interface'''
 def get_000_20_ip_address():
     int_gi000_20 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.20 | include ip address", read_timeout=180)
     split_line = int_gi000_20.split(" ")#split by the spaces
@@ -104,7 +142,7 @@ def get_000_20_shutdown():
     else:
         return "TRUE"
 
-
+'''.659 Interface'''
 def get_000_659_description():
     int_gi000_659 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.659 | include description", read_timeout=180)
     return int_gi000_659.split("description")[1] #return the second portion of the splitted string which is the actual description 
@@ -122,7 +160,8 @@ def get_000_659_shutdown():
         return "FALSE"
     else:
         return "TRUE"
-        
+
+'''.202 Interface'''        
 def get_000_202_description():
     int_gi000_202 = conn.send_command("show running-config interface GigabitEthernet 0/0/0.10 | include description", read_timeout=180)#.20 becomes .202
     return int_gi000_202.split("description")[1] #return the second portion of the splitted string which is the actual description 
