@@ -7,9 +7,9 @@ from tabulate import tabulate
 
 def getSerialNumber(switch_name, con):
     #Get the serial numbers
-    serial_numbers = con.send_command("sh ver | inc System serial number ", read_timeout=180)
+    serial_numbers = con.send_command("sh ver | inc System Serial Number ", read_timeout=180)
     #Split the serial numbers by the expression and put in a list    
-    split_serial_numbers = serial_numbers.split("System serial number            : ")
+    split_serial_numbers = serial_numbers.split("System Serial Number            : ")
    
     #get the hostname and add to table
     serial_number_table = []
